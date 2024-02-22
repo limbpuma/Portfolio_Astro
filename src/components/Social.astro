@@ -1,0 +1,22 @@
+---
+// DynamicLinks.astro
+interface Link {
+  url: string;
+  iconClass: string;
+  label: string;
+}
+
+interface Props {
+  links: Link[];
+}
+
+const { links } = Astro.props as Props;
+---
+
+<div class="flex gap-4 justify-center">
+  {links.map((link, index) => (
+    <a  href={link.url} class="hover:text-primary cursor-pointer" target="_blank" rel="noopener noreferrer" title={link.label ?? ''}>
+      <i class={`${link.iconClass} fa-2x`}></i>
+    </a>
+  ))}
+</div>

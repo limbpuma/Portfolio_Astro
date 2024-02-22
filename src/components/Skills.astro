@@ -1,0 +1,36 @@
+---
+// Importing necessary utilities
+import { getI18N } from '../i18n';
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const skills = i18n.SKILLS.SKILL_SET;
+const sectionId = 'skills';
+import SectionTitle from './SectionTitle.astro';
+---
+
+<div id="skills_section" class=" py-12 sm:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <SectionTitle sectionId={sectionId} />
+      </div>
+      <div class="mt-12">
+        <dl class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {skills.map((skill) => (
+            <div class="flex flex-col items-center p-6 text-center rounded-lg shadow shadow-lg hover:shadow-2xl transition-transform duration-700 ease-in-out transform hover:scale-105">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-12 w-12 rounded-md hover:bg-primary bg-primary">
+                  <i class={`${skill.icon} fa-lg `}></i>
+                </div>
+              </div>
+              <div class="mt-5">
+                <dt class="text-lg leading-6 font-medium ">{skill.name}</dt>
+                <dd class="mt-2 text-base ">{skill.description}</dd>
+              </div>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+  </div>
+  
+  

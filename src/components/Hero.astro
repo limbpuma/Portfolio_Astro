@@ -1,0 +1,19 @@
+---
+import { getI18N } from '../i18n';
+const { currentLocale} = Astro
+const i18n = getI18N({currentLocale});
+import Button from '../components/Button.astro';
+---
+
+<div class="hero min-h-screen">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <p class="font-bold tracking-wide uppercase">{i18n.HERO.SUBTITLE}</p>
+      <h1 class="font-bold font-heading leading-tighter tracking-tighter mb-4 md:text-6xl text-5xl">{i18n.HERO.TITLE}</h1>
+      <p class="text-muted text-xl mb-6">{i18n.HERO.DESCRIPTION}</p>
+      
+      <Button text={i18n.HERO.BUTTON} href="#contact_section" />
+
+    </div>
+  </div>
+</div>

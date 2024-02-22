@@ -1,0 +1,164 @@
+{
+  "SEO_TITLE": "Limber Martinez - Junior Full-Stack-Entwickler",
+  "SEO_DESCRIPTION": "Entdecken Sie das Portfolio von Limber Martinez, einem Junior Full-Stack-Entwickler mit Ausbildung in React, Angular sowie Grundlagen in Java und Spring Boot, der nach Möglichkeiten als Junior oder Trainee sucht.",
+  "NAVBAR": {
+    "ITEM1": "Über Mich",
+    "ITEM2": "Bildung",
+    "ITEM3": "Skills",
+    "ITEM4": "Projekte",
+    "ITEM5": "Kontakt"
+  },
+  "HERO": {
+    "TITLE": "Limber Martinez",
+    "SUBTITLE": "Junior Full-Stack-Entwickler",
+    "DESCRIPTION": "Mit einer soliden Grundlage in Frontend-Technologien und Grundkenntnissen im Backend suche ich nach meiner ersten beruflichen Erfahrung in der Tech-Welt. Als Absolvent intensiver Programme bin ich bereit, beizutragen und weiter zu lernen.",
+    "BUTTON": "Meine Arbeit Entdecken"
+  },
+  "ABOUT_ME": {
+    "TITLE": "Über Mich",
+    "PARAGRAPH_1": "Hallo, ich bin Limber Martinez, ein leidenschaftlicher Webentwickler mit Schwerpunkt auf dem Frontend und wachsendem Interesse am Backend. Ich begann meine Ausbildung am ILS in Hamburg, machte Fortschritte durch Spezialisierungen in React und Angular und erwarb Grundlagen in NodeJS und Java.",
+    "PARAGRAPH_2": "Meine jüngste Teilnahme am Oracle One Altura Education Alura-Programm führte mich in Java und Spring Boot ein. Ich schätze die Scrum-Methodologie und die Bedeutung von zwischenmenschlichen Fähigkeiten in technischen Teams.",
+    "PARAGRAPH_3": "Auf der Suche nach Möglichkeiten als Junior Frontend-Entwickler oder Trainee bin ich begierig, mein Wissen anzuwenden und in einer herausfordernden Umgebung zu wachsen."
+  },
+  "TITLESECTION": {
+    "timeline": { "title": "Meine Reise", "subtitle": "Weg zur Entwicklung" },
+    "projects": { "title": "Portfolio", "subtitle": "Meine Projekte" },
+    "skills": { "title": "Fähigkeiten", "subtitle": "Technologien, mit denen ich arbeite" },
+    "contact": { "title": "Kontaktiere Mich", "subtitle": "Lass uns sprechen" },
+    "under_construction": { "title": "Im Umbau", "subtitle": "Zukünftige Innovationen" }
+  },
+  "TIMELINE": {
+    "EVENTS": [
+      {
+        "DATE": "2023",
+        "TITLE": "Oracle One Altura Education Programm",
+        "DESCRIPTION": "Ein intensives Programm mit Fokus auf Java und Spring Boot, das eine solide Grundlage in der Backend-Entwicklung schafft."
+      },
+      {
+        "DATE": "2022 - 2023",
+        "TITLE": "Full-Stack-Entwickler-Ausbildung",
+        "DESCRIPTION": "Spezialisierung in der Frontend-Entwicklung mit React und Angular an der UTN, Argentinien, ergänzt durch Backend-Fähigkeiten mit NodeJS."
+      },
+      {
+        "DATE": "2022",
+        "TITLE": "Webentwickler-Zertifizierung",
+        "DESCRIPTION": "Beginn meiner Webentwicklungskarriere, die HTML, CSS und JavaScript am ILS in Hamburg umfasst."
+      }
+    ]
+  },
+    "PROJECTS": {
+      "TITLE": "My Projects DE",
+      "PROJECT_LIST": [
+        {
+          "TITLE": "Project 1",
+          "BADGE": "New1",
+          "DESCRIPTION": "Description of Project 1.",
+          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+          "CATEGORIES": ["Category 1", "Category 2"]
+        },
+        {
+          "TITLE": "Project 2",
+          "BADGE": "New2",
+          "DESCRIPTION": "Description of Project 1.",
+          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+          "CATEGORIES": ["Category 1", "Category 2"]
+        },
+        {
+          "TITLE": "Project 3",
+          "BADGE": "New3",
+          "DESCRIPTION": "Description of Project 1.",
+          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+          "CATEGORIES": ["Category 1", "Category 2"]
+        },
+        {
+          "TITLE": "Project 4",
+          "BADGE": "New4",
+          "DESCRIPTION": "Description of Project 1.",
+          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+          "CATEGORIES": ["Category 1", "Category 2"]
+        },
+        {
+          "TITLE": "Project 5",
+          "BADGE": "New5",
+          "DESCRIPTION": "Description of Project 1.",
+          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+          "CATEGORIES": ["Category 1", "Category 2"]
+        },
+        {
+          "TITLE": "Project 6",
+          "BADGE": "New6",
+          "DESCRIPTION": "Description of Project 1.",
+          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
+          "CATEGORIES": ["Category 1", "Category 2"]
+        }
+      ]
+    },
+    "SKILLS": {
+      "SKILL_SET": [
+        {
+          "name": "HTML & CSS",
+          "description": "Solides Verständnis von HTML5 und CSS3, responsive Design und moderne Webdesign-Praktiken.",
+          "icon": "fas fa-code"
+        },
+        {
+          "name": "JavaScript",
+          "description": "Kompetenz in ES6+-Funktionen, asynchroner Programmierung und DOM-Manipulation.",
+          "icon": "fab fa-js-square"
+        },
+        {
+          "name": "React & Angular",
+          "description": "Erfahrung in der Erstellung von SPAs mit React und dynamischen Anwendungen mit Angular.",
+          "icon": "fab fa-react"
+        },
+        {
+          "name": "Node.js & Express",
+          "description": "Grundkenntnisse in skalierbaren Backend-Services mit Node.js und RESTful-API-Design.",
+          "icon": "fab fa-node-js"
+        },
+        {
+          "name": "Java & Spring Boot",
+          "description": "Grundkenntnisse in Java und Spring Boot für robuste Backend-Anwendungen.",
+          "icon": "fab fa-java"
+        },
+        {
+          "name": "Versionskontrolle",
+          "description": "Kompetenter Umgang mit Git und GitHub für Versionskontrolle, Code-Kollaboration und Projektmanagement.",
+          "icon": "fab fa-git-alt"
+        }
+      ]
+    },
+    "CONTACT": {
+      "SUBTITLE": "Ein Treffen Planen",
+      "TITLE": "Lass uns verbinden",
+      "DESCRIPTION": "Offen für Kollaborationen und Jobangebote. Fühl dich frei, mich zu kontaktieren.",
+      "RESUME": "Meinen Lebenslauf Ansehen",
+      "RESUME_URL": "../public/cv/ResumeEN.pdf"
+    },
+    "FOOTER": {
+      "PRIVACY_POLICY": "Datenschutzrichtlinie",
+      "LEGAL_NOTICE": "Rechtlicher Hinweis",
+      "COPYRIGHT": "Urheberrecht © Limber Martinez 2024. Alle Rechte vorbehalten."
+    },
+    "UNDER_CONSTRUCTION": {
+      "MESSAGE": "Ich aktualisiere gerade mein Projektportfolio für 2024. In der Zwischenzeit entdecken Sie meine Projekte von 2023 auf GitHub.",
+      "GITHUB_BUTTON": "Auf GitHub erkunden"
+    },
+    "LEGAL": {
+      "TITLE": "Impressum",
+      "INTRODUCTION": "Willkommen auf meiner persönlichen Portfolio-Webseite. Hier präsentiere ich meine Programmierfähigkeiten und Projekte, mit dem Ziel, Verbindungen zu potenziellen Arbeitgebern und Möglichkeiten im IT-Sektor zu knüpfen. Diese Webseite dient als digitales Lebenslauf und nicht als kommerzielle Plattform.",
+      "IMAGE_ALT": "Porträt von Limber Martinez",
+      "CONTENT": "Betrieben von Limber Martinez, ist diese Webseite ein nicht-kommerzielles persönliches Portfolio. Sie ist darauf ausgelegt, meine beruflichen Qualifikationen und Projekte vorzustellen. Für Inhaltsanfragen kontaktieren Sie mich bitte direkt.",
+      "ADDITIONAL": "Bitte beachten Sie, dass ich, obwohl ich sicherstelle, dass alle Inhalte genau sind, nicht verantwortlich für den Inhalt externer Webseiten bin, die von meinem Portfolio verlinkt sind.",
+      "COPYRIGHT": "Urheberrecht © 2024 Limber Martinez. Alle Rechte vorbehalten. Die Vervielfältigung oder Verbreitung jeglichen Materials von dieser Seite ohne vorherige Genehmigung ist strengstens untersagt.",
+      "CLOSE_BUTTON": "Schließen"
+    },
+    "PRIVACY": {
+      "TITLE": "Datenschutzrichtlinie",
+      "CONTENT": "Ihre Privatsphäre ist uns äußerst wichtig. Diese Richtlinie beschreibt, wie wir persönliche Daten auf dieser Website behandeln, die dazu dient, meine Fähigkeiten als Webentwickler zu präsentieren und Verbindungen zu potenziellen Arbeitgebern herzustellen. Dies ist keine kommerzielle Website, und wir verkaufen keine Produkte oder Dienstleistungen.",
+      "DATA_COLLECTION": "Datenerfassung: Diese Seite sammelt direkt keine persönlichen Daten. Externe Tools wie Calendly für die Terminplanung können jedoch Informationen entsprechend ihrer Datenschutzrichtlinien erfassen.",
+      "DATA_USAGE": "Datenverwendung: Alle durch Drittanbieter-Tools gesammelten Daten werden gemäß deren Datenschutzrichtlinien verwendet. Wir empfehlen Ihnen, diese Richtlinien zu überprüfen, um zu verstehen, wie Ihre Daten gehandhabt werden.",
+      "DATA_PROTECTION": "Datenschutz: Wir treffen Vorkehrungen zum Schutz Ihrer Daten auf den Plattformen, die wir verwenden. Da wir jedoch keine Daten direkt sammeln, raten wir dazu, die Datenschutzeinstellungen und -richtlinien aller Drittanbieter-Tools oder -Dienste, mit denen Sie interagieren, zu überprüfen.",
+      "USER_RIGHTS": "Ihre Rechte: Bezüglich aller persönlichen Daten, die von Drittanbieterdiensten auf dieser Website gehalten werden, haben Sie Rechte unter der DSGVO, einschließlich Zugang, Korrektur und Löschung. Bitte kontaktieren Sie die jeweiligen Dienste direkt, um diese Rechte auszuüben.",
+      "CLOSE_BUTTON": "Schließen"
+    }
+  }

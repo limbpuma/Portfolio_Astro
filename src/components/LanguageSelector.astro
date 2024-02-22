@@ -1,0 +1,42 @@
+---
+const baseURL = '/';
+const languages = {
+  en: '/images/en.webp',
+  es: '/images/es.webp',
+  de: '/images/de.webp',
+};
+const currentPath = Astro.url.pathname;
+const currentLocale = Object.keys(languages).find(lang => currentPath.startsWith(`/${lang}`)) || 'en';
+const otherLanguages = Object.entries(languages).filter(([code]) => code !== currentLocale);
+---
+
+<div class="language-selector hover:bg-transparent focus:bg-transparent active:bg-transparent">
+  <button><a href={`/${currentLocale === 'en' ? '' : currentLocale}`} class="rounded-full active:bg-transparent">
+    </a><img src={languages[currentLocale]} alt={currentLocale.toUpperCase()} class="rounded-full w-6 h-6" />
+  </button>
+  <div class="language-options ">
+    {otherLanguages.map(([code, image]) => (
+      <a href={`/${code === 'en' ? '' : code}`}  class="block mt-2">
+        <img src={image} alt={code.toUpperCase()} class="rounded-full w-6 h-6" />
+      </a>
+    ))}
+  </div>
+</div>
+
+<style>
+.language-selector {
+  display: inline-block;
+  position: relative;
+}
+.language-options {
+  display: none;
+  position: absolute;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-decoration: none;
+}
+.language-selector:hover .language-options {
+
+  display: block;
+
+}
+</style>

@@ -1,0 +1,42 @@
+---
+// Importa Astro.glob para cargar las traducciones dinámicamente
+
+import Social from './Social.astro';
+import { getI18N } from '../i18n';
+const { currentLocale} = Astro
+const i18n = getI18N({currentLocale});
+
+const personalLinks = [
+  { url: "https://linkedin.com/in/tu-usuario", iconClass: "fab fa-linkedin", label: "LinkedIn" },
+  { url: "https://github.com/tu-usuario", iconClass: "fab fa-github", label: "GitHub" }
+];
+
+
+---
+
+<div id="aboutme_section" class="mx-auto max-w-7xl md:px-8 p-4">
+  <div class="md:flex md:gap-16">
+    <div class="md:basis-1/2 self-center">
+      <div class="text-lg mb-12">
+        <h3 class="mb-4 font-bold tracking-tight sm:text-3xl text-2xl text-center">
+          {i18n.ABOUT_ME.TITLE}
+        </h3>
+        <p>{i18n.ABOUT_ME.PARAGRAPH_1}</p>
+        <br>
+        <p>{i18n.ABOUT_ME.PARAGRAPH_2}</p>
+        <br>
+        <p>{i18n.ABOUT_ME.PARAGRAPH_3}</p>
+      </div>
+      
+    </div>
+    <div class="md:basis-1/2 md:mt-0 mt-12" aria-hidden="true">
+      <img alt="A colorful image representing creativity" class="mx-auto w-full h-96 max-h-96 object-cover bg-gray-500 rounded-lg shadow-lg" src="../images/image-profil.jpg" loading="lazy">
+      <div class="flex gap-4 justify-center mt-8">
+        
+
+        <Social links={personalLinks} />
+         
+       </div>
+    </div>
+  </div>
+</div>

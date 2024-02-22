@@ -1,0 +1,19 @@
+---
+// Importa la función para obtener las traducciones
+import { getI18N } from '../i18n';
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const sectionTitles = i18n.TITLESECTION;
+const { sectionId } = Astro.props;
+const selectedTitle = sectionTitles[sectionId] || { title: "Title not found", subtitle: "Subtitle not found" };
+---
+
+
+<div class="flex items-center justify-center mb-12 mt-12">
+    <div class="text-center">
+      <h4 class="font-bold  tracking-wide uppercase font-bold mb-4 mt-4 text-primary">{selectedTitle.title}</h4>
+      <h2 class="text-4xl font-bold mb-4 mt-4">{selectedTitle.subtitle}</h2>
+    </div>
+  </div>
+  
+

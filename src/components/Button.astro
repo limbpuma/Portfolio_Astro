@@ -1,0 +1,14 @@
+---
+// Define las props que el componente aceptará
+interface ButtonProps {
+  text: string; // Texto del botón
+  href: string; // URL a la que el botón dirigirá
+  newTab?: boolean; // Si es true, abre el enlace en una nueva pestaña
+}
+
+const { text, href, newTab = false } = Astro.props as ButtonProps;
+---
+
+<a href={href} class={`btn btn-primary rounded-xl font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:bg-primary-600 bg-primary-500 text-white px-4 py-2 ${newTab ? '' : 'target="_self"'}`} rel={newTab ? 'noopener noreferrer' : undefined} target={newTab ? '_blank' : '_self'}>
+  {text}
+</a>

@@ -1,0 +1,19 @@
+---
+// Importaciones necesarias
+import { getI18N } from '../i18n';
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const sectionId = 'under_construction';
+import SectionTitle from './SectionTitle.astro';
+import Button from '../components/Button.astro';
+---
+
+<div id="under_construction" class="container mx-auto text-center p-4 max-w-4xl mt-12">
+  <div class="bg-base-200 rounded-lg p-8 shadow-lg">
+    <SectionTitle sectionId={sectionId} />
+    <p class="mb-4 text-base-content">{i18n.UNDER_CONSTRUCTION.MESSAGE}</p>
+    <div class="mt-8">
+        <Button text={i18n.UNDER_CONSTRUCTION.GITHUB_BUTTON} href="https://github.com/limbpuma" newTab={true}/>
+    </div>
+  </div>
+</div>

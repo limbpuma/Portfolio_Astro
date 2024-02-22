@@ -1,0 +1,19 @@
+---
+// Importaciones necesarias
+
+const { currentLocale} = Astro
+
+
+---
+
+
+  <div class="min-h-screen flex flex-col items-center justify-center">
+    <img src="/images/error404.webp" alt="error404" class="w-48 h-auto" loading="lazy"> <!-- Asegúrate de tener una imagen de astronauta o el icono que prefieras -->
+    <h1 class="text-4xl font-bold mt-0">Oops! Lost in space?</h1>
+    <p class="text-center mt-2 mb-2">We can't find the page you're looking for. But don't worry, you can always go back to the homepage or check out my LinkeIn.</p>
+    <div class="flex gap-4">
+      <a href="/" class="btn btn-primary">Take me home</a>
+      <a href="https://www.linkedin.com/in/limber-martinez-developer/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Visit LinkedIn</a>
+    </div>
+  </div>
+
