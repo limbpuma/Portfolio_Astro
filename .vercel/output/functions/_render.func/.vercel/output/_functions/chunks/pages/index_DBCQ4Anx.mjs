@@ -212,7 +212,7 @@ const CONTACT$2 = {
 	TITLE: "Let's Connect",
 	DESCRIPTION: "Open to collaborations and job opportunities. Feel free to reach out.",
 	RESUME: "View My Resume",
-	RESUME_URL: "../public/cv/ResumeEN.pdf"
+	RESUME_URL: "/cv/ResumeEN.pdf"
 };
 const FOOTER$2 = {
 	PRIVACY_POLICY: "Privacy Policy",
@@ -424,7 +424,7 @@ const CONTACT$1 = {
 	TITLE: "Lass uns verbinden",
 	DESCRIPTION: "Offen für Kollaborationen und Jobangebote. Fühl dich frei, mich zu kontaktieren.",
 	RESUME: "Meinen Lebenslauf Ansehen",
-	RESUME_URL: "../public/cv/ResumeDE.pdf"
+	RESUME_URL: "/cv/ResumeDE.pdf"
 };
 const FOOTER$1 = {
 	PRIVACY_POLICY: "Datenschutzrichtlinie",
@@ -636,7 +636,7 @@ const CONTACT = {
 	TITLE: "Conectemos",
 	DESCRIPTION: "Abierto a colaboraciones y oportunidades de empleo. No dudes en contactarme.",
 	RESUME: "Ver mi CV",
-	RESUME_URL: "../public/cv/ResumeES.pdf"
+	RESUME_URL: "/cv/ResumeES.pdf"
 };
 const FOOTER = {
 	PRIVACY_POLICY: "Política de Privacidad",
@@ -703,8 +703,8 @@ const $$Navbar = createComponent(async ($$result, $$props, $$slots) => {
   Astro2.self = $$Navbar;
   const { currentLocale } = Astro2;
   const i18n = getI18N({ currentLocale });
-  return renderTemplate`${maybeRenderHead()}<div class="navbar bg-base-100 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="navbar-start"> <div class="dropdown"> <div tabindex="0" role="button" class="btn btn-ghost lg:hidden"> <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg> </div> <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"> <li><a href="#aboutme_section">${i18n.NAVBAR.ITEM1}</a></li> <li><a href="#education_section">${i18n.NAVBAR.ITEM2}</a></li> <li><a href="#skills_section">${i18n.NAVBAR.ITEM3}</a></li> <!-- <li><a href="projects_section">{i18n.NAVBAR.ITEM4}</a></li> --> <li><a href="#contact_section">${i18n.NAVBAR.ITEM5}</a></li> <li><a>${renderComponent($$result, "LanguageSelector", $$LanguageSelector, { "client:load": true, "client:component-hydration": "load", "client:component-path": "C:/Users/limbp/Documents/Developer/Astro/limber-portfolio/src/components/LanguageSelector.astro", "client:component-export": "default" })}</a></li> </ul> </div> <a class="btn btn-ghost text-xl"> <i class="fas fa-laptop-code"></i> LimberDev
-</a> </div> <div class="navbar-center hidden lg:flex"> <ul class="menu menu-horizontal px-1 "> <li><a href="#aboutme_section">${i18n.NAVBAR.ITEM1}</a></li> <li><a href="#education_section">${i18n.NAVBAR.ITEM2}</a></li> <li><a href="#skills_section">${i18n.NAVBAR.ITEM3}</a></li> <!-- <li><a href="projects_section">{i18n.NAVBAR.ITEM4}</a></li> --> <li><a href="#contact_section">${i18n.NAVBAR.ITEM5}</a></li> <li>${renderComponent($$result, "LanguageSelector", $$LanguageSelector, {})}</li> </ul> </div> <div class="navbar-end"> ${renderComponent($$result, "ThemeToggleButton", ThemeToggleButton, { "client:load": true, "client:component-hydration": "load", "client:component-path": "C:/Users/limbp/Documents/Developer/Astro/limber-portfolio/src/components/ThemeToggleButton.jsx", "client:component-export": "default" })} </div> </div> `;
+  return renderTemplate`${maybeRenderHead()}<div class="navbar bg-base-100 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div class="navbar-start"> <div class="dropdown"> <div tabindex="0" role="button" class="btn btn-ghost lg:hidden"> <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path></svg> </div> <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"> <li><a href="#aboutme_section">${i18n.NAVBAR.ITEM1}</a></li> <li><a href="#education_section">${i18n.NAVBAR.ITEM2}</a></li> <li><a href="#skills_section">${i18n.NAVBAR.ITEM3}</a></li> <!-- <li><a href="projects_section">{i18n.NAVBAR.ITEM4}</a></li> --> <li><a href="#contact_section">${i18n.NAVBAR.ITEM5}</a></li> <li><a>${renderComponent($$result, "LanguageSelector", $$LanguageSelector, {})}</a></li> </ul> </div> <a class="btn btn-ghost text-xl"> <i class="fas fa-laptop-code"></i> LimberDev
+</a> </div> <div class="navbar-center hidden lg:flex"> <ul class="menu menu-horizontal px-1 "> <li><a href="#aboutme_section">${i18n.NAVBAR.ITEM1}</a></li> <li><a href="#education_section">${i18n.NAVBAR.ITEM2}</a></li> <li><a href="#skills_section">${i18n.NAVBAR.ITEM3}</a></li> <!-- <li><a href="projects_section">{i18n.NAVBAR.ITEM4}</a></li> --> <li><a href="#contact_section">${i18n.NAVBAR.ITEM5}</a></li> <li>${renderComponent($$result, "LanguageSelector", $$LanguageSelector, {})}</li> </ul> </div> <div class="navbar-end"> ${renderComponent($$result, "ThemeToggleButton", ThemeToggleButton, {})} </div> </div> `;
 }, "C:/Users/limbp/Documents/Developer/Astro/limber-portfolio/src/components/Navbar.astro", void 0);
 
 const LegalModal = ({ title, content, closeButtonText }) => {
