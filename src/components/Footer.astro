@@ -5,8 +5,8 @@ import { getI18N } from '../i18n';
 const { currentLocale} = Astro
 const i18n = getI18N({currentLocale});
 // Supongamos que tienes definido algo como esto en tu archivo i18n
-import LegalModal from '@components/LegalModal.jsx';
-import PrivacyModal from '@components/PrivacyModal.jsx'; 
+import LegalModal from '../components/LegalModal.jsx';
+import PrivacyModal from '../components/PrivacyModal.jsx'; 
 
 const legalTitle = i18n.LEGAL.TITLE;
 const legalContent = `${i18n.LEGAL.INTRODUCTION} ${i18n.LEGAL.CONTENT} ${i18n.LEGAL.ADDITIONAL}`;
