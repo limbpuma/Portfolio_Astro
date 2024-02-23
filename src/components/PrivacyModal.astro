@@ -1,0 +1,42 @@
+---
+
+const {
+  title,
+  content,
+  dataCollection,
+  dataUsage,
+  dataProtection,
+  userRights,
+  closeButtonText
+} = Astro.props;
+---
+
+<a
+  href="#"
+  class="hover:text-primary px-4 py-2 text-lg no-underline font-bold cursor-pointer"
+  onclick="document.getElementById('privacyModal').style.display = 'flex'; return false;"
+>
+  {title}
+</a>
+
+<div id="privacyModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center overflow-y-auto hidden">
+  <div class="modal-box relative bg-base-100 p-6 rounded-lg max-w-lg mx-auto shadow-lg">
+    
+    <h2 class="font-bold text-lg">{title}</h2>
+    <p>{content}</p>
+    <h3 class="font-bold">Information Collection</h3>
+    <p>{dataCollection}</p>
+    <h3 class="font-bold">Use of Information</h3>
+    <p>{dataUsage}</p>
+    <h3 class="font-bold">Protecting Your Information</h3>
+    <p>{dataProtection}</p>
+    <h3 class="font-bold">Your Rights</h3>
+    <p class="mb-4">{userRights}</p>
+    <button
+      class="btn btn-primary rounded-xl font-bold transition duration-300 ease-in-out transform hover:scale-105 hover:bg-primary-600 bg-primary-500 text-white px-4 py-2 "
+      onclick="document.getElementById('privacyModal').style.display = 'none'; return false;"
+    >{closeButtonText}
+    </button>
+  </div>
+</div>
+
