@@ -1,5 +1,7 @@
 import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
+import vercel from '@astrojs/vercel';
+import tailwind from '@astrojs/tailwind';
+import react from '@astrojs/react';
 
 import react from "@astrojs/react";
 
@@ -12,6 +14,7 @@ export default defineConfig({
       prefixDefaultLocale: false, // en -> / de -> /de es -> /es
     }
   },
-  integrations: [tailwind(), react()],
-  output: "server"
+  integrations: [vercel(), tailwind(), react()],
+  output: 'server'
+  
 });
