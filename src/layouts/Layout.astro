@@ -2,7 +2,6 @@
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { getLangFromUrl } from "../i18n/utils";
-import CookieConsent from '../components/cookies/CookieConsent.astro';
 
 
 
@@ -31,7 +30,7 @@ const lang = getLangFromUrl(Astro.url);
     <Navbar />
     <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <slot />
-        <CookieConsent/>
+
     </div>
     <Footer />
 </body>
