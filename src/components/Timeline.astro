@@ -4,7 +4,7 @@ import { getI18N } from '../i18n';
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 const sectionId = 'timeline';
-import SectionTitle from '../components/SectionTitle.astro'; // Asegúrate de que la ruta de importación sea correcta
+import SectionTitle from '@components/SectionTitle.astro'; // Asegúrate de que la ruta de importación sea correcta
 ---
 <div id="education_section">
 <ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">

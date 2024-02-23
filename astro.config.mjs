@@ -12,5 +12,6 @@ export default defineConfig({
       prefixDefaultLocale: false, // en -> / de -> /de es -> /es
     }
   },
-  integrations: [tailwind(), react()]
+  integrations: [tailwind(), react()],
+  output: "server"
 });
