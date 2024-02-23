@@ -1,0 +1,25 @@
+---
+// No se necesita lógica de script en la sección de Astro.
+---
+<div id="cookieConsent" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4" style="display: none;">
+  <div class="max-w-xl mx-auto text-center">
+    <p>We use cookies for a reason. Do you accept its use?</p>
+    <button class="btn btn-primary m-2" onclick="handleConsent(true)">Accept</button>
+    <button class="btn btn-ghost m-2" onclick="handleConsent(false)">Decline</button>
+  </div>
+</div>
+
+<script>
+  window.handleConsent = function(accept) {
+    const consentValue = accept ? 'accepted' : 'denied';
+    localStorage.setItem('cookieConsent', consentValue);
+    document.getElementById('cookieConsent').style.display = 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const cookieConsent = localStorage.getItem('cookieConsent');
+    if (!cookieConsent) {
+      document.getElementById('cookieConsent').style.display = 'block';
+    }
+  });
+</script>

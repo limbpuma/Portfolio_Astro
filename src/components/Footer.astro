@@ -1,12 +1,10 @@
-
 ---
-// Importa el componente Social
 import { getI18N } from '../i18n';
 const { currentLocale} = Astro
 const i18n = getI18N({currentLocale});
-// Supongamos que tienes definido algo como esto en tu archivo i18n
-import LegalModal from '../components/LegalModal.jsx';
-import PrivacyModal from '../components/PrivacyModal.jsx'; 
+
+import LegalModal from './LegalModal.astro';
+import PrivacyModal from './PrivacyModal.astro'; 
 
 const legalTitle = i18n.LEGAL.TITLE;
 const legalContent = `${i18n.LEGAL.INTRODUCTION} ${i18n.LEGAL.CONTENT} ${i18n.LEGAL.ADDITIONAL}`;
@@ -33,7 +31,7 @@ const techLinks = [
   <div class="container mx-auto text-center">
     <div class="mb-4">
       <div class="flex justify-center gap-4">
-        <!-- Itera sobre cada enlace de tecnología para generar dinámicamente los iconos -->
+        
         {techLinks.map((tech) => (
           <a href={tech.url} class="tooltip tooltip-bottom" data-tip={tech.name} target="_blank" rel="noopener noreferrer">
             <img src={tech.icon} class="w-8 h-8 filter hover:brightness-125" alt={tech.name} loading="lazy">
@@ -42,9 +40,9 @@ const techLinks = [
       </div>
     </div>
     <div class="mb-4">
-      <LegalModal client:load title={legalTitle} content={legalContent} closeButtonText={closeButtonText} />
+      <LegalModal title={legalTitle} content={legalContent} closeButtonText={closeButtonText} />
       <PrivacyModal 
-  client:load 
+  
   title="Privacy Policy" 
   content={i18n.PRIVACY.CONTENT} 
   dataCollection={i18n.PRIVACY.DATA_COLLECTION}
