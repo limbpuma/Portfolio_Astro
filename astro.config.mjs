@@ -1,17 +1,17 @@
 import { defineConfig } from 'astro/config';
-import vercel from '@astrojs/vercel'; // Asegúrate de que esta integración es necesaria para tu despliegue
+import vercel from '@astrojs/vercel';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 
-// Configuración de Astro
+// https://astro.build/config
 export default defineConfig({
   i18n: {
     defaultLocale: "en",
     locales: ["en", "de", "es"],
     routing: {
-      prefixDefaultLocale: false, // en -> / de -> /de es -> /es
+      prefixDefaultLocale: false,
     }
   },
-  integrations: [vercel(), tailwind(), react()],
-  output: 'server'
+  output: 'server',
+  integrations: [vercel(), tailwind(), react()]
 });
