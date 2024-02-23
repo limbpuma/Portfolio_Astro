@@ -24,13 +24,15 @@ const CookieConsent = () => {
   if (!show) return null;
 
   return (
-    <div className="card w-96 bg-neutral text-neutral-content fixed bottom-0 mb-4 mx-4 left-0 right-0">
-      <div className="card-body items-center text-center">
-        <h2 className="card-title">Cookies!</h2>
-        <p>We are using cookies for no reason.</p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary" onClick={handleAccept}>Accept</button>
-          <button className="btn btn-ghost" onClick={handleDeny}>Deny</button>
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+      <div className="card max-w-lg w-full mx-4 bg-neutral text-neutral-content">
+        <div className="card-body items-center text-center">
+          <h2 className="card-title">Cookies!</h2>
+          <p>We are using cookies for no reason.</p>
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary" onClick={handleAccept}>Accept</button>
+            <button className="btn btn-ghost" onClick={handleDeny}>Deny</button>
+          </div>
         </div>
       </div>
     </div>
