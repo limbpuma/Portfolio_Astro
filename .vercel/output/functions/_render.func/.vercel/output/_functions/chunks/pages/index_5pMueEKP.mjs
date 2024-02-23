@@ -802,13 +802,37 @@ function getLangFromUrl(url) {
   return lang;
 }
 
+const CookieConsent = () => {
+  const [showConsent, setShowConsent] = useState(false);
+  useEffect(() => {
+    const cookieConsent = localStorage.getItem("cookieConsent");
+    if (!cookieConsent) {
+      setShowConsent(true);
+    }
+  }, []);
+  const handleAccept = () => {
+    localStorage.setItem("cookieConsent", "accepted");
+    setShowConsent(false);
+  };
+  const handleDeny = () => {
+    setShowConsent(false);
+  };
+  if (!showConsent)
+    return null;
+  return /* @__PURE__ */ jsx("div", { className: "fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-xl mx-auto text-center", children: [
+    /* @__PURE__ */ jsx("p", { children: "Usamos cookies por alguna razón. ¿Aceptas su uso?" }),
+    /* @__PURE__ */ jsx("button", { className: "btn btn-primary m-2", onClick: handleAccept, children: "Aceptar" }),
+    /* @__PURE__ */ jsx("button", { className: "btn btn-ghost m-2", onClick: handleDeny, children: "Rechazar" })
+  ] }) });
+};
+
 const $$Astro$d = createAstro();
 const $$Layout = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$d, $$props, $$slots);
   Astro2.self = $$Layout;
   const { description, title } = Astro2.props;
   const lang = getLangFromUrl(Astro2.url);
-  return renderTemplate`<html${addAttribute(lang, "lang")} data-theme="night"> <head><meta charset="UTF-8"><meta name="description"${addAttribute(description, "content")}><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"><title>${title}</title>${renderHead()}</head> <body class="flex flex-col min-h-screen"> ${renderComponent($$result, "Navbar", $$Navbar, {})} <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> ${renderSlot($$result, $$slots["default"])} </div> ${renderComponent($$result, "Footer", $$Footer, {})} </body></html>`;
+  return renderTemplate`<html${addAttribute(lang, "lang")} data-theme="night"> <head><meta charset="UTF-8"><meta name="description"${addAttribute(description, "content")}><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"><title>${title}</title>${renderHead()}</head> <body class="flex flex-col min-h-screen"> ${renderComponent($$result, "Navbar", $$Navbar, {})} <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> ${renderSlot($$result, $$slots["default"])} ${renderComponent($$result, "CookieConsent", CookieConsent, { "client:load": true, "client:component-hydration": "load", "client:component-path": "C:/Users/limbp/Documents/Developer/Astro/limber-portfolio/src/components/cookies/Cookies.jsx", "client:component-export": "default" })} </div> ${renderComponent($$result, "Footer", $$Footer, {})} </body></html>`;
 }, "C:/Users/limbp/Documents/Developer/Astro/limber-portfolio/src/layouts/Layout.astro", void 0);
 
 const $$Astro$c = createAstro();
