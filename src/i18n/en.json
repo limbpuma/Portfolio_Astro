@@ -133,7 +133,7 @@
       "TITLE": "Let's Connect",
       "DESCRIPTION": "Open to collaborations and job opportunities. Feel free to reach out.",
       "RESUME": "View My Resume",
-      "RESUME_URL": "../public/cv/ResumeEN.pdf"
+      "RESUME_URL": "/cv/ResumeEN.pdf"
     },
     "FOOTER": {
       "PRIVACY_POLICY": "Privacy Policy",
