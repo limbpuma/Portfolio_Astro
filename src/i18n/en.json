@@ -50,47 +50,13 @@
     "PROJECTS": {
       "TITLE": "My Projects EN",
       "PROJECT_LIST": [
+        
         {
           "TITLE": "Project 1",
-          "BADGE": "New1",
-          "DESCRIPTION": "Description of Project 1.",
-          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-          "CATEGORIES": ["Category 1", "Category 2"]
-        },
-        {
-          "TITLE": "Project 2",
-          "BADGE": "New2",
-          "DESCRIPTION": "Description of Project 1.",
-          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-          "CATEGORIES": ["Category 1", "Category 2"]
-        },
-        {
-          "TITLE": "Project 3",
-          "BADGE": "New3",
-          "DESCRIPTION": "Description of Project 1.",
-          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-          "CATEGORIES": ["Category 1", "Category 2"]
-        },
-        {
-          "TITLE": "Project 4",
-          "BADGE": "New4",
-          "DESCRIPTION": "Description of Project 1.",
-          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-          "CATEGORIES": ["Category 1", "Category 2"]
-        },
-        {
-          "TITLE": "Project 5",
-          "BADGE": "New5",
-          "DESCRIPTION": "Description of Project 1.",
-          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-          "CATEGORIES": ["Category 1", "Category 2"]
-        },
-        {
-          "TITLE": "Project 6",
-          "BADGE": "New6",
-          "DESCRIPTION": "Description of Project 1.",
-          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-          "CATEGORIES": ["Category 1", "Category 2"]
+          "BADGE": "Astro",
+          "DESCRIPTION": "It's a project that is still in progress, with Astro React and Tailwind Responsive with API integration for products.",
+          "IMAGE": "/images/proyect_1.png",
+          "CATEGORIES": ["React", "Tailwind"]
         }
       ]
     },

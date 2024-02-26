@@ -51,46 +51,11 @@
       "TITLE": "My Projects ES",
       "PROJECT_LIST": [
         {
-          "TITLE": "Project 1",
-          "BADGE": "New1",
-          "DESCRIPTION": "Description of Project 1.",
-          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-          "CATEGORIES": ["Category 1", "Category 2"]
-        },
-        {
-          "TITLE": "Project 2",
-          "BADGE": "New2",
-          "DESCRIPTION": "Description of Project 1.",
-          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-          "CATEGORIES": ["Category 1", "Category 2"]
-        },
-        {
-          "TITLE": "Project 3",
-          "BADGE": "New3",
-          "DESCRIPTION": "Description of Project 1.",
-          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-          "CATEGORIES": ["Category 1", "Category 2"]
-        },
-        {
-          "TITLE": "Project 4",
-          "BADGE": "New4",
-          "DESCRIPTION": "Description of Project 1.",
-          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-          "CATEGORIES": ["Category 1", "Category 2"]
-        },
-        {
-          "TITLE": "Project 5",
-          "BADGE": "New5",
-          "DESCRIPTION": "Description of Project 1.",
-          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-          "CATEGORIES": ["Category 1", "Category 2"]
-        },
-        {
-          "TITLE": "Project 6",
-          "BADGE": "New6",
-          "DESCRIPTION": "Description of Project 1.",
-          "IMAGE": "https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",
-          "CATEGORIES": ["React", "tailwind"]
+          "TITLE": "Ecommerce Store",
+          "BADGE": "Astro",
+          "DESCRIPTION": "Es un proyecto que aún está en marcha, con Astro React y Tailwind Responsive con integración API para productos.",
+          "IMAGE": "/images/proyect_1.png",
+          "CATEGORIES": ["React", "Tailwind"]
         }
       ]
     },
