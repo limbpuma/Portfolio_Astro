@@ -54,14 +54,38 @@
           "BADGE": "Astro",
           "DESCRIPTION": "Es ist ein Projekt, das noch in Arbeit ist, mit Astro React und Tailwind Responsive mit API-Integration für Produkte.",
           "IMAGE": "/images/proyect_1.png",
-          "CATEGORIES": ["React", "Tailwind"]
+          "CATEGORIES": ["React", "Tailwind"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "https://astro-tailwind-shop.vercel.app/",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/Astro_Tailwind_Shop",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
         },
         {
           "TITLE": "Barber Landing",
           "BADGE": "Astro",
           "DESCRIPTION": "Ein Projekt, das noch in Entwicklung ist, mit Astro React und Tailwind für ein responsives Design mit Produkt-API-Integration.",
           "IMAGE": "/images/barbershop.png",
-          "CATEGORIES": ["React", "Tailwind"]
+          "CATEGORIES": ["React", "Tailwind"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "https://astro-barber-web.vercel.app/",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/Astro_Barber_web",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
         }
       ]
     },
