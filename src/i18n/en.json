@@ -59,7 +59,7 @@
           "CATEGORIES": ["React", "Tailwind"]
         },
         {
-          "TITLE": "Barber Landing",
+          "TITLE": "Project 2",
           "BADGE": "Astro",
           "DESCRIPTION": "A project still in development, featuring Astro React and Tailwind for a responsive design with a product API integration.",
           "IMAGE": "/images/barbershop.png",
