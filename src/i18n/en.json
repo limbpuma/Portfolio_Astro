@@ -57,6 +57,13 @@
           "DESCRIPTION": "It's a project that is still in progress, with Astro React and Tailwind Responsive with API integration for products.",
           "IMAGE": "/images/proyect_1.png",
           "CATEGORIES": ["React", "Tailwind"]
+        },
+        {
+          "TITLE": "Barber Landing",
+          "BADGE": "Astro",
+          "DESCRIPTION": "A project still in development, featuring Astro React and Tailwind for a responsive design with a product API integration.",
+          "IMAGE": "/images/barbershop.png",
+          "CATEGORIES": ["React", "Tailwind"]
         }
       ]
     },
