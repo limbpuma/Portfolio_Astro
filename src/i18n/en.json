@@ -55,7 +55,7 @@
           "TITLE": "Project 1",
           "BADGE": "Astro",
           "DESCRIPTION": "It's a project that is still in progress, with Astro React and Tailwind Responsive with API integration for products.",
-          "IMAGE": "/images/proyect_1.png",
+          "IMAGE": "/images/proyect_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -76,7 +76,7 @@
           "TITLE": "Project 2",
           "BADGE": "Astro",
           "DESCRIPTION": "A project still in development, featuring Astro React and Tailwind for a responsive design with a product API integration.",
-          "IMAGE": "/images/barbershop.png",
+          "IMAGE": "/images/barbershop_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {

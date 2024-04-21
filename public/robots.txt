@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /images/
+Allow: /$
+Allow: /en/
+Allow: /de/
+Allow: /es/
+Allow: /resume
+Sitemap: https://limbermartinez.com/sitemap.xml

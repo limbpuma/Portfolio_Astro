@@ -53,7 +53,7 @@
           "TITLE": "Ecommerce Store",
           "BADGE": "Astro",
           "DESCRIPTION": "Es ist ein Projekt, das noch in Arbeit ist, mit Astro React und Tailwind Responsive mit API-Integration für Produkte.",
-          "IMAGE": "/images/proyect_1.png",
+          "IMAGE": "/images/proyect_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -72,7 +72,7 @@
           "TITLE": "Barber Landing",
           "BADGE": "Astro",
           "DESCRIPTION": "Ein Projekt, das noch in Entwicklung ist, mit Astro React und Tailwind für ein responsives Design mit Produkt-API-Integration.",
-          "IMAGE": "/images/barbershop.png",
+          "IMAGE": "/images/barbershop_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {

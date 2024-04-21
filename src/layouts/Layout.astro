@@ -22,6 +22,8 @@ const lang = getLangFromUrl(Astro.url);
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+
 
     <title>{title}</title>
     
@@ -47,3 +49,15 @@ const lang = getLangFromUrl(Astro.url);
   --my-color: #ffabc8;
 }
 </style>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').then(registration => {
+        console.log('Service Worker registrado con éxito');
+      }).catch(err => {
+        console.log('Registro de Service Worker fallido:', err);
+      });
+    });
+  }
+</script>
+
