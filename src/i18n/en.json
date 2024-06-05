@@ -1,6 +1,12 @@
 {
   "SEO_TITLE": "Limber Martinez - Junior Full Stack Developer",
   "SEO_DESCRIPTION": "Discover Limber Martinez's portfolio, a Junior Full Stack Developer trained in React, Angular, and basics of Java and Spring Boot, seeking opportunities as a Junior or Trainee.",
+  "COOKIES_TEXT": {
+    "TITLE": "Cookies!",
+    "DESCRIPTION": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Wenn Sie weiterhin auf unserer Website surfen, stimmen Sie der Verwendung von Cookies zu.",
+    "ACCEPT": "Akzeptieren",
+    "DENY": "Ablehnen"
+  },
   "NAVBAR": {
     "ITEM1": "About Me",
     "ITEM2": "Education",
@@ -52,19 +58,19 @@
       "PROJECT_LIST": [
         
         {
-          "TITLE": "Project 1",
+          "TITLE": "Döner Restaurant",
           "BADGE": "Astro",
-          "DESCRIPTION": "It's a project that is still in progress, with Astro React and Tailwind Responsive with API integration for products.",
+          "DESCRIPTION": "This project is responsive, providing quick access to WhatsApp, phone, and location, and complies with GDPR.",
           "IMAGE": "/images/proyect_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {
-              "url": "https://astro-tailwind-shop.vercel.app/",
+              "url": "https://www.scharnhorst-doener.de/",
               "iconClass": "fas fa-globe",
               "label": "Project 1 Website"
             },
             {
-              "url": "https://github.com/limbpuma/Astro_Tailwind_Shop",
+              "url": "https://github.com/limbpuma/doner_express",
               "iconClass": "fab fa-github",
               "label": "Project 1 GitHub"
             }

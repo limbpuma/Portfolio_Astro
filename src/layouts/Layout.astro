@@ -3,19 +3,15 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { getLangFromUrl } from "../i18n/utils";
 import CookieConsent from '../components/CookieConsent.jsx';
+import { getI18N } from '../i18n';
 
-
-interface Props {
-  description: string
-  title: string
-}
-
-const { description, title } = Astro.props
-const lang = getLangFromUrl(Astro.url);
+const { description, title } = Astro.props;
+const currentLocale = getLangFromUrl(Astro.url);
+const i18n = getI18N({ currentLocale });
 ---
 
 <!doctype html>
-<html lang={lang} data-theme="night">
+<html lang={currentLocale} data-theme="night">
 <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -24,15 +20,13 @@ const lang = getLangFromUrl(Astro.url);
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="manifest" href="/manifest.json">
 
-
     <title>{title}</title>
-    
 </head>
 <body class="flex flex-col min-h-screen">
     <Navbar />
     <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <slot />
-        <CookieConsent client:load />
+        <CookieConsent client:load currentLocale={currentLocale} />
     </div>
     <Footer />
 </body>
@@ -60,4 +54,3 @@ const lang = getLangFromUrl(Astro.url);
     });
   }
 </script>
-

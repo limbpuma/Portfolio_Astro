@@ -1,6 +1,12 @@
 {
   "SEO_TITLE": "Limber Martinez - Desarrollador Full Stack Junior",
   "SEO_DESCRIPTION": "Descubre el portafolio de Limber Martinez, un Desarrollador Full Stack Junior con formación en React, Angular y fundamentos de Java y Spring Boot, buscando oportunidades como Junior o Trainee.",
+  "COOKIES_TEXT": {
+    "TITLE": "Cookies!",
+    "DESCRIPTION": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Wenn Sie weiterhin auf unserer Website surfen, stimmen Sie der Verwendung von Cookies zu.",
+    "ACCEPT": "Akzeptieren",
+    "DENY": "Ablehnen"
+  },
   "NAVBAR": {
     "ITEM1": "Sobre Mí",
     "ITEM2": "Formación",
@@ -51,14 +57,14 @@
       "TITLE": "My Projects ES",
       "PROJECT_LIST": [
         {
-          "TITLE": "Ecommerce Store",
+          "TITLE": "Restaurante Döner",
           "BADGE": "Astro",
-          "DESCRIPTION": "Es un proyecto que aún está en marcha, con Astro React y Tailwind Responsive con integración API para productos.",
+          "DESCRIPTION": "Este proyecto aplica principios responsive para facilitar el acceso rápido a WhatsApp, teléfono y ubicación, cumpliendo con GDPR.",
           "IMAGE": "/images/proyect_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {
-              "url": "https://astro-tailwind-shop.vercel.app/",
+              "url": "https://www.scharnhorst-doener.de/",
               "iconClass": "fas fa-globe",
               "label": "Project 1 Website"
             },
