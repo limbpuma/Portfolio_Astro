@@ -5,7 +5,7 @@ const languages = {
   de: '/images/de.webp',
 };
 const currentPath = Astro.url.pathname;
-const currentLocale = Object.keys(languages).find(lang => currentPath.startsWith(`/${lang}`)) || 'en';
+const currentLocale = Object.keys(languages).find(lang => currentPath.startsWith(`/${lang}`)) || 'de';
 const otherLanguages = Object.entries(languages).filter(([code]) => code !== currentLocale);
 ---
 
@@ -15,7 +15,7 @@ const otherLanguages = Object.entries(languages).filter(([code]) => code !== cur
   </button>
   <div class="language-options ">
     {otherLanguages.map(([code, image]) => (
-      <a href={`/${code === 'en' ? '' : code}`}  class="block mt-2">
+      <a href={`/${code === 'de' ? '' : code}`}  class="block mt-2">
         <img src={image} alt={code.toUpperCase()} class="rounded-full w-6 h-6" />
       </a>
     ))}
@@ -26,6 +26,7 @@ const otherLanguages = Object.entries(languages).filter(([code]) => code !== cur
 .language-selector {
   display: inline-block;
   position: relative;
+  margin-top: auto;
 }
 .language-options {
   display: none;

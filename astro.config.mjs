@@ -23,7 +23,7 @@ function generateSitemap() {
     <lastmod>${new Date().toISOString()}</lastmod>
     <priority>1.00</priority>
   </url>
-  <!-- Más URLs aquí -->
+
 </urlset>`;
   fs.writeFileSync('public/sitemap.xml', sitemapContent);
 }
@@ -31,7 +31,7 @@ function generateSitemap() {
 // Configuración de Astro
 export default defineConfig({
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "de",
     locales: ["en", "de", "es"],
     routing: {
       prefixDefaultLocale: false,

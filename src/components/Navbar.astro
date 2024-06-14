@@ -18,12 +18,12 @@ const i18n = getI18N({currentLocale});
           <li><a href="#skills_section">{i18n.NAVBAR.ITEM3}</a></li>
            <!-- <li><a href="projects_section">{i18n.NAVBAR.ITEM4}</a></li> -->
          <li><a href="#contact_section">{i18n.NAVBAR.ITEM5}</a></li>
-          <li ><a><LanguageSelector/></a></li>
+          
           
         </ul>
       </div>
       <a class="btn btn-ghost text-xl">
-        <i class="fas fa-laptop-code"></i> LimberDev
+        <i class="fas fa-laptop-code"></i> Limber
     </a>
     </div>
     <div class="navbar-center hidden lg:flex">
@@ -33,11 +33,12 @@ const i18n = getI18N({currentLocale});
         <li><a href="#skills_section">{i18n.NAVBAR.ITEM3}</a></li>
         <!-- <li><a href="projects_section">{i18n.NAVBAR.ITEM4}</a></li> -->
        <li><a href="#contact_section">{i18n.NAVBAR.ITEM5}</a></li>
-        <li ><LanguageSelector /></li>
+        
         
       </ul>
     </div>
-    <div class="navbar-end">
+    <div class="navbar-end gap-2 mx-auto my-auto">
+      <LanguageSelector/>
       <ThemeToggleButton client:load/>
     </div>
     </div>

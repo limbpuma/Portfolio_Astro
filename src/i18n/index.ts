@@ -9,7 +9,7 @@ const LANG = {
 };
 
 export const getI18N = ({
-	currentLocale = 'en',
+	currentLocale = 'de',
 }: {
 	currentLocale: string | undefined;
 }) => {
