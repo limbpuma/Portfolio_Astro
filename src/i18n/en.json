@@ -37,6 +37,11 @@
   "TIMELINE": {
     "EVENTS": [
       {
+        "DATE": "July 2024 - Ongoing",
+        "TITLE": "BFW IT Specialist Application Development IHK",
+        "DESCRIPTION": "Training in application development, providing advanced skills in programming and software development."
+      },
+      {
         "DATE": "2023",
         "TITLE": "Oracle One Altura Education Program",
         "DESCRIPTION": "An intensive program focused on Java and Spring Boot, establishing a solid foundation in backend development."
@@ -51,6 +56,7 @@
         "TITLE": "Web Developer Certification",
         "DESCRIPTION": "Beginning of my web development journey, covering HTML, CSS, and JavaScript at ILS in Hamburg."
       }
+      
     ]
   },
     "PROJECTS": {

@@ -37,6 +37,11 @@
   "TIMELINE": {
     "EVENTS": [
       {
+        "DATE": "Julio 2024 - En Curso",
+        "TITLE": "BFW Fachinformatiker Anwendungsentwicklung IHK",
+        "DESCRIPTION": "Formación en desarrollo de aplicaciones, proporcionando habilidades avanzadas en programación y desarrollo de software."
+      },
+      {
         "DATE": "2023",
         "TITLE": "Programa Oracle One Altura Education",
         "DESCRIPTION": "Programa intensivo enfocado en Java y Spring Boot, estableciendo una base sólida en desarrollo Backend."
@@ -51,6 +56,7 @@
         "TITLE": "Certificación Desarrollador Web",
         "DESCRIPTION": "Inicio de mi viaje en desarrollo web, abarcando HTML, CSS y JavaScript en el ILS de Hamburgo."
       }
+      
     ]
   },
     "PROJECTS": {

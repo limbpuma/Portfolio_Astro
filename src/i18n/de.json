@@ -36,6 +36,11 @@
   "TIMELINE": {
     "EVENTS": [
       {
+        "DATE": "Juli 2024 - Laufend",
+        "TITLE": "BFW Fachinformatiker Anwendungsentwicklung IHK",
+        "DESCRIPTION": "Ausbildung in der Anwendungsentwicklung, die fortgeschrittene Fähigkeiten in Programmierung und Softwareentwicklung vermittelt."
+      },
+      {
         "DATE": "2023",
         "TITLE": "Oracle One Altura Education Programm",
         "DESCRIPTION": "Ein intensives Programm mit Fokus auf Java und Spring Boot, das eine solide Grundlage in der Backend-Entwicklung schafft."
@@ -50,6 +55,7 @@
         "TITLE": "Webentwickler-Zertifizierung",
         "DESCRIPTION": "Beginn meiner Webentwicklungskarriere, die HTML, CSS und JavaScript am ILS in Hamburg umfasst."
       }
+      
     ]
   },
     "PROJECTS": {
