@@ -1,6 +1,6 @@
 {
-  "SEO_TITLE": "Limber Martinez - Junior Full-Stack-Entwickler",
-  "SEO_DESCRIPTION": "Entdecken Sie das Portfolio von Limber Martinez, einem Junior Full-Stack-Entwickler mit Ausbildung in React, Angular sowie Grundlagen in Java und Spring Boot, der nach Möglichkeiten als Junior oder Trainee sucht.",
+  "SEO_TITLE": "Limber Martinez - Trainee Fachinformatiker Anwendungsentwicklung",
+"SEO_DESCRIPTION": "Limber Martinez, Umschüler in Anwendungsentwicklung, sucht ein Praktikum ab Juli 2025. Kenntnisse in Frontend und Backend.",
   "COOKIES_TEXT": {
     "TITLE": "Cookies!",
     "DESCRIPTION": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Wenn Sie weiterhin auf unserer Website surfen, stimmen Sie der Verwendung von Cookies zu.",
@@ -16,15 +16,15 @@
   },
   "HERO": {
     "TITLE": "Limber Martinez",
-    "SUBTITLE": "Junior Full Stack Entwickler",
-    "DESCRIPTION": "Mit einer soliden Grundlage in Frontend-Technologien und grundlegenden Backend-Kenntnissen, bin ich bereit, in einer dynamischen Tech-Umgebung beizutragen und zu wachsen. Nach Abschluss intensiver Trainingsprogramme freue ich mich darauf, mein Wissen anzuwenden und meine Fachkenntnisse zu erweitern.",
-    "BUTTON": "Meine Arbeiten entdecken"
+  "SUBTITLE": "Trainee in Anwendungsentwicklung",
+  "DESCRIPTION": "Derzeit im ersten Jahr meiner Umschulung zum Fachinformatiker für Anwendungsentwicklung am BFW Dortmund, suche ich nach einer spannenden Praktikumsmöglichkeit ab Juli 2025, um meine Fähigkeiten in einer realen Arbeitsumgebung weiter auszubauen.",
+  "BUTTON": "Meine Ausbildung entdecken"
   },
   "ABOUT_ME": {
     "TITLE": "Über Mich",
-    "PARAGRAPH_1": "Hallo, ich bin Limber Martinez, ein leidenschaftlicher Webentwickler mit Schwerpunkt auf dem Frontend und wachsendem Interesse am Backend. Ich begann meine Ausbildung am ILS in Hamburg, machte Fortschritte durch Spezialisierungen in React und Angular und erwarb Grundlagen in NodeJS und Java.",
-    "PARAGRAPH_2": "Meine jüngste Teilnahme am Oracle One Altura Education Alura-Programm führte mich in Java und Spring Boot ein. Ich schätze die Scrum-Methodologie und die Bedeutung von zwischenmenschlichen Fähigkeiten in technischen Teams.",
-    "PARAGRAPH_3": "Auf der Suche nach Möglichkeiten als Junior Frontend-Entwickler oder Trainee bin ich begierig, mein Wissen anzuwenden und in einer herausfordernden Umgebung zu wachsen."
+  "PARAGRAPH_1": "Hallo, ich bin Limber Martinez, derzeit in der Ausbildung zum Fachinformatiker für Anwendungsentwicklung. Mit einem starken Fokus auf die Backend-Entwicklung und grundlegenden Kenntnissen im Frontend, suche ich nach Möglichkeiten, praktische Erfahrungen in einem professionellen Umfeld zu sammeln.",
+  "PARAGRAPH_2": "Im Rahmen meiner Ausbildung habe ich bereits Kenntnisse in Java, HTML, CSS und PHP erworben. Ich lerne kontinuierlich neue Technologien und entwickle meine Fähigkeiten weiter, um mich auf die Anforderungen der modernen Softwareentwicklung vorzubereiten.",
+  "PARAGRAPH_3": "Ich bin auf der Suche nach einem Praktikum, das es mir ermöglicht, meine theoretischen Kenntnisse in die Praxis umzusetzen und in einem Team von erfahrenen Entwicklern zu lernen und zu wachsen."
   },
   "TITLESECTION": {
     "timeline": { "title": "Meine Reise", "subtitle": "Weg zur Entwicklung" },
@@ -148,7 +148,7 @@
       "COPYRIGHT": "Urheberrecht © Limber Martinez 2024. Alle Rechte vorbehalten."
     },
     "UNDER_CONSTRUCTION": {
-      "MESSAGE": "Ich aktualisiere gerade mein Projektportfolio für 2024. In der Zwischenzeit entdecken Sie meine Projekte von 2023 auf GitHub.",
+      "MESSAGE": "Ich aktualisiere gerade mein Projektportfolio. In der Zwischenzeit entdecken Sie meine Projekte von 2023 auf GitHub.",
       "GITHUB_BUTTON": "Auf GitHub erkunden"
     },
     "LEGAL": {

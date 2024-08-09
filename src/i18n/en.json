@@ -1,6 +1,6 @@
 {
-  "SEO_TITLE": "Limber Martinez - Junior Full Stack Developer",
-  "SEO_DESCRIPTION": "Discover Limber Martinez's portfolio, a Junior Full Stack Developer trained in React, Angular, and basics of Java and Spring Boot, seeking opportunities as a Junior or Trainee.",
+  "SEO_TITLE": "Limber Martinez - Trainee IT Specialist in Application Development",
+"SEO_DESCRIPTION": "Limber Martinez, trainee in application development, seeking an internship starting July 2025. Knowledge in frontend and backend.",
   "COOKIES_TEXT": {
     "TITLE": "Cookies!",
     "DESCRIPTION": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Wenn Sie weiterhin auf unserer Website surfen, stimmen Sie der Verwendung von Cookies zu.",
@@ -16,15 +16,15 @@
   },
   "HERO": {
     "TITLE": "Limber Martinez",
-    "SUBTITLE": "Junior Full Stack Developer",
-    "DESCRIPTION": "With a strong foundation in Frontend technologies and fundamental Backend skills, I am ready to contribute and grow in a dynamic tech environment. Having completed intensive training programs, I am eager to apply my knowledge and enhance my expertise.",
-    "BUTTON": "Explore My Work"
+  "SUBTITLE": "Trainee in Application Development",
+  "DESCRIPTION": "Currently in the first year of my training as an IT specialist in application development at BFW Dortmund, I am seeking an exciting internship opportunity starting in July 2025 to expand my skills in a real work environment.",
+  "BUTTON": "Discover my training"
   },
   "ABOUT_ME": {
     "TITLE": "About Me",
-    "PARAGRAPH_1": "Hello, I'm Limber Martinez, a passionate web developer with a focus on Frontend and a growing interest in Backend. I began my training at ILS in Hamburg, progressing through specializations in React and Angular, and acquiring fundamentals of NodeJS and Java.",
-    "PARAGRAPH_2": "My recent participation in the Oracle One Altura Education Alura program introduced me to Java and Spring Boot. I value the Scrum methodology and the importance of interpersonal skills in technical teams.",
-    "PARAGRAPH_3": "Looking for opportunities as a Junior Frontend Developer or Trainee, I am eager to apply my knowledge and grow in a challenging environment."
+  "PARAGRAPH_1": "Hello, I’m Limber Martinez, currently training as an IT specialist in application development. With a strong focus on backend development and basic knowledge in frontend, I am looking for opportunities to gain practical experience in a professional environment.",
+  "PARAGRAPH_2": "As part of my training, I have gained knowledge in Java, HTML, CSS, and PHP. I am continuously learning new technologies and developing my skills to prepare for the challenges of modern software development.",
+  "PARAGRAPH_3": "I am seeking an internship that allows me to apply my theoretical knowledge in practice and to learn and grow within a team of experienced developers."
   },
   "TITLESECTION": {
     "timeline": { "title": "My Journey", "subtitle": "Path to Development" },
@@ -152,7 +152,7 @@
       "COPYRIGHT": "Copyright © Limber Martinez 2024. All rights reserved."
     },
     "UNDER_CONSTRUCTION": {
-      "MESSAGE": "I'm currently refreshing my project portfolio for 2024. Meanwhile, discover my 2023 projects on GitHub.",
+      "MESSAGE": "I'm currently refreshing my project portfolio. Meanwhile, discover my 2023 projects on GitHub.",
       "GITHUB_BUTTON": "Explore on GitHub"
     },
     "LEGAL": {

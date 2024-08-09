@@ -1,6 +1,6 @@
 {
-  "SEO_TITLE": "Limber Martinez - Desarrollador Full Stack Junior",
-  "SEO_DESCRIPTION": "Descubre el portafolio de Limber Martinez, un Desarrollador Full Stack Junior con formación en React, Angular y fundamentos de Java y Spring Boot, buscando oportunidades como Junior o Trainee.",
+  "SEO_TITLE": "Limber Martinez - Trainee Fachinformatiker Anwendungsentwicklung",
+"SEO_DESCRIPTION": "Limber Martinez, Umschüler en Anwendungsentwicklung, busca una práctica a partir de julio de 2025. Conocimientos en Frontend y Backend.",
   "COOKIES_TEXT": {
     "TITLE": "Cookies!",
     "DESCRIPTION": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Wenn Sie weiterhin auf unserer Website surfen, stimmen Sie der Verwendung von Cookies zu.",
@@ -16,15 +16,15 @@
   },
   "HERO": {
     "TITLE": "Limber Martinez",
-    "SUBTITLE": "Desarrollador Full Stack Junior",
-    "DESCRIPTION": "Especializado en tecnologías Frontend con una base sólida en Backend, me encuentro listo para sumergirme en el mundo tecnológico y contribuir con mis habilidades. Formado en programas intensivos, busco oportunidades donde pueda crecer profesionalmente y aportar desde el primer día.",
-    "BUTTON": "Explora mis Proyectos"
+  "SUBTITLE": "Trainee en Desarrollo de Aplicaciones",
+  "DESCRIPTION": "Actualmente en el primer año de mi formación como Fachinformatiker en Desarrollo de Aplicaciones en BFW Dortmund, estoy buscando una emocionante oportunidad de prácticas a partir de julio de 2025 para expandir mis habilidades en un entorno laboral real.",
+  "BUTTON": "Descubre mi formación"
   },
   "ABOUT_ME": {
     "TITLE": "Sobre Mí",
-    "PARAGRAPH_1": "Hola, soy Limber Martinez, un apasionado del desarrollo web con énfasis en Frontend y un creciente interés en Backend. Comencé mi formación en el ILS de Hamburgo, avanzando a través de especializaciones en React y Angular, y adquiriendo fundamentos de NodeJS y Java.",
-    "PARAGRAPH_2": "Mi participación reciente en el programa de Oracle One Altura Education Alura me introdujo en Java y Spring Boot. Valoro la metodología Scrum y la importancia de las habilidades interpersonales en equipos técnicos.",
-    "PARAGRAPH_3": "Buscando oportunidades como Desarrollador Frontend Junior o Trainee, estoy ansioso por aplicar mis conocimientos y crecer en un entorno desafiante."
+    "PARAGRAPH_1": "Hola, soy Limber Martinez, actualmente en formación como Fachinformatiker en Desarrollo de Aplicaciones. Con un fuerte enfoque en el desarrollo backend y conocimientos básicos en frontend, busco oportunidades para adquirir experiencia práctica en un entorno profesional.",
+    "PARAGRAPH_2": "Como parte de mi formación, he adquirido conocimientos en Java, HTML, CSS y PHP. Estoy aprendiendo continuamente nuevas tecnologías y desarrollando mis habilidades para prepararme para los desafíos del desarrollo de software moderno.",
+    "PARAGRAPH_3": "Estoy buscando una práctica que me permita aplicar mis conocimientos teóricos en la práctica y aprender y crecer en un equipo de desarrolladores experimentados."
   },
   "TITLESECTION": {
     "timeline": { "title": "Mi Trayectoria", "subtitle": "Camino hacia el Desarrollo" },
@@ -149,7 +149,7 @@
       "COPYRIGHT": "Derechos de autor © Limber Martinez 2024. Todos los derechos reservados."
     },
     "UNDER_CONSTRUCTION": {
-      "MESSAGE": "Actualmente estoy renovando mi portafolio de proyectos para 2024. Mientras tanto, puedes visitar mi GitHub para ver los proyectos de 2023.",
+      "MESSAGE": "Actualmente estoy renovando mi portafolio de proyectos. Mientras tanto, puedes visitar mi GitHub para ver los proyectos de 2023.",
       "GITHUB_BUTTON": "Explorar en GitHub"
     },
     "LEGAL": {
