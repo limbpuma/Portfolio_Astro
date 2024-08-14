@@ -6,7 +6,6 @@ const i18n = getI18N({ currentLocale });
 const sectionId = 'projects';
 const projects = i18n.PROJECTS.PROJECT_LIST;
 import SectionTitle from './SectionTitle.astro';
-
 import Social from '../components/Social.astro';
 
 
@@ -18,7 +17,8 @@ import Social from '../components/Social.astro';
     {projects.map((project) => (
       <div class="card w-full shadow-lg hover:shadow-2xl transition-transform duration-700 ease-in-out transform hover:scale-105 group ">
         <figure class="overflow-hidden">
-          <img src={project.IMAGE} alt={project.TITLE} class="transition-transform duration-700 ease-in-out group-hover:scale-110 h-64"/>
+          <img src={project.IMAGE} alt={project.TITLE} class="w-full h-64 object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"/>
+
         </figure>
         <div class="card-body flex items-center">
           <h2 class="card-title">
