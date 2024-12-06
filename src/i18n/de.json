@@ -83,7 +83,7 @@
         {
           "TITLE": "Barber Landing",
           "BADGE": "Astro",
-          "DESCRIPTION": "Ein Projekt, das noch in Entwicklung ist, mit Astro React und Tailwind für ein responsives Design mit Produkt-API-Integration.",
+          "DESCRIPTION": "Eine moderne, voll responsive Webseite für eine Friseurseite, entwickelt mit Astro, React und Tailwind für ein elegantes und benutzerfreundliches Design.",
           "IMAGE": "/images/barbershop_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
@@ -94,6 +94,25 @@
             },
             {
               "url": "https://github.com/limbpuma/Astro_Barber_web",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
+        },
+        {
+          "TITLE": "Integra Pflege",
+          "BADGE": "Astro",
+          "DESCRIPTION": "Ein voll responsives, statisches Astro-Projekt mit GDPR-Konformität und einem PHP-Kontaktformular, entwickelt für Datenschutz und Benutzerfreundlichkeit.",
+          "IMAGE": "/images/integra_1.webp",
+          "CATEGORIES": ["Astro", "Tailwind"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "https://pflegedienst-integra.de/",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/seniorCare.git",
               "iconClass": "fab fa-github",
               "label": "Project 1 GitHub"
             }
