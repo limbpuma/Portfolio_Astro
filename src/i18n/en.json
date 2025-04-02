@@ -15,11 +15,11 @@
     "ITEM5": "Contact"
   },
   "HERO": {
-    "TITLE": "Limber Martinez",
-  "SUBTITLE": "Trainee in Application Development",
-  "DESCRIPTION": "Currently in the first year of my training as an IT specialist in application development at BFW Dortmund, I am seeking an exciting internship opportunity starting in July 2025 to expand my skills in a real work environment.",
-  "BUTTON": "Discover my training"
-  },
+  "TITLE": "Limber Martinez",
+  "SUBTITLE": "Application Development Trainee",
+  "DESCRIPTION": "Currently training as an Application Development Specialist (IHK) at BFW Dortmund. I’m looking for job opportunities starting in August 2026. Open to collaborating on projects or taking on occasional freelance tasks to contribute and continue learning.",
+  "BUTTON": "Learn more about me"
+},
   "ABOUT_ME": {
     "TITLE": "About Me",
   "PARAGRAPH_1": "Hello, I’m Limber Martinez, currently training as an IT specialist in application development. With a strong focus on backend development and basic knowledge in frontend, I am looking for opportunities to gain practical experience in a professional environment.",

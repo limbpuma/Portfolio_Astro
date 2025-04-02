@@ -15,11 +15,11 @@
     "ITEM5": "Kontakt"
   },
   "HERO": {
-    "TITLE": "Limber Martinez",
+  "TITLE": "Limber Martinez",
   "SUBTITLE": "Trainee in Anwendungsentwicklung",
-  "DESCRIPTION": "Derzeit im ersten Jahr meiner Umschulung zum Fachinformatiker für Anwendungsentwicklung am BFW Dortmund, suche ich nach einer spannenden Praktikumsmöglichkeit ab Juli 2025, um meine Fähigkeiten in einer realen Arbeitsumgebung weiter auszubauen.",
-  "BUTTON": "Meine Ausbildung entdecken"
-  },
+  "DESCRIPTION": "Ich befinde mich derzeit in der Umschulung zum Fachinformatiker für Anwendungsentwicklung (IHK) am BFW Dortmund. Ab August 2026 suche ich eine Festanstellung. Zudem bin ich offen für projektbezogene Mitarbeit oder gelegentliche Freelance-Aufträge.",
+  "BUTTON": "Mehr über mich"
+},
   "ABOUT_ME": {
     "TITLE": "Über Mich",
   "PARAGRAPH_1": "Hallo, ich bin Limber Martinez, derzeit in der Ausbildung zum Fachinformatiker für Anwendungsentwicklung. Mit einem starken Fokus auf die Backend-Entwicklung und grundlegenden Kenntnissen im Frontend, suche ich nach Möglichkeiten, praktische Erfahrungen in einem professionellen Umfeld zu sammeln.",
