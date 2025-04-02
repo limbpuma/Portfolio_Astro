@@ -16,16 +16,16 @@
   },
   "HERO": {
   "TITLE": "Limber Martinez",
-  "SUBTITLE": "Application Development Trainee",
-  "DESCRIPTION": "Currently training as an Application Development Specialist (IHK) at BFW Dortmund. I’m looking for job opportunities starting in August 2026. Open to collaborating on projects or taking on occasional freelance tasks to contribute and continue learning.",
-  "BUTTON": "Learn more about me"
+  "SUBTITLE": "Developer in training with future perspective",
+  "DESCRIPTION": "Currently training as an Application Developer (Fachinformatiker), I’m preparing to enter the professional world. Open to freelance collaborations and impactful projects while building towards future employment opportunities.",
+  "BUTTON": "Explore my projects"
 },
-  "ABOUT_ME": {
-    "TITLE": "About Me",
-  "PARAGRAPH_1": "Hello, I’m Limber Martinez, currently training as an IT specialist in application development. With a strong focus on backend development and basic knowledge in frontend, I am looking for opportunities to gain practical experience in a professional environment.",
-  "PARAGRAPH_2": "As part of my training, I have gained knowledge in Java, HTML, CSS, and PHP. I am continuously learning new technologies and developing my skills to prepare for the challenges of modern software development.",
-  "PARAGRAPH_3": "I am seeking an internship that allows me to apply my theoretical knowledge in practice and to learn and grow within a team of experienced developers."
-  },
+"ABOUT_ME": {
+  "TITLE": "About Me",
+  "PARAGRAPH_1": "Hi, I’m Limber Martinez. I’m currently training as an Application Developer (Fachinformatiker) in Dortmund. I’m passionate about creating practical solutions and continuously learning new technologies.",
+  "PARAGRAPH_2": "I have experience with Java, HTML, CSS, PHP, and I’m currently diving into modern tools like Laravel, Vue.js, and Docker. I’m doing my internship at the digital agency Labor B.",
+  "PARAGRAPH_3": "I’m open to freelance collaborations or small development tasks, with a long-term goal of entering the tech industry full-time. If you have an exciting challenge, I’d love to hear about it."
+},
   "TITLESECTION": {
     "timeline": { "title": "My Journey", "subtitle": "Path to Development" },
     "projects": { "title": "Portfolio", "subtitle": "My Projects" },
