@@ -15,17 +15,17 @@
     "ITEM5": "Contacto"
   },
   "HERO": {
-    "TITLE": "Limber Martinez",
-  "SUBTITLE": "Trainee en Desarrollo de Aplicaciones",
-  "DESCRIPTION": "Actualmente en el primer año de mi formación como Fachinformatiker en Desarrollo de Aplicaciones en BFW Dortmund, estoy buscando una emocionante oportunidad de prácticas a partir de julio de 2025 para expandir mis habilidades en un entorno laboral real.",
-  "BUTTON": "Descubre mi formación"
-  },
-  "ABOUT_ME": {
-    "TITLE": "Sobre Mí",
-    "PARAGRAPH_1": "Hola, soy Limber Martinez, actualmente en formación como Fachinformatiker en Desarrollo de Aplicaciones. Con un fuerte enfoque en el desarrollo backend y conocimientos básicos en frontend, busco oportunidades para adquirir experiencia práctica en un entorno profesional.",
-    "PARAGRAPH_2": "Como parte de mi formación, he adquirido conocimientos en Java, HTML, CSS y PHP. Estoy aprendiendo continuamente nuevas tecnologías y desarrollando mis habilidades para prepararme para los desafíos del desarrollo de software moderno.",
-    "PARAGRAPH_3": "Estoy buscando una práctica que me permita aplicar mis conocimientos teóricos en la práctica y aprender y crecer en un equipo de desarrolladores experimentados."
-  },
+  "TITLE": "Limber Martinez",
+  "SUBTITLE": "Desarrollador en formación con visión a futuro",
+  "DESCRIPTION": "En plena formación como Fachinformatiker en Desarrollo de Aplicaciones, me preparo para integrarme en el mundo profesional. Abierto a colaboraciones freelance y proyectos que aporten valor, mientras me desarrollo para nuevas oportunidades laborales.",
+  "BUTTON": "Explora mis proyectos"
+},
+"ABOUT_ME": {
+  "TITLE": "Sobre Mí",
+  "PARAGRAPH_1": "Hola, soy Limber Martinez. Actualmente realizo una formación como Fachinformatiker en Desarrollo de Aplicaciones en Dortmund. Me apasiona crear soluciones prácticas y aprender constantemente nuevas tecnologías.",
+  "PARAGRAPH_2": "He trabajado con tecnologías como Java, HTML, CSS, PHP, y sigo formándome en herramientas modernas como Laravel, Vue.js y Docker.",
+  "PARAGRAPH_3": "Estoy abierto a colaborar en proyectos freelance o tareas de desarrollo, con la vista puesta en incorporarme al mundo laboral de forma estable en el futuro cercano. Si tienes un reto interesante, estaré encantado de ayudarte."
+},
   "TITLESECTION": {
     "timeline": { "title": "Mi Trayectoria", "subtitle": "Camino hacia el Desarrollo" },
     "projects": { "title": "Portafolio", "subtitle": "Mis Proyectos" },
