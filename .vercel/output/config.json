@@ -2,6 +2,9 @@
 	"version": 3,
 	"routes": [
 		{
+			"handle": "filesystem"
+		},
+		{
 			"src": "^/_astro/(.*)$",
 			"headers": {
 				"cache-control": "public, max-age=31536000, immutable"
@@ -9,34 +12,35 @@
 			"continue": true
 		},
 		{
-			"handle": "filesystem"
-		},
-		{
-			"src": "^\\/_image$",
+			"src": "^/_server-islands/([^/]+?)/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/404\\/?$",
+			"src": "^/_image/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/de\\/?$",
+			"src": "^/404/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/en\\/?$",
+			"src": "^/de/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/es\\/?$",
+			"src": "^/en/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "^\\/$",
+			"src": "^/es/?$",
 			"dest": "_render"
 		},
 		{
-			"src": "/.*",
+			"src": "^/$",
+			"dest": "_render"
+		},
+		{
+			"src": "^/.*$",
 			"dest": "_render",
 			"status": 404
 		}
