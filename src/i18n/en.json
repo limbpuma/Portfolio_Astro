@@ -1,6 +1,6 @@
 {
-  "SEO_TITLE": "Limber Martinez - Trainee IT Specialist in Application Development",
-"SEO_DESCRIPTION": "Limber Martinez, trainee in application development, seeking an internship starting July 2025. Knowledge in frontend and backend.",
+  "SEO_TITLE": "Limber Martinez - AI-Enhanced Full-Stack Developer | Microsoft AI-900 Certified",
+  "SEO_DESCRIPTION": "Limber Martinez, AI-powered application developer specializing in LangChain, OpenAI APIs, and intelligent web solutions. Available for internships starting July 2025.",
   "COOKIES_TEXT": {
     "TITLE": "Cookies!",
     "DESCRIPTION": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Wenn Sie weiterhin auf unserer Website surfen, stimmen Sie der Verwendung von Cookies zu.",
@@ -16,15 +16,15 @@
   },
   "HERO": {
   "TITLE": "Limber Martinez",
-  "SUBTITLE": "Developer in training with future perspective",
-  "DESCRIPTION": "Currently training as an Application Developer (Fachinformatiker), I’m preparing to enter the professional world. Open to freelance collaborations and impactful projects while building towards future employment opportunities.",
-  "BUTTON": "Explore my projects"
+  "SUBTITLE": "AI-Enhanced Full-Stack Developer | Microsoft AI-900 Certified",
+  "DESCRIPTION": "Application Developer in training specializing in AI-powered web solutions. Experienced in building intelligent applications with LangChain, OpenAI APIs, and modern AI development tools. Ready to bring AI innovation to your next project.",
+  "BUTTON": "Explore my AI-powered projects"
 },
 "ABOUT_ME": {
   "TITLE": "About Me",
-  "PARAGRAPH_1": "Hi, I’m Limber Martinez. I’m currently training as an Application Developer (Fachinformatiker) in Dortmund. I’m passionate about creating practical solutions and continuously learning new technologies.",
-  "PARAGRAPH_2": "I have experience with Java, HTML, CSS, PHP, and I’m currently diving into modern tools like Laravel, Vue.js, and Docker.",
-  "PARAGRAPH_3": "I’m open to freelance collaborations or small development tasks, with a long-term goal of entering the tech industry full-time. If you have an exciting challenge, I’d love to hear about it."
+  "PARAGRAPH_1": "Hi, I'm Limber Martinez, a Microsoft AI-900 certified developer currently training as an Application Developer (Fachinformatiker) in Dortmund. I specialize in creating AI-powered solutions and building intelligent web applications.",
+  "PARAGRAPH_2": "I have hands-on experience with AI tools like LangChain, OpenAI APIs, Python agents, and modern development tools including Cursor, GitHub Copilot, and VS Code AI features. My tech stack includes Java, React, TypeScript, and modern frameworks.",
+  "PARAGRAPH_3": "I'm passionate about integrating AI into web development, creating intelligent chatbots, and building AI-enhanced applications. Open to freelance collaborations and exciting AI projects with a goal of joining innovative tech teams."
 },
   "TITLESECTION": {
     "timeline": { "title": "My Journey", "subtitle": "Path to Development" },
@@ -40,6 +40,11 @@
         "DATE": "July 2024 - Ongoing",
         "TITLE": "BFW IT Specialist Application Development IHK",
         "DESCRIPTION": "Training in application development, providing advanced skills in programming and software development."
+      },
+      {
+        "DATE": "2024",
+        "TITLE": "Microsoft AI-900 Certification",
+        "DESCRIPTION": "Microsoft Azure AI Fundamentals certification, covering AI workloads, machine learning principles, computer vision, and conversational AI on Azure."
       },
       {
         "DATE": "2023",
@@ -163,33 +168,38 @@
     "SKILLS": {
       "SKILL_SET": [
         {
-          "name": "HTML & CSS",
-          "description": "Solid understanding of HTML5 and CSS3, responsive design, and modern web design practices.",
-          "icon": "fas fa-code"
+          "name": "AI & Machine Learning",
+          "description": "Microsoft AI-900 certified with hands-on experience in LangChain, OpenAI APIs, and Python AI agents. Specialized in building intelligent applications and chatbots.",
+          "icon": "fas fa-robot"
         },
         {
-          "name": "JavaScript",
-          "description": "Proficiency in ES6+ features, asynchronous programming, and DOM manipulation.",
+          "name": "Modern AI Development Tools",
+          "description": "Proficient with Cursor IDE, GitHub Copilot, VS Code AI extensions, and AI-powered development workflows for enhanced productivity.",
+          "icon": "fas fa-brain"
+        },
+        {
+          "name": "JavaScript & TypeScript",
+          "description": "Advanced proficiency in ES6+ features, TypeScript, asynchronous programming, and modern JavaScript frameworks with AI integration capabilities.",
           "icon": "fab fa-js-square"
         },
         {
-          "name": "React & Angular",
-          "description": "Experience in creating SPAs using React, and dynamic applications with Angular.",
+          "name": "React & Modern Frontend",
+          "description": "Expert in creating SPAs using React, integrating AI components, chatbots, and intelligent user interfaces with modern state management.",
           "icon": "fab fa-react"
         },
         {
-          "name": "Node.js & Express",
-          "description": "Basic knowledge of scalable backend services with Node.js and RESTful API design.",
-          "icon": "fab fa-node-js"
+          "name": "Python & AI Development",
+          "description": "Skilled in Python for AI agent development, API integrations, data processing, and building intelligent backend services.",
+          "icon": "fab fa-python"
         },
         {
           "name": "Java & Spring Boot",
-          "description": "Basic knowledge in Java and Spring Boot for robust backend applications.",
+          "description": "Solid foundation in Java and Spring Boot for enterprise-level backend applications and RESTful API development.",
           "icon": "fab fa-java"
         },
         {
-          "name": "Version Control",
-          "description": "Competent use of Git and GitHub for version control, code collaboration, and project management.",
+          "name": "AI-Enhanced Version Control",
+          "description": "Advanced use of Git, GitHub with AI-powered features, automated workflows, and collaborative development with AI assistance.",
           "icon": "fab fa-git-alt"
         }
       ]
@@ -229,4 +239,3 @@
       "CLOSE_BUTTON": "Close"
     }
   }
-  
