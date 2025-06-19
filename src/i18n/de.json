@@ -69,7 +69,7 @@
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {
-              "url": "https://www.scharnhorst-doener.de/",
+              "url": "https://doner-express-6lswji24o-limbpumas-projects.vercel.app/",
               "iconClass": "fas fa-globe",
               "label": "Project 1 Website"
             },
@@ -117,7 +117,44 @@
               "label": "Project 1 GitHub"
             }
           ]
+        },        {
+          "TITLE": "KFZ Memmo",
+          "BADGE": "Astro",
+          "DESCRIPTION": "Professionelle Landingpage für eine Autowerkstatt & Sachverständigenbüro in Dortmund. Modernes Design, SEO-optimiert und responsive – entwickelt mit Astro und Tailwind.",
+          "IMAGE": "/images/memmokfz.webp",
+          "CATEGORIES": ["Astro", "Tailwind"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "https://memmokfz.vercel.app/",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/kfz_memmo",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
+        },        {
+          "TITLE": "Fast React Pizza",
+          "BADGE": "React",
+          "DESCRIPTION": "Eine moderne Pizza-Lieferanwendung, entwickelt mit React und TypeScript. Funktionen umfassen Login, Warenkorb, Bestellverfolgung und Prioritätsliefersystem mit Redux-Statusverwaltung.",
+          "IMAGE": "/images/fats-pizza-plz.webp",
+          "CATEGORIES": ["React", "TypeScript", "Redux"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "https://fast-pizza-restaurant.netlify.app/",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/pizza_fast_delivery_collect",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
         }
+        
       ]
     },
     "SKILLS": {

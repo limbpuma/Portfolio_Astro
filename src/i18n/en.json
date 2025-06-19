@@ -71,7 +71,7 @@
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {
-              "url": "https://www.scharnhorst-doener.de/",
+              "url": "https://doner-express-6lswji24o-limbpumas-projects.vercel.app/",
               "iconClass": "fas fa-globe",
               "label": "Project 1 Website"
             },
@@ -117,6 +117,42 @@
             },
             {
               "url": "https://github.com/limbpuma/Astro_Barber_web",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
+        },        {
+          "TITLE": "KFZ Memmo",
+          "BADGE": "Astro",
+          "DESCRIPTION": "Professional landing page for a car service and vehicle appraisal center in Dortmund. Built with Astro and Tailwind, optimized for SEO and fully responsive.",
+          "IMAGE": "/images/memmokfz.webp",
+          "CATEGORIES": ["Astro", "Tailwind"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "https://memmokfz.vercel.app/",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/kfz_memmo",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
+        },        {
+          "TITLE": "Fast React Pizza",
+          "BADGE": "React",
+          "DESCRIPTION": "A modern pizza delivery application built with React and TypeScript. Features include login, shopping cart, order tracking, and priority delivery system with Redux state management.",
+          "IMAGE": "/images/fats-pizza-plz.webp",
+          "CATEGORIES": ["React", "TypeScript", "Redux"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "https://fast-pizza-restaurant.netlify.app/",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/pizza_fast_delivery_collect",
               "iconClass": "fab fa-github",
               "label": "Project 1 GitHub"
             }
