@@ -17,11 +17,11 @@
   "HERO": {
   "TITLE": "Limber Martinez",
   "SUBTITLE": "AI-Enhanced Full-Stack Developer | Microsoft AI-900 Certified",
-  "DESCRIPTION": "Application Developer in training at BFW Dortmund, specializing in AI-powered web solutions. Experienced in building intelligent applications with LangChain, OpenAI APIs, and modern AI tools. Seeking 6-month internship starting August 2025.",
+  "DESCRIPTION": "Application Developer in training at BFW Dortmund, focusing on AI-powered web solutions. Experienced in building intelligent applications with LangChain, OpenAI APIs, and modern AI tools. Seeking 6-month internship starting August 2025.",
   "BUTTON": "Explore my AI-powered projects"
 },
 "ABOUT_ME": {
-  "TITLE": "About Me",  "PARAGRAPH_1": "Hi, I'm Limber Martinez, a Microsoft AI-900 certified developer currently training as an Application Developer (Fachinformatiker) at BFW Dortmund until July 2026. I specialize in creating AI-powered solutions and building intelligent web applications with a focus on frontend and backend development.",
+  "TITLE": "About Me",  "PARAGRAPH_1": "Hi, I'm Limber Martinez, a Microsoft AI-900 certified developer currently training as an Application Developer (Fachinformatiker) at BFW Dortmund until July 2026. I focus on creating AI-powered solutions and building intelligent web applications with emphasis on frontend and backend development.",
   "PARAGRAPH_2": "I have hands-on experience with AI tools like LangChain, OpenAI APIs, Python agents, and modern development tools including Cursor, GitHub Copilot, and VS Code AI features. My core stack includes Java, HTML, CSS, JavaScript, React, TypeScript, with growing expertise in AI integration and automation.",
   "PARAGRAPH_3": "I'm seeking a 6-month unpaid internship starting August 2025 in Dortmund and surrounding areas to deepen my knowledge in a practical environment. Passionate about integrating AI into web development and building intelligent applications that solve real-world problems."
 },
@@ -35,9 +35,8 @@
   },  "TIMELINE": {
     "EVENTS": [
       {
-        "DATE": "July 2024 - Ongoing",
-        "TITLE": "BFW IT Specialist Application Development IHK",
-        "DESCRIPTION": "Training in application development, providing advanced skills in programming and software development."
+        "DATE": "July 2024 - Ongoing",        "TITLE": "BFW IT Specialist Application Development IHK",
+        "DESCRIPTION": "Umschulung (retraining) in application development, providing advanced skills in programming and software development."
       },
       {
         "DATE": "2024",
@@ -201,10 +200,9 @@
       ]
     },
     "SKILLS": {
-      "SKILL_SET": [
-        {
+      "SKILL_SET": [        {
           "name": "AI & Machine Learning",
-          "description": "Microsoft AI-900 certified with hands-on experience in LangChain, OpenAI APIs, and Python AI agents. Specialized in building intelligent applications and chatbots.",
+          "description": "Microsoft AI-900 certified with hands-on experience in LangChain, OpenAI APIs, and Python AI agents. Developing skills in building intelligent applications and chatbots.",
           "icon": "fas fa-robot"
         },
         {
@@ -214,15 +212,14 @@
         },
         {
           "name": "JavaScript & TypeScript",
-          "description": "Advanced proficiency in ES6+ features, TypeScript, asynchronous programming, and modern JavaScript frameworks with AI integration capabilities.",
+          "description": "Strong proficiency in ES6+ features, TypeScript, asynchronous programming, and modern JavaScript frameworks with growing AI integration capabilities.",
           "icon": "fab fa-js-square"
         },
         {
           "name": "React & Modern Frontend",
-          "description": "Expert in creating SPAs using React, integrating AI components, chatbots, and intelligent user interfaces with modern state management.",
+          "description": "Experienced in creating SPAs using React, learning to integrate AI components, chatbots, and intelligent user interfaces with modern state management.",
           "icon": "fab fa-react"
-        },
-        {
+        },        {
           "name": "Python & AI Development",
           "description": "Skilled in Python for AI agent development, API integrations, data processing, and building intelligent backend services.",
           "icon": "fab fa-python"
