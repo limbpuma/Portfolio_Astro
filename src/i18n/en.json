@@ -1,6 +1,6 @@
 {
   "SEO_TITLE": "Limber Martinez - AI-Enhanced Full-Stack Developer | Microsoft AI-900 Certified",
-  "SEO_DESCRIPTION": "Limber Martinez, AI-powered application developer specializing in LangChain, OpenAI APIs, and intelligent web solutions. Available for internships starting July 2025.",
+  "SEO_DESCRIPTION": "Limber Martinez, AI-powered application developer in training at BFW Dortmund. Seeking 6-month internship starting August 2025. Microsoft AI-900 certified with LangChain and OpenAI expertise.",
   "COOKIES_TEXT": {
     "TITLE": "Cookies!",
     "DESCRIPTION": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Wenn Sie weiterhin auf unserer Website surfen, stimmen Sie der Verwendung von Cookies zu.",
@@ -17,14 +17,13 @@
   "HERO": {
   "TITLE": "Limber Martinez",
   "SUBTITLE": "AI-Enhanced Full-Stack Developer | Microsoft AI-900 Certified",
-  "DESCRIPTION": "Application Developer in training specializing in AI-powered web solutions. Experienced in building intelligent applications with LangChain, OpenAI APIs, and modern AI development tools. Ready to bring AI innovation to your next project.",
+  "DESCRIPTION": "Application Developer in training at BFW Dortmund, specializing in AI-powered web solutions. Experienced in building intelligent applications with LangChain, OpenAI APIs, and modern AI tools. Seeking 6-month internship starting August 2025.",
   "BUTTON": "Explore my AI-powered projects"
 },
 "ABOUT_ME": {
-  "TITLE": "About Me",
-  "PARAGRAPH_1": "Hi, I'm Limber Martinez, a Microsoft AI-900 certified developer currently training as an Application Developer (Fachinformatiker) in Dortmund. I specialize in creating AI-powered solutions and building intelligent web applications.",
-  "PARAGRAPH_2": "I have hands-on experience with AI tools like LangChain, OpenAI APIs, Python agents, and modern development tools including Cursor, GitHub Copilot, and VS Code AI features. My tech stack includes Java, React, TypeScript, and modern frameworks.",
-  "PARAGRAPH_3": "I'm passionate about integrating AI into web development, creating intelligent chatbots, and building AI-enhanced applications. Open to freelance collaborations and exciting AI projects with a goal of joining innovative tech teams."
+  "TITLE": "About Me",  "PARAGRAPH_1": "Hi, I'm Limber Martinez, a Microsoft AI-900 certified developer currently training as an Application Developer (Fachinformatiker) at BFW Dortmund until July 2026. I specialize in creating AI-powered solutions and building intelligent web applications with a focus on frontend and backend development.",
+  "PARAGRAPH_2": "I have hands-on experience with AI tools like LangChain, OpenAI APIs, Python agents, and modern development tools including Cursor, GitHub Copilot, and VS Code AI features. My core stack includes Java, HTML, CSS, JavaScript, React, TypeScript, with growing expertise in AI integration and automation.",
+  "PARAGRAPH_3": "I'm seeking a 6-month unpaid internship starting August 2025 in Dortmund and surrounding areas to deepen my knowledge in a practical environment. Passionate about integrating AI into web development and building intelligent applications that solve real-world problems."
 },
   "TITLESECTION": {
     "timeline": { "title": "My Journey", "subtitle": "Path to Development" },
@@ -33,8 +32,7 @@
     "contact": { "title": "Contact Me", "subtitle": "Let's Talk" },
     "under_construction": { "title": "Under Construction", "subtitle": "Showcasing Future Innovations" }
 
-  },
-  "TIMELINE": {
+  },  "TIMELINE": {
     "EVENTS": [
       {
         "DATE": "July 2024 - Ongoing",
@@ -63,10 +61,47 @@
       }
       
     ]
-  },
-    "PROJECTS": {
+  },    "PROJECTS": {
       "TITLE": "My Projects EN",
       "PROJECT_LIST": [
+        {
+          "TITLE": "AI Restaurant Name Generator",
+          "BADGE": "AI",
+          "DESCRIPTION": "Intelligent restaurant name generator built with LangChain and OpenAI APIs. Features dynamic cuisine-based suggestions, creative name generation algorithms, and seamless AI integration for business applications.",
+          "IMAGE": "/images/ai_restaurant_generator.webp",
+          "CATEGORIES": ["LangChain", "OpenAI", "Python"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/LangchainRestaurantNameGenerator",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
+        },
+        {
+          "TITLE": "Genius AI App",
+          "BADGE": "AI",
+          "DESCRIPTION": "Multi-purpose AI application featuring intelligent conversation, code generation, image analysis, and music creation. Built with modern AI APIs and showcases comprehensive AI integration capabilities.",
+          "IMAGE": "/images/genius_ai_app.webp",
+          "CATEGORIES": ["AI", "React", "OpenAI"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/geniusapp",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
+        },
         
         {
           "TITLE": "Döner Restaurant",
