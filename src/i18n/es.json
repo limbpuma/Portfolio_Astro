@@ -1,6 +1,6 @@
 {
-  "SEO_TITLE": "Limber Martinez - Trainee Fachinformatiker Anwendungsentwicklung",
-"SEO_DESCRIPTION": "Limber Martinez, Umschüler en Anwendungsentwicklung, busca una práctica a partir de julio de 2025. Conocimientos en Frontend y Backend.",
+  "SEO_TITLE": "Limber Martinez - Desarrollador Full-Stack Potenciado por IA | Microsoft AI-900 Certificado",
+  "SEO_DESCRIPTION": "Limber Martinez, desarrollador de aplicaciones potenciado por IA en formación en BFW Dortmund. Buscando práctica de 6 meses desde agosto 2025. Certificado Microsoft AI-900 con experiencia en LangChain y OpenAI.",
   "COOKIES_TEXT": {
     "TITLE": "Cookies!",
     "DESCRIPTION": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Wenn Sie weiterhin auf unserer Website surfen, stimmen Sie der Verwendung von Cookies zu.",
@@ -16,15 +16,15 @@
   },
   "HERO": {
   "TITLE": "Limber Martinez",
-  "SUBTITLE": "Desarrollador en formación con visión a futuro",
-  "DESCRIPTION": "En plena formación como Fachinformatiker en Desarrollo de Aplicaciones, me preparo para integrarme en el mundo profesional. Abierto a colaboraciones freelance y proyectos que aporten valor, mientras me desarrollo para nuevas oportunidades laborales.",
-  "BUTTON": "Explora mis proyectos"
+  "SUBTITLE": "Desarrollador Full-Stack Potenciado por IA | Microsoft AI-900 Certificado",
+  "DESCRIPTION": "Fachinformatiker en formación en BFW Dortmund, enfocado en soluciones web potenciadas por IA. Experimentado en construir aplicaciones inteligentes con LangChain, APIs de OpenAI y herramientas modernas de IA. Buscando práctica de 6 meses desde agosto 2025.",
+  "BUTTON": "Explora mis proyectos potenciados por IA"
 },
 "ABOUT_ME": {
   "TITLE": "Sobre Mí",
-  "PARAGRAPH_1": "Hola, soy Limber Martinez. Actualmente realizo una formación como Fachinformatiker en Desarrollo de Aplicaciones en Dortmund. Me apasiona crear soluciones prácticas y aprender constantemente nuevas tecnologías.",
-  "PARAGRAPH_2": "He trabajado con tecnologías como Java, HTML, CSS, PHP, y sigo formándome en herramientas modernas como Laravel, Vue.js y Docker.",
-  "PARAGRAPH_3": "Estoy abierto a colaborar en proyectos freelance o tareas de desarrollo, con la vista puesta en incorporarme al mundo laboral de forma estable en el futuro cercano. Si tienes un reto interesante, estaré encantado de ayudarte."
+  "PARAGRAPH_1": "Hola, soy Limber Martinez, un desarrollador certificado Microsoft AI-900 que actualmente realiza una formación como Fachinformatiker en Desarrollo de Aplicaciones en BFW Dortmund hasta julio 2026. Me enfoco en crear soluciones potenciadas por IA y aplicaciones web inteligentes con énfasis en desarrollo frontend y backend.",
+  "PARAGRAPH_2": "Tengo experiencia práctica con herramientas de IA como LangChain, APIs de OpenAI, agentes Python, y herramientas modernas de desarrollo incluyendo Cursor, GitHub Copilot, y características de IA de VS Code. Mi stack central incluye Java, HTML, CSS, JavaScript, React, TypeScript, con creciente experiencia en integración de IA y automatización.",
+  "PARAGRAPH_3": "Busco una práctica de 6 meses no remunerada desde agosto 2025 en Dortmund y alrededores para profundizar mis conocimientos en un entorno práctico. Apasionado por integrar IA en el desarrollo web y construir aplicaciones inteligentes que resuelvan problemas del mundo real."
 },
   "TITLESECTION": {
     "timeline": { "title": "Mi Trayectoria", "subtitle": "Camino hacia el Desarrollo" },
@@ -37,14 +37,19 @@
   "TIMELINE": {
     "EVENTS": [
       {
-        "DATE": "Julio 2024 - En Curso",
-        "TITLE": "BFW Fachinformatiker Anwendungsentwicklung IHK",
+        "DATE": "Julio 2024 - En curso",
+        "TITLE": "BFW Fachinformatiker Desarrollo de Aplicaciones IHK",
         "DESCRIPTION": "Formación en desarrollo de aplicaciones, proporcionando habilidades avanzadas en programación y desarrollo de software."
+      },
+      {
+        "DATE": "2024",
+        "TITLE": "Certificación Microsoft AI-900",
+        "DESCRIPTION": "Certificación Microsoft Azure AI Fundamentals, cubriendo cargas de trabajo de IA, principios de machine learning, visión por computadora e IA conversacional en Azure."
       },
       {
         "DATE": "2023",
         "TITLE": "Programa Oracle One Altura Education",
-        "DESCRIPTION": "Programa intensivo enfocado en Java y Spring Boot, estableciendo una base sólida en desarrollo Backend."
+        "DESCRIPTION": "Un programa intensivo centrado en Java y Spring Boot, estableciendo una base sólida en desarrollo backend."
       },
       {
         "DATE": "2022 - 2023",
@@ -62,6 +67,44 @@
     "PROJECTS": {
       "TITLE": "My Projects ES",
       "PROJECT_LIST": [
+        {
+          "TITLE": "Generador de Nombres IA para Restaurantes",
+          "BADGE": "IA",
+          "DESCRIPTION": "Generador inteligente de nombres para restaurantes construido con LangChain y APIs de OpenAI. Características incluyen sugerencias dinámicas basadas en cocina, algoritmos creativos de generación de nombres e integración perfecta de IA para aplicaciones empresariales.",
+          "IMAGE": "/images/ai_restaurant_generator.webp",
+          "CATEGORIES": ["LangChain", "OpenAI", "Python"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/LangchainRestaurantNameGenerator",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
+        },
+        {
+          "TITLE": "Genius App IA",
+          "BADGE": "IA",
+          "DESCRIPTION": "Aplicación de IA multipropósito con conversación inteligente, generación de código, análisis de imágenes y creación musical. Construida con APIs modernas de IA y muestra capacidades integrales de integración de IA.",
+          "IMAGE": "/images/genius_ai_app.webp",
+          "CATEGORIES": ["IA", "React", "OpenAI"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/geniusapp",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
+        },
         {
           "TITLE": "Restaurante Döner",
           "BADGE": "Astro",
@@ -161,33 +204,38 @@
     "SKILLS": {
       "SKILL_SET": [
         {
-          "name": "HTML & CSS",
-          "description": "Comprensión sólida de HTML5 y CSS3, diseño responsivo y modernas prácticas de diseño web.",
-          "icon": "fas fa-code"
+          "name": "IA & Machine Learning",
+          "description": "Certificado Microsoft AI-900 con experiencia práctica en LangChain, APIs de OpenAI y agentes Python de IA. Especializado en construcción de aplicaciones inteligentes y chatbots.",
+          "icon": "fas fa-robot"
         },
         {
-          "name": "JavaScript",
-          "description": "Dominio de características ES6+, programación asíncrona y manipulación del DOM.",
+          "name": "Herramientas Modernas de Desarrollo IA",
+          "description": "Competente con Cursor IDE, GitHub Copilot, extensiones de IA de VS Code, y flujos de trabajo de desarrollo potenciados por IA para mayor productividad.",
+          "icon": "fas fa-brain"
+        },
+        {
+          "name": "JavaScript & TypeScript",
+          "description": "Competencia avanzada en características ES6+, TypeScript, programación asíncrona y frameworks modernos de JavaScript con capacidades de integración de IA.",
           "icon": "fab fa-js-square"
         },
         {
-          "name": "React & Angular",
-          "description": "Experiencia en creación de SPA usando React, y aplicaciones dinámicas con Angular.",
+          "name": "React & Frontend Moderno",
+          "description": "Experto en crear SPAs usando React, integrando componentes de IA, chatbots e interfaces de usuario inteligentes con gestión de estado moderna.",
           "icon": "fab fa-react"
         },
         {
-          "name": "Node.js & Express",
-          "description": "Conocimientos básicos de servicios backend escalables con Node.js y diseño de API RESTful.",
-          "icon": "fab fa-node-js"
+          "name": "Python & Desarrollo IA",
+          "description": "Habilidades en Python para desarrollo de agentes IA, integraciones de API, procesamiento de datos y construcción de servicios backend inteligentes.",
+          "icon": "fab fa-python"
         },
         {
           "name": "Java & Spring Boot",
-          "description": "Conocimientos básicos en Java y Spring Boot para aplicaciones backend robustas.",
+          "description": "Base sólida en Java y Spring Boot para aplicaciones backend de nivel empresarial y desarrollo de APIs RESTful.",
           "icon": "fab fa-java"
         },
         {
-          "name": "Control de Versiones",
-          "description": "Uso competente de Git y GitHub para el control de versiones, colaboración en código y gestión de proyectos.",
+          "name": "Control de Versiones Potenciado por IA",
+          "description": "Uso avanzado de Git, GitHub con características potenciadas por IA, flujos de trabajo automatizados y desarrollo colaborativo con asistencia de IA.",
           "icon": "fab fa-git-alt"
         }
       ]

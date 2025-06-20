@@ -1,6 +1,6 @@
 {
-  "SEO_TITLE": "Limber Martinez - Trainee Fachinformatiker Anwendungsentwicklung",
-"SEO_DESCRIPTION": "Limber Martinez, Umschüler in Anwendungsentwicklung, sucht ein Praktikum ab Juli 2025. Kenntnisse in Frontend und Backend.",
+  "SEO_TITLE": "Limber Martinez - KI-Enhanced Full-Stack Entwickler | Microsoft AI-900 Zertifiziert",
+  "SEO_DESCRIPTION": "Limber Martinez, KI-gestützter Anwendungsentwickler in Umschulung am BFW Dortmund. Sucht 6-monatiges Praktikum ab August 2025. Microsoft AI-900 zertifiziert mit LangChain und OpenAI Expertise.",
   "COOKIES_TEXT": {
     "TITLE": "Cookies!",
     "DESCRIPTION": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Wenn Sie weiterhin auf unserer Website surfen, stimmen Sie der Verwendung von Cookies zu.",
@@ -16,15 +16,15 @@
   },
   "HERO": {
   "TITLE": "Limber Martinez",
-  "SUBTITLE": "Auszubildender Anwendungsentwickler mit Zukunftsblick",
-  "DESCRIPTION": "Ich befinde mich in der Ausbildung zum Fachinformatiker für Anwendungsentwicklung und bereite mich auf meinen Einstieg in die Berufswelt vor. Ich bin offen für freiberufliche Projekte und Kooperationen, während ich mich auf zukünftige Festanstellungen vorbereite.",
-  "BUTTON": "Meine Projekte ansehen"
+  "SUBTITLE": "KI-Enhanced Full-Stack Entwickler | Microsoft AI-900 Zertifiziert",
+  "DESCRIPTION": "Fachinformatiker in Umschulung am BFW Dortmund, fokussiert auf KI-gestützte Weblösungen. Erfahren im Aufbau intelligenter Anwendungen mit LangChain, OpenAI APIs und modernen KI-Tools. Suche 6-monatiges Praktikum ab August 2025.",
+  "BUTTON": "Meine KI-gestützten Projekte entdecken"
 },
 "ABOUT_ME": {
   "TITLE": "Über Mich",
-  "PARAGRAPH_1": "Hallo, ich bin Limber Martinez. Zurzeit mache ich eine Ausbildung zum Fachinformatiker für Anwendungsentwicklung in Dortmund. Ich liebe es, praxisnahe Lösungen zu entwickeln und ständig neue Technologien zu erlernen.",
-  "PARAGRAPH_2": "Ich habe Erfahrung mit Java, HTML, CSS, PHP und erweitere mein Wissen aktuell mit modernen Tools wie Laravel, Vue.js und Docker.",
-  "PARAGRAPH_3": "Ich bin offen für freiberufliche Mitarbeit oder kleinere Entwicklungsaufgaben und strebe mittelfristig eine feste Stelle in der IT-Branche an. Wenn du ein spannendes Projekt hast, freue ich mich über deine Nachricht."
+  "PARAGRAPH_1": "Hallo, ich bin Limber Martinez, ein Microsoft AI-900 zertifizierter Entwickler, der derzeit eine Umschulung zum Fachinformatiker für Anwendungsentwicklung am BFW Dortmund bis Juli 2026 absolviert. Ich fokussiere mich auf KI-gestützte Lösungen und intelligente Webanwendungen mit Schwerpunkt auf Frontend- und Backend-Entwicklung.",
+  "PARAGRAPH_2": "Ich habe praktische Erfahrung mit KI-Tools wie LangChain, OpenAI APIs, Python-Agenten und modernen Entwicklungstools wie Cursor, GitHub Copilot und VS Code AI-Features. Mein Kern-Stack umfasst Java, HTML, CSS, JavaScript, React, TypeScript, mit wachsender Expertise in KI-Integration und Automatisierung.",
+  "PARAGRAPH_3": "Ich suche ein 6-monatiges, unentgeltliches Praktikum ab August 2025 in Dortmund und Umgebung, um meine Kenntnisse in einem praxisnahen Umfeld zu vertiefen. Leidenschaftlich an der Integration von KI in die Webentwicklung und dem Aufbau intelligenter Anwendungen, die reale Probleme lösen."
 },
   "TITLESECTION": {
     "timeline": { "title": "Meine Reise", "subtitle": "Weg zur Entwicklung" },
@@ -38,7 +38,12 @@
       {
         "DATE": "Juli 2024 - Laufend",
         "TITLE": "BFW Fachinformatiker Anwendungsentwicklung IHK",
-        "DESCRIPTION": "Ausbildung in der Anwendungsentwicklung, die fortgeschrittene Fähigkeiten in Programmierung und Softwareentwicklung vermittelt."
+        "DESCRIPTION": "Umschulung in der Anwendungsentwicklung, die fortgeschrittene Fähigkeiten in Programmierung und Softwareentwicklung vermittelt."
+      },
+      {
+        "DATE": "2024",
+        "TITLE": "Microsoft AI-900 Zertifizierung",
+        "DESCRIPTION": "Microsoft Azure AI Fundamentals Zertifizierung, umfasst KI-Workloads, Machine Learning Prinzipien, Computer Vision und konversationelle KI in Azure."
       },
       {
         "DATE": "2023",
@@ -61,6 +66,44 @@
     "PROJECTS": {
       "TITLE": "My Projects DE",
       "PROJECT_LIST": [
+        {
+          "TITLE": "KI Restaurant Name Generator",
+          "BADGE": "KI",
+          "DESCRIPTION": "Intelligenter Restaurant-Namen-Generator entwickelt mit LangChain und OpenAI APIs. Bietet dynamische küchenbasierte Vorschläge, kreative Namengenerierungsalgorithmen und nahtlose KI-Integration für Geschäftsanwendungen.",
+          "IMAGE": "/images/ai_restaurant_generator.webp",
+          "CATEGORIES": ["LangChain", "OpenAI", "Python"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/LangchainRestaurantNameGenerator",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
+        },
+        {
+          "TITLE": "Genius KI App",
+          "BADGE": "KI",
+          "DESCRIPTION": "Vielseitige KI-Anwendung mit intelligenter Konversation, Code-Generierung, Bildanalyse und Musikerstellung. Entwickelt mit modernen KI-APIs und zeigt umfassende KI-Integrationsfähigkeiten.",
+          "IMAGE": "/images/genius_ai_app.webp",
+          "CATEGORIES": ["KI", "React", "OpenAI"],
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Project 1 Website"
+            },
+            {
+              "url": "https://github.com/limbpuma/geniusapp",
+              "iconClass": "fab fa-github",
+              "label": "Project 1 GitHub"
+            }
+          ]
+        },
         {
           "TITLE": "Restaurant Döner",
           "BADGE": "Astro",
@@ -160,33 +203,38 @@
     "SKILLS": {
       "SKILL_SET": [
         {
-          "name": "HTML & CSS",
-          "description": "Solides Verständnis von HTML5 und CSS3, responsive Design und moderne Webdesign-Praktiken.",
-          "icon": "fas fa-code"
+          "name": "KI & Machine Learning",
+          "description": "Microsoft AI-900 zertifiziert mit praktischer Erfahrung in LangChain, OpenAI APIs und Python KI-Agenten. Spezialisiert auf intelligente Anwendungen und Chatbots.",
+          "icon": "fas fa-robot"
         },
         {
-          "name": "JavaScript",
-          "description": "Kompetenz in ES6+-Funktionen, asynchroner Programmierung und DOM-Manipulation.",
+          "name": "Moderne KI-Entwicklungstools",
+          "description": "Versiert mit Cursor IDE, GitHub Copilot, VS Code KI-Erweiterungen und KI-gestützten Entwicklungsworkflows für erhöhte Produktivität.",
+          "icon": "fas fa-brain"
+        },
+        {
+          "name": "JavaScript & TypeScript",
+          "description": "Fortgeschrittene Kenntnisse in ES6+-Features, TypeScript, asynchroner Programmierung und modernen JavaScript-Frameworks mit KI-Integrationsfähigkeiten.",
           "icon": "fab fa-js-square"
         },
         {
-          "name": "React & Angular",
-          "description": "Erfahrung in der Erstellung von SPAs mit React und dynamischen Anwendungen mit Angular.",
+          "name": "React & Moderne Frontend",
+          "description": "Experte in der Erstellung von SPAs mit React, Integration von KI-Komponenten, Chatbots und intelligenten Benutzeroberflächen mit modernem State Management.",
           "icon": "fab fa-react"
         },
         {
-          "name": "Node.js & Express",
-          "description": "Grundkenntnisse in skalierbaren Backend-Services mit Node.js und RESTful-API-Design.",
-          "icon": "fab fa-node-js"
+          "name": "Python & KI-Entwicklung",
+          "description": "Kenntnisse in Python für KI-Agenten-Entwicklung, API-Integrationen, Datenverarbeitung und Aufbau intelligenter Backend-Services.",
+          "icon": "fab fa-python"
         },
         {
           "name": "Java & Spring Boot",
-          "description": "Grundkenntnisse in Java und Spring Boot für robuste Backend-Anwendungen.",
+          "description": "Solide Grundlage in Java und Spring Boot für unternehmensweite Backend-Anwendungen und RESTful API-Entwicklung.",
           "icon": "fab fa-java"
         },
         {
-          "name": "Versionskontrolle",
-          "description": "Kompetenter Umgang mit Git und GitHub für Versionskontrolle, Code-Kollaboration und Projektmanagement.",
+          "name": "KI-Enhanced Version Control",
+          "description": "Fortgeschrittene Nutzung von Git, GitHub mit KI-gestützten Features, automatisierten Workflows und kollaborativer Entwicklung mit KI-Unterstützung.",
           "icon": "fab fa-git-alt"
         }
       ]
