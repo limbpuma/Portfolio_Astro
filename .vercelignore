@@ -9,6 +9,10 @@ dist/
 .vercel/
 .astro/
 
+# Scripts and development tools
+scripts/
+*.py
+
 # Environment files
 .env
 .env.local
