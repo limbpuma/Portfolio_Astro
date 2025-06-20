@@ -13,6 +13,8 @@ export default defineConfig({
     }
   },
   integrations: [tailwind(), react()],
-  output: 'server',
-  adapter: vercel()
+  output: 'static',
+  adapter: vercel({
+    webAnalytics: { enabled: true }
+  })
 });
