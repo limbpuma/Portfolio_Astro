@@ -241,11 +241,10 @@
           "description": "Uso avanzado de Git, GitHub con características potenciadas por IA, flujos de trabajo automatizados y desarrollo colaborativo con asistencia de IA.",
           "icon": "fab fa-git-alt"
         }
-      ]
-    },    "CONTACT": {
-      "SUBTITLE": "Contacto Potenciado por IA",
+      ]    },    "CONTACT": {
+      "SUBTITLE": "Contacto",
       "TITLE": "Conectemos",
-      "DESCRIPTION": "Abierto a colaboraciones y oportunidades de empleo. Envíame un mensaje inteligente vía WhatsApp.",
+      "DESCRIPTION": "Abierto a colaboraciones y oportunidades de empleo. Envíame un mensaje estructurado vía WhatsApp.",
       "RESUME": "Ver mi CV",
       "RESUME_URL": "/cv/ResumeES.pdf",
       "SMART_CONTACT": "Contacto",
@@ -257,7 +256,7 @@
       "OPPORTUNITY_TYPE": "Tipo de Oportunidad",
       "MESSAGE": "Mensaje",
       "MESSAGE_PLACEHOLDER": "Cuéntame sobre tu proyecto u oportunidad...",
-      "GENERATING": "Generando mensaje IA...",
+      "GENERATING": "Generando mensaje...",
       "SEND_WHATSAPP": "Enviar por WhatsApp",      "RESPONSE_TIME": "Respuesta en 24h",
       "LOCATION": "Disponible en área de Dortmund",
       "AVAILABILITY": "Prácticas desde agosto 2025",
