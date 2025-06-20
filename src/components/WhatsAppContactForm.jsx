@@ -108,9 +108,9 @@ Best regards!`;
       alert(alertMessage);
       return;
     }
+      setIsGenerating(true);
     
-    setIsGenerating(true);
-      // Simular "AI thinking" por 1 segundo
+    // Simular procesamiento por un momento
     setTimeout(() => {
       const message = generateWhatsAppMessage();
       const whatsappUrl = `https://wa.me/4917645754360?text=${message}`;
@@ -122,17 +122,16 @@ Best regards!`;
   const isFormValid = formData.name.trim().length > 0 && privacyAccepted;
 
   return (
-    <div className="w-full max-w-md mx-auto bg-base-100 rounded-2xl shadow-xl p-6 border border-primary/20">
-      {/* Header con estilo AI */}
+    <div className="w-full max-w-md mx-auto bg-base-100 rounded-2xl shadow-xl p-6 border border-primary/20">      {/* Header */}
       <div className="text-center mb-6">
         <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-3">
-          <span className="text-2xl">🤖</span>
+          
           <span className="font-semibold text-primary">
-            {i18n.CONTACT?.SMART_CONTACT || 'Smart Contact'}
+            {i18n.CONTACT?.SMART_CONTACT || 'Contact Form'}
           </span>
         </div>
         <p className="text-sm text-base-content/70">
-          {i18n.CONTACT?.SMART_DESCRIPTION || 'AI-powered message generation for WhatsApp'}
+          {i18n.CONTACT?.SMART_DESCRIPTION || 'Message creation for WhatsApp'}
         </p>
       </div>
 
@@ -242,8 +241,7 @@ Best regards!`;
         >
           {isGenerating ? (
             <span className="flex items-center gap-2">
-              <span className="loading loading-spinner loading-sm"></span>
-              {i18n.CONTACT?.GENERATING || 'Generating AI message...'}
+              <span className="loading loading-spinner loading-sm"></span>              {i18n.CONTACT?.GENERATING || 'Creating message...'}
             </span>
           ) : (
             <span className="flex items-center gap-2">
