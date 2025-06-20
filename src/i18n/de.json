@@ -1,7 +1,6 @@
 {
-  "LANG": "de",
-  "SEO_TITLE": "Limber Martinez - KI-Enhanced Full-Stack Entwickler | Microsoft AI-900 Zertifiziert",
-  "SEO_DESCRIPTION": "Limber Martinez, KI-gestützter Anwendungsentwickler in Umschulung am BFW Dortmund. Sucht 6-monatiges Praktikum ab August 2025. Microsoft AI-900 zertifiziert mit LangChain und OpenAI Expertise.",
+  "LANG": "de",  "SEO_TITLE": "Limber Martinez - Moderner Full-Stack Entwickler | Microsoft AI-900 Zertifiziert",
+  "SEO_DESCRIPTION": "Limber Martinez, moderner Anwendungsentwickler in Umschulung am BFW Dortmund. Sucht 6-monatiges Praktikum ab August 2025. Microsoft AI-900 zertifiziert mit LangChain und OpenAI Expertise.",
   "COOKIES_TEXT": {
     "TITLE": "Cookies!",
     "DESCRIPTION": "Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Wenn Sie weiterhin auf unserer Website surfen, stimmen Sie der Verwendung von Cookies zu.",
@@ -16,17 +15,17 @@
     "ITEM5": "Kontakt"
   },  "HERO": {
   "TITLE": "Limber Martinez",
-  "SUBTITLE": "KI-Enhanced Full-Stack Entwickler | Microsoft AI-900 Zertifiziert",
-  "DESCRIPTION": "Fachinformatiker in Umschulung am BFW Dortmund, fokussiert auf KI-gestützte Weblösungen. Erfahren im Aufbau intelligenter Anwendungen mit LangChain, OpenAI APIs und modernen KI-Tools. Suche 6-monatiges Praktikum ab August 2025.",
-  "BUTTON": "Meine KI-gestützten Projekte entdecken",
+  "SUBTITLE": "Moderner Full-Stack Entwickler | Microsoft AI-900 Zertifiziert",
+  "DESCRIPTION": "Fachinformatiker in Umschulung am BFW Dortmund, fokussiert auf moderne Weblösungen mit KI-Tools. Erfahren im Aufbau von Anwendungen mit LangChain, OpenAI APIs und modernen Entwicklungstools. Suche 6-monatiges Praktikum ab August 2025.",
+  "BUTTON": "Meine Projekte entdecken",
   "DYNAMIC_TEXT_1": "LangChain & OpenAI Entwickler",
   "DYNAMIC_TEXT_2": "Microsoft AI-900 Zertifiziert", 
-  "DYNAMIC_TEXT_3": "KI-Enhanced Entwickler",
+  "DYNAMIC_TEXT_3": "Moderner Web-Entwickler",
   "DYNAMIC_TEXT_4": "Praktikum ab August 2025"
 },
 "ABOUT_ME": {
   "TITLE": "Über Mich",
-  "PARAGRAPH_1": "Hallo, ich bin Limber Martinez, ein Microsoft AI-900 zertifizierter Entwickler, der derzeit eine Umschulung zum Fachinformatiker für Anwendungsentwicklung am BFW Dortmund bis Juli 2026 absolviert. Ich fokussiere mich auf KI-gestützte Lösungen und intelligente Webanwendungen mit Schwerpunkt auf Frontend- und Backend-Entwicklung.",
+  "PARAGRAPH_1": "Hallo, ich bin Limber Martinez, ein Microsoft AI-900 zertifizierter Entwickler, der derzeit eine Umschulung zum Fachinformatiker für Anwendungsentwicklung am BFW Dortmund bis Juli 2026 absolviert. Ich fokussiere mich auf moderne Weblösungen und das Erlernen von KI-Tools für Webanwendungen mit Schwerpunkt auf Frontend- und Backend-Entwicklung.",
   "PARAGRAPH_2": "Ich habe praktische Erfahrung mit KI-Tools wie LangChain, OpenAI APIs, Python-Agenten und modernen Entwicklungstools wie Cursor, GitHub Copilot und VS Code AI-Features. Mein Kern-Stack umfasst Java, HTML, CSS, JavaScript, React, TypeScript, mit wachsender Expertise in KI-Integration und Automatisierung.",
   "PARAGRAPH_3": "Ich suche ein 6-monatiges, unentgeltliches Praktikum ab August 2025 in Dortmund und Umgebung, um meine Kenntnisse in einem praxisnahen Umfeld zu vertiefen. Leidenschaftlich an der Integration von KI in die Webentwicklung und dem Aufbau intelligenter Anwendungen, die reale Probleme lösen."
 },
@@ -210,10 +209,9 @@
           "name": "KI & Machine Learning",
           "description": "Microsoft AI-900 zertifiziert mit praktischer Erfahrung in LangChain, OpenAI APIs und Python KI-Agenten. Spezialisiert auf intelligente Anwendungen und Chatbots.",
           "icon": "fas fa-robot"
-        },
-        {
-          "name": "Moderne KI-Entwicklungstools",
-          "description": "Versiert mit Cursor IDE, GitHub Copilot, VS Code KI-Erweiterungen und KI-gestützten Entwicklungsworkflows für erhöhte Produktivität.",
+        },        {
+          "name": "Moderne Entwicklungstools",
+          "description": "Versiert mit Cursor IDE, GitHub Copilot, VS Code Erweiterungen und modernen Entwicklungsworkflows für erhöhte Produktivität.",
           "icon": "fas fa-brain"
         },
         {
@@ -235,21 +233,18 @@
           "name": "Java & Spring Boot",
           "description": "Solide Grundlage in Java und Spring Boot für unternehmensweite Backend-Anwendungen und RESTful API-Entwicklung.",
           "icon": "fab fa-java"
-        },
-        {
-          "name": "KI-Enhanced Version Control",
-          "description": "Fortgeschrittene Nutzung von Git, GitHub mit KI-gestützten Features, automatisierten Workflows und kollaborativer Entwicklung mit KI-Unterstützung.",
+        },        {
+          "name": "Moderne Version Control",
+          "description": "Fortgeschrittene Nutzung von Git, GitHub mit modernen Features, automatisierten Workflows und kollaborativer Entwicklung.",
           "icon": "fab fa-git-alt"
         }
-      ]
-    },    "CONTACT": {
-      "SUBTITLE": "KI-gestützter Kontakt",
+      ]    },    "CONTACT": {      "SUBTITLE": "Kontakt",
       "TITLE": "Lass uns verbinden",
-      "DESCRIPTION": "Offen für Kollaborationen und Jobangebote. Sende mir eine intelligente Nachricht über WhatsApp.",
+      "DESCRIPTION": "Offen für Kollaborationen und Jobangebote. Sende mir eine strukturierte Nachricht über WhatsApp.",
       "RESUME": "Meinen Lebenslauf Ansehen",
       "RESUME_URL": "/cv/ResumeDE.pdf",
-      "SMART_CONTACT": "Intelligenter Kontakt",
-      "SMART_DESCRIPTION": "KI-gestützte Nachrichtenerstellung für WhatsApp",
+      "SMART_CONTACT": "Kontaktformular",
+      "SMART_DESCRIPTION": "Nachrichtenerstellung für WhatsApp",
       "NAME": "Name",
       "NAME_PLACEHOLDER": "Ihr Name",
       "COMPANY": "Unternehmen",
@@ -257,7 +252,7 @@
       "OPPORTUNITY_TYPE": "Art der Gelegenheit",
       "MESSAGE": "Nachricht",
       "MESSAGE_PLACEHOLDER": "Erzählen Sie mir von Ihrem Projekt oder Ihrer Gelegenheit...",
-      "GENERATING": "KI-Nachricht wird generiert...",
+      "GENERATING": "Nachricht wird erstellt...",
       "SEND_WHATSAPP": "Per WhatsApp senden",      "RESPONSE_TIME": "Antwort innerhalb von 24h",
       "LOCATION": "Verfügbar im Raum Dortmund",
       "AVAILABILITY": "Praktikum ab August 2025",
