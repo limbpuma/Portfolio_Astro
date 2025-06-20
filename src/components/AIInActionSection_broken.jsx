@@ -57,11 +57,10 @@ const AIInActionSection = ({ i18n }) => {
         en: '🚀 AI-Enhanced Portfolio',
         de: '🚀 KI-verstärktes Portfolio',
         es: '🚀 Portfolio Potenciado por IA'
-      },
-      description: {
-        en: 'This very portfolio with AI-powered contact form and smart interactions',
-        de: 'Dieses Portfolio mit KI-betriebenen Kontaktformular und intelligenten Interaktionen',
-        es: 'Este mismo portfolio con formulario de contacto IA e interacciones inteligentes'
+      },      description: {
+        en: 'This portfolio with automated contact form and structured message templates',
+        de: 'Dieses Portfolio mit automatisiertem Kontaktformular und strukturierten Nachrichtenvorlagen',
+        es: 'Este portfolio con formulario de contacto automatizado y plantillas de mensajes estructuradas'
       },
       demoType: 'live',
       githubUrl: '#',
