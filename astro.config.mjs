@@ -9,7 +9,7 @@ function generateRobotsTxt() {
   const content = `User-agent: *
 Disallow:
 
-Sitemap: https://limbermartinez.com/sitemap.xml`;
+Sitemap: https://portfolio-astro-limbpumas-projects.vercel.app/sitemap.xml`;
   fs.writeFileSync('public/robots.txt', content);
 }
 
@@ -19,7 +19,7 @@ function generateSitemap() {
   const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://limbermartinez.com/</loc>
+    <loc>https://portfolio-astro-limbpumas-projects.vercel.app/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <priority>1.00</priority>
   </url>
