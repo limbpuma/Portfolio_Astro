@@ -1,4 +1,5 @@
 {
+  "LANG": "de",
   "SEO_TITLE": "Limber Martinez - KI-Enhanced Full-Stack Entwickler | Microsoft AI-900 Zertifiziert",
   "SEO_DESCRIPTION": "Limber Martinez, KI-gestützter Anwendungsentwickler in Umschulung am BFW Dortmund. Sucht 6-monatiges Praktikum ab August 2025. Microsoft AI-900 zertifiziert mit LangChain und OpenAI Expertise.",
   "COOKIES_TEXT": {
@@ -13,12 +14,15 @@
     "ITEM3": "Skills",
     "ITEM4": "Projekte",
     "ITEM5": "Kontakt"
-  },
-  "HERO": {
+  },  "HERO": {
   "TITLE": "Limber Martinez",
   "SUBTITLE": "KI-Enhanced Full-Stack Entwickler | Microsoft AI-900 Zertifiziert",
   "DESCRIPTION": "Fachinformatiker in Umschulung am BFW Dortmund, fokussiert auf KI-gestützte Weblösungen. Erfahren im Aufbau intelligenter Anwendungen mit LangChain, OpenAI APIs und modernen KI-Tools. Suche 6-monatiges Praktikum ab August 2025.",
-  "BUTTON": "Meine KI-gestützten Projekte entdecken"
+  "BUTTON": "Meine KI-gestützten Projekte entdecken",
+  "DYNAMIC_TEXT_1": "LangChain & OpenAI Entwickler",
+  "DYNAMIC_TEXT_2": "Microsoft AI-900 Zertifiziert", 
+  "DYNAMIC_TEXT_3": "KI-Enhanced Entwickler",
+  "DYNAMIC_TEXT_4": "Praktikum ab August 2025"
 },
 "ABOUT_ME": {
   "TITLE": "Über Mich",
@@ -238,13 +242,27 @@
           "icon": "fab fa-git-alt"
         }
       ]
-    },
-    "CONTACT": {
-      "SUBTITLE": "Ein Treffen Planen",
+    },    "CONTACT": {
+      "SUBTITLE": "KI-gestützter Kontakt",
       "TITLE": "Lass uns verbinden",
-      "DESCRIPTION": "Offen für Kollaborationen und Jobangebote. Fühl dich frei, mich zu kontaktieren.",
+      "DESCRIPTION": "Offen für Kollaborationen und Jobangebote. Sende mir eine intelligente Nachricht über WhatsApp.",
       "RESUME": "Meinen Lebenslauf Ansehen",
-      "RESUME_URL": "/cv/ResumeDE.pdf"
+      "RESUME_URL": "/cv/ResumeDE.pdf",
+      "SMART_CONTACT": "Intelligenter Kontakt",
+      "SMART_DESCRIPTION": "KI-gestützte Nachrichtenerstellung für WhatsApp",
+      "NAME": "Name",
+      "NAME_PLACEHOLDER": "Ihr Name",
+      "COMPANY": "Unternehmen",
+      "COMPANY_PLACEHOLDER": "Firmenname (optional)",
+      "OPPORTUNITY_TYPE": "Art der Gelegenheit",
+      "MESSAGE": "Nachricht",
+      "MESSAGE_PLACEHOLDER": "Erzählen Sie mir von Ihrem Projekt oder Ihrer Gelegenheit...",
+      "GENERATING": "KI-Nachricht wird generiert...",
+      "SEND_WHATSAPP": "Per WhatsApp senden",      "RESPONSE_TIME": "Antwort innerhalb von 24h",
+      "LOCATION": "Verfügbar im Raum Dortmund",
+      "AVAILABILITY": "Praktikum ab August 2025",
+      "PRIVACY_CHECKBOX": "Ich akzeptiere die Datenschutzerklärung und stimme der Kontaktaufnahme über WhatsApp zu.",
+      "PRIVACY_REQUIRED": "Bitte akzeptieren Sie die Datenschutzerklärung, um fortzufahren."
     },
     "FOOTER": {
       "PRIVACY_POLICY": "Datenschutzrichtlinie",

@@ -1,4 +1,5 @@
 {
+  "LANG": "en",
   "SEO_TITLE": "Limber Martinez - AI-Enhanced Full-Stack Developer | Microsoft AI-900 Certified",
   "SEO_DESCRIPTION": "Limber Martinez, AI-powered application developer in training at BFW Dortmund. Seeking 6-month internship starting August 2025. Microsoft AI-900 certified with LangChain and OpenAI expertise.",
   "COOKIES_TEXT": {
@@ -13,12 +14,15 @@
     "ITEM3": "Skills",
     "ITEM4": "Projects",
     "ITEM5": "Contact"
-  },
-  "HERO": {
+  },  "HERO": {
   "TITLE": "Limber Martinez",
   "SUBTITLE": "AI-Enhanced Full-Stack Developer | Microsoft AI-900 Certified",
   "DESCRIPTION": "Application Developer in training at BFW Dortmund, focusing on AI-powered web solutions. Experienced in building intelligent applications with LangChain, OpenAI APIs, and modern AI tools. Seeking 6-month internship starting August 2025.",
-  "BUTTON": "Explore my AI-powered projects"
+  "BUTTON": "Explore my AI-powered projects",
+  "DYNAMIC_TEXT_1": "LangChain & OpenAI Developer",
+  "DYNAMIC_TEXT_2": "Microsoft AI-900 Certified", 
+  "DYNAMIC_TEXT_3": "AI-Enhanced Developer",
+  "DYNAMIC_TEXT_4": "Seeking Internship Aug 2025"
 },
 "ABOUT_ME": {
   "TITLE": "About Me",  "PARAGRAPH_1": "Hi, I'm Limber Martinez, a Microsoft AI-900 certified developer currently training as an Application Developer (Fachinformatiker) at BFW Dortmund until July 2026. I focus on creating AI-powered solutions and building intelligent web applications with emphasis on frontend and backend development.",
@@ -235,13 +239,27 @@
           "icon": "fab fa-git-alt"
         }
       ]
-    },
-    "CONTACT": {
-      "SUBTITLE": "Schedule a Meeting",
+    },    "CONTACT": {
+      "SUBTITLE": "AI-Powered Contact",
       "TITLE": "Let's Connect",
-      "DESCRIPTION": "Open to collaborations and job opportunities. Feel free to reach out.",
+      "DESCRIPTION": "Open to collaborations and job opportunities. Send me a smart message via WhatsApp.",
       "RESUME": "View My Resume",
-      "RESUME_URL": "/cv/ResumeEN.pdf"
+      "RESUME_URL": "/cv/ResumeEN.pdf",
+      "SMART_CONTACT": "Smart Contact",
+      "SMART_DESCRIPTION": "AI-powered message generation for WhatsApp",
+      "NAME": "Name",
+      "NAME_PLACEHOLDER": "Your name",
+      "COMPANY": "Company",
+      "COMPANY_PLACEHOLDER": "Company name (optional)",
+      "OPPORTUNITY_TYPE": "Opportunity Type",
+      "MESSAGE": "Message",
+      "MESSAGE_PLACEHOLDER": "Tell me about your project or opportunity...",
+      "GENERATING": "Generating AI message...",
+      "SEND_WHATSAPP": "Send via WhatsApp",      "RESPONSE_TIME": "Response within 24h",
+      "LOCATION": "Available in Dortmund area",
+      "AVAILABILITY": "Internship from August 2025",
+      "PRIVACY_CHECKBOX": "I accept the Privacy Policy and WhatsApp contact.",
+      "PRIVACY_REQUIRED": "Please accept the privacy policy to continue."
     },
     "FOOTER": {
       "PRIVACY_POLICY": "Privacy Policy",

@@ -13,12 +13,15 @@
     "ITEM3": "Skills",
     "ITEM4": "Proyectos",
     "ITEM5": "Contacto"
-  },
-  "HERO": {
+  },  "HERO": {
   "TITLE": "Limber Martinez",
   "SUBTITLE": "Desarrollador Full-Stack Potenciado por IA | Microsoft AI-900 Certificado",
   "DESCRIPTION": "Fachinformatiker en formación en BFW Dortmund, enfocado en soluciones web potenciadas por IA. Experimentado en construir aplicaciones inteligentes con LangChain, APIs de OpenAI y herramientas modernas de IA. Buscando práctica de 6 meses desde agosto 2025.",
-  "BUTTON": "Explora mis proyectos potenciados por IA"
+  "BUTTON": "Explora mis proyectos potenciados por IA",
+  "DYNAMIC_TEXT_1": "Desarrollador LangChain & OpenAI",
+  "DYNAMIC_TEXT_2": "Microsoft AI-900 Certificado", 
+  "DYNAMIC_TEXT_3": "Desarrollador Potenciado por IA",
+  "DYNAMIC_TEXT_4": "Buscando Prácticas Ago 2025"
 },
 "ABOUT_ME": {
   "TITLE": "Sobre Mí",
@@ -239,13 +242,27 @@
           "icon": "fab fa-git-alt"
         }
       ]
-    },
-    "CONTACT": {
-      "SUBTITLE": "Agenda una reunión",
+    },    "CONTACT": {
+      "SUBTITLE": "Contacto Potenciado por IA",
       "TITLE": "Conectemos",
-      "DESCRIPTION": "Abierto a colaboraciones y oportunidades de empleo. No dudes en contactarme.",
+      "DESCRIPTION": "Abierto a colaboraciones y oportunidades de empleo. Envíame un mensaje inteligente vía WhatsApp.",
       "RESUME": "Ver mi CV",
-      "RESUME_URL": "/cv/ResumeES.pdf"
+      "RESUME_URL": "/cv/ResumeES.pdf",
+      "SMART_CONTACT": "Contacto Inteligente",
+      "SMART_DESCRIPTION": "Generación de mensajes potenciada por IA para WhatsApp",
+      "NAME": "Nombre",
+      "NAME_PLACEHOLDER": "Tu nombre",
+      "COMPANY": "Empresa",
+      "COMPANY_PLACEHOLDER": "Nombre de la empresa (opcional)",
+      "OPPORTUNITY_TYPE": "Tipo de Oportunidad",
+      "MESSAGE": "Mensaje",
+      "MESSAGE_PLACEHOLDER": "Cuéntame sobre tu proyecto u oportunidad...",
+      "GENERATING": "Generando mensaje IA...",
+      "SEND_WHATSAPP": "Enviar por WhatsApp",      "RESPONSE_TIME": "Respuesta en 24h",
+      "LOCATION": "Disponible en área de Dortmund",
+      "AVAILABILITY": "Prácticas desde agosto 2025",
+      "PRIVACY_CHECKBOX": "Acepto la Política de Privacidad y el contacto vía WhatsApp.",
+      "PRIVACY_REQUIRED": "Por favor acepta la política de privacidad para continuar."
     },
     "FOOTER": {
       "PRIVACY_POLICY": "Política de Privacidad",

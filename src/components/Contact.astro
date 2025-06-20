@@ -4,6 +4,7 @@ import { getI18N } from '../i18n';
 const { currentLocale} = Astro
 const i18n = getI18N({currentLocale});
 import Button from '../components/Button.astro';
+import WhatsAppContactForm from './WhatsAppContactForm.jsx';
 const resumeUrl = i18n.CONTACT.RESUME_URL; // Obtén la URL del CV del archivo i18n actual
 
 const sectionId = 'contact';
@@ -34,11 +35,9 @@ const personalLinks = [
 
         </div>
 
-    </div>
-    <div class="w-full lg:w-1/2 flex justify-center items-center my-4 lg:my-0"> <!-- Ajusta el margen vertical aquí -->
-        <div class="calendly-inline-widget w-full" data-url="https://calendly.com/limbpuma/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="height: 700px;"></div>
+    </div>    <div class="w-full lg:w-1/2 flex justify-center items-center my-4 lg:my-0">
+        <WhatsAppContactForm i18n={i18n} client:load />
     </div>
     
 </div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </div>

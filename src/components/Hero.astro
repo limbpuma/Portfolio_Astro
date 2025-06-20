@@ -2,19 +2,25 @@
 import { getI18N } from '../i18n';
 const { currentLocale} = Astro
 const i18n = getI18N({currentLocale});
-import Button from '../components/Button.astro';
+import AIEnhancedHero from './AIEnhancedHero.jsx';
 
+// Textos dinámicos para el efecto de typing
+const dynamicTexts = [
+  i18n.HERO.DYNAMIC_TEXT_1 || "LangChain & OpenAI Expert",
+  i18n.HERO.DYNAMIC_TEXT_2 || "Microsoft AI-900 Certified", 
+  i18n.HERO.DYNAMIC_TEXT_3 || "AI-Enhanced Developer",
+  i18n.HERO.DYNAMIC_TEXT_4 || "Seeking Internship Aug 2025"
+];
 ---
 
 <div class="hero min-h-screen">
-  <div class="hero-content text-center">
-    <div class="max-w-md">
-      <p class="font-bold tracking-wide uppercase">{i18n.HERO.SUBTITLE}</p>
-      <h1 class="font-bold font-heading leading-tighter tracking-tighter mb-4 md:text-6xl text-5xl">{i18n.HERO.TITLE}</h1>
-      <p class="text-muted text-xl mb-6">{i18n.HERO.DESCRIPTION}</p>
-      
-      <Button text={i18n.HERO.BUTTON} href="#education_section" />
-
-    </div>
-  </div>
+  <AIEnhancedHero 
+    title={i18n.HERO.TITLE}
+    dynamicTexts={dynamicTexts}
+    description={i18n.HERO.DESCRIPTION}
+    ctaText={i18n.HERO.BUTTON}
+    ctaLink="#education_section"
+    showCertification={true}
+    client:load
+  />
 </div>
