@@ -271,6 +271,7 @@
       "MANUAL_STEPS": "1. Copiar mensaje → 2. Abrir WhatsApp → 3. Iniciar chat → 4. Pegar y enviar",
       "PREPARE_AI_MESSAGE": "Preparar Mensaje IA",
       "PREPARE_BASIC_MESSAGE": "Preparar Mensaje Básico",
+      "BACKUP_OPTIONS": "Si WhatsApp no se abre automáticamente, usa \"Copiar Mensaje\" y envía manualmente",
       "WHATSAPP_WEB": "WhatsApp Web",
       "WHATSAPP_API": "Enlace API",
       "ALTERNATIVE_METHODS": "Métodos alternativos:",

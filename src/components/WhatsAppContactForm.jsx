@@ -12,8 +12,10 @@ const WhatsAppContactForm = ({ i18n }) => {
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [aiAgent] = useState(new AIMessageAgent());
   const [aiEnabled, setAiEnabled] = useState(true);
-  
-  // Modal states
+                     <span className="flex items-center gap-2">
+                      <span>📱</span>
+                      {i18n.CONTACT?.SEND_TO_WHATSAPP || 'Send via WhatsApp'}
+                    </span> // Modal states
   const [showSendModal, setShowSendModal] = useState(false);
   const [finalMessage, setFinalMessage] = useState('');
   const [isCopied, setIsCopied] = useState(false);
@@ -130,23 +132,33 @@ Best regards`;
   };
 
   const handleConfirmSend = () => {
-    // Simply copy the message and show instructions
-    handleCopyMessage();
-    
-    // Show a helpful alert with instructions
-    const currentLang = i18n.LANG || 'en';
-    let instructions = '';
-    
-    if (currentLang === 'de') {
-      instructions = `✅ Nachricht kopiert!\n\n📱 Nächste Schritte:\n1. WhatsApp öffnen\n2. Neuen Chat mit +49 176 45754360 starten\n3. Nachricht einfügen (Strg+V)\n4. Senden`;
-    } else if (currentLang === 'es') {
-      instructions = `✅ ¡Mensaje copiado!\n\n📱 Próximos pasos:\n1. Abrir WhatsApp\n2. Iniciar chat con +49 176 45754360\n3. Pegar mensaje (Ctrl+V)\n4. Enviar`;
-    } else {
-      instructions = `✅ Message copied!\n\n📱 Next steps:\n1. Open WhatsApp\n2. Start chat with +49 176 45754360\n3. Paste message (Ctrl+V)\n4. Send`;
+    // Try direct WhatsApp link first
+    try {
+      const whatsappUrl = `https://wa.me/4917645754360?text=${encodeURIComponent(finalMessage)}`;
+      
+      // Direct approach - open WhatsApp immediately
+      window.open(whatsappUrl, '_blank');
+      setShowSendModal(false);
+      
+    } catch (error) {
+      console.error('Error opening WhatsApp:', error);
+      // Fallback to copy method
+      handleCopyMessage();
+      
+      const currentLang = i18n.LANG || 'en';
+      let instructions = '';
+      
+      if (currentLang === 'de') {
+        instructions = `❌ Automatischer Link fehlgeschlagen.\n✅ Nachricht kopiert!\n\n📱 Nächste Schritte:\n1. WhatsApp öffnen\n2. Neuen Chat mit +49 176 45754360 starten\n3. Nachricht einfügen (Strg+V)\n4. Senden`;
+      } else if (currentLang === 'es') {
+        instructions = `❌ Enlace automático falló.\n✅ ¡Mensaje copiado!\n\n📱 Próximos pasos:\n1. Abrir WhatsApp\n2. Iniciar chat con +49 176 45754360\n3. Pegar mensaje (Ctrl+V)\n4. Enviar`;
+      } else {
+        instructions = `❌ Automatic link failed.\n✅ Message copied!\n\n📱 Next steps:\n1. Open WhatsApp\n2. Start chat with +49 176 45754360\n3. Paste message (Ctrl+V)\n4. Send`;
+      }
+      
+      alert(instructions);
+      setShowSendModal(false);
     }
-    
-    alert(instructions);
-    setShowSendModal(false);
   };
 
   const handleCopyMessage = async () => {
@@ -506,6 +518,11 @@ Best regards`;
                       {i18n.CONTACT?.COPY_AND_INSTRUCT || 'Copy & Show Instructions'}
                     </span>
                   </button>
+                </div>
+
+                {/* Backup Options */}
+                <div className="text-center text-xs text-base-content/60 mt-2 mb-2">
+                  {i18n.CONTACT?.BACKUP_OPTIONS || 'If WhatsApp doesn\'t open automatically, use "Copy Message" and send manually'}
                 </div>
 
                 {/* Cancel Button */}

@@ -269,6 +269,7 @@
       "MANUAL_STEPS": "1. Nachricht kopieren → 2. WhatsApp öffnen → 3. Chat starten → 4. Einfügen & senden",
       "PREPARE_AI_MESSAGE": "KI-Nachricht vorbereiten",
       "PREPARE_BASIC_MESSAGE": "Basis-Nachricht vorbereiten",
+      "BACKUP_OPTIONS": "Falls WhatsApp nicht automatisch öffnet, \"Nachricht kopieren\" verwenden und manuell senden",
       "WHATSAPP_WEB": "WhatsApp Web",
       "WHATSAPP_API": "API Link",
       "ALTERNATIVE_METHODS": "Alternative Methoden:",
