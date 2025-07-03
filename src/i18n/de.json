@@ -170,7 +170,7 @@
         },        {
           "TITLE": "Fast React Pizza",
           "BADGE": "React",
-          "DESCRIPTION": "Eine moderne Pizza-Lieferanwendung, entwickelt mit React und TypeScript. Funktionen umfassen Login, Warenkorb, Bestellverfolgung und Prioritätsliefersystem mit Redux-Statusverwaltung.",
+          "DESCRIPTION": "Eine moderne Pizza-Lieferanwendung, entwickelt mit React und TypeScript. Funktionen umfassen Login, Warenkorb, Bestellverfolgung und Prioritätsliefersystem mit Redux-Statusverwaltung. Daten werden im Browser-Cache/lokalen Speicher im JSON-Format gespeichert, keine Datenbankimplementierung.",
           "CATEGORIES": ["React", "TypeScript", "Redux"],
           "SOCIAL_LINKS": [
             {
