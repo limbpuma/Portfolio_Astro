@@ -273,7 +273,7 @@ const CustomerSupportAgent = () => {
 
       {/* Analysis Results */}
       {analysis && (
-        <div className="space-y-6 bg-gray-50 p-6 rounded-xl">
+        <div className="space-y-6 bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
           <h3 className="text-xl font-bold text-gray-800">📊 Analysis Results</h3>
           
           {/* Main Classification Cards */}
@@ -398,7 +398,7 @@ const CustomerSupportAgent = () => {
           </div>
 
           {/* Business Impact Metrics */}
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg border">
+          <div className="bg-slate-50 p-4 rounded-lg border border-gray-100">
             <h4 className="font-semibold text-gray-700 mb-2">📈 Business Impact</h4>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div className="text-center">
