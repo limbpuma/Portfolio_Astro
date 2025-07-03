@@ -89,6 +89,27 @@
           ]
         },
         {
+          "TITLE": "AI Workflow Orchestrator",
+          "BADGE": "AI",
+          "DESCRIPTION": "LangGraph-powered workflow automation for complex business processes. Features intelligent project planning, business viability analysis, and team optimization with real-time insights and predictive analytics.",
+          "IMAGE": "/images/ai_restaurant_generator.webp",
+          "CATEGORIES": ["LangGraph", "OpenAI", "Workflow", "Business Intelligence"],
+          "AGENT_TYPE": "workflow-orchestrator",
+          "DEMO_MODE": "real",
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Live Demo"
+            },
+            {
+              "url": "https://github.com/limbpuma/AI-Workflow-Orchestrator",
+              "iconClass": "fab fa-github",
+              "label": "GitHub Repository"
+            }
+          ]
+        },
+        {
           "TITLE": "AI Restaurant Name Generator",
           "BADGE": "AI",
           "DESCRIPTION": "Intelligent restaurant name generator built with LangChain and OpenAI APIs. Features dynamic cuisine-based suggestions, creative name generation algorithms, and seamless AI integration for business applications.",

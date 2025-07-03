@@ -92,6 +92,27 @@
           ]
         },
         {
+          "TITLE": "Orquestador de Flujos de Trabajo IA",
+          "BADGE": "IA",
+          "DESCRIPTION": "Automatización de flujos de trabajo empresariales complejos potenciado por LangGraph. Incluye planificación inteligente de proyectos, análisis de viabilidad empresarial y optimización de equipos con insights en tiempo real y análisis predictivo.",
+          "IMAGE": "/images/ai_restaurant_generator.webp",
+          "CATEGORIES": ["LangGraph", "OpenAI", "Flujos de Trabajo", "Inteligencia Empresarial"],
+          "AGENT_TYPE": "workflow-orchestrator",
+          "DEMO_MODE": "real",
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Demo en Vivo"
+            },
+            {
+              "url": "https://github.com/limbpuma/AI-Workflow-Orchestrator",
+              "iconClass": "fab fa-github",
+              "label": "Repositorio GitHub"
+            }
+          ]
+        },
+        {
           "TITLE": "Generador de Nombres IA para Restaurantes",
           "BADGE": "IA",
           "DESCRIPTION": "Generador inteligente de nombres para restaurantes construido con LangChain y APIs de OpenAI. Características incluyen sugerencias dinámicas basadas en cocina, algoritmos creativos de generación de nombres e integración perfecta de IA para aplicaciones empresariales.",

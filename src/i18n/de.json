@@ -91,6 +91,27 @@
           ]
         },
         {
+          "TITLE": "KI-Workflow-Orchestrator",
+          "BADGE": "KI",
+          "DESCRIPTION": "LangGraph-gestützte Workflow-Automatisierung für komplexe Geschäftsprozesse. Bietet intelligente Projektplanung, Geschäftstauglichkeitsanalyse und Teamoptimierung mit Echtzeit-Einblicken und prädiktiver Analytik.",
+          "IMAGE": "/images/ai_restaurant_generator.webp",
+          "CATEGORIES": ["LangGraph", "OpenAI", "Workflow", "Business Intelligence"],
+          "AGENT_TYPE": "workflow-orchestrator",
+          "DEMO_MODE": "real",
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Live Demo"
+            },
+            {
+              "url": "https://github.com/limbpuma/AI-Workflow-Orchestrator",
+              "iconClass": "fab fa-github",
+              "label": "GitHub Repository"
+            }
+          ]
+        },
+        {
           "TITLE": "KI Restaurant Name Generator",
           "BADGE": "KI",
           "DESCRIPTION": "Intelligenter Restaurant-Namen-Generator entwickelt mit LangChain und OpenAI APIs. Bietet dynamische küchenbasierte Vorschläge, kreative Namengenerierungsalgorithmen und nahtlose KI-Integration für Geschäftsanwendungen.",

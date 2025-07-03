@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import DocumentAnalysisAgent from './agents/DocumentAnalysisAgent.jsx';
+import WorkflowOrchestratorAgent from './agents/WorkflowOrchestratorAgent.jsx';
 
 const AIProjectModal = ({ projectId, agentType, config }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +51,8 @@ const AIProjectModal = ({ projectId, agentType, config }) => {
     switch (agentType) {
       case 'document-analysis':
         return <DocumentAnalysisAgent config={config} />;
+      case 'workflow-orchestrator':
+        return <WorkflowOrchestratorAgent config={config} />;
       case 'code-review':
         return <div>Code Review Agent (Coming Soon)</div>;
       case 'workflow':
