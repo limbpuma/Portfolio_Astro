@@ -136,11 +136,11 @@
         {
           "TITLE": "Integra Pflege",
           "BADGE": "Astro",
-          "DESCRIPTION": "Ein voll responsives, statisches Astro-Projekt mit GDPR-Konformität und einem PHP-Kontaktformular, entwickelt für Datenschutz und Benutzerfreundlichkeit.",
-          "CATEGORIES": ["Astro", "Tailwind"],
+          "DESCRIPTION": "Ein voll responsives, statisches Astro-Projekt mit GDPR-Konformität und einem PHP-Kontaktformular, entwickelt für Datenschutz und Benutzerfreundlichkeit. Erstellt mit Astro und Tailwind CSS, SEO-optimiert, deutsche Rechtskonformität und integrierte Barrierefreiheits-Tools.",
+          "CATEGORIES": ["Astro", "Tailwind", "SEO", "Barrierefreiheit"],
           "SOCIAL_LINKS": [
             {
-              "url": "https://pflegedienst-integra.de/",
+              "url": "https://seniorcare-v2.vercel.app/",
               "iconClass": "fas fa-globe",
               "label": "Project 1 Website"
             },

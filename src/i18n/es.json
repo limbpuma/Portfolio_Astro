@@ -137,11 +137,11 @@
         {
           "TITLE": "Integra Asistencia",
           "BADGE": "Astro",
-          "DESCRIPTION": "Un proyecto Astro totalmente responsivo y estático, con principios de GDPR y un formulario de contacto en PHP, diseñado para privacidad y facilidad de uso.",
-          "CATEGORIES": ["Astro", "Tailwind"],
+          "DESCRIPTION": "Un proyecto Astro totalmente responsivo y estático, con principios de GDPR y un formulario de contacto en PHP, diseñado para privacidad y facilidad de uso. Construido con Astro y Tailwind CSS, optimizado para SEO, cumplimiento legal alemán y herramientas de accesibilidad integradas.",
+          "CATEGORIES": ["Astro", "Tailwind", "SEO", "Accesibilidad"],
           "SOCIAL_LINKS": [
             {
-              "url": "https://astro-barber-web.vercel.app/",
+              "url": "https://seniorcare-v2.vercel.app/",
               "iconClass": "fas fa-globe",
               "label": "Project 1 Website"
             },
