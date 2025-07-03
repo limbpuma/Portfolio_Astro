@@ -12,14 +12,11 @@ const WhatsAppContactForm = ({ i18n }) => {
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [aiAgent] = useState(new AIMessageAgent());
   const [aiEnabled, setAiEnabled] = useState(true);
-  const [messagePreview, setMessagePreview] = useState('');
-  const [showPreview, setShowPreview] = useState(false);
-  const [previewLoading, setPreviewLoading] = useState(false);
   
-  // New modal states
+  // Modal states
   const [showSendModal, setShowSendModal] = useState(false);
   const [finalMessage, setFinalMessage] = useState('');
-  const [isCopied, setIsCopied] = useState(false); // AI enabled by default
+  const [isCopied, setIsCopied] = useState(false);
 
   const opportunityTypes = {
     internship: {
@@ -50,56 +47,6 @@ const WhatsAppContactForm = ({ i18n }) => {
       ...prev,
       [name]: value
     }));
-    
-    // Auto-generate preview when user has enough data
-    if (formData.name && (name === 'message' || name === 'company' || name === 'opportunityType')) {
-      debouncePreview();
-    }
-  };
-
-  // Debounced preview generation to avoid too many calls
-  const debouncePreview = (() => {
-    let timeout;
-    return () => {
-      clearTimeout(timeout);
-      timeout = setTimeout(generatePreview, 1000);
-    };
-  })();
-
-  const generatePreview = async () => {
-    if (!formData.name.trim()) {
-      setShowPreview(false);
-      return;
-    }
-
-    setPreviewLoading(true);
-    try {
-      let message;
-      const currentLang = i18n.LANG || 'en';
-      
-      // Generate preview based on current mode
-      if (aiEnabled) {
-        // Use AI Agent for preview
-        const result = await aiAgent.generateIntelligentMessage(formData, currentLang);
-        if (result.success) {
-          message = result.message;
-        } else {
-          message = generateBasicWhatsAppMessage();
-        }
-      } else {
-        // Use basic generation for preview
-        message = generateBasicWhatsAppMessage();
-      }
-      
-      setMessagePreview(message);
-      setShowPreview(true);
-    } catch (error) {
-      console.error('Preview generation failed:', error);
-      setMessagePreview('Error generating preview');
-      setShowPreview(true);
-    } finally {
-      setPreviewLoading(false);
-    }
   };
 
   const generateBasicWhatsAppMessage = () => {
@@ -143,31 +90,7 @@ Best regards`;
     return message;
   };
 
-  const generateWhatsAppMessage = async () => {
-    const currentLang = i18n.LANG || 'en';
-    
-    // If AI is disabled, use basic generation
-    if (!aiEnabled) {
-      return encodeURIComponent(generateBasicWhatsAppMessage());
-    }
-    
-    try {
-      // Use AI Message Agent for intelligent message generation
-      const result = await aiAgent.generateIntelligentMessage(formData, currentLang);
-      
-      if (result.success) {
-        return encodeURIComponent(result.message);
-      } else {
-        // Fallback to basic generation if AI fails
-        return encodeURIComponent(generateBasicWhatsAppMessage());
-      }
-    } catch (error) {
-      console.error('Message generation error:', error);
-      
-      // Emergency fallback
-      return encodeURIComponent(generateBasicWhatsAppMessage());
-    }
-  };  const handleWhatsAppSend = async () => {
+  const handleWhatsAppSend = async () => {
     if (!privacyAccepted) {
       const alertMessage = i18n.CONTACT?.PRIVACY_REQUIRED || 
         'Please accept the privacy policy / Bitte akzeptieren Sie die Datenschutzerklärung';
@@ -285,10 +208,6 @@ Best regards`;
               checked={aiEnabled}
               onChange={(e) => {
                 setAiEnabled(e.target.checked);
-                // Regenerate preview when mode changes
-                if (formData.name.trim()) {
-                  setTimeout(generatePreview, 500);
-                }
               }}
             />
             <span className={`text-sm ${aiEnabled ? 'text-base-content' : 'text-base-content/50'}`}>
@@ -393,81 +312,6 @@ Best regards`;
             </label>
           )}
         </div>
-
-        {/* Vista Previa del Mensaje */}
-        {formData.name.trim() && (
-          <div className="form-control">
-            <div className="flex justify-between items-center mb-2">
-              <label className="label">
-                <span className="label-text font-medium">
-                  {aiEnabled ? '🤖 AI Generated Preview' : '📝 Basic Message Preview'}
-                </span>
-              </label>
-              <button
-                type="button"
-                onClick={generatePreview}
-                disabled={previewLoading}
-                className="btn btn-outline btn-xs"
-              >
-                {previewLoading ? (
-                  <span className="loading loading-spinner loading-xs"></span>
-                ) : (
-                  '🔄 Refresh Preview'
-                )}
-              </button>
-            </div>
-            
-            {showPreview && messagePreview && (
-              <div className={`p-4 rounded-lg border-2 transition-all duration-300 ${
-                aiEnabled 
-                  ? 'border-blue-200 bg-blue-50 dark:bg-blue-900/20' 
-                  : 'border-gray-200 bg-gray-50 dark:bg-gray-800/50'
-              }`}>
-                <div className="flex items-center gap-2 mb-2">
-                  {aiEnabled ? (
-                    <span className="badge badge-info gap-1">
-                      <span>🤖</span> AI Enhanced
-                    </span>
-                  ) : (
-                    <span className="badge badge-ghost gap-1">
-                      <span>📝</span> Basic Mode
-                    </span>
-                  )}
-                  <span className="badge badge-outline text-xs">
-                    {i18n.LANG === 'de' ? '🇩🇪 Deutsch' : 
-                     i18n.LANG === 'es' ? '🇪🇸 Español' : 
-                     '🇺🇸 English'}
-                  </span>
-                  <span className="text-xs text-base-content/60">WhatsApp Message:</span>
-                </div>
-                <div className="whitespace-pre-wrap text-sm bg-white dark:bg-gray-900 p-3 rounded border max-h-40 overflow-y-auto" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
-                  {messagePreview}
-                </div>
-                {aiEnabled && (
-                  <div className="mt-2 text-xs text-info flex items-center gap-1">
-                    <span>✨</span>
-                    <span>AI analyzed context, tone, and generated this personalized message</span>
-                  </div>
-                )}
-                {!aiEnabled && (
-                  <div className="mt-2 text-xs text-base-content/60 flex items-center gap-1">
-                    <span>📝</span>
-                    <span>Simple template-based message generation</span>
-                  </div>
-                )}
-              </div>
-            )}
-            
-            {previewLoading && (
-              <div className="flex items-center justify-center p-4 border-2 border-dashed border-gray-300 rounded-lg">
-                <span className="loading loading-spinner loading-sm mr-2"></span>
-                <span className="text-sm">
-                  {aiEnabled ? 'AI is analyzing and crafting message...' : 'Generating basic message...'}
-                </span>
-              </div>
-            )}
-          </div>
-        )}
       </div>
 
       {/* Checkbox Datenschutz */}
