@@ -175,7 +175,7 @@
           "CATEGORIES": ["React", "TypeScript", "Redux"],
           "SOCIAL_LINKS": [
             {
-              "url": "https://fast-pizza-restaurant.netlify.app/",
+              "url": "https://campus-pizza-frontend.vercel.app/",
               "iconClass": "fas fa-globe",
               "label": "Project 1 Website"
             },
