@@ -15,9 +15,6 @@ import AIProjectModal from '../components/ai-projects/AIProjectModal.jsx';
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
     {projects.map((project, index) => (
       <div class="card w-full shadow-lg hover:shadow-2xl transition-transform duration-700 ease-in-out transform hover:scale-105 group">
-        <figure class="overflow-hidden">
-          <img src={project.IMAGE} alt={project.TITLE} class="w-full h-64 object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"/>
-        </figure>
         <div class="card-body flex items-center">
           <h2 class="card-title">
             {project.TITLE}

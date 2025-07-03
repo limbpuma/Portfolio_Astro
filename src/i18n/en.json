@@ -71,7 +71,6 @@
           "TITLE": "AI Document Analysis Agent",
           "BADGE": "AI",
           "DESCRIPTION": "Intelligent document analyzer powered by multiple AI models. Features real-time analysis, risk assessment, compliance checking, and interactive chat. Built with OpenAI and Anthropic APIs.",
-          "IMAGE": "/images/ai_restaurant_generator.webp",
           "CATEGORIES": ["LangChain", "OpenAI", "Anthropic", "TypeScript"],
           "AGENT_TYPE": "document-analysis",
           "DEMO_MODE": "real",
@@ -91,9 +90,8 @@
         {
           "TITLE": "Email Response Generator",
           "BADGE": "AI",
-          "DESCRIPTION": "Professional AI-powered email response generator that analyzes incoming emails and creates contextually appropriate replies in 4 different styles. Perfect for customer service, sales, and business correspondence.",
-          "IMAGE": "/images/ai_restaurant_generator.webp",
-          "CATEGORIES": ["NLP", "Email Automation", "Business Communication", "AI Assistant"],
+          "DESCRIPTION": "Professional AI-powered email response generator that analyzes incoming emails and creates contextually appropriate replies in 5 different styles. Perfect for customer service, sales, and business correspondence.",
+          "CATEGORIES": ["NLP", "OpenAI", "Context Analysis", "Business Communication"],
           "AGENT_TYPE": "workflow-orchestrator",
           "DEMO_MODE": "real",
           "SOCIAL_LINKS": [
@@ -113,7 +111,6 @@
           "TITLE": "AI Restaurant Name Generator",
           "BADGE": "AI",
           "DESCRIPTION": "Intelligent restaurant name generator built with LangChain and OpenAI APIs. Features dynamic cuisine-based suggestions, creative name generation algorithms, and seamless AI integration for business applications.",
-          "IMAGE": "/images/ai_restaurant_generator.webp",
           "CATEGORIES": ["LangChain", "OpenAI", "Python"],
           "SOCIAL_LINKS": [
             {
@@ -132,7 +129,6 @@
           "TITLE": "Genius AI App",
           "BADGE": "AI",
           "DESCRIPTION": "Multi-purpose AI application featuring intelligent conversation, code generation, image analysis, and music creation. Built with modern AI APIs and showcases comprehensive AI integration capabilities.",
-          "IMAGE": "/images/genius_ai_app.webp",
           "CATEGORIES": ["AI", "React", "OpenAI"],
           "SOCIAL_LINKS": [
             {
@@ -152,7 +148,6 @@
           "TITLE": "Döner Restaurant",
           "BADGE": "Astro",
           "DESCRIPTION": "This project is responsive, providing quick access to WhatsApp, phone, and location, and complies with GDPR.",
-          "IMAGE": "/images/proyect_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -173,7 +168,6 @@
           "TITLE": "Project 2",
           "BADGE": "Astro",
           "DESCRIPTION": "A modern, fully responsive website for a hair salon, developed with Astro, React, and Tailwind, focused on an elegant and user-friendly design.",
-          "IMAGE": "/images/barbershop_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -192,7 +186,6 @@
           "TITLE": "Integra Care",
           "BADGE": "Astro",
           "DESCRIPTION": "A fully responsive, static Astro project with GDPR principles and a PHP contact form, designed for privacy and user-friendliness.",
-          "IMAGE": "/images/integra_1.webp",
           "CATEGORIES": ["Astro", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -210,7 +203,6 @@
           "TITLE": "KFZ Memmo",
           "BADGE": "Astro",
           "DESCRIPTION": "Professional landing page for a car service and vehicle appraisal center in Dortmund. Built with Astro and Tailwind, optimized for SEO and fully responsive.",
-          "IMAGE": "/images/memmokfz.webp",
           "CATEGORIES": ["Astro", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -228,7 +220,6 @@
           "TITLE": "Fast React Pizza",
           "BADGE": "React",
           "DESCRIPTION": "A modern pizza delivery application built with React and TypeScript. Features include login, shopping cart, order tracking, and priority delivery system with Redux state management.",
-          "IMAGE": "/images/fats-pizza-plz.webp",
           "CATEGORIES": ["React", "TypeScript", "Redux"],
           "SOCIAL_LINKS": [
             {

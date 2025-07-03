@@ -74,7 +74,6 @@
           "TITLE": "Agente de Análisis de Documentos IA",
           "BADGE": "IA",
           "DESCRIPTION": "Analizador inteligente de documentos potenciado por múltiples modelos de IA. Características incluyen análisis en tiempo real, evaluación de riesgos, verificación de cumplimiento y chat interactivo. Construido con APIs de OpenAI y Anthropic.",
-          "IMAGE": "/images/ai_restaurant_generator.webp",
           "CATEGORIES": ["LangChain", "OpenAI", "Anthropic", "TypeScript"],
           "AGENT_TYPE": "document-analysis",
           "DEMO_MODE": "real",
@@ -94,9 +93,8 @@
         {
           "TITLE": "Generador de Respuestas de Email",
           "BADGE": "IA",
-          "DESCRIPTION": "Generador profesional de respuestas de email potenciado por IA que analiza emails entrantes y crea respuestas contextualmente apropiadas en 4 estilos diferentes. Perfecto para atención al cliente, ventas y correspondencia empresarial.",
-          "IMAGE": "/images/ai_restaurant_generator.webp",
-          "CATEGORIES": ["PLN", "Automatización Email", "Comunicación Empresarial", "Asistente IA"],
+          "DESCRIPTION": "Generador profesional de respuestas de email potenciado por IA que analiza emails entrantes y crea respuestas contextualmente apropiadas en 5 estilos diferentes. Perfecto para atención al cliente, ventas y correspondencia empresarial.",
+          "CATEGORIES": ["PLN", "OpenAI", "Análisis Contextual", "Comunicación Empresarial"],
           "AGENT_TYPE": "workflow-orchestrator",
           "DEMO_MODE": "real",
           "SOCIAL_LINKS": [
@@ -116,7 +114,6 @@
           "TITLE": "Generador de Nombres IA para Restaurantes",
           "BADGE": "IA",
           "DESCRIPTION": "Generador inteligente de nombres para restaurantes construido con LangChain y APIs de OpenAI. Características incluyen sugerencias dinámicas basadas en cocina, algoritmos creativos de generación de nombres e integración perfecta de IA para aplicaciones empresariales.",
-          "IMAGE": "/images/ai_restaurant_generator.webp",
           "CATEGORIES": ["LangChain", "OpenAI", "Python"],
           "SOCIAL_LINKS": [
             {
@@ -135,7 +132,6 @@
           "TITLE": "Genius App IA",
           "BADGE": "IA",
           "DESCRIPTION": "Aplicación de IA multipropósito con conversación inteligente, generación de código, análisis de imágenes y creación musical. Construida con APIs modernas de IA y muestra capacidades integrales de integración de IA.",
-          "IMAGE": "/images/genius_ai_app.webp",
           "CATEGORIES": ["IA", "React", "OpenAI"],
           "SOCIAL_LINKS": [
             {
@@ -154,7 +150,6 @@
           "TITLE": "Restaurante Döner",
           "BADGE": "Astro",
           "DESCRIPTION": "Este proyecto aplica principios responsive para facilitar el acceso rápido a WhatsApp, teléfono y ubicación, cumpliendo con GDPR.",
-          "IMAGE": "/images/proyect_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -173,7 +168,6 @@
           "TITLE": "Barber Landing",
           "BADGE": "Astro",
           "DESCRIPTION": "Una web moderna y totalmente responsiva para una peluquería, desarrollada con Astro, React y Tailwind, enfocada en un diseño elegante y funcional.",
-          "IMAGE": "/images/barbershop_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -192,7 +186,6 @@
           "TITLE": "Integra Asistencia",
           "BADGE": "Astro",
           "DESCRIPTION": "Un proyecto Astro totalmente responsivo y estático, con principios de GDPR y un formulario de contacto en PHP, diseñado para privacidad y facilidad de uso.",
-          "IMAGE": "/images/integra_1.webp",
           "CATEGORIES": ["Astro", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -210,7 +203,6 @@
           "TITLE": "KFZ Memmo",
           "BADGE": "Astro",
           "DESCRIPTION": "Landing page profesional para un taller mecánico y perito en Dortmund. Totalmente responsiva, optimizada para SEO, desarrollada con Astro y Tailwind CSS.",
-          "IMAGE": "/images/memmokfz.webp",
           "CATEGORIES": ["Astro", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -228,7 +220,6 @@
           "TITLE": "Fast React Pizza",
           "BADGE": "React",
           "DESCRIPTION": "Una aplicación moderna de delivery de pizzas desarrollada con React y TypeScript. Incluye funciones de login, carrito de compras, seguimiento de pedidos y sistema de entrega prioritaria con gestión de estado Redux.",
-          "IMAGE": "/images/fats-pizza-plz.webp",
           "CATEGORIES": ["React", "TypeScript", "Redux"],
           "SOCIAL_LINKS": [
             {

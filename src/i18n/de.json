@@ -73,7 +73,6 @@
           "TITLE": "KI Dokumentenanalyse Agent",
           "BADGE": "KI",
           "DESCRIPTION": "Intelligenter Dokumentenanalysator mit mehreren KI-Modellen. Bietet Echtzeitanalyse, Risikobewertung, Compliance-Prüfung und interaktiven Chat. Entwickelt mit OpenAI und Anthropic APIs.",
-          "IMAGE": "/images/ai_restaurant_generator.webp",
           "CATEGORIES": ["LangChain", "OpenAI", "Anthropic", "TypeScript"],
           "AGENT_TYPE": "document-analysis",
           "DEMO_MODE": "real",
@@ -94,7 +93,6 @@
           "TITLE": "Email Response Generator",
           "BADGE": "KI",
           "DESCRIPTION": "Professioneller KI-gestützter E-Mail-Antwort-Generator, der eingehende E-Mails analysiert und kontextuell angemessene Antworten in 4 verschiedenen Stilen erstellt. Perfekt für Kundenservice, Vertrieb und Geschäftskommunikation.",
-          "IMAGE": "/images/ai_restaurant_generator.webp",
           "CATEGORIES": ["NLP", "E-Mail-Automatisierung", "Geschäftskommunikation", "KI-Assistent"],
           "AGENT_TYPE": "workflow-orchestrator",
           "DEMO_MODE": "real",
@@ -115,7 +113,6 @@
           "TITLE": "KI Restaurant Name Generator",
           "BADGE": "KI",
           "DESCRIPTION": "Intelligenter Restaurant-Namen-Generator entwickelt mit LangChain und OpenAI APIs. Bietet dynamische küchenbasierte Vorschläge, kreative Namengenerierungsalgorithmen und nahtlose KI-Integration für Geschäftsanwendungen.",
-          "IMAGE": "/images/ai_restaurant_generator.webp",
           "CATEGORIES": ["LangChain", "OpenAI", "Python"],
           "SOCIAL_LINKS": [
             {
@@ -134,7 +131,6 @@
           "TITLE": "Genius KI App",
           "BADGE": "KI",
           "DESCRIPTION": "Vielseitige KI-Anwendung mit intelligenter Konversation, Code-Generierung, Bildanalyse und Musikerstellung. Entwickelt mit modernen KI-APIs und zeigt umfassende KI-Integrationsfähigkeiten.",
-          "IMAGE": "/images/genius_ai_app.webp",
           "CATEGORIES": ["KI", "React", "OpenAI"],
           "SOCIAL_LINKS": [
             {
@@ -153,7 +149,6 @@
           "TITLE": "Restaurant Döner",
           "BADGE": "Astro",
           "DESCRIPTION": "Dieses Projekt ist responsive gestaltet, um schnellen Zugriff auf WhatsApp, Telefon und Standort zu ermöglichen und entspricht der DSGVO.",
-          "IMAGE": "/images/proyect_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -172,7 +167,6 @@
           "TITLE": "Barber Landing",
           "BADGE": "Astro",
           "DESCRIPTION": "Eine moderne, voll responsive Webseite für eine Friseurseite, entwickelt mit Astro, React und Tailwind für ein elegantes und benutzerfreundliches Design.",
-          "IMAGE": "/images/barbershop_1.webp",
           "CATEGORIES": ["React", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -191,7 +185,6 @@
           "TITLE": "Integra Pflege",
           "BADGE": "Astro",
           "DESCRIPTION": "Ein voll responsives, statisches Astro-Projekt mit GDPR-Konformität und einem PHP-Kontaktformular, entwickelt für Datenschutz und Benutzerfreundlichkeit.",
-          "IMAGE": "/images/integra_1.webp",
           "CATEGORIES": ["Astro", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -209,7 +202,6 @@
           "TITLE": "KFZ Memmo",
           "BADGE": "Astro",
           "DESCRIPTION": "Professionelle Landingpage für eine Autowerkstatt & Sachverständigenbüro in Dortmund. Modernes Design, SEO-optimiert und responsive – entwickelt mit Astro und Tailwind.",
-          "IMAGE": "/images/memmokfz.webp",
           "CATEGORIES": ["Astro", "Tailwind"],
           "SOCIAL_LINKS": [
             {
@@ -227,7 +219,6 @@
           "TITLE": "Fast React Pizza",
           "BADGE": "React",
           "DESCRIPTION": "Eine moderne Pizza-Lieferanwendung, entwickelt mit React und TypeScript. Funktionen umfassen Login, Warenkorb, Bestellverfolgung und Prioritätsliefersystem mit Redux-Statusverwaltung.",
-          "IMAGE": "/images/fats-pizza-plz.webp",
           "CATEGORIES": ["React", "TypeScript", "Redux"],
           "SOCIAL_LINKS": [
             {
