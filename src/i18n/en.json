@@ -89,11 +89,11 @@
           ]
         },
         {
-          "TITLE": "AI Workflow Orchestrator",
+          "TITLE": "Business Process Optimizer",
           "BADGE": "AI",
-          "DESCRIPTION": "LangGraph-powered workflow automation for complex business processes. Features intelligent project planning, business viability analysis, and team optimization with real-time insights and predictive analytics.",
+          "DESCRIPTION": "AI-powered business process analysis that identifies bottlenecks, calculates costs, and provides actionable optimization strategies with real ROI calculations for immediate implementation.",
           "IMAGE": "/images/ai_restaurant_generator.webp",
-          "CATEGORIES": ["LangGraph", "OpenAI", "Workflow", "Business Intelligence"],
+          "CATEGORIES": ["Process Mining", "AI Analytics", "ROI Calculator", "Automation"],
           "AGENT_TYPE": "workflow-orchestrator",
           "DEMO_MODE": "real",
           "SOCIAL_LINKS": [
@@ -103,7 +103,7 @@
               "label": "Live Demo"
             },
             {
-              "url": "https://github.com/limbpuma/AI-Workflow-Orchestrator",
+              "url": "https://github.com/limbpuma/Business-Process-Optimizer",
               "iconClass": "fab fa-github",
               "label": "GitHub Repository"
             }

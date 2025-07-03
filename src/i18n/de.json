@@ -91,11 +91,11 @@
           ]
         },
         {
-          "TITLE": "KI-Workflow-Orchestrator",
+          "TITLE": "Business Process Optimizer",
           "BADGE": "KI",
-          "DESCRIPTION": "LangGraph-gestützte Workflow-Automatisierung für komplexe Geschäftsprozesse. Bietet intelligente Projektplanung, Geschäftstauglichkeitsanalyse und Teamoptimierung mit Echtzeit-Einblicken und prädiktiver Analytik.",
+          "DESCRIPTION": "KI-gestützte Geschäftsprozessanalyse, die Engpässe identifiziert, Kosten berechnet und umsetzbare Optimierungsstrategien mit echten ROI-Berechnungen für sofortige Implementierung bereitstellt.",
           "IMAGE": "/images/ai_restaurant_generator.webp",
-          "CATEGORIES": ["LangGraph", "OpenAI", "Workflow", "Business Intelligence"],
+          "CATEGORIES": ["Process Mining", "KI-Analytik", "ROI-Rechner", "Automatisierung"],
           "AGENT_TYPE": "workflow-orchestrator",
           "DEMO_MODE": "real",
           "SOCIAL_LINKS": [
@@ -105,7 +105,7 @@
               "label": "Live Demo"
             },
             {
-              "url": "https://github.com/limbpuma/AI-Workflow-Orchestrator",
+              "url": "https://github.com/limbpuma/Business-Process-Optimizer",
               "iconClass": "fab fa-github",
               "label": "GitHub Repository"
             }

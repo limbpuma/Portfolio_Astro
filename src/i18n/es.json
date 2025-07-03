@@ -92,11 +92,11 @@
           ]
         },
         {
-          "TITLE": "Orquestador de Flujos de Trabajo IA",
+          "TITLE": "Optimizador de Procesos Empresariales",
           "BADGE": "IA",
-          "DESCRIPTION": "Automatización de flujos de trabajo empresariales complejos potenciado por LangGraph. Incluye planificación inteligente de proyectos, análisis de viabilidad empresarial y optimización de equipos con insights en tiempo real y análisis predictivo.",
+          "DESCRIPTION": "Análisis de procesos empresariales potenciado por IA que identifica cuellos de botella, calcula costos y proporciona estrategias de optimización accionables con cálculos de ROI reales para implementación inmediata.",
           "IMAGE": "/images/ai_restaurant_generator.webp",
-          "CATEGORIES": ["LangGraph", "OpenAI", "Flujos de Trabajo", "Inteligencia Empresarial"],
+          "CATEGORIES": ["Minería de Procesos", "Análisis IA", "Calculadora ROI", "Automatización"],
           "AGENT_TYPE": "workflow-orchestrator",
           "DEMO_MODE": "real",
           "SOCIAL_LINKS": [
@@ -106,7 +106,7 @@
               "label": "Demo en Vivo"
             },
             {
-              "url": "https://github.com/limbpuma/AI-Workflow-Orchestrator",
+              "url": "https://github.com/limbpuma/Business-Process-Optimizer",
               "iconClass": "fab fa-github",
               "label": "Repositorio GitHub"
             }
