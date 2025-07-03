@@ -131,34 +131,134 @@ Best regards`;
     }
   };
 
-  const handleConfirmSend = () => {
-    // Try direct WhatsApp link first
+  const handleConfirmSend = async () => {
+    const whatsappUrl = `https://wa.me/4917645754360?text=${encodeURIComponent(finalMessage)}`;
+    
+    // Device/browser detection
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const isAndroid = /Android/i.test(navigator.userAgent);
+    const isChrome = /Chrome|CriOS/.test(navigator.userAgent);
+    const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+    
+    let whatsappOpened = false;
+    
     try {
-      const whatsappUrl = `https://wa.me/4917645754360?text=${encodeURIComponent(finalMessage)}`;
+      if (isMobile) {
+        // === MOBILE STRATEGIES ===
+        if (isIOS) {
+          // iOS: Try WhatsApp URL scheme first, then fallback to wa.me
+          try {
+            const iosScheme = `whatsapp://send?phone=4917645754360&text=${encodeURIComponent(finalMessage)}`;
+            window.location.href = iosScheme;
+            whatsappOpened = true;
+            
+            // Fallback to wa.me after a brief delay if app scheme fails
+            setTimeout(() => {
+              if (document.visibilityState === 'visible') {
+                window.location.href = whatsappUrl;
+              }
+            }, 1500);
+          } catch (e) {
+            window.location.href = whatsappUrl;
+            whatsappOpened = true;
+          }
+        } else if (isAndroid) {
+          // Android: Try intent first, then wa.me
+          try {
+            const intentUrl = `intent://send?phone=4917645754360&text=${encodeURIComponent(finalMessage)}#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end`;
+            window.location.href = intentUrl;
+            whatsappOpened = true;
+            
+            // Fallback to wa.me
+            setTimeout(() => {
+              if (document.visibilityState === 'visible') {
+                window.location.href = whatsappUrl;
+              }
+            }, 1500);
+          } catch (e) {
+            window.location.href = whatsappUrl;
+            whatsappOpened = true;
+          }
+        } else {
+          // Other mobile platforms
+          window.location.href = whatsappUrl;
+          whatsappOpened = true;
+        }
+      } else {
+        // === DESKTOP STRATEGIES ===
+        if (isSafari) {
+          // Safari: Use location.href directly for better compatibility
+          window.location.href = whatsappUrl;
+          whatsappOpened = true;
+        } else {
+          // Chrome, Firefox, Edge: Try window.open first
+          const whatsappWindow = window.open(whatsappUrl, '_blank', 'width=800,height=600,scrollbars=yes,resizable=yes');
+          
+          if (whatsappWindow) {
+            try {
+              whatsappWindow.focus();
+              whatsappOpened = true;
+              
+              // Check if window was blocked or closed immediately
+              setTimeout(() => {
+                if (whatsappWindow.closed) {
+                  // Window was blocked, try location.href
+                  window.location.href = whatsappUrl;
+                }
+              }, 100);
+            } catch (e) {
+              // Cross-origin issues, try location.href
+              window.location.href = whatsappUrl;
+              whatsappOpened = true;
+            }
+          } else {
+            // Pop-up was blocked, use location.href
+            window.location.href = whatsappUrl;
+            whatsappOpened = true;
+          }
+        }
+      }
       
-      // Direct approach - open WhatsApp immediately
-      window.open(whatsappUrl, '_blank');
-      setShowSendModal(false);
+      // Wait a moment to see if WhatsApp opens successfully
+      const checkDelay = isMobile ? 3000 : 2000;
+      setTimeout(() => {
+        // If page is still visible and focused, WhatsApp likely didn't open
+        if (document.visibilityState === 'visible' && !document.hidden) {
+          handleFallbackInstructions();
+        } else {
+          // Success! Close the modal
+          setShowSendModal(false);
+        }
+      }, checkDelay);
       
     } catch (error) {
       console.error('Error opening WhatsApp:', error);
-      // Fallback to copy method
-      handleCopyMessage();
-      
-      const currentLang = i18n.LANG || 'en';
-      let instructions = '';
-      
-      if (currentLang === 'de') {
-        instructions = `❌ Automatischer Link fehlgeschlagen.\n✅ Nachricht kopiert!\n\n📱 Nächste Schritte:\n1. WhatsApp öffnen\n2. Neuen Chat mit +49 176 45754360 starten\n3. Nachricht einfügen (Strg+V)\n4. Senden`;
-      } else if (currentLang === 'es') {
-        instructions = `❌ Enlace automático falló.\n✅ ¡Mensaje copiado!\n\n📱 Próximos pasos:\n1. Abrir WhatsApp\n2. Iniciar chat con +49 176 45754360\n3. Pegar mensaje (Ctrl+V)\n4. Enviar`;
-      } else {
-        instructions = `❌ Automatic link failed.\n✅ Message copied!\n\n📱 Next steps:\n1. Open WhatsApp\n2. Start chat with +49 176 45754360\n3. Paste message (Ctrl+V)\n4. Send`;
-      }
-      
-      alert(instructions);
-      setShowSendModal(false);
+      handleFallbackInstructions();
     }
+  };
+
+  const handleFallbackInstructions = async () => {
+    // Copy message to clipboard first
+    try {
+      await handleCopyMessage();
+    } catch (e) {
+      console.error('Failed to copy message:', e);
+    }
+    
+    const currentLang = i18n.LANG || 'en';
+    let instructions = '';
+    
+    if (currentLang === 'de') {
+      instructions = `� WhatsApp öffnen - Anweisungen\n\n✅ Nachricht wurde automatisch kopiert!\n\n� Option 1 - Direkter Link:\nÖffne: https://wa.me/4917645754360\n\n📝 Option 2 - Manuell:\n1. WhatsApp öffnen (Web/App)\n2. Neuen Chat starten\n3. Nummer: +49 176 45754360\n4. Nachricht einfügen (Strg+V)\n5. Senden ✈️\n\n💡 WhatsApp Web: web.whatsapp.com`;
+    } else if (currentLang === 'es') {
+      instructions = `� Abrir WhatsApp - Instrucciones\n\n✅ ¡Mensaje copiado automáticamente!\n\n🔗 Opción 1 - Enlace directo:\nAbrir: https://wa.me/4917645754360\n\n� Opción 2 - Manual:\n1. Abrir WhatsApp (Web/App)\n2. Iniciar nuevo chat\n3. Número: +49 176 45754360\n4. Pegar mensaje (Ctrl+V)\n5. Enviar ✈️\n\n💡 WhatsApp Web: web.whatsapp.com`;
+    } else {
+      instructions = `� Open WhatsApp - Instructions\n\n✅ Message automatically copied!\n\n🔗 Option 1 - Direct link:\nOpen: https://wa.me/4917645754360\n\n� Option 2 - Manual:\n1. Open WhatsApp (Web/App)\n2. Start new chat\n3. Number: +49 176 45754360\n4. Paste message (Ctrl+V)\n5. Send ✈️\n\n💡 WhatsApp Web: web.whatsapp.com`;
+    }
+    
+    alert(instructions);
+    setShowSendModal(false);
   };
 
   const handleCopyMessage = async () => {
