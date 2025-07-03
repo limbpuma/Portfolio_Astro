@@ -254,7 +254,17 @@
       "COPY_MESSAGE": "Copy Message",
       "COPIED": "Copied!",
       "SEND_TO_WHATSAPP": "Send via WhatsApp",
-      "CANCEL_SEND": "Cancel"
+      "COPY_AND_INSTRUCT": "Copy & Show Instructions",
+      "CANCEL_SEND": "Cancel",
+      "WHATSAPP_CONTACT": "WhatsApp Contact",
+      "HOW_TO_SEND": "How to send:",
+      "MANUAL_STEPS": "1. Copy message → 2. Open WhatsApp → 3. Start chat → 4. Paste & send",
+      "PREPARE_AI_MESSAGE": "Prepare AI Message",
+      "PREPARE_BASIC_MESSAGE": "Prepare Basic Message",
+      "WHATSAPP_WEB": "WhatsApp Web",
+      "WHATSAPP_API": "API Link",
+      "ALTERNATIVE_METHODS": "Alternative methods:",
+      "MANUAL_INSTRUCTIONS": "If links don't work: Copy message and send manually to the number above"
     },
     "FOOTER": {
       "PRIVACY_POLICY": "Privacy Policy",

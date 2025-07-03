@@ -264,7 +264,17 @@
       "COPY_MESSAGE": "Copiar Mensaje",
       "COPIED": "¡Copiado!",
       "SEND_TO_WHATSAPP": "Enviar por WhatsApp",
-      "CANCEL_SEND": "Cancelar"
+      "COPY_AND_INSTRUCT": "Copiar y Mostrar Instrucciones",
+      "CANCEL_SEND": "Cancelar",
+      "WHATSAPP_CONTACT": "Contacto WhatsApp",
+      "HOW_TO_SEND": "Cómo enviar:",
+      "MANUAL_STEPS": "1. Copiar mensaje → 2. Abrir WhatsApp → 3. Iniciar chat → 4. Pegar y enviar",
+      "PREPARE_AI_MESSAGE": "Preparar Mensaje IA",
+      "PREPARE_BASIC_MESSAGE": "Preparar Mensaje Básico",
+      "WHATSAPP_WEB": "WhatsApp Web",
+      "WHATSAPP_API": "Enlace API",
+      "ALTERNATIVE_METHODS": "Métodos alternativos:",
+      "MANUAL_INSTRUCTIONS": "Si los enlaces no funcionan: Copia el mensaje y envíalo manualmente al número de arriba"
     },
     "FOOTER": {
       "PRIVACY_POLICY": "Política de Privacidad",

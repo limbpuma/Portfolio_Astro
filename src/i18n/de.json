@@ -262,7 +262,17 @@
       "COPY_MESSAGE": "Nachricht kopieren",
       "COPIED": "Kopiert!",
       "SEND_TO_WHATSAPP": "Per WhatsApp senden",
-      "CANCEL_SEND": "Abbrechen"
+      "COPY_AND_INSTRUCT": "Kopieren & Anweisungen zeigen",
+      "CANCEL_SEND": "Abbrechen",
+      "WHATSAPP_CONTACT": "WhatsApp Kontakt",
+      "HOW_TO_SEND": "So senden:",
+      "MANUAL_STEPS": "1. Nachricht kopieren → 2. WhatsApp öffnen → 3. Chat starten → 4. Einfügen & senden",
+      "PREPARE_AI_MESSAGE": "KI-Nachricht vorbereiten",
+      "PREPARE_BASIC_MESSAGE": "Basis-Nachricht vorbereiten",
+      "WHATSAPP_WEB": "WhatsApp Web",
+      "WHATSAPP_API": "API Link",
+      "ALTERNATIVE_METHODS": "Alternative Methoden:",
+      "MANUAL_INSTRUCTIONS": "Falls die Links nicht funktionieren: Nachricht kopieren und manuell an die obige Nummer senden"
     },
     "FOOTER": {
       "PRIVACY_POLICY": "Datenschutzrichtlinie",

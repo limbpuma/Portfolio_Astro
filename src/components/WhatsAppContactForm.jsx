@@ -207,8 +207,22 @@ Best regards`;
   };
 
   const handleConfirmSend = () => {
-    const whatsappUrl = `https://wa.me/4917645754360?text=${encodeURIComponent(finalMessage)}`;
-    window.open(whatsappUrl, '_blank');
+    // Simply copy the message and show instructions
+    handleCopyMessage();
+    
+    // Show a helpful alert with instructions
+    const currentLang = i18n.LANG || 'en';
+    let instructions = '';
+    
+    if (currentLang === 'de') {
+      instructions = `✅ Nachricht kopiert!\n\n📱 Nächste Schritte:\n1. WhatsApp öffnen\n2. Neuen Chat mit +49 176 45754360 starten\n3. Nachricht einfügen (Strg+V)\n4. Senden`;
+    } else if (currentLang === 'es') {
+      instructions = `✅ ¡Mensaje copiado!\n\n📱 Próximos pasos:\n1. Abrir WhatsApp\n2. Iniciar chat con +49 176 45754360\n3. Pegar mensaje (Ctrl+V)\n4. Enviar`;
+    } else {
+      instructions = `✅ Message copied!\n\n📱 Next steps:\n1. Open WhatsApp\n2. Start chat with +49 176 45754360\n3. Paste message (Ctrl+V)\n4. Send`;
+    }
+    
+    alert(instructions);
     setShowSendModal(false);
   };
 
@@ -496,10 +510,10 @@ Best regards`;
             </span>
           ) : (
             <span className="flex items-center gap-2">
-              <span className="text-xl">{aiEnabled ? '🤖📱' : '��📱'}</span>
+              <span className="text-xl">{aiEnabled ? '🤖�' : '�📋'}</span>
               {aiEnabled ? 
-                (i18n.CONTACT?.SEND_WHATSAPP || 'Generate AI Message & Send') :
-                (i18n.CONTACT?.SEND_WHATSAPP_BASIC || 'Create Message & Send')
+                (i18n.CONTACT?.PREPARE_AI_MESSAGE || 'Prepare AI Message') :
+                (i18n.CONTACT?.PREPARE_BASIC_MESSAGE || 'Prepare Basic Message')
               }
             </span>
           )}
@@ -644,8 +658,8 @@ Best regards`;
                     disabled={!finalMessage.trim()}
                   >
                     <span className="flex items-center gap-2">
-                      <span>📱</span>
-                      {i18n.CONTACT?.SEND_TO_WHATSAPP || 'Send via WhatsApp'}
+                      <span>�</span>
+                      {i18n.CONTACT?.COPY_AND_INSTRUCT || 'Copy & Show Instructions'}
                     </span>
                   </button>
                 </div>
@@ -658,12 +672,34 @@ Best regards`;
                   {i18n.CONTACT?.CANCEL_SEND || 'Cancel'}
                 </button>
 
-                {/* Contact Info */}
+                {/* Contact Info & Instructions */}
+                <div className="text-center p-4 bg-base-200 rounded-lg">
+                  <div className="text-sm font-medium text-base-content mb-2">
+                    📱 {i18n.CONTACT?.WHATSAPP_CONTACT || 'WhatsApp Contact'}
+                  </div>
+                  <div className="text-lg font-mono font-bold text-primary mb-3">
+                    +49 176 45754360
+                  </div>
+                  <div className="text-xs text-base-content/70 space-y-1">
+                    <div className="flex items-center justify-center gap-2">
+                      <span>✅</span>
+                      <span>{i18n.CONTACT?.RESPONSE_TIME || 'Response within 24h'}</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <span>📍</span>
+                      <span>{i18n.CONTACT?.LOCATION || 'Available in Dortmund area'}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Manual Instructions */}
                 <div className="text-center text-xs text-base-content/60 mt-2">
-                  📱 WhatsApp: +49 176 45754360 | 
-                  <span className="ml-1">
-                    {i18n.CONTACT?.RESPONSE_TIME || 'Response within 24h'}
-                  </span>
+                  <div className="font-medium mb-1">
+                    {i18n.CONTACT?.HOW_TO_SEND || 'How to send:'}
+                  </div>
+                  <div>
+                    {i18n.CONTACT?.MANUAL_STEPS || '1. Copy message → 2. Open WhatsApp → 3. Start chat → 4. Paste & send'}
+                  </div>
                 </div>
               </div>
             </div>
