@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import DocumentAnalysisAgent from './agents/DocumentAnalysisAgent.jsx';
 import EmailResponseAgent from './agents/EmailResponseAgent.jsx';
+import CustomerSupportAgent from './agents/CustomerSupportAgent.jsx';
 
 const AIProjectModal = ({ projectId, agentType, config }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,6 +54,8 @@ const AIProjectModal = ({ projectId, agentType, config }) => {
         return <DocumentAnalysisAgent config={config} />;
       case 'workflow-orchestrator':
         return <EmailResponseAgent config={config} />;
+      case 'customer-support':
+        return <CustomerSupportAgent config={config} />;
       case 'code-review':
         return <div>Code Review Agent (Coming Soon)</div>;
       case 'workflow':

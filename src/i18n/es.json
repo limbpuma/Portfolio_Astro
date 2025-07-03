@@ -233,6 +233,26 @@
               "label": "Project 1 GitHub"
             }
           ]
+        },
+        {
+          "TITLE": "Clasificador de Tickets de Soporte",
+          "BADGE": "IA",
+          "DESCRIPTION": "Sistema inteligente de análisis de tickets de soporte al cliente potenciado por IA que categoriza, prioriza y enruta tickets automáticamente. Incluye análisis de sentimientos, detección de urgencia e insights accionables para equipos de soporte.",
+          "CATEGORIES": ["Clasificación IA", "OpenAI", "PLN", "Soporte al Cliente"],
+          "AGENT_TYPE": "customer-support",
+          "DEMO_MODE": "real",
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Demo en Vivo"
+            },
+            {
+              "url": "https://github.com/limbpuma/Customer-Support-Classifier",
+              "iconClass": "fab fa-github",
+              "label": "Repositorio GitHub"
+            }
+          ]
         }
         
       ]

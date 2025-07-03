@@ -232,6 +232,26 @@
               "label": "Project 1 GitHub"
             }
           ]
+        },
+        {
+          "TITLE": "Kundensupport Ticket Klassifizierer",
+          "BADGE": "KI",
+          "DESCRIPTION": "Intelligentes KI-gestütztes Analysesystem für Kundensupport-Tickets, das automatisch kategorisiert, priorisiert und weiterleitet. Bietet Sentiment-Analyse, Dringlichkeitserkennung und umsetzbare Erkenntnisse für Support-Teams.",
+          "CATEGORIES": ["KI-Klassifizierung", "OpenAI", "NLP", "Kundensupport"],
+          "AGENT_TYPE": "customer-support",
+          "DEMO_MODE": "real",
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Live Demo"
+            },
+            {
+              "url": "https://github.com/limbpuma/Customer-Support-Classifier",
+              "iconClass": "fab fa-github",
+              "label": "GitHub Repository"
+            }
+          ]
         }
         
       ]
