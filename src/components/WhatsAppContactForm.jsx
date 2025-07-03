@@ -14,7 +14,12 @@ const WhatsAppContactForm = ({ i18n }) => {
   const [aiEnabled, setAiEnabled] = useState(true);
   const [messagePreview, setMessagePreview] = useState('');
   const [showPreview, setShowPreview] = useState(false);
-  const [previewLoading, setPreviewLoading] = useState(false); // AI enabled by default
+  const [previewLoading, setPreviewLoading] = useState(false);
+  
+  // New modal states
+  const [showSendModal, setShowSendModal] = useState(false);
+  const [finalMessage, setFinalMessage] = useState('');
+  const [isCopied, setIsCopied] = useState(false); // AI enabled by default
 
   const opportunityTypes = {
     internship: {
@@ -71,25 +76,18 @@ const WhatsAppContactForm = ({ i18n }) => {
     try {
       let message;
       const currentLang = i18n.LANG || 'en';
-      console.log('🎯 PREVIEW - Detected language from i18n.LANG:', currentLang);
-      console.log('🎯 PREVIEW - Full i18n object:', i18n);
       
       // Generate preview based on current mode
       if (aiEnabled) {
         // Use AI Agent for preview
-        console.log('🤖 PREVIEW - Using AI mode with language:', currentLang);
-        
         const result = await aiAgent.generateIntelligentMessage(formData, currentLang);
         if (result.success) {
           message = result.message;
-          console.log('✅ PREVIEW - AI success, message starts with:', message.substring(0, 30));
         } else {
-          console.log('❌ PREVIEW - AI failed, using basic fallback');
           message = generateBasicWhatsAppMessage();
         }
       } else {
         // Use basic generation for preview
-        console.log('📝 PREVIEW - Using basic mode with language:', currentLang);
         message = generateBasicWhatsAppMessage();
       }
       
@@ -106,7 +104,6 @@ const WhatsAppContactForm = ({ i18n }) => {
 
   const generateBasicWhatsAppMessage = () => {
     const currentLang = i18n.LANG || 'en';
-    console.log('🔍 DEBUG - Detected language:', currentLang, 'from i18n:', i18n.LANG);
     const opportunityText = opportunityTypes[formData.opportunityType]?.[currentLang] || opportunityTypes[formData.opportunityType]?.en;
 
     let message = '';
@@ -148,7 +145,6 @@ Best regards`;
 
   const generateWhatsAppMessage = async () => {
     const currentLang = i18n.LANG || 'en';
-    console.log('🤖 DEBUG - AI generating message in language:', currentLang);
     
     // If AI is disabled, use basic generation
     if (!aiEnabled) {
@@ -182,18 +178,47 @@ Best regards`;
     setIsGenerating(true);
     
     try {
-      // Generate intelligent message using AI
-      const message = await generateWhatsAppMessage();
-      const whatsappUrl = `https://wa.me/4917645754360?text=${message}`;
-      window.open(whatsappUrl, '_blank');
+      // Generate final message for confirmation
+      const currentLang = i18n.LANG || 'en';
+      let message;
+      
+      if (aiEnabled) {
+        const result = await aiAgent.generateIntelligentMessage(formData, currentLang);
+        if (result.success) {
+          message = result.message;
+        } else {
+          message = generateBasicWhatsAppMessage();
+        }
+      } else {
+        message = generateBasicWhatsAppMessage();
+      }
+      
+      setFinalMessage(message);
+      setShowSendModal(true);
     } catch (error) {
       console.error('Error generating message:', error);
-      // Still try to open WhatsApp with basic message
+      // Emergency fallback
       const basicMessage = `Hello Limber! I'm interested in discussing opportunities. Name: ${formData.name}`;
-      const whatsappUrl = `https://wa.me/4917645754360?text=${encodeURIComponent(basicMessage)}`;
-      window.open(whatsappUrl, '_blank');
+      setFinalMessage(basicMessage);
+      setShowSendModal(true);
     } finally {
       setIsGenerating(false);
+    }
+  };
+
+  const handleConfirmSend = () => {
+    const whatsappUrl = `https://wa.me/4917645754360?text=${encodeURIComponent(finalMessage)}`;
+    window.open(whatsappUrl, '_blank');
+    setShowSendModal(false);
+  };
+
+  const handleCopyMessage = async () => {
+    try {
+      await navigator.clipboard.writeText(finalMessage);
+      setIsCopied(true);
+      setTimeout(() => setIsCopied(false), 2000);
+    } catch (error) {
+      console.error('Failed to copy message:', error);
     }
   };
 
@@ -495,6 +520,156 @@ Best regards`;
           <span>🎯</span>
           <span>{i18n.CONTACT?.AVAILABILITY || 'Internship from August 2025'}</span>        </div>
       </div>
+
+      {/* Confirmation Modal */}
+      {showSendModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-base-100 rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden">
+            {/* Modal Header */}
+            <div className="p-6 border-b border-base-300">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">📱</span>
+                  <div>
+                    <h3 className="font-bold text-lg">
+                      {i18n.CONTACT?.CONFIRM_SEND_TITLE || 'Confirm WhatsApp Message'}
+                    </h3>
+                    <p className="text-sm text-base-content/70">
+                      {i18n.CONTACT?.CONFIRM_SEND_SUBTITLE || 'Review your message before sending'}
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setShowSendModal(false)}
+                  className="btn btn-sm btn-circle btn-ghost"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 overflow-y-auto max-h-[60vh]">
+              {/* Message Type Indicator */}
+              <div className="flex items-center gap-2 mb-4">
+                {aiEnabled ? (
+                  <div className="flex items-center gap-2">
+                    <span className="badge badge-info gap-2">
+                      <span>🤖</span> AI Enhanced Message
+                    </span>
+                    <span className="badge badge-outline text-xs">
+                      {i18n.LANG === 'de' ? '🇩🇪 Deutsch' : 
+                       i18n.LANG === 'es' ? '🇪🇸 Español' : 
+                       '🇺🇸 English'}
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-2">
+                    <span className="badge badge-ghost gap-2">
+                      <span>📝</span> Basic Message
+                    </span>
+                    <span className="badge badge-outline text-xs">
+                      {i18n.LANG === 'de' ? '🇩🇪 Deutsch' : 
+                       i18n.LANG === 'es' ? '🇪🇸 Español' : 
+                       '🇺🇸 English'}
+                    </span>
+                  </div>
+                )}
+              </div>
+
+              {/* Message Preview */}
+              <div className="bg-base-200 rounded-lg p-4 border border-primary/20">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="text-sm font-medium text-base-content/70">
+                    {i18n.CONTACT?.MESSAGE_PREVIEW_LABEL || 'Message to be sent:'}
+                  </span>
+                </div>
+                <div className="bg-white dark:bg-gray-900 rounded-lg p-4 border">
+                  <textarea
+                    value={finalMessage}
+                    onChange={(e) => setFinalMessage(e.target.value)}
+                    className="w-full h-48 resize-none bg-transparent border-none outline-none text-sm leading-relaxed"
+                    style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}
+                    placeholder={i18n.CONTACT?.EDIT_MESSAGE_HINT || 'You can edit this message before sending...'}
+                  />
+                </div>
+                <div className="mt-2 text-xs text-base-content/60">
+                  {i18n.CONTACT?.EDIT_MESSAGE_TIP || 'You can edit the message above before sending'}
+                </div>
+              </div>
+
+              {/* Additional Info */}
+              {aiEnabled && (
+                <div className="mt-4 p-3 bg-info/10 rounded-lg border border-info/20">
+                  <div className="flex items-center gap-2 text-info">
+                    <span>✨</span>
+                    <span className="text-sm font-medium">
+                      {i18n.CONTACT?.AI_ENHANCEMENT_NOTE || 'AI Enhancement Applied'}
+                    </span>
+                  </div>
+                  <p className="text-xs text-info/80 mt-1">
+                    {i18n.CONTACT?.AI_ENHANCEMENT_DESC || 'This message was analyzed and enhanced by AI for better tone, context, and professionalism.'}
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Modal Footer */}
+            <div className="p-6 border-t border-base-300 bg-base-50">
+              <div className="flex flex-col gap-3">
+                {/* Action Buttons */}
+                <div className="flex gap-3">
+                  <button
+                    onClick={handleCopyMessage}
+                    className="btn btn-outline flex-1"
+                    disabled={!finalMessage.trim()}
+                  >
+                    <span className="flex items-center gap-2">
+                      {isCopied ? (
+                        <>
+                          <span>✅</span>
+                          {i18n.CONTACT?.COPIED || 'Copied!'}
+                        </>
+                      ) : (
+                        <>
+                          <span>📋</span>
+                          {i18n.CONTACT?.COPY_MESSAGE || 'Copy Message'}
+                        </>
+                      )}
+                    </span>
+                  </button>
+                  <button
+                    onClick={handleConfirmSend}
+                    className="btn btn-primary flex-1"
+                    disabled={!finalMessage.trim()}
+                  >
+                    <span className="flex items-center gap-2">
+                      <span>📱</span>
+                      {i18n.CONTACT?.SEND_TO_WHATSAPP || 'Send via WhatsApp'}
+                    </span>
+                  </button>
+                </div>
+
+                {/* Cancel Button */}
+                <button
+                  onClick={() => setShowSendModal(false)}
+                  className="btn btn-ghost w-full"
+                >
+                  {i18n.CONTACT?.CANCEL_SEND || 'Cancel'}
+                </button>
+
+                {/* Contact Info */}
+                <div className="text-center text-xs text-base-content/60 mt-2">
+                  📱 WhatsApp: +49 176 45754360 | 
+                  <span className="ml-1">
+                    {i18n.CONTACT?.RESPONSE_TIME || 'Response within 24h'}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

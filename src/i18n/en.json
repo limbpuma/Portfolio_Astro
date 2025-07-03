@@ -243,7 +243,18 @@
       "LOCATION": "Available in Dortmund area",
       "AVAILABILITY": "Internship from August 2025",
       "PRIVACY_CHECKBOX": "I accept the Privacy Policy and WhatsApp contact.",
-      "PRIVACY_REQUIRED": "Please accept the privacy policy to continue."
+      "PRIVACY_REQUIRED": "Please accept the privacy policy to continue.",
+      "CONFIRM_SEND_TITLE": "Confirm WhatsApp Message",
+      "CONFIRM_SEND_SUBTITLE": "Review your message before sending",
+      "MESSAGE_PREVIEW_LABEL": "Message to be sent:",
+      "EDIT_MESSAGE_HINT": "You can edit this message before sending...",
+      "EDIT_MESSAGE_TIP": "You can edit the message above before sending",
+      "AI_ENHANCEMENT_NOTE": "AI Enhancement Applied",
+      "AI_ENHANCEMENT_DESC": "This message was analyzed and enhanced by AI for better tone, context, and professionalism.",
+      "COPY_MESSAGE": "Copy Message",
+      "COPIED": "Copied!",
+      "SEND_TO_WHATSAPP": "Send via WhatsApp",
+      "CANCEL_SEND": "Cancel"
     },
     "FOOTER": {
       "PRIVACY_POLICY": "Privacy Policy",

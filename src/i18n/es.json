@@ -253,7 +253,18 @@
       "LOCATION": "Disponible en área de Dortmund",
       "AVAILABILITY": "Prácticas desde agosto 2025",
       "PRIVACY_CHECKBOX": "Acepto la Política de Privacidad y el contacto vía WhatsApp.",
-      "PRIVACY_REQUIRED": "Por favor acepta la política de privacidad para continuar."
+      "PRIVACY_REQUIRED": "Por favor acepta la política de privacidad para continuar.",
+      "CONFIRM_SEND_TITLE": "Confirmar Mensaje de WhatsApp",
+      "CONFIRM_SEND_SUBTITLE": "Revisa tu mensaje antes de enviarlo",
+      "MESSAGE_PREVIEW_LABEL": "Mensaje que se enviará:",
+      "EDIT_MESSAGE_HINT": "Puedes editar este mensaje antes de enviarlo...",
+      "EDIT_MESSAGE_TIP": "Puedes editar el mensaje arriba antes de enviarlo",
+      "AI_ENHANCEMENT_NOTE": "Mejora de IA Aplicada",
+      "AI_ENHANCEMENT_DESC": "Este mensaje fue analizado y mejorado por IA para un mejor tono, contexto y profesionalismo.",
+      "COPY_MESSAGE": "Copiar Mensaje",
+      "COPIED": "¡Copiado!",
+      "SEND_TO_WHATSAPP": "Enviar por WhatsApp",
+      "CANCEL_SEND": "Cancelar"
     },
     "FOOTER": {
       "PRIVACY_POLICY": "Política de Privacidad",

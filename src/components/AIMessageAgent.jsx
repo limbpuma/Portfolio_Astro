@@ -14,17 +14,12 @@ class AIMessageAgent {
    * Main method to generate intelligent WhatsApp message
    */
   async generateIntelligentMessage(formData, language = 'en') {
-    console.log('🤖 AI Agent - Received language:', language);
-    console.log('🤖 AI Agent - Form data:', formData);
-    
     try {
       // Simulate AI processing time
       await new Promise(resolve => setTimeout(resolve, 1200));
 
       const analysis = this.analyzeContext(formData, language);
       const enhancedMessage = this.craftIntelligentMessage(formData, analysis, language);
-      
-      console.log('🤖 AI Agent - Generated message in', language, ':', enhancedMessage.substring(0, 50) + '...');
       
       return {
         success: true,
@@ -320,8 +315,6 @@ ${closing}`;
    * Craft culturally appropriate greeting
    */
   craftGreeting(formality, culturalContext, language) {
-    console.log('🎯 Crafting greeting for language:', language, 'formality:', formality);
-    
     const greetings = {
       en: {
         formal: 'Hello Limber! 👋',
@@ -341,7 +334,6 @@ ${closing}`;
     };
 
     const result = greetings[language]?.[formality] || greetings.en[formality];
-    console.log('🎯 Selected greeting:', result);
     return result;
   }
 

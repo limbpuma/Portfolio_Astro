@@ -251,7 +251,18 @@
       "LOCATION": "Verfügbar im Raum Dortmund",
       "AVAILABILITY": "Praktikum ab August 2025",
       "PRIVACY_CHECKBOX": "Ich akzeptiere die Datenschutzerklärung und stimme der Kontaktaufnahme über WhatsApp zu.",
-      "PRIVACY_REQUIRED": "Bitte akzeptieren Sie die Datenschutzerklärung, um fortzufahren."
+      "PRIVACY_REQUIRED": "Bitte akzeptieren Sie die Datenschutzerklärung, um fortzufahren.",
+      "CONFIRM_SEND_TITLE": "WhatsApp-Nachricht bestätigen",
+      "CONFIRM_SEND_SUBTITLE": "Überprüfen Sie Ihre Nachricht vor dem Senden",
+      "MESSAGE_PREVIEW_LABEL": "Zu sendende Nachricht:",
+      "EDIT_MESSAGE_HINT": "Sie können diese Nachricht vor dem Senden bearbeiten...",
+      "EDIT_MESSAGE_TIP": "Sie können die Nachricht oben vor dem Senden bearbeiten",
+      "AI_ENHANCEMENT_NOTE": "KI-Verbesserung angewendet",
+      "AI_ENHANCEMENT_DESC": "Diese Nachricht wurde von der KI analysiert und für besseren Ton, Kontext und Professionalität verbessert.",
+      "COPY_MESSAGE": "Nachricht kopieren",
+      "COPIED": "Kopiert!",
+      "SEND_TO_WHATSAPP": "Per WhatsApp senden",
+      "CANCEL_SEND": "Abbrechen"
     },
     "FOOTER": {
       "PRIVACY_POLICY": "Datenschutzrichtlinie",
