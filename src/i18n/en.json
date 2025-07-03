@@ -89,11 +89,11 @@
           ]
         },
         {
-          "TITLE": "Business Process Optimizer",
+          "TITLE": "Email Response Generator",
           "BADGE": "AI",
-          "DESCRIPTION": "AI-powered business process analysis that identifies bottlenecks, calculates costs, and provides actionable optimization strategies with real ROI calculations for immediate implementation.",
+          "DESCRIPTION": "Professional AI-powered email response generator that analyzes incoming emails and creates contextually appropriate replies in 4 different styles. Perfect for customer service, sales, and business correspondence.",
           "IMAGE": "/images/ai_restaurant_generator.webp",
-          "CATEGORIES": ["Process Mining", "AI Analytics", "ROI Calculator", "Automation"],
+          "CATEGORIES": ["NLP", "Email Automation", "Business Communication", "AI Assistant"],
           "AGENT_TYPE": "workflow-orchestrator",
           "DEMO_MODE": "real",
           "SOCIAL_LINKS": [
@@ -103,7 +103,7 @@
               "label": "Live Demo"
             },
             {
-              "url": "https://github.com/limbpuma/Business-Process-Optimizer",
+              "url": "https://github.com/limbpuma/Email-Response-Generator",
               "iconClass": "fab fa-github",
               "label": "GitHub Repository"
             }

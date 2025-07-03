@@ -92,11 +92,11 @@
           ]
         },
         {
-          "TITLE": "Optimizador de Procesos Empresariales",
+          "TITLE": "Generador de Respuestas de Email",
           "BADGE": "IA",
-          "DESCRIPTION": "Análisis de procesos empresariales potenciado por IA que identifica cuellos de botella, calcula costos y proporciona estrategias de optimización accionables con cálculos de ROI reales para implementación inmediata.",
+          "DESCRIPTION": "Generador profesional de respuestas de email potenciado por IA que analiza emails entrantes y crea respuestas contextualmente apropiadas en 4 estilos diferentes. Perfecto para atención al cliente, ventas y correspondencia empresarial.",
           "IMAGE": "/images/ai_restaurant_generator.webp",
-          "CATEGORIES": ["Minería de Procesos", "Análisis IA", "Calculadora ROI", "Automatización"],
+          "CATEGORIES": ["PLN", "Automatización Email", "Comunicación Empresarial", "Asistente IA"],
           "AGENT_TYPE": "workflow-orchestrator",
           "DEMO_MODE": "real",
           "SOCIAL_LINKS": [
@@ -106,7 +106,7 @@
               "label": "Demo en Vivo"
             },
             {
-              "url": "https://github.com/limbpuma/Business-Process-Optimizer",
+              "url": "https://github.com/limbpuma/Email-Response-Generator",
               "iconClass": "fab fa-github",
               "label": "Repositorio GitHub"
             }

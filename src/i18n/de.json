@@ -91,11 +91,11 @@
           ]
         },
         {
-          "TITLE": "Business Process Optimizer",
+          "TITLE": "Email Response Generator",
           "BADGE": "KI",
-          "DESCRIPTION": "KI-gestützte Geschäftsprozessanalyse, die Engpässe identifiziert, Kosten berechnet und umsetzbare Optimierungsstrategien mit echten ROI-Berechnungen für sofortige Implementierung bereitstellt.",
+          "DESCRIPTION": "Professioneller KI-gestützter E-Mail-Antwort-Generator, der eingehende E-Mails analysiert und kontextuell angemessene Antworten in 4 verschiedenen Stilen erstellt. Perfekt für Kundenservice, Vertrieb und Geschäftskommunikation.",
           "IMAGE": "/images/ai_restaurant_generator.webp",
-          "CATEGORIES": ["Process Mining", "KI-Analytik", "ROI-Rechner", "Automatisierung"],
+          "CATEGORIES": ["NLP", "E-Mail-Automatisierung", "Geschäftskommunikation", "KI-Assistent"],
           "AGENT_TYPE": "workflow-orchestrator",
           "DEMO_MODE": "real",
           "SOCIAL_LINKS": [
@@ -105,7 +105,7 @@
               "label": "Live Demo"
             },
             {
-              "url": "https://github.com/limbpuma/Business-Process-Optimizer",
+              "url": "https://github.com/limbpuma/Email-Response-Generator",
               "iconClass": "fab fa-github",
               "label": "GitHub Repository"
             }
