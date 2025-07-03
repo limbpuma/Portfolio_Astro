@@ -109,78 +109,10 @@
             }
           ]
         },
-        {
-          "TITLE": "KI Restaurant Name Generator",
-          "BADGE": "KI",
-          "DESCRIPTION": "Intelligenter Restaurant-Namen-Generator entwickelt mit LangChain und OpenAI APIs. Bietet dynamische küchenbasierte Vorschläge, kreative Namengenerierungsalgorithmen und nahtlose KI-Integration für Geschäftsanwendungen.",
-          "CATEGORIES": ["LangChain", "OpenAI", "Python"],
-          "SOCIAL_LINKS": [
-            {
-              "url": "#",
-              "iconClass": "fas fa-globe",
-              "label": "Project 1 Website"
-            },
-            {
-              "url": "https://github.com/limbpuma/LangchainRestaurantNameGenerator",
-              "iconClass": "fab fa-github",
-              "label": "Project 1 GitHub"
-            }
-          ]
-        },
-        {
-          "TITLE": "Genius KI App",
-          "BADGE": "KI",
-          "DESCRIPTION": "Vielseitige KI-Anwendung mit intelligenter Konversation, Code-Generierung, Bildanalyse und Musikerstellung. Entwickelt mit modernen KI-APIs und zeigt umfassende KI-Integrationsfähigkeiten.",
-          "CATEGORIES": ["KI", "React", "OpenAI"],
-          "SOCIAL_LINKS": [
-            {
-              "url": "#",
-              "iconClass": "fas fa-globe",
-              "label": "Project 1 Website"
-            },
-            {
-              "url": "https://github.com/limbpuma/geniusapp",
-              "iconClass": "fab fa-github",
-              "label": "Project 1 GitHub"
-            }
-          ]
-        },
-        {
-          "TITLE": "Restaurant Döner",
-          "BADGE": "Astro",
-          "DESCRIPTION": "Dieses Projekt ist responsive gestaltet, um schnellen Zugriff auf WhatsApp, Telefon und Standort zu ermöglichen und entspricht der DSGVO.",
-          "CATEGORIES": ["React", "Tailwind"],
-          "SOCIAL_LINKS": [
-            {
-              "url": "https://doner-express-6lswji24o-limbpumas-projects.vercel.app/",
-              "iconClass": "fas fa-globe",
-              "label": "Project 1 Website"
-            },
-            {
-              "url": "https://github.com/limbpuma/doner_express",
-              "iconClass": "fab fa-github",
-              "label": "Project 1 GitHub"
-            }
-          ]
-        },
-        {
-          "TITLE": "Barber Landing",
-          "BADGE": "Astro",
-          "DESCRIPTION": "Eine moderne, voll responsive Webseite für eine Friseurseite, entwickelt mit Astro, React und Tailwind für ein elegantes und benutzerfreundliches Design.",
-          "CATEGORIES": ["React", "Tailwind"],
-          "SOCIAL_LINKS": [
-            {
-              "url": "https://astro-barber-web.vercel.app/",
-              "iconClass": "fas fa-globe",
-              "label": "Project 1 Website"
-            },
-            {
-              "url": "https://github.com/limbpuma/Astro_Barber_web",
-              "iconClass": "fab fa-github",
-              "label": "Project 1 GitHub"
-            }
-          ]
-        },
+
+
+
+
         {
           "TITLE": "Integra Pflege",
           "BADGE": "Astro",
