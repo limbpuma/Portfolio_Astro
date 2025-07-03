@@ -208,8 +208,8 @@ const CustomerSupportAgent = () => {
     <div className="max-w-6xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold text-gray-800">🎫 Customer Support Ticket Classifier</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <h2 className="text-3xl font-bold text-gray-200">🎫 Customer Support Ticket Classifier</h2>
+        <p className="text-gray-200 max-w-2xl mx-auto">
           Intelligent AI-powered analysis of customer support tickets. Automatically categorizes, prioritizes, 
           and routes tickets to the appropriate departments with actionable insights.
         </p>
@@ -217,7 +217,7 @@ const CustomerSupportAgent = () => {
 
       {/* Quick Examples */}
       <div className="space-y-3">
-        <h3 className="text-lg font-semibold text-gray-700">🚀 Quick Examples</h3>
+        <h3 className="text-lg font-semibold text-gray-200">🚀 Quick Examples</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {exampleTickets.map((example, index) => (
             <button
@@ -225,7 +225,7 @@ const CustomerSupportAgent = () => {
               onClick={() => loadExample(example)}
               className="p-3 text-left border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all duration-200"
             >
-              <span className="text-sm font-medium text-blue-600">{example.title}</span>
+              <span className="text-sm font-medium text-blue-300">{example.title}</span>
             </button>
           ))}
         </div>
@@ -234,11 +234,11 @@ const CustomerSupportAgent = () => {
       {/* Input Section */}
       <div className="space-y-4">
         <div className="flex justify-between items-center">
-          <h3 className="text-lg font-semibold text-gray-700">📝 Ticket Content</h3>
+          <h3 className="text-lg font-semibold text-gray-200">📝 Ticket Content</h3>
           {ticket && (
             <button
               onClick={clearAnalysis}
-              className="text-sm text-gray-500 hover:text-gray-700"
+              className="text-sm text-gray-500 hover:text-gray-400"
             >
               Clear
             </button>
