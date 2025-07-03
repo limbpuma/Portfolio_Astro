@@ -16,8 +16,8 @@ const rateLimitStore = new Map<string, { count: number; resetTime: number }>();
 
 function checkRateLimit(clientId: string): boolean {
   const now = Date.now();
-  const windowMs = 60 * 60 * 1000; // 1 hour
-  const maxRequests = 10; // 10 requests per hour per client
+  const windowMs = 15 * 60 * 1000; // 15 minutes
+  const maxRequests = 20; // 20 requests per 15 minutes (more permissive for demo)
 
   if (!rateLimitStore.has(clientId)) {
     rateLimitStore.set(clientId, { count: 1, resetTime: now + windowMs });
@@ -39,14 +39,15 @@ function checkRateLimit(clientId: string): boolean {
   return true;
 }
 
-export const POST: APIRoute = async ({ request, clientAddress }) => {
+export const POST: APIRoute = async ({ request }) => {
   try {
-    // Rate limiting
-    const clientId = clientAddress || 'unknown';
-    if (!checkRateLimit(clientId)) {
+    // Simple rate limiting using a global counter (for demo purposes)
+    // In production, use proper rate limiting with Redis/database
+    const globalKey = 'global';
+    if (!checkRateLimit(globalKey)) {
       return new Response(JSON.stringify({
         error: 'Rate limit exceeded',
-        message: 'Please wait before making another request'
+        message: 'Demo rate limit reached. Please try again later.'
       }), {
         status: 429,
         headers: { 'Content-Type': 'application/json' }

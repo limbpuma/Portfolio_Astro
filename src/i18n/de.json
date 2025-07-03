@@ -70,6 +70,27 @@
       "TITLE": "My Projects DE",
       "PROJECT_LIST": [
         {
+          "TITLE": "KI Dokumentenanalyse Agent",
+          "BADGE": "KI",
+          "DESCRIPTION": "Intelligenter Dokumentenanalysator mit mehreren KI-Modellen. Bietet Echtzeitanalyse, Risikobewertung, Compliance-Prüfung und interaktiven Chat. Entwickelt mit OpenAI und Anthropic APIs.",
+          "IMAGE": "/images/ai_restaurant_generator.webp",
+          "CATEGORIES": ["LangChain", "OpenAI", "Anthropic", "TypeScript"],
+          "AGENT_TYPE": "document-analysis",
+          "DEMO_MODE": "real",
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Live Demo"
+            },
+            {
+              "url": "https://github.com/limbpuma/AI-Document-Analysis-Agent",
+              "iconClass": "fab fa-github",
+              "label": "GitHub Repository"
+            }
+          ]
+        },
+        {
           "TITLE": "KI Restaurant Name Generator",
           "BADGE": "KI",
           "DESCRIPTION": "Intelligenter Restaurant-Namen-Generator entwickelt mit LangChain und OpenAI APIs. Bietet dynamische küchenbasierte Vorschläge, kreative Namengenerierungsalgorithmen und nahtlose KI-Integration für Geschäftsanwendungen.",

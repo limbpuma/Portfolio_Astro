@@ -71,6 +71,27 @@
       "TITLE": "My Projects ES",
       "PROJECT_LIST": [
         {
+          "TITLE": "Agente de Análisis de Documentos IA",
+          "BADGE": "IA",
+          "DESCRIPTION": "Analizador inteligente de documentos potenciado por múltiples modelos de IA. Características incluyen análisis en tiempo real, evaluación de riesgos, verificación de cumplimiento y chat interactivo. Construido con APIs de OpenAI y Anthropic.",
+          "IMAGE": "/images/ai_restaurant_generator.webp",
+          "CATEGORIES": ["LangChain", "OpenAI", "Anthropic", "TypeScript"],
+          "AGENT_TYPE": "document-analysis",
+          "DEMO_MODE": "real",
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Demo en Vivo"
+            },
+            {
+              "url": "https://github.com/limbpuma/AI-Document-Analysis-Agent",
+              "iconClass": "fab fa-github",
+              "label": "Repositorio GitHub"
+            }
+          ]
+        },
+        {
           "TITLE": "Generador de Nombres IA para Restaurantes",
           "BADGE": "IA",
           "DESCRIPTION": "Generador inteligente de nombres para restaurantes construido con LangChain y APIs de OpenAI. Características incluyen sugerencias dinámicas basadas en cocina, algoritmos creativos de generación de nombres e integración perfecta de IA para aplicaciones empresariales.",
