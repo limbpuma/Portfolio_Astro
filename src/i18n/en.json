@@ -107,7 +107,26 @@
             }
           ]
         },
-        
+        {
+          "TITLE": "Customer Support Ticket Classifier",
+          "BADGE": "AI",
+          "DESCRIPTION": "Intelligent AI-powered customer support ticket analysis system that automatically categorizes, prioritizes, and routes tickets. Features sentiment analysis, urgency detection, and actionable insights for support teams.",
+          "CATEGORIES": ["AI Classification", "OpenAI", "NLP", "Customer Support"],
+          "AGENT_TYPE": "customer-support",
+          "DEMO_MODE": "real",
+          "SOCIAL_LINKS": [
+            {
+              "url": "#",
+              "iconClass": "fas fa-globe",
+              "label": "Live Demo"
+            },
+            {
+              "url": "https://github.com/limbpuma/Customer-Support-Classifier",
+              "iconClass": "fab fa-github",
+              "label": "GitHub Repository"
+            }
+          ]
+        },
         {
           "TITLE": "Integra Care",
           "BADGE": "Astro",
@@ -157,26 +176,6 @@
               "url": "https://github.com/limbpuma/pizza_fast_delivery_collect",
               "iconClass": "fab fa-github",
               "label": "Project 1 GitHub"
-            }
-          ]
-        },
-        {
-          "TITLE": "Customer Support Ticket Classifier",
-          "BADGE": "AI",
-          "DESCRIPTION": "Intelligent AI-powered customer support ticket analysis system that automatically categorizes, prioritizes, and routes tickets. Features sentiment analysis, urgency detection, and actionable insights for support teams.",
-          "CATEGORIES": ["AI Classification", "OpenAI", "NLP", "Customer Support"],
-          "AGENT_TYPE": "customer-support",
-          "DEMO_MODE": "real",
-          "SOCIAL_LINKS": [
-            {
-              "url": "#",
-              "iconClass": "fas fa-globe",
-              "label": "Live Demo"
-            },
-            {
-              "url": "https://github.com/limbpuma/Customer-Support-Classifier",
-              "iconClass": "fab fa-github",
-              "label": "GitHub Repository"
             }
           ]
         }
