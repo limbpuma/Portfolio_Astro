@@ -121,9 +121,25 @@ RECOMMENDATIONS:
         })
       });
 
-      const data = await response.json();
-
+      // Check if response is ok before parsing JSON
       if (!response.ok) {
+        const errorText = await response.text();
+        console.error('API Error Response:', errorText);
+        throw new Error(`API Error: ${response.status} - ${errorText}`);
+      }
+
+      // Try to parse JSON with error handling
+      let data;
+      try {
+        const responseText = await response.text();
+        console.log('API Response Text:', responseText);
+        data = JSON.parse(responseText);
+      } catch (parseError) {
+        console.error('JSON Parse Error:', parseError);
+        throw new Error('Invalid response format from API');
+      }
+
+      if (data.error) {
         throw new Error(data.message || 'Analysis failed');
       }
 
