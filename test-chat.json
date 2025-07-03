@@ -1,0 +1,15 @@
+{
+  "message": "¿Qué riesgos encontraste en el documento?",
+  "analysisContext": {
+    "analysis": {
+      "documentType": "Test Document",
+      "summary": "This is a test document for analysis.",
+      "keyFindings": ["Sample finding"],
+      "riskLevel": "medium",
+      "compliance": {"score": 75, "issues": []},
+      "recommendations": ["Review document"],
+      "metadata": {"wordCount": 7, "readingTime": "0.1 minutes", "complexity": "Low"}
+    }
+  },
+  "model": "openai"
+}

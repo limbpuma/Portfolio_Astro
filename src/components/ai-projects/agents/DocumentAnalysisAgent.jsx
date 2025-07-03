@@ -9,6 +9,7 @@ const DocumentAnalysisAgent = ({ config }) => {
   const [error, setError] = useState(null);
   const [chatMessages, setChatMessages] = useState([]);
   const [chatInput, setChatInput] = useState('');
+  const [isChatLoading, setIsChatLoading] = useState(false);
 
   // Sample documents for demo
   const sampleDocuments = {
@@ -153,25 +154,66 @@ RECOMMENDATIONS:
     }
   };
 
-  const handleChatMessage = (message) => {
-    const responses = {
-      'what did you find': 'Based on my analysis, I found several key points in your document. The analysis reveals important insights about the content structure and potential areas of concern.',
-      'show me risks': 'I have identified potential risks in the document. These include compliance issues, missing information, and areas that might need legal review.',
-      'explain compliance': 'The compliance score indicates how well the document meets standard industry practices and regulatory requirements.',
-      'what are the recommendations': 'My recommendations focus on improving document quality, addressing compliance gaps, and enhancing clarity for better understanding.',
-      'hello': 'Hello! I am ready to answer questions about the document analysis. What would you like to know?',
-      'help': 'I can help you understand the analysis results. Try asking about findings, risks, compliance, or recommendations.'
-    };
-
-    const response = responses[message.toLowerCase()] || 
-      `I understand you are asking about "${message}". Based on the document analysis, I can provide insights about the content, structure, and recommendations. Could you be more specific about what aspect you would like to explore?`;
-
+  const handleChatMessage = async (message) => {
+    if (!message.trim()) return;
+    
+    // Add user message immediately
     setChatMessages(prev => [
       ...prev,
-      { type: 'user', content: message },
-      { type: 'assistant', content: response }
+      { type: 'user', content: message }
     ]);
     setChatInput('');
+    setIsChatLoading(true);
+
+    try {
+      const response = await fetch('/api/ai/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: message,
+          analysisContext: analysisResults,
+          model: selectedModel
+        })
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Chat API Error: ${response.status} - ${errorText}`);
+      }
+
+      let data;
+      try {
+        const responseText = await response.text();
+        data = JSON.parse(responseText);
+      } catch (parseError) {
+        throw new Error('Invalid response format from chat API');
+      }
+
+      if (data.error) {
+        throw new Error(data.message || 'Chat failed');
+      }
+
+      // Add AI response
+      setChatMessages(prev => [
+        ...prev,
+        { type: 'assistant', content: data.data.response }
+      ]);
+
+    } catch (err) {
+      console.error('Chat error:', err);
+      // Add error message as AI response
+      setChatMessages(prev => [
+        ...prev,
+        { 
+          type: 'assistant', 
+          content: `Lo siento, hubo un error al procesar tu pregunta: ${err.message}. Por favor intenta de nuevo.` 
+        }
+      ]);
+    } finally {
+      setIsChatLoading(false);
+    }
   };
 
   const parseAnalysisResult = () => {
@@ -460,13 +502,14 @@ RECOMMENDATIONS:
             <div className="h-64 overflow-y-auto p-4 space-y-3">
               {chatMessages.length === 0 && (
                 <div className="text-center text-gray-500 dark:text-gray-400">
-                  <p>Ask me anything about the document analysis!</p>
+                  <p>¡Pregúntame cualquier cosa sobre el análisis del documento!</p>
                   <div className="mt-2 flex flex-wrap gap-2 justify-center">
-                    {['What did you find?', 'Show me risks', 'Explain compliance'].map((suggestion) => (
+                    {['¿Qué encontraste?', 'Muestra los riesgos', 'Explica el cumplimiento', '¿Cuáles son las recomendaciones?'].map((suggestion) => (
                       <button
                         key={suggestion}
                         onClick={() => handleChatMessage(suggestion)}
-                        className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                        disabled={isChatLoading}
+                        className="text-xs px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         {suggestion}
                       </button>
@@ -486,6 +529,17 @@ RECOMMENDATIONS:
                   </div>
                 </div>
               ))}
+              
+              {isChatLoading && (
+                <div className="flex justify-start">
+                  <div className="bg-gray-100 dark:bg-gray-700 px-3 py-2 rounded-lg">
+                    <div className="flex items-center space-x-2">
+                      <div className="animate-spin h-4 w-4 border-2 border-blue-500 border-t-transparent rounded-full"></div>
+                      <span className="text-gray-600 dark:text-gray-400">IA está escribiendo...</span>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
             
             <div className="p-4 border-t border-gray-200 dark:border-gray-700">
@@ -494,23 +548,25 @@ RECOMMENDATIONS:
                   type="text"
                   value={chatInput}
                   onChange={(e) => setChatInput(e.target.value)}
-                  placeholder="Ask about the analysis..."
-                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+                  placeholder="Pregunta sobre el análisis..."
+                  disabled={isChatLoading}
+                  className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
                   onKeyPress={(e) => {
-                    if (e.key === 'Enter' && chatInput.trim()) {
+                    if (e.key === 'Enter' && chatInput.trim() && !isChatLoading) {
                       handleChatMessage(chatInput.trim());
                     }
                   }}
                 />
                 <button
                   onClick={() => {
-                    if (chatInput.trim()) {
+                    if (chatInput.trim() && !isChatLoading) {
                       handleChatMessage(chatInput.trim());
                     }
                   }}
-                  className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+                  disabled={isChatLoading || !chatInput.trim()}
+                  className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send
+                  {isChatLoading ? 'Enviando...' : 'Enviar'}
                 </button>
               </div>
             </div>
