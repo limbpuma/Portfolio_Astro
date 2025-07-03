@@ -13,7 +13,7 @@ export const getI18N = ({
 }: {
 	currentLocale: string | undefined;
 }) => {
-	if (currentLocale === LANG.GERMAN) return {...english, ...german};
-	if (currentLocale === LANG.SPANISH) return {...english, ...spanish};
+	if (currentLocale === LANG.GERMAN) return german;
+	if (currentLocale === LANG.SPANISH) return spanish;
 	return english;
 };

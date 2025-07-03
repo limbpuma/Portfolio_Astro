@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AIMessageAgent from './AIMessageAgent.jsx';
 
 const WhatsAppContactForm = ({ i18n }) => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,11 @@ const WhatsAppContactForm = ({ i18n }) => {
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [aiAgent] = useState(new AIMessageAgent());
+  const [aiEnabled, setAiEnabled] = useState(true);
+  const [messagePreview, setMessagePreview] = useState('');
+  const [showPreview, setShowPreview] = useState(false);
+  const [previewLoading, setPreviewLoading] = useState(false); // AI enabled by default
 
   const opportunityTypes = {
     internship: {
@@ -39,84 +45,156 @@ const WhatsAppContactForm = ({ i18n }) => {
       ...prev,
       [name]: value
     }));
+    
+    // Auto-generate preview when user has enough data
+    if (formData.name && (name === 'message' || name === 'company' || name === 'opportunityType')) {
+      debouncePreview();
+    }
   };
 
-  const generateWhatsAppMessage = () => {
+  // Debounced preview generation to avoid too many calls
+  const debouncePreview = (() => {
+    let timeout;
+    return () => {
+      clearTimeout(timeout);
+      timeout = setTimeout(generatePreview, 1000);
+    };
+  })();
+
+  const generatePreview = async () => {
+    if (!formData.name.trim()) {
+      setShowPreview(false);
+      return;
+    }
+
+    setPreviewLoading(true);
+    try {
+      let message;
+      const currentLang = i18n.LANG || 'en';
+      console.log('🎯 PREVIEW - Detected language from i18n.LANG:', currentLang);
+      console.log('🎯 PREVIEW - Full i18n object:', i18n);
+      
+      // Generate preview based on current mode
+      if (aiEnabled) {
+        // Use AI Agent for preview
+        console.log('🤖 PREVIEW - Using AI mode with language:', currentLang);
+        
+        const result = await aiAgent.generateIntelligentMessage(formData, currentLang);
+        if (result.success) {
+          message = result.message;
+          console.log('✅ PREVIEW - AI success, message starts with:', message.substring(0, 30));
+        } else {
+          console.log('❌ PREVIEW - AI failed, using basic fallback');
+          message = generateBasicWhatsAppMessage();
+        }
+      } else {
+        // Use basic generation for preview
+        console.log('📝 PREVIEW - Using basic mode with language:', currentLang);
+        message = generateBasicWhatsAppMessage();
+      }
+      
+      setMessagePreview(message);
+      setShowPreview(true);
+    } catch (error) {
+      console.error('Preview generation failed:', error);
+      setMessagePreview('Error generating preview');
+      setShowPreview(true);
+    } finally {
+      setPreviewLoading(false);
+    }
+  };
+
+  const generateBasicWhatsAppMessage = () => {
     const currentLang = i18n.LANG || 'en';
+    console.log('🔍 DEBUG - Detected language:', currentLang, 'from i18n:', i18n.LANG);
     const opportunityText = opportunityTypes[formData.opportunityType]?.[currentLang] || opportunityTypes[formData.opportunityType]?.en;
 
     let message = '';
     
     if (currentLang === 'de') {
-      message = `¡Hallo Limber! 👋
+      message = `Hallo Limber,
 
-Ich bin ${formData.name || '[Name]'}${formData.company ? ` von ${formData.company}` : ''}.
+ich bin ${formData.name || '[Name]'}${formData.company ? ` von ${formData.company}` : ''}.
 
-Ich habe dein Portfolio gesehen und bin interessiert an deiner Expertise in:
-✅ Microsoft AI-900 Zertifizierung
-✅ LangChain & OpenAI APIs  
-✅ AI-Enhanced Development
+${opportunityText}
 
-Art der Gelegenheit: ${opportunityText}
+${formData.message ? `${formData.message}` : 'Ich bin interessiert an einer Zusammenarbeit.'}
 
-${formData.message ? `Nachricht: ${formData.message}` : ''}
-
-Könnten wir über mögliche Zusammenarbeit sprechen?
-
-Beste Grüße!`;
+Freundliche Grüße`;
     } else if (currentLang === 'es') {
-      message = `¡Hola Limber! 👋
+      message = `Hola Limber,
 
-Soy ${formData.name || '[Nombre]'}${formData.company ? ` de ${formData.company}` : ''}.
+soy ${formData.name || '[Nombre]'}${formData.company ? ` de ${formData.company}` : ''}.
 
-He visto tu portfolio y me interesa tu expertise en:
-✅ Certificación Microsoft AI-900
-✅ LangChain & OpenAI APIs
-✅ Desarrollo Potenciado por IA
+${opportunityText}
 
-Tipo de oportunidad: ${opportunityText}
+${formData.message ? `${formData.message}` : 'Estoy interesado en colaborar contigo.'}
 
-${formData.message ? `Mensaje: ${formData.message}` : ''}
-
-¿Podríamos conversar sobre posibles colaboraciones?
-
-¡Saludos!`;
+Saludos`;
     } else {
-      message = `Hello Limber! 👋
+      message = `Hi Limber,
 
 I'm ${formData.name || '[Name]'}${formData.company ? ` from ${formData.company}` : ''}.
 
-I've seen your portfolio and I'm interested in your expertise in:
-✅ Microsoft AI-900 Certification
-✅ LangChain & OpenAI APIs
-✅ AI-Enhanced Development
+${opportunityText}
 
-Opportunity type: ${opportunityText}
+${formData.message ? `${formData.message}` : 'I\'m interested in working together.'}
 
-${formData.message ? `Message: ${formData.message}` : ''}
-
-Could we discuss potential collaboration opportunities?
-
-Best regards!`;
+Best regards`;
     }
 
-    return encodeURIComponent(message);
-  };  const handleWhatsAppSend = () => {
+    return message;
+  };
+
+  const generateWhatsAppMessage = async () => {
+    const currentLang = i18n.LANG || 'en';
+    console.log('🤖 DEBUG - AI generating message in language:', currentLang);
+    
+    // If AI is disabled, use basic generation
+    if (!aiEnabled) {
+      return encodeURIComponent(generateBasicWhatsAppMessage());
+    }
+    
+    try {
+      // Use AI Message Agent for intelligent message generation
+      const result = await aiAgent.generateIntelligentMessage(formData, currentLang);
+      
+      if (result.success) {
+        return encodeURIComponent(result.message);
+      } else {
+        // Fallback to basic generation if AI fails
+        return encodeURIComponent(generateBasicWhatsAppMessage());
+      }
+    } catch (error) {
+      console.error('Message generation error:', error);
+      
+      // Emergency fallback
+      return encodeURIComponent(generateBasicWhatsAppMessage());
+    }
+  };  const handleWhatsAppSend = async () => {
     if (!privacyAccepted) {
       const alertMessage = i18n.CONTACT?.PRIVACY_REQUIRED || 
         'Please accept the privacy policy / Bitte akzeptieren Sie die Datenschutzerklärung';
       alert(alertMessage);
       return;
     }
-      setIsGenerating(true);
     
-    // Simular procesamiento por un momento
-    setTimeout(() => {
-      const message = generateWhatsAppMessage();
+    setIsGenerating(true);
+    
+    try {
+      // Generate intelligent message using AI
+      const message = await generateWhatsAppMessage();
       const whatsappUrl = `https://wa.me/4917645754360?text=${message}`;
       window.open(whatsappUrl, '_blank');
+    } catch (error) {
+      console.error('Error generating message:', error);
+      // Still try to open WhatsApp with basic message
+      const basicMessage = `Hello Limber! I'm interested in discussing opportunities. Name: ${formData.name}`;
+      const whatsappUrl = `https://wa.me/4917645754360?text=${encodeURIComponent(basicMessage)}`;
+      window.open(whatsappUrl, '_blank');
+    } finally {
       setIsGenerating(false);
-    }, 1500);
+    }
   };
 
   const isFormValid = formData.name.trim().length > 0 && privacyAccepted;
@@ -125,14 +203,60 @@ Best regards!`;
     <div className="w-full max-w-md mx-auto bg-base-100 rounded-2xl shadow-xl p-6 border border-primary/20">      {/* Header */}
       <div className="text-center mb-6">
         <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-3">
-          
+          <span className="text-xl">{aiEnabled ? '🤖' : '📝'}</span>
           <span className="font-semibold text-primary">
-            {i18n.CONTACT?.SMART_CONTACT || 'Contact Form'}
+            {aiEnabled ? 
+              (i18n.CONTACT?.SMART_CONTACT || 'AI-Enhanced Contact') : 
+              (i18n.CONTACT?.BASIC_CONTACT || 'Basic Contact')
+            }
           </span>
         </div>
         <p className="text-sm text-base-content/70">
-          {i18n.CONTACT?.SMART_DESCRIPTION || 'Message creation for WhatsApp'}
+          {aiEnabled ? 
+            (i18n.CONTACT?.SMART_DESCRIPTION || 'Intelligent message generation powered by AI') :
+            (i18n.CONTACT?.BASIC_DESCRIPTION || 'Traditional message creation')
+          }
         </p>
+      </div>
+
+      {/* AI Toggle */}
+      <div className="mb-6 p-4 bg-base-200 rounded-lg border border-primary/20">
+        <div className="flex items-center justify-between">
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-lg">{aiEnabled ? '🤖' : '📝'}</span>
+              <span className="font-medium text-base-content">
+                {i18n.CONTACT?.AI_TOGGLE_LABEL || 'AI Message Enhancement'}
+              </span>
+            </div>
+            <p className="text-sm text-base-content/70">
+              {aiEnabled ? 
+                (i18n.CONTACT?.AI_ENABLED_DESC || 'AI will analyze your message and create a personalized, contextually appropriate response') :
+                (i18n.CONTACT?.AI_DISABLED_DESC || 'Use traditional message template without AI enhancements')
+              }
+            </p>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className={`text-sm ${!aiEnabled ? 'text-base-content' : 'text-base-content/50'}`}>
+              {i18n.CONTACT?.BASIC_MODE || 'Basic'}
+            </span>
+            <input
+              type="checkbox"
+              className="toggle toggle-primary"
+              checked={aiEnabled}
+              onChange={(e) => {
+                setAiEnabled(e.target.checked);
+                // Regenerate preview when mode changes
+                if (formData.name.trim()) {
+                  setTimeout(generatePreview, 500);
+                }
+              }}
+            />
+            <span className={`text-sm ${aiEnabled ? 'text-base-content' : 'text-base-content/50'}`}>
+              {i18n.CONTACT?.AI_MODE || 'AI'}
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* Formulario */}
@@ -199,14 +323,112 @@ Best regards!`;
             <span className="label-text font-medium">
               {i18n.CONTACT?.MESSAGE || 'Message'}
             </span>
+            {aiEnabled && (
+              <span className="label-text-alt text-info">
+                <span className="text-xs">🤖 AI will enhance this</span>
+              </span>
+            )}
           </label>
           <textarea
             name="message"
             value={formData.message}
             onChange={handleInputChange}
-            placeholder={i18n.CONTACT?.MESSAGE_PLACEHOLDER || 'Tell me about your project or opportunity...'}
-            className="textarea textarea-bordered textarea-primary w-full h-24 resize-none transition-all duration-300 focus:scale-[1.02]"          />
+            placeholder={aiEnabled ? 
+              (i18n.CONTACT?.MESSAGE_PLACEHOLDER || 'Tell me about your project or opportunity (AI will enhance this)...') :
+              (i18n.CONTACT?.BASIC_MESSAGE_PLACEHOLDER || 'Tell me about your project or opportunity...')
+            }
+            className="textarea textarea-bordered textarea-primary w-full h-24 resize-none transition-all duration-300 focus:scale-[1.02]"
+          />
+          {aiEnabled && (
+            <label className="label">
+              <span className="label-text-alt text-info text-xs">
+                ✨ AI will analyze context, tone, and create a personalized professional message
+              </span>
+            </label>
+          )}
+          {!aiEnabled && (
+            <label className="label">
+              <span className="label-text-alt text-base-content/60 text-xs">
+                📝 Will use a simple, direct message template
+              </span>
+            </label>
+          )}
         </div>
+
+        {/* Vista Previa del Mensaje */}
+        {formData.name.trim() && (
+          <div className="form-control">
+            <div className="flex justify-between items-center mb-2">
+              <label className="label">
+                <span className="label-text font-medium">
+                  {aiEnabled ? '🤖 AI Generated Preview' : '📝 Basic Message Preview'}
+                </span>
+              </label>
+              <button
+                type="button"
+                onClick={generatePreview}
+                disabled={previewLoading}
+                className="btn btn-outline btn-xs"
+              >
+                {previewLoading ? (
+                  <span className="loading loading-spinner loading-xs"></span>
+                ) : (
+                  '🔄 Refresh Preview'
+                )}
+              </button>
+            </div>
+            
+            {showPreview && messagePreview && (
+              <div className={`p-4 rounded-lg border-2 transition-all duration-300 ${
+                aiEnabled 
+                  ? 'border-blue-200 bg-blue-50 dark:bg-blue-900/20' 
+                  : 'border-gray-200 bg-gray-50 dark:bg-gray-800/50'
+              }`}>
+                <div className="flex items-center gap-2 mb-2">
+                  {aiEnabled ? (
+                    <span className="badge badge-info gap-1">
+                      <span>🤖</span> AI Enhanced
+                    </span>
+                  ) : (
+                    <span className="badge badge-ghost gap-1">
+                      <span>📝</span> Basic Mode
+                    </span>
+                  )}
+                  <span className="badge badge-outline text-xs">
+                    {i18n.LANG === 'de' ? '🇩🇪 Deutsch' : 
+                     i18n.LANG === 'es' ? '🇪🇸 Español' : 
+                     '🇺🇸 English'}
+                  </span>
+                  <span className="text-xs text-base-content/60">WhatsApp Message:</span>
+                </div>
+                <div className="whitespace-pre-wrap text-sm bg-white dark:bg-gray-900 p-3 rounded border max-h-40 overflow-y-auto" style={{fontFamily: 'system-ui, -apple-system, sans-serif'}}>
+                  {messagePreview}
+                </div>
+                {aiEnabled && (
+                  <div className="mt-2 text-xs text-info flex items-center gap-1">
+                    <span>✨</span>
+                    <span>AI analyzed context, tone, and generated this personalized message</span>
+                  </div>
+                )}
+                {!aiEnabled && (
+                  <div className="mt-2 text-xs text-base-content/60 flex items-center gap-1">
+                    <span>📝</span>
+                    <span>Simple template-based message generation</span>
+                  </div>
+                )}
+              </div>
+            )}
+            
+            {previewLoading && (
+              <div className="flex items-center justify-center p-4 border-2 border-dashed border-gray-300 rounded-lg">
+                <span className="loading loading-spinner loading-sm mr-2"></span>
+                <span className="text-sm">
+                  {aiEnabled ? 'AI is analyzing and crafting message...' : 'Generating basic message...'}
+                </span>
+              </div>
+            )}
+          </div>
+        )}
       </div>
 
       {/* Checkbox Datenschutz */}
@@ -241,12 +463,19 @@ Best regards!`;
         >
           {isGenerating ? (
             <span className="flex items-center gap-2">
-              <span className="loading loading-spinner loading-sm"></span>              {i18n.CONTACT?.GENERATING || 'Creating message...'}
+              <span className="loading loading-spinner loading-sm"></span>
+              {aiEnabled ? 
+                (i18n.CONTACT?.GENERATING || 'Analyzing & crafting AI message...') :
+                (i18n.CONTACT?.GENERATING_BASIC || 'Creating message...')
+              }
             </span>
           ) : (
             <span className="flex items-center gap-2">
-              <span className="text-xl">📱</span>
-              {i18n.CONTACT?.SEND_WHATSAPP || 'Send via WhatsApp'}
+              <span className="text-xl">{aiEnabled ? '🤖📱' : '��📱'}</span>
+              {aiEnabled ? 
+                (i18n.CONTACT?.SEND_WHATSAPP || 'Generate AI Message & Send') :
+                (i18n.CONTACT?.SEND_WHATSAPP_BASIC || 'Create Message & Send')
+              }
             </span>
           )}
         </button>
