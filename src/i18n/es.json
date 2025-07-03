@@ -220,13 +220,9 @@
           "name": "Java & Spring Boot",
           "description": "Base sólida en Java y Spring Boot para aplicaciones backend de nivel empresarial y desarrollo de APIs RESTful.",
           "icon": "fab fa-java"
-        },
-        {
-          "name": "Control de Versiones Potenciado por IA",
-          "description": "Uso avanzado de Git, GitHub con características potenciadas por IA, flujos de trabajo automatizados y desarrollo colaborativo con asistencia de IA.",
-          "icon": "fab fa-git-alt"
         }
-      ]    },    "CONTACT": {
+      ]
+    },    "CONTACT": {
       "SUBTITLE": "Contacto",
       "TITLE": "Conectemos",
       "DESCRIPTION": "Abierto a colaboraciones y oportunidades de empleo. Envíame un mensaje estructurado vía WhatsApp.",

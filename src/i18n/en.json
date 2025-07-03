@@ -17,7 +17,7 @@
   },  "HERO": {
   "TITLE": "Limber Martinez",
   "SUBTITLE": "AI-Enhanced Full-Stack Developer | Microsoft AI-900 Certified",
-  "DESCRIPTION": "Application Developer in training at BFW Dortmund, focusing on AI-powered web solutions. Experienced in building intelligent applications with LangChain, OpenAI APIs, and modern AI tools. Seeking 6-month internship starting August 2025.",
+  "DESCRIPTION": "Application Developer in training at BFW Dortmund, focusing on AI-powered web solutions. Building intelligent applications with LangChain, OpenAI APIs, and modern AI tools. Seeking 6-month unpaid internship starting August 2025 as part of IHK certification program.",
   "BUTTON": "Explore my AI-powered projects",
   "DYNAMIC_TEXT_1": "LangChain & OpenAI Developer",
   "DYNAMIC_TEXT_2": "Microsoft AI-900 Certified", 
@@ -210,11 +210,6 @@
           "name": "Java & Spring Boot",
           "description": "Solid foundation in Java and Spring Boot for enterprise-level backend applications and RESTful API development.",
           "icon": "fab fa-java"
-        },
-        {
-          "name": "AI-Enhanced Version Control",
-          "description": "Advanced use of Git, GitHub with AI-powered features, automated workflows, and collaborative development with AI assistance.",
-          "icon": "fab fa-git-alt"
         }
       ]
     },    "CONTACT": {

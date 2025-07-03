@@ -16,7 +16,7 @@
   },  "HERO": {
   "TITLE": "Limber Martinez",
   "SUBTITLE": "Moderner Full-Stack Entwickler | Microsoft AI-900 Zertifiziert",
-  "DESCRIPTION": "Fachinformatiker in Umschulung am BFW Dortmund, fokussiert auf moderne Weblösungen mit KI-Tools. Erfahren im Aufbau von Anwendungen mit LangChain, OpenAI APIs und modernen Entwicklungstools. Suche 6-monatiges Praktikum ab August 2025.",
+  "DESCRIPTION": "Fachinformatiker in Umschulung am BFW Dortmund, fokussiert auf moderne Weblösungen mit KI-Tools. Entwickle Anwendungen mit LangChain, OpenAI APIs und modernen Entwicklungstools. Suche 6-monatiges unentgeltliches Praktikum ab August 2025 im Rahmen der IHK-Ausbildung.",
   "BUTTON": "Meine Projekte entdecken",
   "DYNAMIC_TEXT_1": "LangChain & OpenAI Entwickler",
   "DYNAMIC_TEXT_2": "Microsoft AI-900 Zertifiziert", 
@@ -218,12 +218,9 @@
           "name": "Java & Spring Boot",
           "description": "Solide Grundlage in Java und Spring Boot für unternehmensweite Backend-Anwendungen und RESTful API-Entwicklung.",
           "icon": "fab fa-java"
-        },        {
-          "name": "Moderne Version Control",
-          "description": "Fortgeschrittene Nutzung von Git, GitHub mit modernen Features, automatisierten Workflows und kollaborativer Entwicklung.",
-          "icon": "fab fa-git-alt"
         }
-      ]    },    "CONTACT": {      "SUBTITLE": "Kontakt",
+      ]
+    },    "CONTACT": {      "SUBTITLE": "Kontakt",
       "TITLE": "Lass uns verbinden",
       "DESCRIPTION": "Offen für Kollaborationen und Jobangebote. Sende mir eine strukturierte Nachricht über WhatsApp.",
       "RESUME": "Meinen Lebenslauf Ansehen",
