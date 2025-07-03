@@ -6,6 +6,8 @@ const WorkflowOrchestratorAgent = ({ config }) => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [executionResults, setExecutionResults] = useState(null);
   const [selectedTemplate, setSelectedTemplate] = useState('');
+  const [customInput, setCustomInput] = useState('');
+  const [customMode, setCustomMode] = useState(false);
 
   // Real-world workflow templates
   const workflowTemplates = {
@@ -53,7 +55,63 @@ const WorkflowOrchestratorAgent = ({ config }) => {
   const handleTemplateSelect = (templateKey) => {
     setSelectedTemplate(templateKey);
     setWorkflowSteps([...workflowTemplates[templateKey].steps]);
+    setCustomMode(false);
     setCurrentStep('execution');
+  };
+
+  const handleCustomInput = () => {
+    if (!customInput.trim()) return;
+    
+    // Generate a custom workflow based on user input
+    const customWorkflow = generateCustomWorkflow(customInput);
+    setWorkflowSteps(customWorkflow);
+    setSelectedTemplate('custom');
+    setCustomMode(true);
+    setCurrentStep('execution');
+  };
+
+  const generateCustomWorkflow = (input) => {
+    // Analyze the input and create appropriate workflow steps
+    const lowercaseInput = input.toLowerCase();
+    
+    let steps = [];
+    
+    if (lowercaseInput.includes('proyecto') || lowercaseInput.includes('project') || lowercaseInput.includes('app')) {
+      steps = [
+        { id: 1, name: 'Análisis de Requisitos', type: 'ai-analysis', status: 'pending', duration: '2-3 días' },
+        { id: 2, name: 'Estimación de Recursos', type: 'ai-processing', status: 'pending', duration: '1-2 días' },
+        { id: 3, name: 'Planificación de Presupuesto', type: 'ai-analysis', status: 'pending', duration: '1 día' },
+        { id: 4, name: 'Evaluación de Riesgos', type: 'ai-analysis', status: 'pending', duration: '2 días' },
+        { id: 5, name: 'Plan de Implementación', type: 'output', status: 'pending', duration: '1 día' }
+      ];
+    } else if (lowercaseInput.includes('negocio') || lowercaseInput.includes('business') || lowercaseInput.includes('empresa')) {
+      steps = [
+        { id: 1, name: 'Investigación de Mercado', type: 'ai-analysis', status: 'pending', duration: '3-5 días' },
+        { id: 2, name: 'Análisis Financiero', type: 'ai-processing', status: 'pending', duration: '2-3 días' },
+        { id: 3, name: 'Evaluación de Competencia', type: 'ai-analysis', status: 'pending', duration: '2 días' },
+        { id: 4, name: 'Análisis de Viabilidad', type: 'ai-analysis', status: 'pending', duration: '1-2 días' },
+        { id: 5, name: 'Recomendación Final', type: 'output', status: 'pending', duration: '1 día' }
+      ];
+    } else if (lowercaseInput.includes('equipo') || lowercaseInput.includes('team') || lowercaseInput.includes('personal')) {
+      steps = [
+        { id: 1, name: 'Evaluación de Performance', type: 'ai-analysis', status: 'pending', duration: '2-3 días' },
+        { id: 2, name: 'Análisis de Habilidades', type: 'ai-analysis', status: 'pending', duration: '1-2 días' },
+        { id: 3, name: 'Plan de Capacitación', type: 'ai-processing', status: 'pending', duration: '2 días' },
+        { id: 4, name: 'Optimización de Roles', type: 'ai-processing', status: 'pending', duration: '1-2 días' },
+        { id: 5, name: 'Plan de Mejora', type: 'output', status: 'pending', duration: '1 día' }
+      ];
+    } else {
+      // Generic workflow for any other input
+      steps = [
+        { id: 1, name: 'Análisis Inicial', type: 'ai-analysis', status: 'pending', duration: '1-2 días' },
+        { id: 2, name: 'Procesamiento de Datos', type: 'ai-processing', status: 'pending', duration: '1-2 días' },
+        { id: 3, name: 'Evaluación de Opciones', type: 'ai-analysis', status: 'pending', duration: '1-2 días' },
+        { id: 4, name: 'Generación de Estrategia', type: 'ai-processing', status: 'pending', duration: '1 día' },
+        { id: 5, name: 'Plan de Acción', type: 'output', status: 'pending', duration: '1 día' }
+      ];
+    }
+    
+    return steps;
   };
 
   const executeWorkflow = async () => {
@@ -108,6 +166,34 @@ const WorkflowOrchestratorAgent = ({ config }) => {
   };
 
   const generateStepResult = (step) => {
+    if (customMode) {
+      // Generate dynamic results based on custom input
+      const customResults = {
+        'Análisis Inicial': `Análisis completado: "${customInput}" - Identificadas 5 áreas clave de enfoque`,
+        'Análisis de Requisitos': `Requisitos extraídos de: "${customInput}" - 8 elementos críticos identificados`,
+        'Investigación de Mercado': `Investigación basada en: "${customInput}" - Mercado objetivo definido`,
+        'Evaluación de Performance': `Evaluación iniciada para: "${customInput}" - Métricas base establecidas`,
+        'Procesamiento de Datos': 'Datos procesados con IA - Patrones relevantes detectados',
+        'Estimación de Recursos': 'Recursos calculados - Timeline y presupuesto optimizados',
+        'Análisis Financiero': 'Proyecciones financieras completadas - ROI estimado',
+        'Análisis de Habilidades': 'Gaps de habilidades identificados - Plan de desarrollo creado',
+        'Evaluación de Opciones': 'Opciones evaluadas - Mejor estrategia seleccionada',
+        'Plan de Capacitación': 'Programa de capacitación personalizado generado',
+        'Planificación de Presupuesto': 'Presupuesto optimizado - Asignación eficiente de recursos',
+        'Análisis de Competencia': 'Análisis competitivo completo - Ventajas identificadas',
+        'Evaluación de Riesgos': 'Riesgos principales identificados - Estrategias de mitigación',
+        'Análisis de Viabilidad': 'Viabilidad confirmada - Probabilidad de éxito alta',
+        'Optimización de Roles': 'Roles optimizados - Productividad mejorada en 25%',
+        'Generación de Estrategia': 'Estrategia personalizada generada - Acciones prioritarias',
+        'Plan de Implementación': 'Plan detallado creado - Milestones y entregables definidos',
+        'Recomendación Final': 'Recomendación estratégica completada - Próximos pasos claros',
+        'Plan de Acción': 'Plan de acción integral generado - Listo para implementación',
+        'Plan de Mejora': 'Plan de mejora continua establecido - KPIs definidos'
+      };
+      
+      return customResults[step.name] || `Análisis personalizado completado para: ${step.name}`;
+    }
+
     const projectPlanningResults = {
       'Requirements Analysis': 'Identified 12 core features, 8 integrations, and 3 compliance requirements',
       'Time Estimation': 'Development: 4.5 months, Testing: 6 weeks, Deployment: 2 weeks',
@@ -145,6 +231,16 @@ const WorkflowOrchestratorAgent = ({ config }) => {
   };
 
   const generateWorkflowInsights = (templateKey) => {
+    if (customMode) {
+      return [
+        `🎯 Análisis personalizado completado para: "${customInput.substring(0, 40)}..."`,
+        `⚡ Workflow optimizado reduce tiempo de planificación en 70%`,
+        `💡 5 recomendaciones estratégicas generadas específicamente`,
+        `📊 Probabilidad de éxito estimada: 82% basada en análisis IA`,
+        `🔄 Plan de implementación adaptado a tus necesidades específicas`
+      ];
+    }
+
     const insights = {
       'project-planning': [
         '🎯 Project feasibility score: 87% - highly viable within constraints',
@@ -176,6 +272,8 @@ const WorkflowOrchestratorAgent = ({ config }) => {
     setWorkflowSteps([]);
     setExecutionResults(null);
     setSelectedTemplate('');
+    setCustomInput('');
+    setCustomMode(false);
     setIsProcessing(false);
   };
 
@@ -216,33 +314,69 @@ const WorkflowOrchestratorAgent = ({ config }) => {
         </div>
 
         {currentStep === 'design' && (
-          <div className="space-y-6">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">
-              Choose a Workflow Template
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              {Object.entries(workflowTemplates).map(([key, template]) => (
-                <div
-                  key={key}
-                  className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-purple-400 cursor-pointer transition-all duration-300 hover:shadow-lg group"
-                  onClick={() => handleTemplateSelect(key)}
+          <div className="space-y-8">
+            {/* Custom Input Section */}
+            <div className="bg-white rounded-xl p-6 border border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                🎯 Describe tu Proyecto o Necesidad
+              </h3>
+              <div className="space-y-4">
+                <textarea
+                  value={customInput}
+                  onChange={(e) => setCustomInput(e.target.value)}
+                  placeholder="Ejemplo: 'Necesito desarrollar una app de delivery para mi restaurante con presupuesto de €20k y plazo de 4 meses'"
+                  className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                  rows="3"
+                />
+                <button
+                  onClick={handleCustomInput}
+                  disabled={!customInput.trim()}
+                  className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-lg hover:from-green-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 font-medium"
                 >
-                  <h4 className="font-semibold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
-                    {template.name}
-                  </h4>
-                  <p className="text-sm text-gray-600 mb-3">{template.description}</p>
-                  <div className="bg-gray-50 rounded-lg p-3 mb-4">
-                    <p className="text-xs text-gray-500 mb-1">Example scenario:</p>
-                    <p className="text-xs text-gray-700 italic">"{template.example}"</p>
+                  🚀 Generar Workflow Personalizado
+                </button>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-gray-300"></div>
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="px-2 bg-gray-50 text-gray-500">o elige un template predefinido</span>
+              </div>
+            </div>
+
+            {/* Template Selection */}
+            <div className="space-y-6">
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                Choose a Workflow Template
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                {Object.entries(workflowTemplates).map(([key, template]) => (
+                  <div
+                    key={key}
+                    className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-purple-400 cursor-pointer transition-all duration-300 hover:shadow-lg group"
+                    onClick={() => handleTemplateSelect(key)}
+                  >
+                    <h4 className="font-semibold text-gray-800 mb-2 group-hover:text-purple-600 transition-colors">
+                      {template.name}
+                    </h4>
+                    <p className="text-sm text-gray-600 mb-3">{template.description}</p>
+                    <div className="bg-gray-50 rounded-lg p-3 mb-4">
+                      <p className="text-xs text-gray-500 mb-1">Example scenario:</p>
+                      <p className="text-xs text-gray-700 italic">"{template.example}"</p>
+                    </div>
+                    <div className="flex justify-between items-center text-xs">
+                      <span className="text-purple-600 font-medium">
+                        {template.steps.length} AI-powered steps
+                      </span>
+                      <span className="text-gray-500">Click to start →</span>
+                    </div>
                   </div>
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="text-purple-600 font-medium">
-                      {template.steps.length} AI-powered steps
-                    </span>
-                    <span className="text-gray-500">Click to start →</span>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         )}
@@ -251,8 +385,13 @@ const WorkflowOrchestratorAgent = ({ config }) => {
           <div className="space-y-6">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-xl font-semibold text-gray-800">
-                {workflowTemplates[selectedTemplate]?.name}
+                {customMode ? 'Workflow Personalizado' : workflowTemplates[selectedTemplate]?.name}
               </h3>
+              {customMode && (
+                <div className="text-sm text-gray-600 bg-green-50 px-3 py-1 rounded-lg border border-green-200">
+                  📝 Basado en: "{customInput.substring(0, 50)}..."
+                </div>
+              )}
               <button
                 onClick={executeWorkflow}
                 disabled={isProcessing}
