@@ -132,105 +132,16 @@ Best regards`;
   };
 
   const handleConfirmSend = async () => {
-    const whatsappUrl = `https://wa.me/4917645754360?text=${encodeURIComponent(finalMessage)}`;
-    
-    // Device/browser detection
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const isAndroid = /Android/i.test(navigator.userAgent);
-    const isChrome = /Chrome|CriOS/.test(navigator.userAgent);
-    const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
-    
-    let whatsappOpened = false;
+    // Use the exact same format as the working code
+    const restaurantPhone = '+4917645754360'; // Verified number
+    const whatsappUrl = `https://wa.me/${restaurantPhone.replace('+', '')}?text=${encodeURIComponent(finalMessage)}`;
     
     try {
-      if (isMobile) {
-        // === MOBILE STRATEGIES ===
-        if (isIOS) {
-          // iOS: Try WhatsApp URL scheme first, then fallback to wa.me
-          try {
-            const iosScheme = `whatsapp://send?phone=4917645754360&text=${encodeURIComponent(finalMessage)}`;
-            window.location.href = iosScheme;
-            whatsappOpened = true;
-            
-            // Fallback to wa.me after a brief delay if app scheme fails
-            setTimeout(() => {
-              if (document.visibilityState === 'visible') {
-                window.location.href = whatsappUrl;
-              }
-            }, 1500);
-          } catch (e) {
-            window.location.href = whatsappUrl;
-            whatsappOpened = true;
-          }
-        } else if (isAndroid) {
-          // Android: Try intent first, then wa.me
-          try {
-            const intentUrl = `intent://send?phone=4917645754360&text=${encodeURIComponent(finalMessage)}#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end`;
-            window.location.href = intentUrl;
-            whatsappOpened = true;
-            
-            // Fallback to wa.me
-            setTimeout(() => {
-              if (document.visibilityState === 'visible') {
-                window.location.href = whatsappUrl;
-              }
-            }, 1500);
-          } catch (e) {
-            window.location.href = whatsappUrl;
-            whatsappOpened = true;
-          }
-        } else {
-          // Other mobile platforms
-          window.location.href = whatsappUrl;
-          whatsappOpened = true;
-        }
-      } else {
-        // === DESKTOP STRATEGIES ===
-        if (isSafari) {
-          // Safari: Use location.href directly for better compatibility
-          window.location.href = whatsappUrl;
-          whatsappOpened = true;
-        } else {
-          // Chrome, Firefox, Edge: Try window.open first
-          const whatsappWindow = window.open(whatsappUrl, '_blank', 'width=800,height=600,scrollbars=yes,resizable=yes');
-          
-          if (whatsappWindow) {
-            try {
-              whatsappWindow.focus();
-              whatsappOpened = true;
-              
-              // Check if window was blocked or closed immediately
-              setTimeout(() => {
-                if (whatsappWindow.closed) {
-                  // Window was blocked, try location.href
-                  window.location.href = whatsappUrl;
-                }
-              }, 100);
-            } catch (e) {
-              // Cross-origin issues, try location.href
-              window.location.href = whatsappUrl;
-              whatsappOpened = true;
-            }
-          } else {
-            // Pop-up was blocked, use location.href
-            window.location.href = whatsappUrl;
-            whatsappOpened = true;
-          }
-        }
-      }
+      // Open WhatsApp - exact same approach as working code
+      window.open(whatsappUrl, '_blank');
       
-      // Wait a moment to see if WhatsApp opens successfully
-      const checkDelay = isMobile ? 3000 : 2000;
-      setTimeout(() => {
-        // If page is still visible and focused, WhatsApp likely didn't open
-        if (document.visibilityState === 'visible' && !document.hidden) {
-          handleFallbackInstructions();
-        } else {
-          // Success! Close the modal
-          setShowSendModal(false);
-        }
-      }, checkDelay);
+      // Close the modal immediately after opening WhatsApp
+      setShowSendModal(false);
       
     } catch (error) {
       console.error('Error opening WhatsApp:', error);
@@ -614,8 +525,8 @@ Best regards`;
                     disabled={!finalMessage.trim()}
                   >
                     <span className="flex items-center gap-2">
-                      <span>�</span>
-                      {i18n.CONTACT?.COPY_AND_INSTRUCT || 'Copy & Show Instructions'}
+                      <span>📱</span>
+                      {i18n.CONTACT?.SEND_TO_WHATSAPP || 'Send via WhatsApp'}
                     </span>
                   </button>
                 </div>
