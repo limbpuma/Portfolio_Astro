@@ -12,10 +12,8 @@ const WhatsAppContactForm = ({ i18n }) => {
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [aiAgent] = useState(new AIMessageAgent());
   const [aiEnabled, setAiEnabled] = useState(true);
-                     <span className="flex items-center gap-2">
-                      <span>📱</span>
-                      {i18n.CONTACT?.SEND_TO_WHATSAPP || 'Send via WhatsApp'}
-                    </span> // Modal states
+  
+  // Modal states
   const [showSendModal, setShowSendModal] = useState(false);
   const [finalMessage, setFinalMessage] = useState('');
   const [isCopied, setIsCopied] = useState(false);
@@ -131,45 +129,39 @@ Best regards`;
     }
   };
 
-  const handleConfirmSend = async () => {
-    // Use the exact same format as the working code
-    const restaurantPhone = '+4917645754360'; // Verified number
-    const whatsappUrl = `https://wa.me/${restaurantPhone.replace('+', '')}?text=${encodeURIComponent(finalMessage)}`;
+  const handleConfirmSend = () => {
+    // Use WhatsApp Web - most reliable solution
+    const phoneNumber = "4917645754360";
+    const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(finalMessage)}`;
     
     try {
-      // Open WhatsApp - exact same approach as working code
-      window.open(whatsappUrl, '_blank');
+      // Open WhatsApp Web in a new tab
+      window.open(whatsappWebUrl, '_blank', 'noopener,noreferrer');
       
-      // Close the modal immediately after opening WhatsApp
-      setShowSendModal(false);
+      // Close the modal after a short delay
+      setTimeout(() => {
+        setShowSendModal(false);
+      }, 1000);
       
     } catch (error) {
-      console.error('Error opening WhatsApp:', error);
-      handleFallbackInstructions();
+      console.error('Error opening WhatsApp Web:', error);
+      // Fallback: copy message and show instructions
+      handleCopyMessage();
+      
+      const currentLang = i18n.LANG || 'en';
+      let instructions = '';
+      
+      if (currentLang === 'de') {
+        instructions = `✅ Nachricht kopiert!\n\n📱 Nächste Schritte:\n1. WhatsApp öffnen\n2. Neuen Chat mit +49 176 45754360 starten\n3. Nachricht einfügen (Strg+V)\n4. Senden`;
+      } else if (currentLang === 'es') {
+        instructions = `✅ ¡Mensaje copiado!\n\n📱 Próximos pasos:\n1. Abrir WhatsApp\n2. Iniciar chat con +49 176 45754360\n3. Pegar mensaje (Ctrl+V)\n4. Enviar`;
+      } else {
+        instructions = `✅ Message copied!\n\n📱 Next steps:\n1. Open WhatsApp\n2. Start chat with +49 176 45754360\n3. Paste message (Ctrl+V)\n4. Send`;
+      }
+      
+      alert(instructions);
+      setShowSendModal(false);
     }
-  };
-
-  const handleFallbackInstructions = async () => {
-    // Copy message to clipboard first
-    try {
-      await handleCopyMessage();
-    } catch (e) {
-      console.error('Failed to copy message:', e);
-    }
-    
-    const currentLang = i18n.LANG || 'en';
-    let instructions = '';
-    
-    if (currentLang === 'de') {
-      instructions = `� WhatsApp öffnen - Anweisungen\n\n✅ Nachricht wurde automatisch kopiert!\n\n� Option 1 - Direkter Link:\nÖffne: https://wa.me/4917645754360\n\n📝 Option 2 - Manuell:\n1. WhatsApp öffnen (Web/App)\n2. Neuen Chat starten\n3. Nummer: +49 176 45754360\n4. Nachricht einfügen (Strg+V)\n5. Senden ✈️\n\n💡 WhatsApp Web: web.whatsapp.com`;
-    } else if (currentLang === 'es') {
-      instructions = `� Abrir WhatsApp - Instrucciones\n\n✅ ¡Mensaje copiado automáticamente!\n\n🔗 Opción 1 - Enlace directo:\nAbrir: https://wa.me/4917645754360\n\n� Opción 2 - Manual:\n1. Abrir WhatsApp (Web/App)\n2. Iniciar nuevo chat\n3. Número: +49 176 45754360\n4. Pegar mensaje (Ctrl+V)\n5. Enviar ✈️\n\n💡 WhatsApp Web: web.whatsapp.com`;
-    } else {
-      instructions = `� Open WhatsApp - Instructions\n\n✅ Message automatically copied!\n\n🔗 Option 1 - Direct link:\nOpen: https://wa.me/4917645754360\n\n� Option 2 - Manual:\n1. Open WhatsApp (Web/App)\n2. Start new chat\n3. Number: +49 176 45754360\n4. Paste message (Ctrl+V)\n5. Send ✈️\n\n💡 WhatsApp Web: web.whatsapp.com`;
-    }
-    
-    alert(instructions);
-    setShowSendModal(false);
   };
 
   const handleCopyMessage = async () => {
@@ -525,15 +517,10 @@ Best regards`;
                     disabled={!finalMessage.trim()}
                   >
                     <span className="flex items-center gap-2">
-                      <span>📱</span>
-                      {i18n.CONTACT?.SEND_TO_WHATSAPP || 'Send via WhatsApp'}
+                      <span>�</span>
+                      {i18n.CONTACT?.COPY_AND_INSTRUCT || 'Copy & Show Instructions'}
                     </span>
                   </button>
-                </div>
-
-                {/* Backup Options */}
-                <div className="text-center text-xs text-base-content/60 mt-2 mb-2">
-                  {i18n.CONTACT?.BACKUP_OPTIONS || 'If WhatsApp doesn\'t open automatically, use "Copy Message" and send manually'}
                 </div>
 
                 {/* Cancel Button */}
