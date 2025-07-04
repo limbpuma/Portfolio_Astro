@@ -265,7 +265,10 @@
       "WHATSAPP_WEB": "WhatsApp Web",
       "WHATSAPP_API": "API Link",
       "ALTERNATIVE_METHODS": "Alternative methods:",
-      "MANUAL_INSTRUCTIONS": "If links don't work: Copy message and send manually to the number above"
+      "MANUAL_INSTRUCTIONS": "If links don't work: Copy message and send manually to the number above",
+      "CONTACT_FORM": "Contact Form",
+      "CONTACT_DESCRIPTION": "Send me a message directly to WhatsApp",
+      "PREPARE_MESSAGE": "Prepare Message for WhatsApp"
     },
     "FOOTER": {
       "PRIVACY_POLICY": "Privacy Policy",

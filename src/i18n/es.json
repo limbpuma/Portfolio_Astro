@@ -275,7 +275,10 @@
       "WHATSAPP_WEB": "WhatsApp Web",
       "WHATSAPP_API": "Enlace API",
       "ALTERNATIVE_METHODS": "Métodos alternativos:",
-      "MANUAL_INSTRUCTIONS": "Si los enlaces no funcionan: Copia el mensaje y envíalo manualmente al número de arriba"
+      "MANUAL_INSTRUCTIONS": "Si los enlaces no funcionan: Copia el mensaje y envíalo manualmente al número de arriba",
+      "CONTACT_FORM": "Formulario de Contacto",
+      "CONTACT_DESCRIPTION": "Envíame un mensaje directamente a WhatsApp",
+      "PREPARE_MESSAGE": "Preparar Mensaje para WhatsApp"
     },
     "FOOTER": {
       "PRIVACY_POLICY": "Política de Privacidad",

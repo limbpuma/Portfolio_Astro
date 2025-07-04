@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import AIMessageAgent from './AIMessageAgent.jsx';
 
 const WhatsAppContactForm = ({ i18n }) => {
   const [formData, setFormData] = useState({
@@ -10,8 +9,6 @@ const WhatsAppContactForm = ({ i18n }) => {
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
-  const [aiAgent] = useState(new AIMessageAgent());
-  const [aiEnabled, setAiEnabled] = useState(true);
   
   // Modal states
   const [showSendModal, setShowSendModal] = useState(false);
@@ -101,21 +98,8 @@ Best regards`;
     setIsGenerating(true);
     
     try {
-      // Generate final message for confirmation
-      const currentLang = i18n.LANG || 'en';
-      let message;
-      
-      if (aiEnabled) {
-        const result = await aiAgent.generateIntelligentMessage(formData, currentLang);
-        if (result.success) {
-          message = result.message;
-        } else {
-          message = generateBasicWhatsAppMessage();
-        }
-      } else {
-        message = generateBasicWhatsAppMessage();
-      }
-      
+      // Generate simple message
+      const message = generateBasicWhatsAppMessage();
       setFinalMessage(message);
       setShowSendModal(true);
     } catch (error) {
@@ -180,56 +164,14 @@ Best regards`;
     <div className="w-full max-w-md mx-auto bg-base-100 rounded-2xl shadow-xl p-6 border border-primary/20">      {/* Header */}
       <div className="text-center mb-6">
         <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-3">
-          <span className="text-xl">{aiEnabled ? '🤖' : '📝'}</span>
+          <span className="text-xl">📝</span>
           <span className="font-semibold text-primary">
-            {aiEnabled ? 
-              (i18n.CONTACT?.SMART_CONTACT || 'AI-Enhanced Contact') : 
-              (i18n.CONTACT?.BASIC_CONTACT || 'Basic Contact')
-            }
+            {i18n.CONTACT?.CONTACT_FORM || 'Contact Form'}
           </span>
         </div>
         <p className="text-sm text-base-content/70">
-          {aiEnabled ? 
-            (i18n.CONTACT?.SMART_DESCRIPTION || 'Intelligent message generation powered by AI') :
-            (i18n.CONTACT?.BASIC_DESCRIPTION || 'Traditional message creation')
-          }
+          {i18n.CONTACT?.CONTACT_DESCRIPTION || 'Send me a message directly to WhatsApp'}
         </p>
-      </div>
-
-      {/* AI Toggle */}
-      <div className="mb-6 p-4 bg-base-200 rounded-lg border border-primary/20">
-        <div className="flex items-center justify-between">
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-lg">{aiEnabled ? '🤖' : '📝'}</span>
-              <span className="font-medium text-base-content">
-                {i18n.CONTACT?.AI_TOGGLE_LABEL || 'AI Message Enhancement'}
-              </span>
-            </div>
-            <p className="text-sm text-base-content/70">
-              {aiEnabled ? 
-                (i18n.CONTACT?.AI_ENABLED_DESC || 'AI will analyze your message and create a personalized, contextually appropriate response') :
-                (i18n.CONTACT?.AI_DISABLED_DESC || 'Use traditional message template without AI enhancements')
-              }
-            </p>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className={`text-sm ${!aiEnabled ? 'text-base-content' : 'text-base-content/50'}`}>
-              {i18n.CONTACT?.BASIC_MODE || 'Basic'}
-            </span>
-            <input
-              type="checkbox"
-              className="toggle toggle-primary"
-              checked={aiEnabled}
-              onChange={(e) => {
-                setAiEnabled(e.target.checked);
-              }}
-            />
-            <span className={`text-sm ${aiEnabled ? 'text-base-content' : 'text-base-content/50'}`}>
-              {i18n.CONTACT?.AI_MODE || 'AI'}
-            </span>
-          </div>
-        </div>
       </div>
 
       {/* Formulario */}
@@ -296,36 +238,19 @@ Best regards`;
             <span className="label-text font-medium">
               {i18n.CONTACT?.MESSAGE || 'Message'}
             </span>
-            {aiEnabled && (
-              <span className="label-text-alt text-info">
-                <span className="text-xs">🤖 AI will enhance this</span>
-              </span>
-            )}
           </label>
           <textarea
             name="message"
             value={formData.message}
             onChange={handleInputChange}
-            placeholder={aiEnabled ? 
-              (i18n.CONTACT?.MESSAGE_PLACEHOLDER || 'Tell me about your project or opportunity (AI will enhance this)...') :
-              (i18n.CONTACT?.BASIC_MESSAGE_PLACEHOLDER || 'Tell me about your project or opportunity...')
-            }
+            placeholder={i18n.CONTACT?.BASIC_MESSAGE_PLACEHOLDER || 'Tell me about your project or opportunity...'}
             className="textarea textarea-bordered textarea-primary w-full h-24 resize-none transition-all duration-300 focus:scale-[1.02]"
           />
-          {aiEnabled && (
-            <label className="label">
-              <span className="label-text-alt text-info text-xs">
-                ✨ AI will analyze context, tone, and create a personalized professional message
-              </span>
-            </label>
-          )}
-          {!aiEnabled && (
-            <label className="label">
-              <span className="label-text-alt text-base-content/60 text-xs">
-                📝 Will use a simple, direct message template
-              </span>
-            </label>
-          )}
+          <label className="label">
+            <span className="label-text-alt text-base-content/60 text-xs">
+              📝 Your message will be sent directly to WhatsApp
+            </span>
+          </label>
         </div>
       </div>
 
@@ -362,18 +287,12 @@ Best regards`;
           {isGenerating ? (
             <span className="flex items-center gap-2">
               <span className="loading loading-spinner loading-sm"></span>
-              {aiEnabled ? 
-                (i18n.CONTACT?.GENERATING || 'Analyzing & crafting AI message...') :
-                (i18n.CONTACT?.GENERATING_BASIC || 'Creating message...')
-              }
+              {i18n.CONTACT?.GENERATING_BASIC || 'Creating message...'}
             </span>
           ) : (
             <span className="flex items-center gap-2">
-              <span className="text-xl">{aiEnabled ? '🤖�' : '�📋'}</span>
-              {aiEnabled ? 
-                (i18n.CONTACT?.PREPARE_AI_MESSAGE || 'Prepare AI Message') :
-                (i18n.CONTACT?.PREPARE_BASIC_MESSAGE || 'Prepare Basic Message')
-              }
+              <span className="text-xl">📋</span>
+              {i18n.CONTACT?.PREPARE_MESSAGE || 'Prepare Message for WhatsApp'}
             </span>
           )}
         </button>
@@ -425,29 +344,16 @@ Best regards`;
             <div className="p-6 overflow-y-auto max-h-[60vh]">
               {/* Message Type Indicator */}
               <div className="flex items-center gap-2 mb-4">
-                {aiEnabled ? (
-                  <div className="flex items-center gap-2">
-                    <span className="badge badge-info gap-2">
-                      <span>🤖</span> AI Enhanced Message
-                    </span>
-                    <span className="badge badge-outline text-xs">
-                      {i18n.LANG === 'de' ? '🇩🇪 Deutsch' : 
-                       i18n.LANG === 'es' ? '🇪🇸 Español' : 
-                       '🇺🇸 English'}
-                    </span>
-                  </div>
-                ) : (
-                  <div className="flex items-center gap-2">
-                    <span className="badge badge-ghost gap-2">
-                      <span>📝</span> Basic Message
-                    </span>
-                    <span className="badge badge-outline text-xs">
-                      {i18n.LANG === 'de' ? '🇩🇪 Deutsch' : 
-                       i18n.LANG === 'es' ? '🇪🇸 Español' : 
-                       '🇺🇸 English'}
-                    </span>
-                  </div>
-                )}
+                <div className="flex items-center gap-2">
+                  <span className="badge badge-ghost gap-2">
+                    <span>📝</span> Message
+                  </span>
+                  <span className="badge badge-outline text-xs">
+                    {i18n.LANG === 'de' ? '🇩🇪 Deutsch' : 
+                     i18n.LANG === 'es' ? '🇪🇸 Español' : 
+                     '🇺🇸 English'}
+                  </span>
+                </div>
               </div>
 
               {/* Message Preview */}
@@ -470,21 +376,6 @@ Best regards`;
                   {i18n.CONTACT?.EDIT_MESSAGE_TIP || 'You can edit the message above before sending'}
                 </div>
               </div>
-
-              {/* Additional Info */}
-              {aiEnabled && (
-                <div className="mt-4 p-3 bg-info/10 rounded-lg border border-info/20">
-                  <div className="flex items-center gap-2 text-info">
-                    <span>✨</span>
-                    <span className="text-sm font-medium">
-                      {i18n.CONTACT?.AI_ENHANCEMENT_NOTE || 'AI Enhancement Applied'}
-                    </span>
-                  </div>
-                  <p className="text-xs text-info/80 mt-1">
-                    {i18n.CONTACT?.AI_ENHANCEMENT_DESC || 'This message was analyzed and enhanced by AI for better tone, context, and professionalism.'}
-                  </p>
-                </div>
-              )}
             </div>
 
             {/* Modal Footer */}

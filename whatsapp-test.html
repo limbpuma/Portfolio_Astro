@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba WhatsApp URL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .url-display {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #007bff;
+            font-family: monospace;
+            word-break: break-all;
+        }
+        .test-button {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px 0;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .test-button:hover {
+            background-color: #128c7e;
+        }
+        .results {
+            background: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #28a745;
+        }
+        .error {
+            background: #ffeaea;
+            border-left-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Prueba WhatsApp URL - Portfolio</h1>
+        
+        <p>Esta página permite probar la generación correcta de URLs de WhatsApp para evitar redirecciones a <code>api.whatsapp.com</code>.</p>
+        
+        <h2>📱 Información del Contacto</h2>
+        <ul>
+            <li><strong>Número:</strong> +49 176 45754360</li>
+            <li><strong>Formato correcto:</strong> 4917645754360 (sin + para wa.me)</li>
+        </ul>
+        
+        <h2>🔗 Generación de URL</h2>
+        <div>
+            <label for="message">Mensaje de prueba:</label><br>
+            <textarea id="message" rows="4" cols="50" placeholder="Escribe tu mensaje aquí...">Hola Limber,
+
+soy [Nombre] de [Empresa].
+
+💼 Colaboración en Proyecto
+
+Estoy interesado en colaborar contigo.
+
+Saludos</textarea>
+        </div>
+        
+        <button class="test-button" onclick="generateURL()">🔄 Generar URL</button>
+        
+        <div id="url-result" class="url-display" style="display: none;">
+            <strong>URL Generada:</strong><br>
+            <span id="generated-url"></span>
+        </div>
+        
+        <div id="test-results" class="results" style="display: none;">
+            <h3>✅ Resultados del Test</h3>
+            <ul id="test-list"></ul>
+        </div>
+        
+        <div style="margin-top: 30px;">
+            <button class="test-button" onclick="testWhatsApp()">📱 Probar WhatsApp</button>
+            <button class="test-button" onclick="copyURL()">📋 Copiar URL</button>
+        </div>
+        
+        <h2>🔍 Verificaciones</h2>
+        <div id="verification-results"></div>
+    </div>
+
+    <script>
+        let currentURL = '';
+        
+        function generateURL() {
+            const message = document.getElementById('message').value;
+            
+            // Usar el mismo formato que el código del portfolio
+            const restaurantPhone = '+4917645754360'; // Verified number
+            const whatsappUrl = `https://wa.me/${restaurantPhone.replace('+', '')}?text=${encodeURIComponent(message)}`;
+            
+            currentURL = whatsappUrl;
+            
+            // Mostrar la URL generada
+            document.getElementById('generated-url').textContent = whatsappUrl;
+            document.getElementById('url-result').style.display = 'block';
+            
+            // Ejecutar verificaciones
+            runVerifications(whatsappUrl);
+            
+            // Mostrar resultados del test
+            const testResults = document.getElementById('test-results');
+            const testList = document.getElementById('test-list');
+            
+            testList.innerHTML = `
+                <li>✅ Número sin '+': ${restaurantPhone.replace('+', '')}</li>
+                <li>✅ Dominio correcto: wa.me</li>
+                <li>✅ Parámetro text: ${encodeURIComponent(message) ? 'Presente' : 'Ausente'}</li>
+                <li>✅ Encoding: ${encodeURIComponent(message).length} caracteres</li>
+                <li>✅ Formato URL: ${whatsappUrl.startsWith('https://wa.me/') ? 'Correcto' : 'Incorrecto'}</li>
+            `;
+            
+            testResults.style.display = 'block';
+        }
+        
+        function runVerifications(url) {
+            const results = document.getElementById('verification-results');
+            let html = '';
+            
+            // Verificar que no contiene api.whatsapp.com
+            if (url.includes('api.whatsapp.com')) {
+                html += '<div class="results error">❌ ERROR: URL contiene api.whatsapp.com</div>';
+            } else {
+                html += '<div class="results">✅ OK: URL no contiene api.whatsapp.com</div>';
+            }
+            
+            // Verificar formato correcto
+            if (url.startsWith('https://wa.me/49')) {
+                html += '<div class="results">✅ OK: Formato wa.me correcto</div>';
+            } else {
+                html += '<div class="results error">❌ ERROR: Formato wa.me incorrecto</div>';
+            }
+            
+            // Verificar número sin +
+            if (url.includes('wa.me/4917645754360')) {
+                html += '<div class="results">✅ OK: Número sin "+" símbolo</div>';
+            } else {
+                html += '<div class="results error">❌ ERROR: Número con formato incorrecto</div>';
+            }
+            
+            results.innerHTML = html;
+        }
+        
+        function testWhatsApp() {
+            if (!currentURL) {
+                alert('Primero genera una URL');
+                return;
+            }
+            
+            console.log('🚀 Abriendo WhatsApp:', currentURL);
+            
+            try {
+                window.open(currentURL, '_blank');
+                console.log('✅ WhatsApp abierto exitosamente');
+            } catch (error) {
+                console.error('❌ Error abriendo WhatsApp:', error);
+                alert('Error abriendo WhatsApp. Ver consola para detalles.');
+            }
+        }
+        
+        function copyURL() {
+            if (!currentURL) {
+                alert('Primero genera una URL');
+                return;
+            }
+            
+            navigator.clipboard.writeText(currentURL).then(() => {
+                alert('URL copiada al portapapeles');
+            }).catch(err => {
+                console.error('Error copiando URL:', err);
+                alert('Error copiando URL');
+            });
+        }
+        
+        // Generar URL automáticamente al cargar la página
+        window.onload = function() {
+            generateURL();
+        };
+    </script>
+</body>
+</html>

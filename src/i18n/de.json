@@ -301,5 +301,8 @@
       "DATA_PROTECTION": "Datenschutz: Wir treffen Vorkehrungen zum Schutz Ihrer Daten auf den Plattformen, die wir verwenden. Da wir jedoch keine Daten direkt sammeln, raten wir dazu, die Datenschutzeinstellungen und -richtlinien aller Drittanbieter-Tools oder -Dienste, mit denen Sie interagieren, zu überprüfen.",
       "USER_RIGHTS": "Ihre Rechte: Bezüglich aller persönlichen Daten, die von Drittanbieterdiensten auf dieser Website gehalten werden, haben Sie Rechte unter der DSGVO, einschließlich Zugang, Korrektur und Löschung. Bitte kontaktieren Sie die jeweiligen Dienste direkt, um diese Rechte auszuüben.",
       "CLOSE_BUTTON": "Schließen"
-    }
+    },
+    "CONTACT_FORM": "Kontaktformular",
+    "CONTACT_DESCRIPTION": "Senden Sie mir eine Nachricht direkt an WhatsApp",
+    "PREPARE_MESSAGE": "Nachricht für WhatsApp vorbereiten"
   }
