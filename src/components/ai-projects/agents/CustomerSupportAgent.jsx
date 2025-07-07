@@ -1,26 +1,34 @@
 import React, { useState } from 'react';
 
-const CustomerSupportAgent = () => {
+const CustomerSupportAgent = ({ config, translations = {}, locale = 'en' }) => {
   const [ticket, setTicket] = useState('');
   const [analysis, setAnalysis] = useState(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
+  // Get translations for the agent
+  const t = translations.AGENTS?.CUSTOMER_SUPPORT || {};
+
+  // Default fallback texts
+  const getText = (key, fallback) => {
+    return t[key] || fallback;
+  };
+
   // Example tickets for quick testing
   const exampleTickets = [
     {
-      title: "🚨 Critical Technical Issue",
+      title: getText('EXAMPLE_CRITICAL', '🚨 Critical Technical Issue'),
       content: "URGENT: Payment gateway completely down!!! Our e-commerce site can't process any payments for the last 2 hours. We're losing thousands of dollars every minute. Customer ID: TECH-12345. This needs IMMEDIATE attention!"
     },
     {
-      title: "💰 Billing Question",
+      title: getText('EXAMPLE_BILLING', '💰 Billing Question'),
       content: "Hi, I have a question about my last invoice. I see a charge for $49.99 but I can't remember what it's for. Could you please help me understand what this charge is? My account email is john@company.com"
     },
     {
-      title: "💡 Feature Request",
+      title: getText('EXAMPLE_FEATURE', '💡 Feature Request'),
       content: "Hello team, we've been using your product for 6 months and love it! Would it be possible to add dark mode to the dashboard? Many of our team members work late and would really appreciate this feature. Thanks for your great work!"
     },
     {
-      title: "😤 Frustrated Customer",
+      title: getText('EXAMPLE_FRUSTRATED', '😤 Frustrated Customer'),
       content: "This is the THIRD time I'm contacting support about the same issue! My account keeps getting locked out every day and nobody has helped me fix this. I'm considering switching to a competitor if this isn't resolved TODAY."
     }
   ];
@@ -208,16 +216,15 @@ const CustomerSupportAgent = () => {
     <div className="max-w-6xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <h2 className="text-3xl font-bold text-gray-200">🎫 Customer Support Ticket Classifier</h2>
+        <h2 className="text-3xl font-bold text-gray-200">{getText('TITLE', '� Customer Support Ticket Classifier')}</h2>
         <p className="text-gray-200 max-w-2xl mx-auto">
-          Intelligent AI-powered analysis of customer support tickets. Automatically categorizes, prioritizes, 
-          and routes tickets to the appropriate departments with actionable insights.
+          {getText('SUBTITLE', 'Analyze and classify support tickets with AI')}
         </p>
       </div>
 
       {/* Quick Examples */}
       <div className="space-y-3">
-        <h3 className="text-lg font-semibold text-gray-200">🚀 Quick Examples</h3>
+        <h3 className="text-lg font-semibold text-gray-200">{getText('EXAMPLES_TITLE', '� Try Examples:')}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {exampleTickets.map((example, index) => (
             <button
@@ -234,13 +241,13 @@ const CustomerSupportAgent = () => {
       {/* Input Section */}
       <div className="space-y-4">
         <div className="flex justify-between items-center">
-          <h3 className="text-lg font-semibold text-gray-200">📝 Ticket Content</h3>
+          <h3 className="text-lg font-semibold text-gray-200">{getText('INPUT_TITLE', '� Support Ticket')}</h3>
           {ticket && (
             <button
               onClick={clearAnalysis}
               className="text-sm text-gray-500 hover:text-gray-400"
             >
-              Clear
+              {getText('START_OVER', 'Clear')}
             </button>
           )}
         </div>
@@ -248,7 +255,7 @@ const CustomerSupportAgent = () => {
         <textarea
           value={ticket}
           onChange={(e) => setTicket(e.target.value)}
-          placeholder="Paste your customer support ticket here... (e.g., customer complaint, feature request, technical issue, billing question)"
+          placeholder={getText('INPUT_PLACEHOLDER', 'Paste the support ticket content here...')}
           className="w-full h-32 p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
         />
         
@@ -263,10 +270,10 @@ const CustomerSupportAgent = () => {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
-              Analyzing Ticket...
+              {getText('ANALYZING', 'Analyzing ticket...')}
             </span>
           ) : (
-            '🔍 Analyze Ticket'
+            getText('ANALYZE_BUTTON', '🔍 Analyze Ticket')
           )}
         </button>
       </div>
@@ -274,24 +281,24 @@ const CustomerSupportAgent = () => {
       {/* Analysis Results */}
       {analysis && (
         <div className="space-y-6 bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
-          <h3 className="text-xl font-bold text-gray-800">📊 Analysis Results</h3>
+          <h3 className="text-xl font-bold text-gray-800">{getText('ANALYSIS_TITLE', '📊 Analysis Results')}</h3>
           
           {/* Main Classification Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Category & Priority */}
             <div className="bg-white p-4 rounded-lg shadow-sm border">
-              <h4 className="font-semibold text-gray-700 mb-3">🏷️ Classification</h4>
+              <h4 className="font-semibold text-gray-700 mb-3">{getText('CATEGORY_TITLE', '🏷️ Category')}</h4>
               <div className="space-y-2">
                 <div>
-                  <span className="text-sm text-gray-500">Category:</span>
+                  <span className="text-sm text-gray-500">{getText('CATEGORY_TITLE', 'Category')}:</span>
                   <div className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm font-medium inline-block ml-2">
                     {analysis.category}
                   </div>
                 </div>
                 <div>
-                  <span className="text-sm text-gray-500">Priority:</span>
+                  <span className="text-sm text-gray-500">{getText('PRIORITY_TITLE', 'Priority')}:</span>
                   <div className={`${analysis.priorityColor} px-2 py-1 rounded text-sm font-medium inline-block ml-2`}>
-                    {analysis.priority}
+                    {getText(`PRIORITY_${analysis.priority?.toUpperCase()}`, analysis.priority)}
                   </div>
                 </div>
               </div>
@@ -299,12 +306,12 @@ const CustomerSupportAgent = () => {
 
             {/* Sentiment & Urgency */}
             <div className="bg-white p-4 rounded-lg shadow-sm border">
-              <h4 className="font-semibold text-gray-700 mb-3">😊 Customer State</h4>
+              <h4 className="font-semibold text-gray-700 mb-3">{getText('SENTIMENT_TITLE', '😊 Sentiment')}</h4>
               <div className="space-y-2">
                 <div>
-                  <span className="text-sm text-gray-500">Sentiment:</span>
+                  <span className="text-sm text-gray-500">{getText('SENTIMENT_TITLE', 'Sentiment')}:</span>
                   <div className={`${analysis.sentimentColor} px-2 py-1 rounded text-sm font-medium inline-block ml-2`}>
-                    {analysis.sentiment}
+                    {getText(`SENTIMENT_${analysis.sentiment?.toUpperCase()}`, analysis.sentiment)}
                   </div>
                 </div>
                 <div className="text-sm">

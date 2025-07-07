@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const EmailResponseAgent = ({ config }) => {
+const EmailResponseAgent = ({ config, translations = {}, locale = 'en' }) => {
   const [currentStep, setCurrentStep] = useState('input');
   const [incomingEmail, setIncomingEmail] = useState('');
   const [responseType, setResponseType] = useState('professional');
@@ -8,30 +8,38 @@ const EmailResponseAgent = ({ config }) => {
   const [generatedResponse, setGeneratedResponse] = useState('');
   const [copySuccess, setCopySuccess] = useState(false);
 
+  // Get translations for the agent
+  const t = translations.AGENTS?.EMAIL_RESPONSE || {};
+
+  // Default fallback texts
+  const getText = (key, fallback) => {
+    return t[key] || fallback;
+  };
+
   const responseTypes = {
     'professional': {
-      name: '💼 Profesional',
-      description: 'Respuesta formal para clientes o colegas',
+      name: getText('TYPE_PROFESSIONAL', '💼 Professional'),
+      description: getText('TYPE_PROFESSIONAL_DESC', 'Formal response for clients or colleagues'),
       tone: 'formal y cortés'
     },
     'friendly': {
-      name: '😊 Amigable',
-      description: 'Respuesta cálida pero profesional',
+      name: getText('TYPE_FRIENDLY', '😊 Friendly'),
+      description: getText('TYPE_FRIENDLY_DESC', 'Warm but professional response'),
       tone: 'amigable y cercano'
     },
     'brief': {
-      name: '⚡ Breve',
-      description: 'Respuesta concisa y directa',
+      name: getText('TYPE_BRIEF', '⚡ Brief'),
+      description: getText('TYPE_BRIEF_DESC', 'Concise and direct response'),
       tone: 'conciso y directo'
     },
     'apologetic': {
-      name: '🙏 Disculpa',
-      description: 'Para problemas, retrasos o errores',
+      name: getText('TYPE_APOLOGETIC', '🙏 Apologetic'),
+      description: getText('TYPE_APOLOGETIC_DESC', 'For problems, delays, or errors'),
       tone: 'empático y solucionador'
     },
     'payment': {
-      name: '💰 Pago/Cobro',
-      description: 'Para temas de pagos o facturas',
+      name: getText('TYPE_PAYMENT', '💰 Payment/Billing'),
+      description: getText('TYPE_PAYMENT_DESC', 'For payment or invoice matters'),
       tone: 'responsable y solucionador'
     }
   };
@@ -486,11 +494,10 @@ Atentamente,
       <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8 border border-blue-200">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">
-            📧 Generador de Respuestas de Email IA
+            {getText('TITLE', '📧 Email Response Generator')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Pega cualquier email que hayas recibido y la IA generará una respuesta profesional, 
-            personalizada y contextualmente apropiada en segundos.
+            {getText('SUBTITLE', 'Generate professional email responses with AI')}
           </p>
         </div>
 
@@ -499,7 +506,7 @@ Atentamente,
             {/* Tipo de Respuesta */}
             <div className="bg-white rounded-xl p-6 border border-gray-200">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                🎯 Tipo de Respuesta
+                {getText('RESPONSE_TYPES', '📝 Choose Response Style:')}
               </h3>
               <div className="grid md:grid-cols-3 gap-4">
                 {Object.entries(responseTypes).map(([key, config]) => (
@@ -522,13 +529,13 @@ Atentamente,
             {/* Input del Email */}
             <div className="bg-white rounded-xl p-6 border border-gray-200">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                📨 Email Recibido
+                {getText('INPUT_TITLE', '� Incoming Email')}
               </h3>
               <div className="space-y-4">
                 <textarea
                   value={incomingEmail}
                   onChange={(e) => setIncomingEmail(e.target.value)}
-                  placeholder="Pega aquí el email que recibiste y del cual necesitas generar una respuesta..."
+                  placeholder={getText('INPUT_PLACEHOLDER', 'Paste the email you want to respond to...')}
                   className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                   rows="6"
                 />
@@ -537,14 +544,14 @@ Atentamente,
                   disabled={!incomingEmail.trim()}
                   className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-green-600 text-white rounded-lg hover:from-blue-600 hover:to-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 font-medium"
                 >
-                  ✨ Generar Respuesta Profesional
+                  {getText('GENERATE_BUTTON', '🚀 Generate Response')}
                 </button>
               </div>
             </div>
 
             {/* Ejemplos */}
             <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <h4 className="font-semibold text-gray-800 mb-3">💡 Prueba con estos ejemplos:</h4>
+              <h4 className="font-semibold text-gray-800 mb-3">{getText('EXAMPLES_TITLE', '� Try Examples:')}</h4>
               <div className="grid md:grid-cols-2 gap-4 text-sm">
                 {Object.entries(exampleEmails).map(([key, email]) => (
                   <div 
@@ -553,10 +560,10 @@ Atentamente,
                     onClick={() => setIncomingEmail(email)}
                   >
                     <div className="font-medium text-gray-700 mb-2">
-                      {key === 'complaint' && '😤 Email de Queja'}
-                      {key === 'inquiry' && '🤔 Consulta de Servicios'}
-                      {key === 'meeting' && '📅 Reprogramar Reunión'}
-                      {key === 'payment' && '� Cobro/Pago Pendiente'}
+                      {key === 'complaint' && getText('EXAMPLE_COMPLAINT', '� Customer Complaint')}
+                      {key === 'inquiry' && getText('EXAMPLE_INQUIRY', '❓ Business Inquiry')}
+                      {key === 'meeting' && getText('EXAMPLE_MEETING', '📅 Meeting Request')}
+                      {key === 'payment' && getText('EXAMPLE_PAYMENT', '💰 Payment Reminder')}
                     </div>
                     <div className="text-xs text-gray-600 line-clamp-3">
                       {email.substring(0, 120)}...

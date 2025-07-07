@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const DocumentAnalysisAgent = ({ config }) => {
+const DocumentAnalysisAgent = ({ config, translations = {}, locale = 'en' }) => {
   const [currentStep, setCurrentStep] = useState('upload');
   const [uploadedFile, setUploadedFile] = useState(null);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -10,6 +10,14 @@ const DocumentAnalysisAgent = ({ config }) => {
   const [chatMessages, setChatMessages] = useState([]);
   const [chatInput, setChatInput] = useState('');
   const [isChatLoading, setIsChatLoading] = useState(false);
+
+  // Get translations for the agent
+  const t = translations.AGENTS?.DOCUMENT_ANALYSIS || {};
+
+  // Default fallback texts
+  const getText = (key, fallback) => {
+    return t[key] || fallback;
+  };
 
   // Sample documents for demo
   const sampleDocuments = {
@@ -241,17 +249,17 @@ RECOMMENDATIONS:
       {/* Header */}
       <div className="mb-6">
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-          🤖 Document Analysis Agent
+          {getText('TITLE', '🤖 Document Analysis Agent')}
         </h3>
         <p className="text-gray-600 dark:text-gray-300">
-          Upload any document for intelligent analysis using AI
+          {getText('SUBTITLE', 'Upload any document for intelligent analysis using AI')}
         </p>
       </div>
 
       {/* Model Selector */}
       <div className="mb-6">
         <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-          🧠 Choose AI Model:
+          {getText('MODEL_SELECTOR', '🧠 Choose AI Model:')}
         </h4>
         <div className="flex gap-3">
           <button 
@@ -262,7 +270,7 @@ RECOMMENDATIONS:
             }`}
             onClick={() => setSelectedModel('openai')}
           >
-            🔥 GPT-3.5 Turbo
+            {getText('MODEL_GPT', '🔥 GPT-3.5 Turbo')}
           </button>
           <button 
             className={`px-4 py-2 rounded-lg font-medium transition-all ${
@@ -272,7 +280,7 @@ RECOMMENDATIONS:
             }`}
             onClick={() => setSelectedModel('claude')}
           >
-            🧠 Claude 3 Haiku
+            {getText('MODEL_CLAUDE', '🧠 Claude 3 Haiku')}
           </button>
         </div>
       </div>
@@ -288,10 +296,10 @@ RECOMMENDATIONS:
             </div>
             
             <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-              Upload Document or Try Sample
+              {getText('UPLOAD_TITLE', 'Upload Document or Try Sample')}
             </h3>
             <p className="text-gray-500 dark:text-gray-400 mb-4">
-              Upload PDF, DOCX, TXT files or try our sample documents
+              {getText('UPLOAD_SUBTITLE', 'Upload PDF, DOCX, TXT files or try our sample documents')}
             </p>
             
             <input
@@ -315,15 +323,24 @@ RECOMMENDATIONS:
             <div className="mt-4">
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">Or try sample documents:</p>
               <div className="flex flex-wrap gap-2 justify-center">
-                {Object.keys(sampleDocuments).map((filename) => (
-                  <button
-                    key={filename}
-                    onClick={() => handleFileUpload(filename)}
-                    className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-                  >
-                    📄 {filename.replace('sample-', '').replace('.txt', '')}
-                  </button>
-                ))}
+                <button
+                  onClick={() => handleFileUpload('sample-contract.txt')}
+                  className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                >
+                  {getText('SAMPLE_CONTRACT', '📄 Professional Contract')}
+                </button>
+                <button
+                  onClick={() => handleFileUpload('sample-resume.txt')}
+                  className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                >
+                  {getText('SAMPLE_RESUME', '👤 Resume Example')}
+                </button>
+                <button
+                  onClick={() => handleFileUpload('sample-report.txt')}
+                  className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                >
+                  {getText('SAMPLE_REPORT', '📊 Business Report')}
+                </button>
               </div>
             </div>
           </div>
@@ -333,7 +350,10 @@ RECOMMENDATIONS:
           <div className="text-center py-8">
             <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mb-4"></div>
             <p className="text-lg text-gray-900 dark:text-white font-medium">
-              🔍 Analyzing with {selectedModel === 'openai' ? 'GPT-3.5' : 'Claude'}...
+              {getText('PROCESSING_TITLE', 'Processing Document...')}
+            </p>
+            <p className="text-gray-600 dark:text-gray-400 mt-2">
+              {getText('PROCESSING_SUBTITLE', 'Analyzing content with AI...')}
             </p>
             <div className="mt-4 space-y-2">
               <div className="flex items-center justify-center space-x-2">
@@ -361,7 +381,7 @@ RECOMMENDATIONS:
                 </svg>
               </div>
               <div className="ml-3">
-                <h3 className="text-sm font-medium text-red-800 dark:text-red-200">Analysis Error</h3>
+                <h3 className="text-sm font-medium text-red-800 dark:text-red-200">{getText('ERROR_TITLE', 'Analysis Error')}</h3>
                 <p className="text-sm text-red-700 dark:text-red-300 mt-1">{error}</p>
                 <button
                   onClick={() => {
@@ -370,7 +390,7 @@ RECOMMENDATIONS:
                   }}
                   className="mt-2 text-sm text-red-600 dark:text-red-400 hover:text-red-500 dark:hover:text-red-300"
                 >
-                  Try again
+                  {getText('ERROR_RETRY', 'Try again')}
                 </button>
               </div>
             </div>
@@ -393,21 +413,21 @@ RECOMMENDATIONS:
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">📋 Document Overview</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">{getText('OVERVIEW_TITLE', '📋 Document Overview')}</h4>
                 <div className="space-y-2">
-                  <p><span className="font-medium">Type:</span> {parsedResults.documentType}</p>
-                  <p><span className="font-medium">Summary:</span> {parsedResults.summary}</p>
+                  <p><span className="font-medium">{getText('OVERVIEW_TYPE', 'Type:')} </span>{parsedResults.documentType}</p>
+                  <p><span className="font-medium">{getText('OVERVIEW_SUMMARY', 'Summary:')} </span>{parsedResults.summary}</p>
                   {parsedResults.metadata && (
                     <>
-                      <p><span className="font-medium">Word Count:</span> {parsedResults.metadata.wordCount}</p>
-                      <p><span className="font-medium">Reading Time:</span> {parsedResults.metadata.readingTime}</p>
-                      <p><span className="font-medium">Complexity:</span> 
+                      <p><span className="font-medium">{getText('OVERVIEW_WORD_COUNT', 'Word Count:')} </span>{parsedResults.metadata.wordCount}</p>
+                      <p><span className="font-medium">{getText('OVERVIEW_READING_TIME', 'Reading Time:')} </span>{parsedResults.metadata.readingTime}</p>
+                      <p><span className="font-medium">{getText('OVERVIEW_COMPLEXITY', 'Complexity:')} </span>
                         <span className={`ml-2 px-2 py-1 rounded text-xs ${
                           parsedResults.metadata.complexity === 'high' ? 'bg-red-100 text-red-800' :
                           parsedResults.metadata.complexity === 'medium' ? 'bg-yellow-100 text-yellow-800' :
                           'bg-green-100 text-green-800'
                         }`}>
-                          {parsedResults.metadata.complexity}
+                          {getText(`COMPLEXITY_${parsedResults.metadata.complexity?.toUpperCase()}`, parsedResults.metadata.complexity)}
                         </span>
                       </p>
                     </>
@@ -416,10 +436,10 @@ RECOMMENDATIONS:
               </div>
 
               <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">⚠️ Risk Assessment</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-3">{getText('RISK_TITLE', '⚠️ Risk Assessment')}</h4>
                 <div className="space-y-2">
                   <p>
-                    <span className="font-medium">Risk Level:</span>
+                    <span className="font-medium">{getText('RISK_LEVEL', 'Risk Level:')} </span>
                     <span className={`ml-2 px-2 py-1 rounded text-xs ${
                       parsedResults.riskLevel === 'high' ? 'bg-red-100 text-red-800' :
                       parsedResults.riskLevel === 'medium' ? 'bg-yellow-100 text-yellow-800' :
@@ -430,10 +450,10 @@ RECOMMENDATIONS:
                   </p>
                   {parsedResults.compliance && (
                     <>
-                      <p><span className="font-medium">Compliance Score:</span> {parsedResults.compliance.score}%</p>
+                      <p><span className="font-medium">{getText('RISK_COMPLIANCE', 'Compliance Score:')} </span>{parsedResults.compliance.score}%</p>
                       {parsedResults.compliance.issues?.length > 0 && (
                         <div>
-                          <span className="font-medium">Issues:</span>
+                          <span className="font-medium">{getText('RISK_ISSUES', 'Issues:')} </span>
                           <ul className="mt-1 text-sm list-disc list-inside text-gray-600 dark:text-gray-400">
                             {parsedResults.compliance.issues.map((issue, idx) => (
                               <li key={idx}>{issue}</li>
@@ -448,7 +468,7 @@ RECOMMENDATIONS:
             </div>
 
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">🔍 Key Findings</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">{getText('FINDINGS_TITLE', '🔍 Key Findings')}</h4>
               <ul className="space-y-1">
                 {parsedResults.keyFindings.map((finding, idx) => (
                   <li key={idx} className="flex items-start space-x-2">
@@ -460,7 +480,7 @@ RECOMMENDATIONS:
             </div>
 
             <div className="bg-white dark:bg-gray-800 p-4 rounded-lg border border-gray-200 dark:border-gray-700">
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">💡 Recommendations</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">{getText('RECOMMENDATIONS_TITLE', '💡 Recommendations')}</h4>
               <ul className="space-y-1">
                 {parsedResults.recommendations.map((rec, idx) => (
                   <li key={idx} className="flex items-start space-x-2">
@@ -476,7 +496,7 @@ RECOMMENDATIONS:
                 onClick={() => setCurrentStep('chat')}
                 className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
               >
-                💬 Ask Questions
+                {getText('CHAT_TITLE', '💬 Ask Questions')}
               </button>
               <button
                 onClick={() => {
@@ -486,7 +506,7 @@ RECOMMENDATIONS:
                 }}
                 className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
               >
-                🔄 Analyze Another Document
+                {getText('START_NEW', '🔄 Start New Analysis')}
               </button>
             </div>
           </div>
@@ -495,8 +515,8 @@ RECOMMENDATIONS:
         {currentStep === 'chat' && (
           <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
             <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-              <h4 className="font-semibold text-gray-900 dark:text-white">💬 Chat with AI about the analysis</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">Ask questions about the document analysis results</p>
+              <h4 className="font-semibold text-gray-900 dark:text-white">{getText('CHAT_TITLE', '💬 Ask Questions')}</h4>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{getText('CHAT_SUBTITLE', 'Ask questions about the analysis')}</p>
             </div>
             
             <div className="h-64 overflow-y-auto p-4 space-y-3">
@@ -548,7 +568,7 @@ RECOMMENDATIONS:
                   type="text"
                   value={chatInput}
                   onChange={(e) => setChatInput(e.target.value)}
-                  placeholder="Pregunta sobre el análisis..."
+                  placeholder={getText('CHAT_PLACEHOLDER', 'Ask about the analysis...')}
                   disabled={isChatLoading}
                   className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white disabled:opacity-50 disabled:cursor-not-allowed"
                   onKeyPress={(e) => {
@@ -566,7 +586,7 @@ RECOMMENDATIONS:
                   disabled={isChatLoading || !chatInput.trim()}
                   className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isChatLoading ? 'Enviando...' : 'Enviar'}
+                  {isChatLoading ? getText('CHAT_SENDING', 'Sending...') : getText('CHAT_SEND', 'Send')}
                 </button>
               </div>
             </div>
@@ -576,7 +596,7 @@ RECOMMENDATIONS:
                 onClick={() => setCurrentStep('results')}
                 className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
               >
-                ← Back to Results
+                {getText('CHAT_BACK', '← Back to Results')}
               </button>
             </div>
           </div>

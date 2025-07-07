@@ -68,6 +68,11 @@
   },
     "PROJECTS": {
       "TITLE": "My Projects DE",
+      "AI_DEMO_BUTTON": "🚀 KI Demo Testen",
+      "LIVE_DEMO": "� Live Demo",
+      "SOURCE_CODE": "💻 Quellcode",
+      "ARCHITECTURE": "�️ Architektur",
+      "CLOSE": "✕ Schließen",
       "PROJECT_LIST": [
         {
           "TITLE": "KI Dokumentenanalyse Agent",
@@ -75,19 +80,7 @@
           "DESCRIPTION": "Intelligenter Dokumentenanalysator mit mehreren KI-Modellen. Bietet Echtzeitanalyse, Risikobewertung, Compliance-Prüfung und interaktiven Chat. Entwickelt mit OpenAI und Anthropic APIs.",
           "CATEGORIES": ["LangChain", "OpenAI", "Anthropic", "TypeScript"],
           "AGENT_TYPE": "document-analysis",
-          "DEMO_MODE": "real",
-          "SOCIAL_LINKS": [
-            {
-              "url": "#",
-              "iconClass": "fas fa-globe",
-              "label": "Live Demo"
-            },
-            {
-              "url": "https://github.com/limbpuma/AI-Document-Analysis-Agent",
-              "iconClass": "fab fa-github",
-              "label": "GitHub Repository"
-            }
-          ]
+          "DEMO_MODE": "real"
         },
         {
           "TITLE": "Email Response Generator",
@@ -95,19 +88,7 @@
           "DESCRIPTION": "Professioneller KI-gestützter E-Mail-Antwort-Generator, der eingehende E-Mails analysiert und kontextuell angemessene Antworten in 4 verschiedenen Stilen erstellt. Perfekt für Kundenservice, Vertrieb und Geschäftskommunikation.",
           "CATEGORIES": ["NLP", "E-Mail-Automatisierung", "Geschäftskommunikation", "KI-Assistent"],
           "AGENT_TYPE": "workflow-orchestrator",
-          "DEMO_MODE": "real",
-          "SOCIAL_LINKS": [
-            {
-              "url": "#",
-              "iconClass": "fas fa-globe",
-              "label": "Live Demo"
-            },
-            {
-              "url": "https://github.com/limbpuma/Email-Response-Generator",
-              "iconClass": "fab fa-github",
-              "label": "GitHub Repository"
-            }
-          ]
+          "DEMO_MODE": "real"
         },
         {
           "TITLE": "Kundensupport Ticket Klassifizierer",
@@ -115,19 +96,7 @@
           "DESCRIPTION": "Intelligentes KI-gestütztes Analysesystem für Kundensupport-Tickets, das automatisch kategorisiert, priorisiert und weiterleitet. Bietet Sentiment-Analyse, Dringlichkeitserkennung und umsetzbare Erkenntnisse für Support-Teams.",
           "CATEGORIES": ["KI-Klassifizierung", "OpenAI", "NLP", "Kundensupport"],
           "AGENT_TYPE": "customer-support",
-          "DEMO_MODE": "real",
-          "SOCIAL_LINKS": [
-            {
-              "url": "#",
-              "iconClass": "fas fa-globe",
-              "label": "Live Demo"
-            },
-            {
-              "url": "https://github.com/limbpuma/Customer-Support-Classifier",
-              "iconClass": "fab fa-github",
-              "label": "GitHub Repository"
-            }
-          ]
+          "DEMO_MODE": "real"
         },
 
 
@@ -301,6 +270,104 @@
       "DATA_PROTECTION": "Datenschutz: Wir treffen Vorkehrungen zum Schutz Ihrer Daten auf den Plattformen, die wir verwenden. Da wir jedoch keine Daten direkt sammeln, raten wir dazu, die Datenschutzeinstellungen und -richtlinien aller Drittanbieter-Tools oder -Dienste, mit denen Sie interagieren, zu überprüfen.",
       "USER_RIGHTS": "Ihre Rechte: Bezüglich aller persönlichen Daten, die von Drittanbieterdiensten auf dieser Website gehalten werden, haben Sie Rechte unter der DSGVO, einschließlich Zugang, Korrektur und Löschung. Bitte kontaktieren Sie die jeweiligen Dienste direkt, um diese Rechte auszuüben.",
       "CLOSE_BUTTON": "Schließen"
+    },
+    "AGENTS": {
+      "DOCUMENT_ANALYSIS": {
+        "TITLE": "🤖 Dokumentenanalyse-Agent",
+        "SUBTITLE": "Laden Sie beliebige Dokumente für intelligente KI-Analyse hoch",
+        "MODEL_SELECTOR": "🧠 KI-Modell auswählen:",
+        "MODEL_GPT": "🔥 GPT-3.5 Turbo",
+        "MODEL_CLAUDE": "🧠 Claude 3 Haiku",
+        "UPLOAD_TITLE": "Dokument hochladen oder Beispiel testen",
+        "UPLOAD_SUBTITLE": "Laden Sie PDF, DOCX, TXT-Dateien hoch oder testen Sie unsere Beispieldokumente",
+        "SAMPLE_CONTRACT": "📄 Professioneller Vertrag",
+        "SAMPLE_RESUME": "👤 Lebenslauf-Beispiel",
+        "SAMPLE_REPORT": "📊 Geschäftsbericht",
+        "PROCESSING_TITLE": "Verarbeitung des Dokuments...",
+        "PROCESSING_SUBTITLE": "Inhalte werden mit KI analysiert...",
+        "ERROR_TITLE": "Analysefehler",
+        "ERROR_RETRY": "Erneut versuchen",
+        "OVERVIEW_TITLE": "📋 Dokumentübersicht",
+        "OVERVIEW_TYPE": "Typ:",
+        "OVERVIEW_SUMMARY": "Zusammenfassung:",
+        "OVERVIEW_WORD_COUNT": "Wörteranzahl:",
+        "OVERVIEW_READING_TIME": "Lesezeit:",
+        "OVERVIEW_COMPLEXITY": "Komplexität:",
+        "RISK_TITLE": "⚠️ Risikobewertung",
+        "RISK_LEVEL": "Risikolevel:",
+        "RISK_COMPLIANCE": "Compliance-Bewertung:",
+        "RISK_ISSUES": "Probleme:",
+        "FINDINGS_TITLE": "🔍 Haupterkenntnisse",
+        "RECOMMENDATIONS_TITLE": "💡 Empfehlungen",
+        "CHAT_TITLE": "💬 Fragen stellen",
+        "CHAT_SUBTITLE": "Stellen Sie Fragen zur Analyse",
+        "CHAT_PLACEHOLDER": "Fragen zur Analyse...",
+        "CHAT_SEND": "Senden",
+        "CHAT_SENDING": "Sende...",
+        "CHAT_BACK": "← Zurück zu Ergebnissen",
+        "START_NEW": "🔄 Neue Analyse starten",
+        "COMPLEXITY_HIGH": "hoch",
+        "COMPLEXITY_MEDIUM": "mittel",
+        "COMPLEXITY_LOW": "niedrig"
+      },
+      "EMAIL_RESPONSE": {
+        "TITLE": "📧 E-Mail-Antwort-Generator",
+        "SUBTITLE": "Erstellen Sie professionelle E-Mail-Antworten mit KI",
+        "RESPONSE_TYPES": "📝 Antwort-Stil auswählen:",
+        "TYPE_PROFESSIONAL": "💼 Professionell",
+        "TYPE_PROFESSIONAL_DESC": "Förmliche Antwort für Kunden oder Kollegen",
+        "TYPE_FRIENDLY": "😊 Freundlich",
+        "TYPE_FRIENDLY_DESC": "Warme aber professionelle Antwort",
+        "TYPE_BRIEF": "⚡ Kurz",
+        "TYPE_BRIEF_DESC": "Prägnante und direkte Antwort",
+        "TYPE_APOLOGETIC": "🙏 Entschuldigend",
+        "TYPE_APOLOGETIC_DESC": "Für Probleme, Verzögerungen oder Fehler",
+        "TYPE_PAYMENT": "💰 Zahlung/Rechnung",
+        "TYPE_PAYMENT_DESC": "Für Zahlungs- oder Rechnungsangelegenheiten",
+        "INPUT_TITLE": "📬 Eingehende E-Mail",
+        "INPUT_PLACEHOLDER": "Fügen Sie die E-Mail ein, auf die Sie antworten möchten...",
+        "EXAMPLES_TITLE": "📋 Beispiele testen:",
+        "EXAMPLE_COMPLAINT": "🚨 Kundenbeschwerde",
+        "EXAMPLE_INQUIRY": "❓ Geschäftsanfrage",
+        "EXAMPLE_MEETING": "📅 Terminanfrage",
+        "EXAMPLE_PAYMENT": "💰 Zahlungserinnerung",
+        "GENERATE_BUTTON": "🚀 Antwort generieren",
+        "GENERATING": "Antwort wird generiert...",
+        "COPY_BUTTON": "📋 In Zwischenablage kopieren",
+        "COPY_SUCCESS": "✅ In Zwischenablage kopiert!",
+        "TRY_ANOTHER": "🔄 Andere E-Mail testen",
+        "RESPONSE_TITLE": "📝 Generierte Antwort"
+      },
+      "CUSTOMER_SUPPORT": {
+        "TITLE": "🎧 Kundensupport-Ticket-Klassifizierer",
+        "SUBTITLE": "Analysieren und klassifizieren Sie Support-Tickets mit KI",
+        "INPUT_TITLE": "📬 Support-Ticket",
+        "INPUT_PLACEHOLDER": "Fügen Sie den Inhalt des Support-Tickets hier ein...",
+        "EXAMPLES_TITLE": "📋 Beispiele testen:",
+        "EXAMPLE_CRITICAL": "🚨 Kritisches technisches Problem",
+        "EXAMPLE_BILLING": "💰 Rechnungsfrage",
+        "EXAMPLE_FEATURE": "💡 Funktionsanfrage",
+        "EXAMPLE_FRUSTRATED": "😤 Frustrierter Kunde",
+        "ANALYZE_BUTTON": "🔍 Ticket analysieren",
+        "ANALYZING": "Ticket wird analysiert...",
+        "ANALYSIS_TITLE": "📊 Analyseergebnisse",
+        "CATEGORY_TITLE": "🏷️ Kategorie",
+        "PRIORITY_TITLE": "🚨 Priorität",
+        "SENTIMENT_TITLE": "😊 Stimmung",
+        "DEPARTMENT_TITLE": "🏢 Abteilung",
+        "ACTIONS_TITLE": "⚡ Vorgeschlagene Aktionen",
+        "PROCESSING_TIME": "⏱️ Bearbeitungszeit",
+        "KEYWORDS_TITLE": "🔑 Schlüsselwörter",
+        "START_OVER": "🔄 Neu starten",
+        "PRIORITY_CRITICAL": "Kritisch",
+        "PRIORITY_HIGH": "Hoch",
+        "PRIORITY_MEDIUM": "Mittel",
+        "PRIORITY_LOW": "Niedrig",
+        "SENTIMENT_POSITIVE": "Positiv",
+        "SENTIMENT_NEUTRAL": "Neutral",
+        "SENTIMENT_FRUSTRATED": "Frustriert",
+        "SENTIMENT_CONCERNED": "Besorgt"
+      }
     },
     "CONTACT_FORM": "Kontaktformular",
     "CONTACT_DESCRIPTION": "Senden Sie mir eine Nachricht direkt an WhatsApp",

@@ -70,6 +70,11 @@
   },
     "PROJECTS": {
       "TITLE": "My Projects ES",
+      "AI_DEMO_BUTTON": "🚀 Probar Demo IA",
+      "LIVE_DEMO": "🚀 Demo en Vivo",
+      "SOURCE_CODE": "� Código Fuente",
+      "ARCHITECTURE": "🏗️ Arquitectura", 
+      "CLOSE": "✕ Cerrar",
       "PROJECT_LIST": [
         {
           "TITLE": "Agente de Análisis de Documentos IA",
@@ -77,19 +82,7 @@
           "DESCRIPTION": "Analizador inteligente de documentos potenciado por múltiples modelos de IA. Características incluyen análisis en tiempo real, evaluación de riesgos, verificación de cumplimiento y chat interactivo. Construido con APIs de OpenAI y Anthropic.",
           "CATEGORIES": ["LangChain", "OpenAI", "Anthropic", "TypeScript"],
           "AGENT_TYPE": "document-analysis",
-          "DEMO_MODE": "real",
-          "SOCIAL_LINKS": [
-            {
-              "url": "#",
-              "iconClass": "fas fa-globe",
-              "label": "Demo en Vivo"
-            },
-            {
-              "url": "https://github.com/limbpuma/AI-Document-Analysis-Agent",
-              "iconClass": "fab fa-github",
-              "label": "Repositorio GitHub"
-            }
-          ]
+          "DEMO_MODE": "real"
         },
         {
           "TITLE": "Generador de Respuestas de Email",
@@ -97,19 +90,7 @@
           "DESCRIPTION": "Generador profesional de respuestas de email potenciado por IA que analiza emails entrantes y crea respuestas contextualmente apropiadas en 5 estilos diferentes. Perfecto para atención al cliente, ventas y correspondencia empresarial.",
           "CATEGORIES": ["PLN", "OpenAI", "Análisis Contextual", "Comunicación Empresarial"],
           "AGENT_TYPE": "workflow-orchestrator",
-          "DEMO_MODE": "real",
-          "SOCIAL_LINKS": [
-            {
-              "url": "#",
-              "iconClass": "fas fa-globe",
-              "label": "Demo en Vivo"
-            },
-            {
-              "url": "https://github.com/limbpuma/Email-Response-Generator",
-              "iconClass": "fab fa-github",
-              "label": "Repositorio GitHub"
-            }
-          ]
+          "DEMO_MODE": "real"
         },
         {
           "TITLE": "Clasificador de Tickets de Soporte",
@@ -117,19 +98,7 @@
           "DESCRIPTION": "Sistema inteligente de análisis de tickets de soporte al cliente potenciado por IA que categoriza, prioriza y enruta tickets automáticamente. Incluye análisis de sentimientos, detección de urgencia e insights accionables para equipos de soporte.",
           "CATEGORIES": ["Clasificación IA", "OpenAI", "PLN", "Soporte al Cliente"],
           "AGENT_TYPE": "customer-support",
-          "DEMO_MODE": "real",
-          "SOCIAL_LINKS": [
-            {
-              "url": "#",
-              "iconClass": "fas fa-globe",
-              "label": "Demo en Vivo"
-            },
-            {
-              "url": "https://github.com/limbpuma/Customer-Support-Classifier",
-              "iconClass": "fab fa-github",
-              "label": "Repositorio GitHub"
-            }
-          ]
+          "DEMO_MODE": "real"
         },
 
 
@@ -306,5 +275,103 @@
       "DATA_PROTECTION": "Protección de Datos: Tomamos precauciones para proteger tus datos en las plataformas que utilizamos. Sin embargo, dado que no recopilamos datos directamente, aconsejamos revisar los ajustes de privacidad y políticas de cualquier herramienta o servicio de terceros con los que interactúes.",
       "USER_RIGHTS": "Tus Derechos: Respecto a cualquier dato personal que posean los servicios de terceros utilizados en este sitio, tienes derechos bajo el GDPR, incluyendo el acceso, la corrección y la eliminación. Por favor, contacta directamente a los servicios respectivos para ejercer estos derechos.",
       "CLOSE_BUTTON": "Cerrar"
+    },
+    "AGENTS": {
+      "DOCUMENT_ANALYSIS": {
+        "TITLE": "🤖 Agente de Análisis de Documentos",
+        "SUBTITLE": "Sube cualquier documento para análisis inteligente con IA",
+        "MODEL_SELECTOR": "🧠 Elige el Modelo de IA:",
+        "MODEL_GPT": "🔥 GPT-3.5 Turbo",
+        "MODEL_CLAUDE": "🧠 Claude 3 Haiku",
+        "UPLOAD_TITLE": "Subir Documento o Probar Ejemplo",
+        "UPLOAD_SUBTITLE": "Sube archivos PDF, DOCX, TXT o prueba nuestros documentos de ejemplo",
+        "SAMPLE_CONTRACT": "📄 Contrato Profesional",
+        "SAMPLE_RESUME": "👤 Ejemplo de CV",
+        "SAMPLE_REPORT": "📊 Informe de Negocio",
+        "PROCESSING_TITLE": "Procesando Documento...",
+        "PROCESSING_SUBTITLE": "Analizando contenido con IA...",
+        "ERROR_TITLE": "Error de Análisis",
+        "ERROR_RETRY": "Intentar de nuevo",
+        "OVERVIEW_TITLE": "📋 Resumen del Documento",
+        "OVERVIEW_TYPE": "Tipo:",
+        "OVERVIEW_SUMMARY": "Resumen:",
+        "OVERVIEW_WORD_COUNT": "Número de Palabras:",
+        "OVERVIEW_READING_TIME": "Tiempo de Lectura:",
+        "OVERVIEW_COMPLEXITY": "Complejidad:",
+        "RISK_TITLE": "⚠️ Evaluación de Riesgo",
+        "RISK_LEVEL": "Nivel de Riesgo:",
+        "RISK_COMPLIANCE": "Puntuación de Cumplimiento:",
+        "RISK_ISSUES": "Problemas:",
+        "FINDINGS_TITLE": "🔍 Hallazgos Clave",
+        "RECOMMENDATIONS_TITLE": "💡 Recomendaciones",
+        "CHAT_TITLE": "💬 Hacer Preguntas",
+        "CHAT_SUBTITLE": "Haz preguntas sobre el análisis",
+        "CHAT_PLACEHOLDER": "Pregunta sobre el análisis...",
+        "CHAT_SEND": "Enviar",
+        "CHAT_SENDING": "Enviando...",
+        "CHAT_BACK": "← Volver a Resultados",
+        "START_NEW": "🔄 Iniciar Nuevo Análisis",
+        "COMPLEXITY_HIGH": "alta",
+        "COMPLEXITY_MEDIUM": "media",
+        "COMPLEXITY_LOW": "baja"
+      },
+      "EMAIL_RESPONSE": {
+        "TITLE": "📧 Generador de Respuestas de Email",
+        "SUBTITLE": "Genera respuestas profesionales de email con IA",
+        "RESPONSE_TYPES": "📝 Elige el Estilo de Respuesta:",
+        "TYPE_PROFESSIONAL": "💼 Profesional",
+        "TYPE_PROFESSIONAL_DESC": "Respuesta formal para clientes o colegas",
+        "TYPE_FRIENDLY": "😊 Amigable",
+        "TYPE_FRIENDLY_DESC": "Respuesta cálida pero profesional",
+        "TYPE_BRIEF": "⚡ Breve",
+        "TYPE_BRIEF_DESC": "Respuesta concisa y directa",
+        "TYPE_APOLOGETIC": "🙏 Disculpa",
+        "TYPE_APOLOGETIC_DESC": "Para problemas, retrasos o errores",
+        "TYPE_PAYMENT": "💰 Pago/Facturación",
+        "TYPE_PAYMENT_DESC": "Para asuntos de pago o factura",
+        "INPUT_TITLE": "📬 Email Entrante",
+        "INPUT_PLACEHOLDER": "Pega el email al que quieres responder...",
+        "EXAMPLES_TITLE": "📋 Probar Ejemplos:",
+        "EXAMPLE_COMPLAINT": "🚨 Queja de Cliente",
+        "EXAMPLE_INQUIRY": "❓ Consulta de Negocio",
+        "EXAMPLE_MEETING": "📅 Solicitud de Reunión",
+        "EXAMPLE_PAYMENT": "💰 Recordatorio de Pago",
+        "GENERATE_BUTTON": "🚀 Generar Respuesta",
+        "GENERATING": "Generando Respuesta...",
+        "COPY_BUTTON": "📋 Copiar al Portapapeles",
+        "COPY_SUCCESS": "✅ ¡Copiado al portapapeles!",
+        "TRY_ANOTHER": "🔄 Probar Otro Email",
+        "RESPONSE_TITLE": "📝 Respuesta Generada"
+      },
+      "CUSTOMER_SUPPORT": {
+        "TITLE": "🎧 Clasificador de Tickets de Soporte",
+        "SUBTITLE": "Analiza y clasifica tickets de soporte con IA",
+        "INPUT_TITLE": "📬 Ticket de Soporte",
+        "INPUT_PLACEHOLDER": "Pega el contenido del ticket de soporte aquí...",
+        "EXAMPLES_TITLE": "📋 Probar Ejemplos:",
+        "EXAMPLE_CRITICAL": "🚨 Problema Técnico Crítico",
+        "EXAMPLE_BILLING": "💰 Pregunta de Facturación",
+        "EXAMPLE_FEATURE": "💡 Solicitud de Funcionalidad",
+        "EXAMPLE_FRUSTRATED": "😤 Cliente Frustrado",
+        "ANALYZE_BUTTON": "🔍 Analizar Ticket",
+        "ANALYZING": "Analizando ticket...",
+        "ANALYSIS_TITLE": "📊 Resultados del Análisis",
+        "CATEGORY_TITLE": "🏷️ Categoría",
+        "PRIORITY_TITLE": "🚨 Prioridad",
+        "SENTIMENT_TITLE": "😊 Sentimiento",
+        "DEPARTMENT_TITLE": "🏢 Departamento",
+        "ACTIONS_TITLE": "⚡ Acciones Sugeridas",
+        "PROCESSING_TIME": "⏱️ Tiempo de Procesamiento",
+        "KEYWORDS_TITLE": "🔑 Palabras Clave",
+        "START_OVER": "🔄 Empezar de Nuevo",
+        "PRIORITY_CRITICAL": "Crítico",
+        "PRIORITY_HIGH": "Alto",
+        "PRIORITY_MEDIUM": "Medio",
+        "PRIORITY_LOW": "Bajo",
+        "SENTIMENT_POSITIVE": "Positivo",
+        "SENTIMENT_NEUTRAL": "Neutral",
+        "SENTIMENT_FRUSTRATED": "Frustrado",
+        "SENTIMENT_CONCERNED": "Preocupado"
+      }
     }
   }

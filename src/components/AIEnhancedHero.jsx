@@ -83,7 +83,7 @@ const AICertificationBadge = ({ isVisible }) => {
         <span className="text-2xl">🏆</span>
         <div className="text-sm">
           <div className="font-bold text-primary">Microsoft AI-900</div>
-          <div className="text-xs text-base-content/70">Certified 2024</div>
+          <div className="text-xs text-base-content/70">Certified</div>
         </div>
         <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
       </div>

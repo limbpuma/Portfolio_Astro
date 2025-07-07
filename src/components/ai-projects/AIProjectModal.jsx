@@ -3,7 +3,7 @@ import DocumentAnalysisAgent from './agents/DocumentAnalysisAgent.jsx';
 import EmailResponseAgent from './agents/EmailResponseAgent.jsx';
 import CustomerSupportAgent from './agents/CustomerSupportAgent.jsx';
 
-const AIProjectModal = ({ projectId, agentType, config }) => {
+const AIProjectModal = ({ projectId, agentType, config, locale = 'en', translations = {} }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentView, setCurrentView] = useState('demo'); // demo, code, architecture
 
@@ -51,11 +51,11 @@ const AIProjectModal = ({ projectId, agentType, config }) => {
   const renderAgentContent = () => {
     switch (agentType) {
       case 'document-analysis':
-        return <DocumentAnalysisAgent config={config} />;
+        return <DocumentAnalysisAgent config={config} translations={translations} locale={locale} />;
       case 'workflow-orchestrator':
-        return <EmailResponseAgent config={config} />;
+        return <EmailResponseAgent config={config} translations={translations} locale={locale} />;
       case 'customer-support':
-        return <CustomerSupportAgent config={config} />;
+        return <CustomerSupportAgent config={config} translations={translations} locale={locale} />;
       case 'code-review':
         return <div>Code Review Agent (Coming Soon)</div>;
       case 'workflow':
@@ -323,7 +323,7 @@ export class DocumentAnalysisAgent {
               }`}
               onClick={() => setCurrentView('demo')}
             >
-              🚀 Live Demo
+              {translations.LIVE_DEMO || '🚀 Live Demo'}
             </button>
             <button 
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -333,7 +333,7 @@ export class DocumentAnalysisAgent {
               }`}
               onClick={() => setCurrentView('code')}
             >
-              💻 Source Code
+              {translations.SOURCE_CODE || '💻 Source Code'}
             </button>
             <button 
               className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -343,7 +343,7 @@ export class DocumentAnalysisAgent {
               }`}
               onClick={() => setCurrentView('architecture')}
             >
-              🏗️ Architecture
+              {translations.ARCHITECTURE || '🏗️ Architecture'}
             </button>
           </div>
           

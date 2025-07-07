@@ -66,6 +66,11 @@
     ]
   },    "PROJECTS": {
       "TITLE": "My Projects EN",
+      "AI_DEMO_BUTTON": "🚀 Try AI Demo",
+      "LIVE_DEMO": "� Live Demo",
+      "SOURCE_CODE": "💻 Source Code", 
+      "ARCHITECTURE": "�️ Architecture",
+      "CLOSE": "✕ Close",
       "PROJECT_LIST": [
         {
           "TITLE": "AI Document Analysis Agent",
@@ -73,19 +78,7 @@
           "DESCRIPTION": "Intelligent document analyzer powered by multiple AI models. Features real-time analysis, risk assessment, compliance checking, and interactive chat. Built with OpenAI and Anthropic APIs.",
           "CATEGORIES": ["LangChain", "OpenAI", "Anthropic", "TypeScript"],
           "AGENT_TYPE": "document-analysis",
-          "DEMO_MODE": "real",
-          "SOCIAL_LINKS": [
-            {
-              "url": "#",
-              "iconClass": "fas fa-globe",
-              "label": "Live Demo"
-            },
-            {
-              "url": "https://github.com/limbpuma/AI-Document-Analysis-Agent",
-              "iconClass": "fab fa-github",
-              "label": "GitHub Repository"
-            }
-          ]
+          "DEMO_MODE": "real"
         },
         {
           "TITLE": "Email Response Generator",
@@ -93,19 +86,7 @@
           "DESCRIPTION": "Professional AI-powered email response generator that analyzes incoming emails and creates contextually appropriate replies in 5 different styles. Perfect for customer service, sales, and business correspondence.",
           "CATEGORIES": ["NLP", "OpenAI", "Context Analysis", "Business Communication"],
           "AGENT_TYPE": "workflow-orchestrator",
-          "DEMO_MODE": "real",
-          "SOCIAL_LINKS": [
-            {
-              "url": "#",
-              "iconClass": "fas fa-globe",
-              "label": "Live Demo"
-            },
-            {
-              "url": "https://github.com/limbpuma/Email-Response-Generator",
-              "iconClass": "fab fa-github",
-              "label": "GitHub Repository"
-            }
-          ]
+          "DEMO_MODE": "real"
         },
         {
           "TITLE": "Customer Support Ticket Classifier",
@@ -113,19 +94,7 @@
           "DESCRIPTION": "Intelligent AI-powered customer support ticket analysis system that automatically categorizes, prioritizes, and routes tickets. Features sentiment analysis, urgency detection, and actionable insights for support teams.",
           "CATEGORIES": ["AI Classification", "OpenAI", "NLP", "Customer Support"],
           "AGENT_TYPE": "customer-support",
-          "DEMO_MODE": "real",
-          "SOCIAL_LINKS": [
-            {
-              "url": "#",
-              "iconClass": "fas fa-globe",
-              "label": "Live Demo"
-            },
-            {
-              "url": "https://github.com/limbpuma/Customer-Support-Classifier",
-              "iconClass": "fab fa-github",
-              "label": "GitHub Repository"
-            }
-          ]
+          "DEMO_MODE": "real"
         },
         {
           "TITLE": "Integra Care",
@@ -296,5 +265,103 @@
       "DATA_PROTECTION": "Data Protection: We take precautions to protect your data on platforms we use. However, as we do not collect data directly, we advise reviewing the privacy settings and policies of any third-party tools or services you interact with.",
       "USER_RIGHTS": "Your Rights: Regarding any personal data held by third-party services used on this site, you have rights under GDPR, including access, correction, and deletion. Please contact the respective services directly to exercise these rights.",
       "CLOSE_BUTTON": "Close"
+    },
+    "AGENTS": {
+      "DOCUMENT_ANALYSIS": {
+        "TITLE": "🤖 Document Analysis Agent",
+        "SUBTITLE": "Upload any document for intelligent analysis using AI",
+        "MODEL_SELECTOR": "🧠 Choose AI Model:",
+        "MODEL_GPT": "🔥 GPT-3.5 Turbo",
+        "MODEL_CLAUDE": "🧠 Claude 3 Haiku",
+        "UPLOAD_TITLE": "Upload Document or Try Sample",
+        "UPLOAD_SUBTITLE": "Upload PDF, DOCX, TXT files or try our sample documents",
+        "SAMPLE_CONTRACT": "📄 Professional Contract",
+        "SAMPLE_RESUME": "👤 Resume Example",
+        "SAMPLE_REPORT": "📊 Business Report",
+        "PROCESSING_TITLE": "Processing Document...",
+        "PROCESSING_SUBTITLE": "Analyzing content with AI...",
+        "ERROR_TITLE": "Analysis Error",
+        "ERROR_RETRY": "Try again",
+        "OVERVIEW_TITLE": "📋 Document Overview",
+        "OVERVIEW_TYPE": "Type:",
+        "OVERVIEW_SUMMARY": "Summary:",
+        "OVERVIEW_WORD_COUNT": "Word Count:",
+        "OVERVIEW_READING_TIME": "Reading Time:",
+        "OVERVIEW_COMPLEXITY": "Complexity:",
+        "RISK_TITLE": "⚠️ Risk Assessment",
+        "RISK_LEVEL": "Risk Level:",
+        "RISK_COMPLIANCE": "Compliance Score:",
+        "RISK_ISSUES": "Issues:",
+        "FINDINGS_TITLE": "🔍 Key Findings",
+        "RECOMMENDATIONS_TITLE": "💡 Recommendations",
+        "CHAT_TITLE": "💬 Ask Questions",
+        "CHAT_SUBTITLE": "Ask questions about the analysis",
+        "CHAT_PLACEHOLDER": "Ask about the analysis...",
+        "CHAT_SEND": "Send",
+        "CHAT_SENDING": "Sending...",
+        "CHAT_BACK": "← Back to Results",
+        "START_NEW": "🔄 Start New Analysis",
+        "COMPLEXITY_HIGH": "high",
+        "COMPLEXITY_MEDIUM": "medium",
+        "COMPLEXITY_LOW": "low"
+      },
+      "EMAIL_RESPONSE": {
+        "TITLE": "📧 Email Response Generator",
+        "SUBTITLE": "Generate professional email responses with AI",
+        "RESPONSE_TYPES": "📝 Choose Response Style:",
+        "TYPE_PROFESSIONAL": "💼 Professional",
+        "TYPE_PROFESSIONAL_DESC": "Formal response for clients or colleagues",
+        "TYPE_FRIENDLY": "😊 Friendly",
+        "TYPE_FRIENDLY_DESC": "Warm but professional response",
+        "TYPE_BRIEF": "⚡ Brief",
+        "TYPE_BRIEF_DESC": "Concise and direct response",
+        "TYPE_APOLOGETIC": "🙏 Apologetic",
+        "TYPE_APOLOGETIC_DESC": "For problems, delays, or errors",
+        "TYPE_PAYMENT": "💰 Payment/Billing",
+        "TYPE_PAYMENT_DESC": "For payment or invoice matters",
+        "INPUT_TITLE": "📬 Incoming Email",
+        "INPUT_PLACEHOLDER": "Paste the email you want to respond to...",
+        "EXAMPLES_TITLE": "📋 Try Examples:",
+        "EXAMPLE_COMPLAINT": "🚨 Customer Complaint",
+        "EXAMPLE_INQUIRY": "❓ Business Inquiry",
+        "EXAMPLE_MEETING": "📅 Meeting Request",
+        "EXAMPLE_PAYMENT": "💰 Payment Reminder",
+        "GENERATE_BUTTON": "🚀 Generate Response",
+        "GENERATING": "Generating Response...",
+        "COPY_BUTTON": "📋 Copy to Clipboard",
+        "COPY_SUCCESS": "✅ Copied to clipboard!",
+        "TRY_ANOTHER": "🔄 Try Another Email",
+        "RESPONSE_TITLE": "📝 Generated Response"
+      },
+      "CUSTOMER_SUPPORT": {
+        "TITLE": "🎧 Customer Support Ticket Classifier",
+        "SUBTITLE": "Analyze and classify support tickets with AI",
+        "INPUT_TITLE": "📬 Support Ticket",
+        "INPUT_PLACEHOLDER": "Paste the support ticket content here...",
+        "EXAMPLES_TITLE": "📋 Try Examples:",
+        "EXAMPLE_CRITICAL": "🚨 Critical Technical Issue",
+        "EXAMPLE_BILLING": "💰 Billing Question",
+        "EXAMPLE_FEATURE": "💡 Feature Request",
+        "EXAMPLE_FRUSTRATED": "😤 Frustrated Customer",
+        "ANALYZE_BUTTON": "🔍 Analyze Ticket",
+        "ANALYZING": "Analyzing ticket...",
+        "ANALYSIS_TITLE": "📊 Analysis Results",
+        "CATEGORY_TITLE": "🏷️ Category",
+        "PRIORITY_TITLE": "🚨 Priority",
+        "SENTIMENT_TITLE": "😊 Sentiment",
+        "DEPARTMENT_TITLE": "🏢 Department",
+        "ACTIONS_TITLE": "⚡ Suggested Actions",
+        "PROCESSING_TIME": "⏱️ Processing Time",
+        "KEYWORDS_TITLE": "🔑 Keywords",
+        "START_OVER": "🔄 Start Over",
+        "PRIORITY_CRITICAL": "Critical",
+        "PRIORITY_HIGH": "High",
+        "PRIORITY_MEDIUM": "Medium",
+        "PRIORITY_LOW": "Low",
+        "SENTIMENT_POSITIVE": "Positive",
+        "SENTIMENT_NEUTRAL": "Neutral",
+        "SENTIMENT_FRUSTRATED": "Frustrated",
+        "SENTIMENT_CONCERNED": "Concerned"
+      }
     }
   }
