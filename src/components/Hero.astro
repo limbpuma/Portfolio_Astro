@@ -11,6 +11,12 @@ const dynamicTexts = [
   i18n.HERO.DYNAMIC_TEXT_3 || "Modern Web Developer",
   i18n.HERO.DYNAMIC_TEXT_4 || "Seeking Internship Aug 2025"
 ];
+
+const statusTexts = {
+  aiEnhanced: i18n.HERO.STATUS_AI_ENHANCED || "AI-Enhanced",
+  availableInternship: i18n.HERO.STATUS_AVAILABLE_INTERNSHIP || "Available for Internship",
+  dortmundReady: i18n.HERO.STATUS_DORTMUND_READY || "Dortmund Ready"
+};
 ---
 
 <div class="hero min-h-screen">
@@ -20,6 +26,7 @@ const dynamicTexts = [
     description={i18n.HERO.DESCRIPTION}
     ctaText={i18n.HERO.BUTTON}
     ctaLink="#education_section"
+    statusTexts={statusTexts}
     showCertification={true}
     client:load
   />

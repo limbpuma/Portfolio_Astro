@@ -21,7 +21,10 @@
   "DYNAMIC_TEXT_1": "LangChain & OpenAI Entwickler",
   "DYNAMIC_TEXT_2": "Microsoft AI-900 Zertifiziert", 
   "DYNAMIC_TEXT_3": "Moderner Web-Entwickler",
-  "DYNAMIC_TEXT_4": "Praktikum ab August 2025"
+  "DYNAMIC_TEXT_4": "Praktikum ab August 2025",
+  "STATUS_AI_ENHANCED": "KI-Verstärkt",
+  "STATUS_AVAILABLE_INTERNSHIP": "Verfügbar für Praktikum",
+  "STATUS_DORTMUND_READY": "Dortmund-Bereit"
 },
 "ABOUT_ME": {
   "TITLE": "Über Mich",
@@ -374,7 +377,8 @@
       "COMING_SOON": "Demnächst",
       "CODE_REVIEW_AGENT": "Code-Review-Agent",
       "WORKFLOW_AGENT": "Workflow-Agent",
-      "AGENT_NOT_FOUND": "Agententyp nicht gefunden"
+      "AGENT_NOT_FOUND": "Agententyp nicht gefunden",
+      "COPY_CODE": "Kopieren"
     },
     "CONTACT_FORM": "Kontaktformular",
     "CONTACT_DESCRIPTION": "Senden Sie mir eine Nachricht direkt an WhatsApp",

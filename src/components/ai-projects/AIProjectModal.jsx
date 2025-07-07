@@ -141,7 +141,7 @@ export class DocumentAnalysisAgent {
         <div className="bg-gray-900 rounded-lg overflow-hidden">
           <div className="flex items-center justify-between px-4 py-2 bg-gray-800">
             <span className="text-sm text-gray-300">TypeScript / JavaScript</span>
-            <button className="text-gray-400 hover:text-white text-sm">📋 Copy</button>
+            <button className="text-gray-400 hover:text-white text-sm">📋 {translations.MODAL?.COPY_CODE || 'Copy'}</button>
           </div>
           <pre className="p-4 text-sm text-gray-100 overflow-x-auto">
             <code>{codeExamples[agentType] || 'Code example not available'}</code>

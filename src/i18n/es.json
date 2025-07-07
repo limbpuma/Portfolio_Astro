@@ -22,7 +22,10 @@
   "DYNAMIC_TEXT_1": "Desarrollador LangChain & OpenAI",
   "DYNAMIC_TEXT_2": "Microsoft AI-900 Certificado", 
   "DYNAMIC_TEXT_3": "Desarrollador Potenciado por IA",
-  "DYNAMIC_TEXT_4": "Buscando Prácticas Ago 2025"
+  "DYNAMIC_TEXT_4": "Buscando Prácticas Ago 2025",
+  "STATUS_AI_ENHANCED": "Potenciado por IA",
+  "STATUS_AVAILABLE_INTERNSHIP": "Disponible para Prácticas",
+  "STATUS_DORTMUND_READY": "Listo en Dortmund"
 },
 "ABOUT_ME": {
   "TITLE": "Sobre Mí",
@@ -379,6 +382,7 @@
       "COMING_SOON": "Próximamente",
       "CODE_REVIEW_AGENT": "Agente de Revisión de Código",
       "WORKFLOW_AGENT": "Agente de Flujo de Trabajo",
-      "AGENT_NOT_FOUND": "Tipo de agente no encontrado"
+      "AGENT_NOT_FOUND": "Tipo de agente no encontrado",
+      "COPY_CODE": "Copiar"
     }
   }

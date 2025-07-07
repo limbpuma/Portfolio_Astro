@@ -97,6 +97,7 @@ const AIEnhancedHero = ({
   description, 
   ctaText, 
   ctaLink,
+  statusTexts = {},
   showCertification = true 
 }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -166,15 +167,15 @@ const AIEnhancedHero = ({
         }`} style={{transitionDelay: '800ms'}}>
           <div className="flex items-center gap-2 text-sm text-success">
             <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
-            <span>AI-Enhanced</span>
+            <span>{statusTexts.aiEnhanced || 'AI-Enhanced'}</span>
           </div>
           <div className="flex items-center gap-2 text-sm text-info">
             <div className="w-2 h-2 bg-info rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-            <span>Available for Internship</span>
+            <span>{statusTexts.availableInternship || 'Available for Internship'}</span>
           </div>
           <div className="flex items-center gap-2 text-sm text-warning">
             <div className="w-2 h-2 bg-warning rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-            <span>Dortmund Ready</span>
+            <span>{statusTexts.dortmundReady || 'Dortmund Ready'}</span>
           </div>
         </div>
       </div>

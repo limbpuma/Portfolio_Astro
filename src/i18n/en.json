@@ -22,7 +22,10 @@
   "DYNAMIC_TEXT_1": "LangChain & OpenAI Developer",
   "DYNAMIC_TEXT_2": "Microsoft AI-900 Certified", 
   "DYNAMIC_TEXT_3": "AI-Enhanced Developer",
-  "DYNAMIC_TEXT_4": "Seeking Internship Aug 2025"
+  "DYNAMIC_TEXT_4": "Seeking Internship Aug 2025",
+  "STATUS_AI_ENHANCED": "AI-Enhanced",
+  "STATUS_AVAILABLE_INTERNSHIP": "Available for Internship",
+  "STATUS_DORTMUND_READY": "Dortmund Ready"
 },
 "ABOUT_ME": {
   "TITLE": "About Me",  "PARAGRAPH_1": "Hi, I'm Limber Martinez, a Microsoft AI-900 certified developer currently training as an Application Developer (Fachinformatiker) at BFW Dortmund until July 2026. I focus on creating AI-powered solutions and building intelligent web applications with emphasis on frontend and backend development.",
@@ -369,6 +372,7 @@
       "COMING_SOON": "Coming Soon",
       "CODE_REVIEW_AGENT": "Code Review Agent",
       "WORKFLOW_AGENT": "Workflow Agent",
-      "AGENT_NOT_FOUND": "Agent type not found"
+      "AGENT_NOT_FOUND": "Agent type not found",
+      "COPY_CODE": "Copy"
     }
   }

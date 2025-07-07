@@ -614,7 +614,7 @@ Atentamente,
                       : 'bg-blue-500 text-white hover:bg-blue-600'
                   }`}
                 >
-                  {copySuccess ? '✅ Copiado!' : '📋 Copiar'}
+                  {copySuccess ? (translations.AGENTS?.COPY_SUCCESS || '✅ Copied to clipboard!') : (translations.AGENTS?.COPY_BUTTON || '📋 Copy to Clipboard')}
                 </button>
               </div>
               <div className="bg-gray-50 rounded-lg p-4 font-mono text-sm whitespace-pre-wrap">
