@@ -342,15 +342,55 @@
         "EXAMPLE_PAYMENT": "💰 Recordatorio de Pago",
         "GENERATE_BUTTON": "🚀 Generar Respuesta",
         "GENERATING": "Generando Respuesta...",
+        "GENERATING_SUBTITLE": "Analizando contexto y creando respuesta personalizada",
         "COPY_BUTTON": "📋 Copiar al Portapapeles",
         "COPY_SUCCESS": "✅ ¡Copiado al portapapeles!",
         "TRY_ANOTHER": "🔄 Probar Otro Email",
         "RESPONSE_TITLE": "📝 Respuesta Generada",
+        "RESPONSE_STYLE": "Estilo",
+        "RESPONSE_READY": "📝 Tu Respuesta Lista",
+        "ORIGINAL_EMAIL": "📨 Email Original",
+        "GENERATE_ANOTHER": "🔄 Generar Otra Respuesta",
+        "NEW_EMAIL": "🆕 Nuevo Email",
+        "BENEFITS_TITLE": "💼 Beneficios del Generador",
+        "TIME_SAVED": "Tiempo Ahorrado",
+        "PROFESSIONALISM": "Profesionalismo",
+        "RESPONSE_STYLES": "Estilos de Respuesta",
+        "GENERATION_TIME": "Tiempo de Generación",
         "EXAMPLES": {
           "COMPLAINT": "Hola, estoy muy molesto porque mi pedido #12345 llegó 3 días tarde y algunos productos están dañados. Esto es inaceptable, necesito una solución inmediata. Saludos, Juan Pérez",
           "INQUIRY": "Buenos días, estoy interesado en sus servicios de consultoría para mi empresa. Somos una startup de 15 empleados en el sector tecnológico y necesitamos orientación estratégica. Saludos cordiales, María González",
           "MEETING": "Hola, necesito reprogramar la reunión de mañana a las 10am porque surgió una emergencia familiar. ¿Sería posible moverla al jueves a la misma hora? Disculpas por el inconveniente, Carlos López",
           "PAYMENT": "Hola Carlos, te envío por décima vez el email para recordarte que me debes 500€. Si no me pagas te demandaré. Atentamente, Roger"
+        },
+        "RESPONSE_TEMPLATES": {
+          "GREETING": "Estimado/a",
+          "GREETING_WITH_NAME": "Estimado/a {name}",
+          "COMPLAINT": {
+            "FORMAL": "Estimado/a {greeting},\n\nGracias por contactarnos y lamento mucho los inconvenientes que ha experimentado con su pedido.\n\nEntiendo completamente su frustración y quiero asegurarle que vamos a resolver esta situación de inmediato. He escalado su caso a nuestro equipo de atención prioritaria.\n\nLas acciones que tomaremos son:\n• Investigación inmediata del problema en su pedido\n• Envío de productos de reemplazo sin costo adicional\n• Crédito en su cuenta por las molestias ocasionadas\n\nMe pondré en contacto con usted en las próximas 2 horas con una actualización detallada.\n\nApreciamos su paciencia y la oportunidad de corregir esta situación.\n\nCordialmente,\n[Su nombre]",
+            "FRIENDLY": "¡Hola!\n\nPrimero que todo, mil disculpas por lo que pasó con tu pedido. Definitivamente no es la experiencia que queremos que tengas con nosotros.\n\nYa estoy revisando tu caso personalmente y vamos a solucionarlo hoy mismo. Te propongo:\n\n✓ Te enviamos productos nuevos inmediatamente (llegada garantizada mañana)\n✓ Te devolvemos el costo del envío\n✓ Un descuento del 20% en tu próxima compra\n\nTe escribo en máximo 2 horas con el número de seguimiento y todos los detalles.\n\n¡Gracias por darnos la oportunidad de arreglarlo!\n\nSaludos,\n[Tu nombre]",
+            "BRIEF": "Estimado/a {greeting},\n\nDisculpas por los problemas con su pedido #12345.\n\nSolución inmediata:\n- Productos de reemplazo enviados hoy\n- Reembolso del envío procesado\n- Compensación adicional aplicada\n\nActualización en 2 horas.\n\nCordialmente,\n[Su nombre]"
+          },
+          "INQUIRY": {
+            "FORMAL": "Estimado/a {greeting},\n\nGracias por su interés en nuestros servicios de consultoría. Me complace conocer sobre su empresa y su crecimiento en el sector tecnológico.\n\nPara una startup de 15 empleados, podemos ofrecer:\n• Planificación estratégica empresarial\n• Desarrollo de hoja de ruta tecnológica\n• Estrategias de crecimiento y escalamiento del equipo\n• Análisis de mercado y posicionamiento competitivo\n\nMe gustaría programar una llamada de consulta para entender mejor sus necesidades y objetivos específicos.\n\nPor favor, hágame saber su disponibilidad para la próxima semana.\n\nCordialmente,\n[Su nombre]",
+            "FRIENDLY": "¡Hola!\n\n¡Gracias por contactarnos sobre nuestros servicios de consultoría! Es emocionante saber sobre tu startup tecnológica.\n\nPara un equipo de 15 personas como el tuyo, normalmente ayudamos con:\n\n🎯 Planificación estratégica y hoja de ruta\n🚀 Estrategias de escalamiento\n💡 Optimización de tecnología y procesos\n📈 Análisis de crecimiento y mercado\n\nMe encantaría charlar sobre tus desafíos y objetivos específicos. ¿Qué tal si programamos una llamada rápida esta semana?\n\n¡Espero saber de ti!\n\nSaludos,\n[Tu nombre]",
+            "BRIEF": "Estimado/a {greeting},\n\nGracias por su interés en nuestros servicios de consultoría.\n\nPara startups tecnológicas (15 empleados):\n- Planificación estratégica: $X\n- Hoja de ruta tecnológica: $Y\n- Estrategias de crecimiento: $Z\n\nDisponible para consulta la próxima semana.\n\nCordialmente,\n[Su nombre]"
+          },
+          "MEETING": {
+            "FORMAL": "Estimado/a {greeting},\n\nEntiendo que las emergencias familiares tienen prioridad. Por supuesto, podemos reprogramar la reunión de mañana.\n\nTengo disponibilidad el jueves a las 10am como usted sugirió. Le enviaré una invitación de calendario con los detalles actualizados.\n\nPor favor, no se preocupe por el cambio - estas cosas suceden y espero que todo se resuelva bien.\n\nCordialmente,\n[Su nombre]",
+            "FRIENDLY": "¡Hola!\n\n¡Por supuesto, no hay problema en absoluto! La familia es lo primero, siempre.\n\nEl jueves a las 10am me viene perfecto. Actualizaré el calendario y te enviaré el nuevo enlace de la reunión.\n\nEspero que todo esté bien y se resuelva pronto. ¡Nos vemos el jueves!\n\nSaludos,\n[Tu nombre]",
+            "BRIEF": "Estimado/a {greeting},\n\nReunión reprogramada:\n- Nueva fecha: Jueves 10am\n- Invitación de calendario enviada\n- Sin problema con el cambio\n\nCordialmente,\n[Su nombre]"
+          },
+          "PAYMENT": {
+            "FORMAL": "Estimado/a {greeting},\n\nAcuso recibo de su recordatorio de pago sobre el monto pendiente de €500.\n\nQuiero resolver este asunto de manera profesional y pronta. Propongo que programemos una breve llamada para discutir:\n• Cronograma de pago y opciones\n• Cualquier documentación necesaria\n• Resolución que funcione para ambas partes\n\nEstoy comprometido a resolver este asunto esta semana. Por favor, hágame saber su horario preferido para una llamada.\n\nCordialmente,\n[Su nombre]",
+            "FRIENDLY": "¡Hola!\n\nGracias por el recordatorio sobre los €500. Definitivamente quiero resolver esto.\n\nHe tenido algunos gastos inesperados pero estoy comprometido a pagarte. ¿Podemos trabajar en un plan de pago?\n\nOpciones que puedo ofrecer:\n• Pago completo para [fecha]\n• Dos cuotas de €250 cada una\n• Otro arreglo que te funcione\n\n¡Déjame saber qué funciona mejor!\n\nSaludos,\n[Tu nombre]",
+            "BRIEF": "Estimado/a {greeting},\n\nRegarding €500 payment:\n- Reconozco la deuda\n- Propongo pago para [fecha]\n- Solicito confirmación\n\nCordialmente,\n[Su nombre]"
+          },
+          "GENERIC": {
+            "FORMAL": "Estimado/a {greeting},\n\nGracias por su email. He recibido su mensaje y lo revisaré cuidadosamente.\n\nLe responderé con información detallada dentro de 24 horas.\n\nCordialmente,\n[Su nombre]",
+            "FRIENDLY": "¡Hola!\n\n¡Gracias por contactarme! Recibí tu mensaje y te responderé pronto.\n\n¡Que tengas un gran día!\n\nSaludos,\n[Tu nombre]",
+            "BRIEF": "Estimado/a {greeting},\n\nEmail recibido. Respuesta dentro de 24 horas.\n\nCordialmente,\n[Su nombre]"
+          }
         }
       },
       "CUSTOMER_SUPPORT": {

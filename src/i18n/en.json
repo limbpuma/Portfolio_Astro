@@ -332,15 +332,55 @@
         "EXAMPLE_PAYMENT": "💰 Payment Reminder",
         "GENERATE_BUTTON": "🚀 Generate Response",
         "GENERATING": "Generating Response...",
+        "GENERATING_SUBTITLE": "Analyzing context and creating personalized response",
         "COPY_BUTTON": "📋 Copy to Clipboard",
         "COPY_SUCCESS": "✅ Copied to clipboard!",
         "TRY_ANOTHER": "🔄 Try Another Email",
         "RESPONSE_TITLE": "📝 Generated Response",
+        "RESPONSE_STYLE": "Style",
+        "RESPONSE_READY": "📝 Your Response Ready",
+        "ORIGINAL_EMAIL": "📨 Original Email",
+        "GENERATE_ANOTHER": "🔄 Generate Another Response",
+        "NEW_EMAIL": "🆕 New Email",
+        "BENEFITS_TITLE": "💼 Generator Benefits",
+        "TIME_SAVED": "Time Saved",
+        "PROFESSIONALISM": "Professionalism",
+        "RESPONSE_STYLES": "Response Styles",
+        "GENERATION_TIME": "Generation Time",
         "EXAMPLES": {
           "COMPLAINT": "Hello, I am very upset because my order #12345 arrived 3 days late and some products are damaged. This is unacceptable, I need an immediate solution. Regards, John Smith",
           "INQUIRY": "Good morning, I am interested in your consulting services for my company. We are a startup with 15 employees in the technology sector and we need strategic guidance. Best regards, Maria Johnson",
           "MEETING": "Hello, I need to reschedule tomorrow's meeting at 10am because a family emergency arose. Would it be possible to move it to Thursday at the same time? Apologies for the inconvenience, Carlos Lopez",
           "PAYMENT": "Hello Carlos, I'm sending you the email for the tenth time to remind you that you owe me €500. If you don't pay me I will sue you. Sincerely, Roger"
+        },
+        "RESPONSE_TEMPLATES": {
+          "GREETING": "Dear",
+          "GREETING_WITH_NAME": "Dear {name}",
+          "COMPLAINT": {
+            "FORMAL": "Dear {greeting},\n\nThank you for contacting us and I sincerely apologize for the inconvenience you experienced with your order.\n\nI completely understand your frustration and want to assure you that we will resolve this situation immediately. I have escalated your case to our priority support team.\n\nThe actions we will take are:\n• Immediate investigation of the problem with your order\n• Shipment of replacement products at no additional cost\n• Credit to your account for the inconvenience\n\nI will contact you within the next 2 hours with a detailed update.\n\nWe appreciate your patience and the opportunity to correct this situation.\n\nBest regards,\n[Your name]",
+            "FRIENDLY": "Hello!\n\nFirst of all, a thousand apologies for what happened with your order. This is definitely not the experience we want you to have with us.\n\nI am personally reviewing your case and we will solve it today. I propose:\n\n✓ We send you new products immediately (guaranteed arrival tomorrow)\n✓ We refund the shipping cost\n✓ A 20% discount on your next purchase\n\nI'll write to you in maximum 2 hours with the tracking number and all the details.\n\nThanks for giving us the opportunity to fix it!\n\nBest regards,\n[Your name]",
+            "BRIEF": "Dear {greeting},\n\nApologies for the issues with your order #12345.\n\nImmediate solution:\n- Replacement products shipped today\n- Shipping refund processed\n- Additional compensation applied\n\nUpdate within 2 hours.\n\nBest regards,\n[Your name]"
+          },
+          "INQUIRY": {
+            "FORMAL": "Dear {greeting},\n\nThank you for your interest in our consulting services. I am pleased to learn about your company and its growth in the technology sector.\n\nFor a startup with 15 employees, we can offer:\n• Strategic business planning\n• Technology roadmap development\n• Team growth and scaling strategies\n• Market analysis and competitive positioning\n\nI would like to schedule a consultation call to better understand your specific needs and goals.\n\nPlease let me know your availability for next week.\n\nBest regards,\n[Your name]",
+            "FRIENDLY": "Hello!\n\nThank you for reaching out about our consulting services. It's exciting to hear about your tech startup!\n\nFor a 15-person team like yours, we typically help with:\n\n🎯 Strategic planning and roadmap\n🚀 Scaling strategies\n💡 Technology and process optimization\n📈 Growth and market analysis\n\nI'd love to chat about your specific challenges and goals. How about we schedule a quick call this week?\n\nLooking forward to hearing from you!\n\nBest regards,\n[Your name]",
+            "BRIEF": "Dear {greeting},\n\nThank you for your interest in our consulting services.\n\nFor tech startups (15 employees):\n- Strategic planning: $X\n- Technology roadmap: $Y\n- Growth strategies: $Z\n\nAvailable for consultation next week.\n\nBest regards,\n[Your name]"
+          },
+          "MEETING": {
+            "FORMAL": "Dear {greeting},\n\nI understand that family emergencies take priority. Of course, we can reschedule tomorrow's meeting.\n\nI have availability on Thursday at 10am as you suggested. I will send you a calendar invitation with the updated details.\n\nPlease don't worry about the change - these things happen and I hope everything is resolved well.\n\nBest regards,\n[Your name]",
+            "FRIENDLY": "Hello!\n\nOf course, no problem at all! Family first, always.\n\nThursday at 10am works perfectly for me. I'll update the calendar and send you the new meeting link.\n\nHope everything is okay and gets resolved soon. See you Thursday!\n\nBest regards,\n[Your name]",
+            "BRIEF": "Dear {greeting},\n\nMeeting rescheduled:\n- New date: Thursday 10am\n- Calendar invitation sent\n- No problem with the change\n\nBest regards,\n[Your name]"
+          },
+          "PAYMENT": {
+            "FORMAL": "Dear {greeting},\n\nI acknowledge receipt of your payment reminder regarding the outstanding amount of €500.\n\nI want to resolve this matter professionally and promptly. I propose we schedule a brief call to discuss:\n• Payment timeline and options\n• Any documentation needed\n• Resolution that works for both parties\n\nI am committed to settling this matter this week. Please let me know your preferred time for a call.\n\nBest regards,\n[Your name]",
+            "FRIENDLY": "Hello!\n\nThanks for the reminder about the €500. I definitely want to get this sorted out.\n\nI've had some unexpected expenses but I'm committed to paying this back. Can we work out a payment plan?\n\nOptions I can offer:\n• Full payment by [date]\n• Two installments of €250 each\n• Other arrangement that works for you\n\nLet me know what works best!\n\nBest regards,\n[Your name]",
+            "BRIEF": "Dear {greeting},\n\nRegarding €500 payment:\n- Acknowledge the debt\n- Propose payment by [date]\n- Request confirmation\n\nBest regards,\n[Your name]"
+          },
+          "GENERIC": {
+            "FORMAL": "Dear {greeting},\n\nThank you for your email. I have received your message and will review it carefully.\n\nI will respond with detailed information within 24 hours.\n\nBest regards,\n[Your name]",
+            "FRIENDLY": "Hello!\n\nThanks for reaching out! I got your message and will get back to you soon.\n\nHave a great day!\n\nBest regards,\n[Your name]",
+            "BRIEF": "Dear {greeting},\n\nEmail received. Response within 24 hours.\n\nBest regards,\n[Your name]"
+          }
         }
       },
       "CUSTOMER_SUPPORT": {

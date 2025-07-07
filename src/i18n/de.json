@@ -337,15 +337,55 @@
         "EXAMPLE_PAYMENT": "💰 Zahlungserinnerung",
         "GENERATE_BUTTON": "🚀 Antwort generieren",
         "GENERATING": "Antwort wird generiert...",
+        "GENERATING_SUBTITLE": "Kontext analysieren und personalisierte Antwort erstellen",
         "COPY_BUTTON": "📋 In Zwischenablage kopieren",
         "COPY_SUCCESS": "✅ In Zwischenablage kopiert!",
         "TRY_ANOTHER": "🔄 Andere E-Mail testen",
         "RESPONSE_TITLE": "📝 Generierte Antwort",
+        "RESPONSE_STYLE": "Stil",
+        "RESPONSE_READY": "📝 Ihre Antwort ist bereit",
+        "ORIGINAL_EMAIL": "📨 Original E-Mail",
+        "GENERATE_ANOTHER": "🔄 Weitere Antwort generieren",
+        "NEW_EMAIL": "🆕 Neue E-Mail",
+        "BENEFITS_TITLE": "💼 Generator-Vorteile",
+        "TIME_SAVED": "Eingesparte Zeit",
+        "PROFESSIONALISM": "Professionalität",
+        "RESPONSE_STYLES": "Antwort-Stile",
+        "GENERATION_TIME": "Generierungszeit",
         "EXAMPLES": {
           "COMPLAINT": "Hallo, ich bin sehr verärgert, weil meine Bestellung #12345 3 Tage zu spät ankam und einige Produkte beschädigt sind. Das ist inakzeptabel, ich brauche eine sofortige Lösung. Mit freundlichen Grüßen, Johann Schmidt",
           "INQUIRY": "Guten Tag, ich interessiere mich für Ihre Beratungsdienstleistungen für mein Unternehmen. Wir sind ein Startup mit 15 Mitarbeitern im Technologiesektor und benötigen strategische Beratung. Mit freundlichen Grüßen, Maria Müller",
           "MEETING": "Hallo, ich muss das morgige Meeting um 10 Uhr verschieben, da ein familiärer Notfall aufgetreten ist. Wäre es möglich, es auf Donnerstag zur gleichen Zeit zu verlegen? Entschuldigung für die Unannehmlichkeiten, Carlos Lopez",
           "PAYMENT": "Hallo Carlos, ich sende Ihnen zum zehnten Mal die E-Mail, um Sie daran zu erinnern, dass Sie mir 500€ schulden. Wenn Sie nicht zahlen, werde ich Sie verklagen. Mit freundlichen Grüßen, Roger"
+        },
+        "RESPONSE_TEMPLATES": {
+          "GREETING": "Sehr geehrte/r",
+          "GREETING_WITH_NAME": "Sehr geehrte/r {name}",
+          "COMPLAINT": {
+            "FORMAL": "Sehr geehrte/r {greeting},\n\nvielen Dank für Ihre Kontaktaufnahme und ich entschuldige mich aufrichtig für die Unannehmlichkeiten, die Sie mit Ihrer Bestellung erfahren haben.\n\nIch verstehe Ihre Frustration vollkommen und möchte Sie versichern, dass wir diese Situation sofort lösen werden. Ich habe Ihren Fall an unser prioritäres Support-Team weitergeleitet.\n\nDie Maßnahmen, die wir ergreifen werden:\n• Sofortige Untersuchung des Problems mit Ihrer Bestellung\n• Versendung von Ersatzprodukten ohne zusätzliche Kosten\n• Gutschrift auf Ihr Konto für die Unannehmlichkeiten\n\nIch werde mich innerhalb der nächsten 2 Stunden mit einem detaillierten Update bei Ihnen melden.\n\nWir schätzen Ihre Geduld und die Gelegenheit, diese Situation zu korrigieren.\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+            "FRIENDLY": "Hallo!\n\nZunächst einmal tausend Entschuldigungen für das, was mit Ihrer Bestellung passiert ist. Das ist definitiv nicht die Erfahrung, die wir Ihnen bieten möchten.\n\nIch überprüfe Ihren Fall persönlich und wir werden es heute lösen. Ich schlage vor:\n\n✓ Wir senden Ihnen sofort neue Produkte (garantierte Ankunft morgen)\n✓ Wir erstatten die Versandkosten\n✓ 20% Rabatt auf Ihren nächsten Einkauf\n\nIch schreibe Ihnen spätestens in 2 Stunden mit der Sendungsverfolgungsnummer und allen Details.\n\nDanke, dass Sie uns die Gelegenheit geben, es zu reparieren!\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+            "BRIEF": "Sehr geehrte/r {greeting},\n\nEntschuldigung für die Probleme mit Ihrer Bestellung #12345.\n\nSofortige Lösung:\n- Ersatzprodukte heute versandt\n- Versanderstattung bearbeitet\n- Zusätzliche Entschädigung angewendet\n\nUpdate in 2 Stunden.\n\nMit freundlichen Grüßen,\n[Ihr Name]"
+          },
+          "INQUIRY": {
+            "FORMAL": "Sehr geehrte/r {greeting},\n\nvielen Dank für Ihr Interesse an unseren Beratungsdienstleistungen. Es freut mich, von Ihrem Unternehmen und seinem Wachstum im Technologiesektor zu erfahren.\n\nFür ein Startup mit 15 Mitarbeitern können wir anbieten:\n• Strategische Unternehmensplanung\n• Entwicklung einer Technologie-Roadmap\n• Strategien für Teamwachstum und Skalierung\n• Marktanalyse und Wettbewerbspositionierung\n\nIch würde gerne ein Beratungsgespräch vereinbaren, um Ihre spezifischen Bedürfnisse und Ziele besser zu verstehen.\n\nBitte teilen Sie mir Ihre Verfügbarkeit für nächste Woche mit.\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+            "FRIENDLY": "Hallo!\n\nVielen Dank für Ihre Anfrage bezüglich unserer Beratungsdienstleistungen. Es ist aufregend, von Ihrem Tech-Startup zu hören!\n\nFür ein 15-köpfiges Team wie Ihres helfen wir normalerweise bei:\n\n🎯 Strategischer Planung und Roadmap\n🚀 Skalierungsstrategien\n💡 Technologie- und Prozessoptimierung\n📈 Wachstums- und Marktanalyse\n\nIch würde gerne über Ihre spezifischen Herausforderungen und Ziele sprechen. Wie wäre es, wenn wir diese Woche einen kurzen Anruf vereinbaren?\n\nFreue mich auf Ihre Rückmeldung!\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+            "BRIEF": "Sehr geehrte/r {greeting},\n\nVielen Dank für Ihr Interesse an unseren Beratungsdienstleistungen.\n\nFür Tech-Startups (15 Mitarbeiter):\n- Strategische Planung: $X\n- Technologie-Roadmap: $Y\n- Wachstumsstrategien: $Z\n\nVerfügbar für Beratung nächste Woche.\n\nMit freundlichen Grüßen,\n[Ihr Name]"
+          },
+          "MEETING": {
+            "FORMAL": "Sehr geehrte/r {greeting},\n\nich verstehe, dass familiäre Notfälle Priorität haben. Natürlich können wir das morgige Meeting verschieben.\n\nIch habe am Donnerstag um 10 Uhr Zeit, wie Sie vorgeschlagen haben. Ich werde Ihnen eine Kalendereinladung mit den aktualisierten Details senden.\n\nBitte machen Sie sich keine Sorgen wegen der Änderung - solche Dinge passieren und ich hoffe, dass sich alles gut löst.\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+            "FRIENDLY": "Hallo!\n\nNatürlich, überhaupt kein Problem! Familie geht immer vor.\n\nDonnerstag um 10 Uhr passt mir perfekt. Ich werde den Kalender aktualisieren und Ihnen den neuen Meeting-Link senden.\n\nIch hoffe, alles ist in Ordnung und löst sich bald. Bis Donnerstag!\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+            "BRIEF": "Sehr geehrte/r {greeting},\n\nMeeting verschoben:\n- Neuer Termin: Donnerstag 10 Uhr\n- Kalendereinladung gesendet\n- Kein Problem mit der Änderung\n\nMit freundlichen Grüßen,\n[Ihr Name]"
+          },
+          "PAYMENT": {
+            "FORMAL": "Sehr geehrte/r {greeting},\n\nich bestätige den Erhalt Ihrer Zahlungserinnerung bezüglich des ausstehenden Betrags von €500.\n\nIch möchte diese Angelegenheit professionell und zeitnah lösen. Ich schlage vor, dass wir einen kurzen Anruf vereinbaren, um zu besprechen:\n• Zahlungsplan und Optionen\n• Benötigte Dokumentation\n• Lösung, die für beide Seiten funktioniert\n\nIch bin verpflichtet, diese Angelegenheit diese Woche zu regeln. Bitte teilen Sie mir Ihre bevorzugte Zeit für einen Anruf mit.\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+            "FRIENDLY": "Hallo!\n\nDanke für die Erinnerung bezüglich der €500. Ich möchte das definitiv regeln.\n\nIch hatte einige unerwartete Ausgaben, aber ich bin verpflichtet, das zurückzuzahlen. Können wir einen Zahlungsplan ausarbeiten?\n\nOptionen, die ich anbieten kann:\n• Vollzahlung bis [Datum]\n• Zwei Raten von je €250\n• Andere Vereinbarung, die für Sie funktioniert\n\nLassen Sie mich wissen, was am besten funktioniert!\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+            "BRIEF": "Sehr geehrte/r {greeting},\n\nBezüglich €500 Zahlung:\n- Anerkenne die Schuld\n- Schlage Zahlung bis [Datum] vor\n- Bitte um Bestätigung\n\nMit freundlichen Grüßen,\n[Ihr Name]"
+          },
+          "GENERIC": {
+            "FORMAL": "Sehr geehrte/r {greeting},\n\nvielen Dank für Ihre E-Mail. Ich habe Ihre Nachricht erhalten und werde sie sorgfältig prüfen.\n\nIch werde Ihnen innerhalb von 24 Stunden mit detaillierten Informationen antworten.\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+            "FRIENDLY": "Hallo!\n\nDanke für Ihre Nachricht! Ich habe Ihre Nachricht erhalten und werde Ihnen bald antworten.\n\nHaben Sie einen schönen Tag!\n\nMit freundlichen Grüßen,\n[Ihr Name]",
+            "BRIEF": "Sehr geehrte/r {greeting},\n\nE-Mail erhalten. Antwort innerhalb von 24 Stunden.\n\nMit freundlichen Grüßen,\n[Ihr Name]"
+          }
         }
       },
       "CUSTOMER_SUPPORT": {
