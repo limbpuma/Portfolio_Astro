@@ -133,15 +133,8 @@ Best regards`;
       handleCopyMessage();
       
       const currentLang = i18n.LANG || 'en';
-      let instructions = '';
-      
-      if (currentLang === 'de') {
-        instructions = `✅ Nachricht kopiert!\n\n📱 Nächste Schritte:\n1. WhatsApp öffnen\n2. Neuen Chat mit +49 176 45754360 starten\n3. Nachricht einfügen (Strg+V)\n4. Senden`;
-      } else if (currentLang === 'es') {
-        instructions = `✅ ¡Mensaje copiado!\n\n📱 Próximos pasos:\n1. Abrir WhatsApp\n2. Iniciar chat con +49 176 45754360\n3. Pegar mensaje (Ctrl+V)\n4. Enviar`;
-      } else {
-        instructions = `✅ Message copied!\n\n📱 Next steps:\n1. Open WhatsApp\n2. Start chat with +49 176 45754360\n3. Paste message (Ctrl+V)\n4. Send`;
-      }
+      const instructions = i18n.CONTACT?.COPY_SUCCESS_INSTRUCTIONS || 
+        '✅ Message copied!\n\n📱 Next steps:\n1. Open WhatsApp\n2. Start chat with +49 176 45754360\n3. Paste message (Ctrl+V)\n4. Send';
       
       alert(instructions);
       setShowSendModal(false);

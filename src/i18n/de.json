@@ -239,6 +239,7 @@
       "WHATSAPP_CONTACT": "WhatsApp Kontakt",
       "HOW_TO_SEND": "So senden:",
       "MANUAL_STEPS": "1. Nachricht kopieren → 2. WhatsApp öffnen → 3. Chat starten → 4. Einfügen & senden",
+      "COPY_SUCCESS_INSTRUCTIONS": "✅ Nachricht kopiert!\n\n📱 Nächste Schritte:\n1. WhatsApp öffnen\n2. Neuen Chat mit +49 176 45754360 starten\n3. Nachricht einfügen (Strg+V)\n4. Senden",
       "PREPARE_AI_MESSAGE": "KI-Nachricht vorbereiten",
       "PREPARE_BASIC_MESSAGE": "Basis-Nachricht vorbereiten",
       "BACKUP_OPTIONS": "Falls WhatsApp nicht automatisch öffnet, \"Nachricht kopieren\" verwenden und manuell senden",

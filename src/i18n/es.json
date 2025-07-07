@@ -241,6 +241,7 @@
       "WHATSAPP_CONTACT": "Contacto WhatsApp",
       "HOW_TO_SEND": "Cómo enviar:",
       "MANUAL_STEPS": "1. Copiar mensaje → 2. Abrir WhatsApp → 3. Iniciar chat → 4. Pegar y enviar",
+      "COPY_SUCCESS_INSTRUCTIONS": "✅ ¡Mensaje copiado!\n\n📱 Próximos pasos:\n1. Abrir WhatsApp\n2. Iniciar chat con +49 176 45754360\n3. Pegar mensaje (Ctrl+V)\n4. Enviar",
       "PREPARE_AI_MESSAGE": "Preparar Mensaje IA",
       "PREPARE_BASIC_MESSAGE": "Preparar Mensaje Básico",
       "BACKUP_OPTIONS": "Si WhatsApp no se abre automáticamente, usa \"Copiar Mensaje\" y envía manualmente",
