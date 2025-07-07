@@ -17,19 +17,19 @@ const CustomerSupportAgent = ({ config, translations = {}, locale = 'en' }) => {
   const exampleTickets = [
     {
       title: getText('EXAMPLE_CRITICAL', '🚨 Critical Technical Issue'),
-      content: "URGENT: Payment gateway completely down!!! Our e-commerce site can't process any payments for the last 2 hours. We're losing thousands of dollars every minute. Customer ID: TECH-12345. This needs IMMEDIATE attention!"
+      content: translations.AGENTS?.CUSTOMER_SUPPORT?.EXAMPLES?.CRITICAL || "URGENT: Payment gateway completely down!!! Our e-commerce site can't process any payments for the last 2 hours. We're losing thousands of dollars every minute. Customer ID: TECH-12345. This needs IMMEDIATE attention!"
     },
     {
       title: getText('EXAMPLE_BILLING', '💰 Billing Question'),
-      content: "Hi, I have a question about my last invoice. I see a charge for $49.99 but I can't remember what it's for. Could you please help me understand what this charge is? My account email is john@company.com"
+      content: translations.AGENTS?.CUSTOMER_SUPPORT?.EXAMPLES?.BILLING || "Hi, I have a question about my last invoice. I see a charge for $49.99 but I can't remember what it's for. Could you please help me understand what this charge is? My account email is john@company.com"
     },
     {
       title: getText('EXAMPLE_FEATURE', '💡 Feature Request'),
-      content: "Hello team, we've been using your product for 6 months and love it! Would it be possible to add dark mode to the dashboard? Many of our team members work late and would really appreciate this feature. Thanks for your great work!"
+      content: translations.AGENTS?.CUSTOMER_SUPPORT?.EXAMPLES?.FEATURE || "Hello team, we've been using your product for 6 months and love it! Would it be possible to add dark mode to the dashboard? Many of our team members work late and would really appreciate this feature. Thanks for your great work!"
     },
     {
       title: getText('EXAMPLE_FRUSTRATED', '😤 Frustrated Customer'),
-      content: "This is the THIRD time I'm contacting support about the same issue! My account keeps getting locked out every day and nobody has helped me fix this. I'm considering switching to a competitor if this isn't resolved TODAY."
+      content: translations.AGENTS?.CUSTOMER_SUPPORT?.EXAMPLES?.FRUSTRATED || "This is the THIRD time I'm contacting support about the same issue! My account keeps getting locked out every day and nobody has helped me fix this. I'm considering switching to a competitor if this isn't resolved TODAY."
     }
   ];
 

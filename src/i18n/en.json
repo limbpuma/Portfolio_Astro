@@ -335,7 +335,13 @@
         "COPY_BUTTON": "📋 Copy to Clipboard",
         "COPY_SUCCESS": "✅ Copied to clipboard!",
         "TRY_ANOTHER": "🔄 Try Another Email",
-        "RESPONSE_TITLE": "📝 Generated Response"
+        "RESPONSE_TITLE": "📝 Generated Response",
+        "EXAMPLES": {
+          "COMPLAINT": "Hello, I am very upset because my order #12345 arrived 3 days late and some products are damaged. This is unacceptable, I need an immediate solution. Regards, John Smith",
+          "INQUIRY": "Good morning, I am interested in your consulting services for my company. We are a startup with 15 employees in the technology sector and we need strategic guidance. Best regards, Maria Johnson",
+          "MEETING": "Hello, I need to reschedule tomorrow's meeting at 10am because a family emergency arose. Would it be possible to move it to Thursday at the same time? Apologies for the inconvenience, Carlos Lopez",
+          "PAYMENT": "Hello Carlos, I'm sending you the email for the tenth time to remind you that you owe me €500. If you don't pay me I will sue you. Sincerely, Roger"
+        }
       },
       "CUSTOMER_SUPPORT": {
         "TITLE": "🎧 Customer Support Ticket Classifier",
@@ -365,7 +371,13 @@
         "SENTIMENT_POSITIVE": "Positive",
         "SENTIMENT_NEUTRAL": "Neutral",
         "SENTIMENT_FRUSTRATED": "Frustrated",
-        "SENTIMENT_CONCERNED": "Concerned"
+        "SENTIMENT_CONCERNED": "Concerned",
+        "EXAMPLES": {
+          "CRITICAL": "URGENT: Payment gateway completely down!!! Our e-commerce site can't process any payments for the last 2 hours. We're losing thousands of dollars every minute. Customer ID: TECH-12345. This needs IMMEDIATE attention!",
+          "BILLING": "Hi, I have a question about my last invoice. I see a charge for $49.99 but I can't remember what it's for. Could you please help me understand what this charge is? My account email is john@company.com",
+          "FEATURE": "Hello team, we've been using your product for 6 months and love it! Would it be possible to add dark mode to the dashboard? Many of our team members work late and would really appreciate this feature. Thanks for your great work!",
+          "FRUSTRATED": "This is the THIRD time I'm contacting support about the same issue! My account keeps getting locked out every day and nobody has helped me fix this. I'm considering switching to a competitor if this isn't resolved TODAY."
+        }
       }
     },
     "MODAL": {

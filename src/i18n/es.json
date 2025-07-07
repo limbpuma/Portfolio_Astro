@@ -345,7 +345,13 @@
         "COPY_BUTTON": "📋 Copiar al Portapapeles",
         "COPY_SUCCESS": "✅ ¡Copiado al portapapeles!",
         "TRY_ANOTHER": "🔄 Probar Otro Email",
-        "RESPONSE_TITLE": "📝 Respuesta Generada"
+        "RESPONSE_TITLE": "📝 Respuesta Generada",
+        "EXAMPLES": {
+          "COMPLAINT": "Hola, estoy muy molesto porque mi pedido #12345 llegó 3 días tarde y algunos productos están dañados. Esto es inaceptable, necesito una solución inmediata. Saludos, Juan Pérez",
+          "INQUIRY": "Buenos días, estoy interesado en sus servicios de consultoría para mi empresa. Somos una startup de 15 empleados en el sector tecnológico y necesitamos orientación estratégica. Saludos cordiales, María González",
+          "MEETING": "Hola, necesito reprogramar la reunión de mañana a las 10am porque surgió una emergencia familiar. ¿Sería posible moverla al jueves a la misma hora? Disculpas por el inconveniente, Carlos López",
+          "PAYMENT": "Hola Carlos, te envío por décima vez el email para recordarte que me debes 500€. Si no me pagas te demandaré. Atentamente, Roger"
+        }
       },
       "CUSTOMER_SUPPORT": {
         "TITLE": "🎧 Clasificador de Tickets de Soporte",
@@ -375,7 +381,13 @@
         "SENTIMENT_POSITIVE": "Positivo",
         "SENTIMENT_NEUTRAL": "Neutral",
         "SENTIMENT_FRUSTRATED": "Frustrado",
-        "SENTIMENT_CONCERNED": "Preocupado"
+        "SENTIMENT_CONCERNED": "Preocupado",
+        "EXAMPLES": {
+          "CRITICAL": "URGENTE: ¡¡¡Pasarela de pagos completamente caída!!! Nuestro sitio de e-commerce no puede procesar ningún pago desde hace 2 horas. Estamos perdiendo miles de euros cada minuto. ID de cliente: TECH-12345. ¡Esto necesita atención INMEDIATA!",
+          "BILLING": "Hola, tengo una pregunta sobre mi última factura. Veo un cargo de 49,99€ pero no recuerdo para qué es. ¿Podrían ayudarme a entender qué es este cargo? Mi email de cuenta es juan@empresa.com",
+          "FEATURE": "¡Hola equipo, hemos estado usando su producto durante 6 meses y nos encanta! ¿Sería posible agregar modo oscuro al panel de control? Muchos de nuestros miembros del equipo trabajan tarde y realmente apreciarían esta función. ¡Gracias por su excelente trabajo!",
+          "FRUSTRATED": "¡Esta es la TERCERA vez que contacto soporte sobre el mismo problema! Mi cuenta se bloquea todos los días y nadie me ha ayudado a arreglar esto. Estoy considerando cambiarme a un competidor si esto no se resuelve HOY."
+        }
       }
     },
     "MODAL": {

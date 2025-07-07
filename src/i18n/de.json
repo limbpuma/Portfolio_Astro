@@ -340,7 +340,13 @@
         "COPY_BUTTON": "📋 In Zwischenablage kopieren",
         "COPY_SUCCESS": "✅ In Zwischenablage kopiert!",
         "TRY_ANOTHER": "🔄 Andere E-Mail testen",
-        "RESPONSE_TITLE": "📝 Generierte Antwort"
+        "RESPONSE_TITLE": "📝 Generierte Antwort",
+        "EXAMPLES": {
+          "COMPLAINT": "Hallo, ich bin sehr verärgert, weil meine Bestellung #12345 3 Tage zu spät ankam und einige Produkte beschädigt sind. Das ist inakzeptabel, ich brauche eine sofortige Lösung. Mit freundlichen Grüßen, Johann Schmidt",
+          "INQUIRY": "Guten Tag, ich interessiere mich für Ihre Beratungsdienstleistungen für mein Unternehmen. Wir sind ein Startup mit 15 Mitarbeitern im Technologiesektor und benötigen strategische Beratung. Mit freundlichen Grüßen, Maria Müller",
+          "MEETING": "Hallo, ich muss das morgige Meeting um 10 Uhr verschieben, da ein familiärer Notfall aufgetreten ist. Wäre es möglich, es auf Donnerstag zur gleichen Zeit zu verlegen? Entschuldigung für die Unannehmlichkeiten, Carlos Lopez",
+          "PAYMENT": "Hallo Carlos, ich sende Ihnen zum zehnten Mal die E-Mail, um Sie daran zu erinnern, dass Sie mir 500€ schulden. Wenn Sie nicht zahlen, werde ich Sie verklagen. Mit freundlichen Grüßen, Roger"
+        }
       },
       "CUSTOMER_SUPPORT": {
         "TITLE": "🎧 Kundensupport-Ticket-Klassifizierer",
@@ -370,7 +376,13 @@
         "SENTIMENT_POSITIVE": "Positiv",
         "SENTIMENT_NEUTRAL": "Neutral",
         "SENTIMENT_FRUSTRATED": "Frustriert",
-        "SENTIMENT_CONCERNED": "Besorgt"
+        "SENTIMENT_CONCERNED": "Besorgt",
+        "EXAMPLES": {
+          "CRITICAL": "DRINGEND: Zahlungsgateway komplett ausgefallen!!! Unsere E-Commerce-Website kann seit 2 Stunden keine Zahlungen verarbeiten. Wir verlieren jede Minute Tausende von Euro. Kunden-ID: TECH-12345. Das braucht SOFORTIGE Aufmerksamkeit!",
+          "BILLING": "Hallo, ich habe eine Frage zu meiner letzten Rechnung. Ich sehe eine Gebühr von 49,99€, aber ich kann mich nicht erinnern, wofür sie ist. Könnten Sie mir bitte helfen zu verstehen, was diese Gebühr ist? Meine Konto-E-Mail ist johann@firma.com",
+          "FEATURE": "Hallo Team, wir nutzen Ihr Produkt seit 6 Monaten und lieben es! Wäre es möglich, einen dunklen Modus zum Dashboard hinzuzufügen? Viele unserer Teammitglieder arbeiten spät und würden diese Funktion sehr schätzen. Danke für Ihre großartige Arbeit!",
+          "FRUSTRATED": "Das ist das DRITTE Mal, dass ich den Support wegen desselben Problems kontaktiere! Mein Konto wird jeden Tag gesperrt und niemand hat mir geholfen, das zu beheben. Ich überlege, zu einem Konkurrenten zu wechseln, wenn das nicht HEUTE gelöst wird."
+        }
       }
     },
     "MODAL": {

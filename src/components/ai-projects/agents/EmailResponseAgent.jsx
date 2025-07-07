@@ -45,13 +45,13 @@ const EmailResponseAgent = ({ config, translations = {}, locale = 'en' }) => {
   };
 
   const exampleEmails = {
-    complaint: "Hola, estoy muy molesto porque mi pedido #12345 llegó 3 días tarde y algunos productos están dañados. Esto es inaceptable, necesito una solución inmediata. Saludos, Juan Pérez",
+    complaint: translations.AGENTS?.EMAIL_RESPONSE?.EXAMPLES?.COMPLAINT || "Hello, I am very upset because my order #12345 arrived 3 days late and some products are damaged. This is unacceptable, I need an immediate solution. Regards, John Smith",
     
-    inquiry: "Buenos días, estoy interesado en sus servicios de consultoría para mi empresa. Somos una startup de 15 empleados en el sector fintech. ¿Podrían enviarme información sobre precios y disponibilidad? Gracias, María González",
+    inquiry: translations.AGENTS?.EMAIL_RESPONSE?.EXAMPLES?.INQUIRY || "Good morning, I am interested in your consulting services for my company. We are a startup with 15 employees in the technology sector and we need strategic guidance. Best regards, Maria Johnson",
     
-    meeting: "Hola, necesito reprogramar la reunión de mañana a las 10am porque surgió una emergencia familiar. ¿Sería posible moverla al jueves a la misma hora? Disculpas por el inconveniente, Carlos López",
+    meeting: translations.AGENTS?.EMAIL_RESPONSE?.EXAMPLES?.MEETING || "Hello, I need to reschedule tomorrow's meeting at 10am because a family emergency arose. Would it be possible to move it to Thursday at the same time? Apologies for the inconvenience, Carlos Lopez",
     
-    payment: "Hola Carlos, te envío por décima vez el email para recordarte que me debes 500€. Si no me pagas te demandaré. Atentamente, Roger"
+    payment: translations.AGENTS?.EMAIL_RESPONSE?.EXAMPLES?.PAYMENT || "Hello Carlos, I'm sending you the email for the tenth time to remind you that you owe me €500. If you don't pay me I will sue you. Sincerely, Roger"
   };
 
   const generateResponse = async () => {
