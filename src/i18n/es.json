@@ -113,12 +113,12 @@
             {
               "url": "https://seniorcare-v2.vercel.app/",
               "iconClass": "fas fa-globe",
-              "label": "Project 1 Website"
+              "label": "Sitio Web Integra Care"
             },
             {
               "url": "https://github.com/limbpuma/Astro_Barber_web",
               "iconClass": "fab fa-github",
-              "label": "Project 1 GitHub"
+              "label": "GitHub Integra Care"
             }
           ]
         },        {
@@ -130,12 +130,12 @@
             {
               "url": "https://memmokfz.vercel.app/",
               "iconClass": "fas fa-globe",
-              "label": "Project 1 Website"
+              "label": "Sitio Web KFZ Memmo"
             },
             {
               "url": "https://github.com/limbpuma/kfz_memmo",
               "iconClass": "fab fa-github",
-              "label": "Project 1 GitHub"
+              "label": "GitHub KFZ Memmo"
             }
           ]
         },        {
@@ -147,12 +147,12 @@
             {
               "url": "https://campus-pizza-frontend.vercel.app/",
               "iconClass": "fas fa-globe",
-              "label": "Project 1 Website"
+              "label": "Sitio Web Fast React Pizza"
             },
             {
               "url": "https://github.com/limbpuma/pizza_fast_delivery_collect",
               "iconClass": "fab fa-github",
-              "label": "Project 1 GitHub"
+              "label": "GitHub Fast React Pizza"
             }
           ]
         }
@@ -373,5 +373,12 @@
         "SENTIMENT_FRUSTRATED": "Frustrado",
         "SENTIMENT_CONCERNED": "Preocupado"
       }
+    },
+    "MODAL": {
+      "CLOSE": "Cerrar",
+      "COMING_SOON": "Próximamente",
+      "CODE_REVIEW_AGENT": "Agente de Revisión de Código",
+      "WORKFLOW_AGENT": "Agente de Flujo de Trabajo",
+      "AGENT_NOT_FOUND": "Tipo de agente no encontrado"
     }
   }

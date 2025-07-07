@@ -57,11 +57,11 @@ const AIProjectModal = ({ projectId, agentType, config, locale = 'en', translati
       case 'customer-support':
         return <CustomerSupportAgent config={config} translations={translations} locale={locale} />;
       case 'code-review':
-        return <div>Code Review Agent (Coming Soon)</div>;
+        return <div>{translations.MODAL?.CODE_REVIEW_AGENT || 'Code Review Agent'} ({translations.MODAL?.COMING_SOON || 'Coming Soon'})</div>;
       case 'workflow':
-        return <div>Workflow Agent (Coming Soon)</div>;
+        return <div>{translations.MODAL?.WORKFLOW_AGENT || 'Workflow Agent'} ({translations.MODAL?.COMING_SOON || 'Coming Soon'})</div>;
       default:
-        return <div>Agent type not found</div>;
+        return <div>{translations.MODAL?.AGENT_NOT_FOUND || 'Agent type not found'}</div>;
     }
   };
 
